@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free IRS mileage deduction calculator for 2026. Calculate your exact mileage tax deduction at 72.5 cents per mile. Built for Uber, DoorDash, Instacart, and all gig workers.">
+<meta name="keywords" content="mileage deduction calculator, IRS mileage rate 2026, mileage tax deduction, gig worker mileage, DoorDash mileage deduction, Uber mileage deduction, 72.5 cents per mile 2026">
+<meta name="author" content="1099TaxCalcs.com">
+<meta property="og:title" content="Mileage Deduction Calculator 2026 — 72.5¢/Mile | 1099TaxCalcs.com">
+<meta property="og:description" content="Calculate your exact IRS mileage deduction instantly. 72.5¢ per mile in 2026. Built for Uber, DoorDash, Instacart, and freelancers.">
+<meta property="og:url" content="https://1099taxcalcs.com/mileage-calculator.html">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://1099taxcalcs.com/mileage-calculator.html">
+<title>Mileage Deduction Calculator 2026 — 72.5¢ Per Mile | 1099TaxCalcs.com</title>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+<style>
+  :root {
+    --navy:   #0D1F3C;
+    --navy2:  #162847;
+    --green:  #00A878;
+    --green2: #008F65;
+    --amber:  #F5A623;
+    --light:  #F4F7FC;
+    --white:  #FFFFFF;
+    --gray1:  #F0F4FA;
+    --gray2:  #E2E8F4;
+    --gray3:  #94A3B8;
+    --text:   #1A2A44;
+    --text2:  #4A5A72;
+    --red:    #E53E3E;
+    --font:   'Segoe UI', system-ui, -apple-system, sans-serif;
+    --radius: 8px;
+    --shadow: 0 2px 12px rgba(13,31,60,0.10);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); color: var(--text); background: var(--light); font-size: 16px; line-height: 1.6; }
+  a { color: var(--green); text-decoration: none; }
+  a:hover { color: var(--green2); text-decoration: underline; }
+
+  /* HEADER */
+  header { background: var(--navy); padding: 0 24px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+  .header-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-icon { width: 38px; height: 38px; background: var(--green); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: white; letter-spacing: -1px; flex-shrink: 0; }
+  .logo-text { color: white; font-size: 17px; font-weight: 700; }
+  .logo-text span { color: var(--amber); }
+  nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+  nav a { color: rgba(255,255,255,0.85); font-size: 13px; padding: 6px 10px; border-radius: 6px; transition: all 0.15s; white-space: nowrap; }
+  nav a:hover { background: rgba(255,255,255,0.1); color: white; text-decoration: none; }
+  nav a.active { color: var(--amber); }
+  .nav-cta { background: var(--green) !important; color: white !important; font-weight: 600; padding: 7px 14px !important; }
+  .nav-cta:hover { background: var(--green2) !important; }
+  .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: white; margin: 5px 0; border-radius: 2px; }
+  @media(max-width: 768px) {
+    .hamburger { display: block; }
+    nav { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--navy2); padding: 12px 16px; flex-direction: column; align-items: flex-start; gap: 2px; }
+    nav.open { display: flex; }
+    nav a { width: 100%; padding: 10px 12px; }
+  }
+
+  /* PAGE HERO */
+  .page-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%); color: white; padding: 40px 24px 36px; }
+  .page-hero-inner { max-width: 1200px; margin: 0 auto; }
+  .breadcrumb { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 12px; }
+  .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--green); }
+  .breadcrumb span { margin: 0 6px; }
+  .page-hero h1 { font-size: clamp(24px, 3.5vw, 38px); font-weight: 800; line-height: 1.2; margin-bottom: 10px; }
+  .page-hero h1 em { color: var(--amber); font-style: normal; }
+  .page-hero p { font-size: 15px; color: rgba(255,255,255,0.75); max-width: 620px; line-height: 1.7; }
+  .hero-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+  .pill { font-size: 11px; font-weight: 600; padding: 4px 12px; border-radius: 20px; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8); border: 1px solid rgba(255,255,255,0.15); }
+  .pill.green { background: rgba(0,168,120,0.2); color: #5EEAD4; border-color: rgba(0,168,120,0.3); }
+
+  /* RATE BAR */
+  .rate-bar { background: var(--green); color: white; padding: 10px 24px; text-align: center; font-size: 13px; font-weight: 600; }
+  .rate-bar strong { font-size: 16px; }
+
+  /* LAYOUT */
+  .main-wrap { max-width: 1200px; margin: 0 auto; padding: 32px 24px; display: grid; grid-template-columns: 1fr 300px; gap: 32px; align-items: start; }
+  @media(max-width: 960px) { .main-wrap { grid-template-columns: 1fr; } }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* AD SLOTS */
+  .ad-slot { background: var(--gray1); border: 1px dashed var(--gray2); border-radius: var(--radius); text-align: center; color: var(--gray3); font-size: 11px; padding: 8px; }
+  .ad-728 { width: 100%; height: 90px; line-height: 74px; margin: 20px 0; }
+  .ad-300 { width: 100%; height: 250px; line-height: 234px; }
+
+  /* CALCULATOR CARD */
+  .calc-card { background: white; border-radius: 16px; box-shadow: 0 4px 24px rgba(13,31,60,0.13); overflow: hidden; margin-bottom: 24px; }
+  .calc-header { background: var(--navy); color: white; padding: 18px 24px; }
+  .calc-header h2 { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+  .calc-header p { font-size: 13px; color: rgba(255,255,255,0.65); }
+  .calc-body { padding: 24px; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media(max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+  .form-group { margin-bottom: 14px; }
+  .form-group label { display: block; font-size: 12px; font-weight: 600; color: var(--text2); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .form-group label .tip { font-size: 11px; color: var(--green); font-weight: 400; text-transform: none; letter-spacing: 0; margin-left: 4px; }
+  .form-group input, .form-group select { width: 100%; padding: 10px 14px; border: 1.5px solid var(--gray2); border-radius: var(--radius); font-size: 15px; color: var(--text); background: var(--gray1); transition: border-color 0.15s; font-family: var(--font); }
+  .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--green); background: white; }
+  .input-suffix { position: relative; }
+  .input-suffix::after { content: attr(data-unit); position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: var(--gray3); font-size: 12px; font-weight: 600; }
+  .input-suffix input { padding-right: 44px; }
+  .input-prefix { position: relative; }
+  .input-prefix::before { content: '$'; position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--gray3); font-size: 15px; font-weight: 600; }
+  .input-prefix input { padding-left: 26px; }
+
+  .section-divider { font-size: 11px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 0.08em; padding: 10px 0 8px; border-top: 1px solid var(--gray2); margin-top: 4px; display: flex; align-items: center; gap: 8px; }
+  .section-divider::after { content: ''; flex: 1; height: 1px; background: var(--gray2); }
+
+  /* RATE SELECTOR */
+  .rate-selector { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 14px; }
+  .rate-btn { padding: 10px 8px; border: 1.5px solid var(--gray2); border-radius: var(--radius); background: var(--gray1); cursor: pointer; text-align: center; transition: all 0.15s; font-family: var(--font); }
+  .rate-btn:hover { border-color: var(--green); }
+  .rate-btn.active { border-color: var(--green); background: #E9F9F4; }
+  .rate-btn .rate-num { font-size: 16px; font-weight: 800; color: var(--navy); display: block; }
+  .rate-btn .rate-year { font-size: 10px; color: var(--text2); display: block; margin-top: 1px; }
+  .rate-btn.active .rate-num { color: var(--green2); }
+
+  /* PLATFORM QUICK SELECT */
+  .platform-select { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+  .plat-btn { padding: 6px 12px; border: 1.5px solid var(--gray2); border-radius: 20px; background: var(--gray1); cursor: pointer; font-size: 12px; font-weight: 600; color: var(--text2); font-family: var(--font); transition: all 0.15s; }
+  .plat-btn:hover { border-color: var(--green); color: var(--navy); }
+  .plat-btn.active { background: var(--navy); color: white; border-color: var(--navy); }
+
+  .calc-btn { width: 100%; padding: 14px; background: var(--green); color: white; font-size: 16px; font-weight: 700; border: none; border-radius: var(--radius); cursor: pointer; transition: background 0.15s; font-family: var(--font); }
+  .calc-btn:hover { background: var(--green2); }
+  .reset-btn { width: 100%; padding: 9px; background: transparent; color: var(--text2); font-size: 13px; border: 1.5px solid var(--gray2); border-radius: var(--radius); cursor: pointer; font-family: var(--font); margin-top: 8px; transition: all 0.15s; }
+  .reset-btn:hover { border-color: var(--green); color: var(--green); }
+
+  /* RESULTS */
+  .results { display: none; margin-top: 24px; }
+  .results.show { display: block; }
+  .results-header { background: var(--navy); color: white; border-radius: 12px 12px 0 0; padding: 14px 20px; }
+  .results-header h3 { font-size: 15px; font-weight: 700; }
+  .results-header p { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 2px; }
+  .results-body { background: white; border: 1.5px solid var(--gray2); border-top: none; border-radius: 0 0 12px 12px; padding: 20px; }
+
+  /* BIG RESULT */
+  .big-result { background: linear-gradient(135deg, var(--navy), var(--navy2)); border-radius: 12px; padding: 20px 24px; text-align: center; margin-bottom: 14px; }
+  .big-result-label { color: rgba(255,255,255,0.7); font-size: 13px; margin-bottom: 4px; }
+  .big-result-value { font-size: 48px; font-weight: 800; color: var(--amber); line-height: 1.1; }
+  .big-result-sub { color: rgba(255,255,255,0.6); font-size: 13px; margin-top: 6px; }
+
+  .result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 14px; }
+  @media(max-width: 500px) { .result-grid { grid-template-columns: 1fr 1fr; } }
+  .r-box { background: var(--gray1); border-radius: var(--radius); padding: 12px 14px; border-left: 3px solid var(--gray2); }
+  .r-box.green { border-left-color: var(--green); background: #E9F9F4; }
+  .r-box.amber { border-left-color: var(--amber); background: #FFF8EC; }
+  .r-label { font-size: 11px; font-weight: 600; color: var(--text2); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .r-value { font-size: 18px; font-weight: 800; color: var(--navy); }
+  .r-value.green { color: var(--green2); }
+  .r-value.amber { color: #B7791F; }
+  .r-sub { font-size: 11px; color: var(--text2); margin-top: 3px; }
+
+  /* MONTHLY BREAKDOWN */
+  .monthly-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-bottom: 14px; }
+  @media(max-width: 500px) { .monthly-grid { grid-template-columns: repeat(2, 1fr); } }
+  .month-box { background: var(--gray1); border-radius: var(--radius); padding: 8px 10px; text-align: center; }
+  .month-name { font-size: 10px; color: var(--text2); text-transform: uppercase; letter-spacing: 0.04em; }
+  .month-miles { font-size: 13px; font-weight: 700; color: var(--navy); }
+  .month-ded { font-size: 11px; color: var(--green2); font-weight: 600; }
+
+  .tax-savings-box { background: #E9F9F4; border: 1.5px solid rgba(0,168,120,0.3); border-radius: var(--radius); padding: 14px 18px; margin-bottom: 12px; }
+  .tax-savings-row { display: flex; justify-content: space-between; align-items: center; padding: 5px 0; border-bottom: 1px solid rgba(0,168,120,0.15); font-size: 13px; }
+  .tax-savings-row:last-child { border-bottom: none; font-weight: 700; font-size: 14px; color: var(--navy); }
+  .tax-savings-row .label { color: var(--text2); }
+  .tax-savings-row .val { font-weight: 600; color: var(--navy); }
+  .tax-savings-row .val.green { color: var(--green2); }
+
+  .tracking-tip { background: #FFF8EC; border: 1px solid #F5D78E; border-radius: var(--radius); padding: 12px 14px; font-size: 13px; color: #7A4F00; line-height: 1.6; margin-bottom: 10px; }
+  .result-note { font-size: 11px; color: var(--gray3); text-align: center; margin-top: 10px; line-height: 1.6; }
+
+  /* CONTENT */
+  .section { background: white; border-radius: 12px; padding: 28px; margin-bottom: 20px; box-shadow: var(--shadow); }
+  .section-label { font-size: 11px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+  .section h2 { font-size: 22px; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
+  .section h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin: 20px 0 8px; }
+  .section p { color: var(--text2); line-height: 1.8; margin-bottom: 12px; }
+  .section ul, .section ol { color: var(--text2); line-height: 1.8; margin: 8px 0 12px 20px; }
+  .section li { margin-bottom: 6px; }
+  .section strong { color: var(--navy); }
+
+  /* RATE HISTORY TABLE */
+  .info-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 14px 0; }
+  .info-table th { background: var(--navy); color: white; padding: 10px 14px; text-align: left; font-size: 12px; letter-spacing: 0.04em; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid var(--gray2); color: var(--text2); }
+  .info-table tr:nth-child(even) td { background: var(--gray1); }
+  .info-table tr.current-year td { background: #E9F9F4; font-weight: 600; color: var(--navy); }
+  .info-table strong { color: var(--navy); }
+
+  /* WHAT COUNTS BOX */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 14px; }
+  @media(max-width: 600px) { .two-col { grid-template-columns: 1fr; } }
+  .check-list { list-style: none; margin: 0 !important; }
+  .check-list li { display: flex; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--gray2); font-size: 13px; color: var(--text2); }
+  .check-list li:last-child { border-bottom: none; }
+  .check-list .icon { flex-shrink: 0; font-size: 14px; }
+
+  /* APPS TABLE */
+  .app-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; margin-top: 14px; }
+  .app-card { background: var(--gray1); border: 1.5px solid var(--gray2); border-radius: var(--radius); padding: 14px 16px; }
+  .app-name { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .app-price { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 20px; display: inline-block; margin-bottom: 6px; }
+  .price-free { background: #E9F9F4; color: var(--green2); }
+  .price-paid { background: #FFF8EC; color: #B7791F; }
+  .app-desc { font-size: 12px; color: var(--text2); line-height: 1.5; }
+
+  /* FAQ */
+  .faq-list { margin-top: 10px; }
+  .faq-item { border-bottom: 1px solid var(--gray2); }
+  .faq-q { width: 100%; text-align: left; background: none; border: none; padding: 14px 0; font-size: 15px; font-weight: 600; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: var(--font); }
+  .faq-q:hover { color: var(--green); }
+  .faq-q .arrow { font-size: 18px; color: var(--green); transition: transform 0.2s; flex-shrink: 0; margin-left: 12px; }
+  .faq-q.open .arrow { transform: rotate(180deg); }
+  .faq-a { font-size: 14px; color: var(--text2); line-height: 1.8; padding-bottom: 14px; display: none; }
+  .faq-a.open { display: block; }
+
+  /* RELATED */
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; margin-top: 12px; }
+  .related-card { background: var(--gray1); border: 1.5px solid var(--gray2); border-radius: var(--radius); padding: 14px 16px; text-decoration: none; transition: all 0.15s; display: block; }
+  .related-card:hover { border-color: var(--green); background: white; text-decoration: none; }
+  .related-card h4 { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+  .related-card p { font-size: 12px; color: var(--text2); margin: 0; }
+
+  /* SIDEBAR */
+  .sidebar { display: flex; flex-direction: column; gap: 18px; }
+  .sidebar-card { background: white; border-radius: 12px; padding: 18px; box-shadow: var(--shadow); }
+  .sidebar-card h3 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 10px; border-bottom: 2px solid var(--green); padding-bottom: 7px; }
+  .cta-card { background: linear-gradient(135deg, var(--navy), var(--navy2)); color: white; border-radius: 12px; padding: 18px; }
+  .cta-card h3 { font-size: 14px; font-weight: 700; color: white; margin-bottom: 6px; border: none; padding: 0; }
+  .cta-card p { font-size: 12px; color: rgba(255,255,255,0.7); margin-bottom: 12px; line-height: 1.6; }
+  .cta-card a { display: block; background: var(--green); color: white; text-align: center; padding: 9px; border-radius: var(--radius); font-weight: 700; font-size: 13px; text-decoration: none; }
+  .cta-card a:hover { background: var(--green2); }
+  .quick-links a { display: flex; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--gray2); font-size: 13px; color: var(--text); text-decoration: none; }
+  .quick-links a:last-child { border-bottom: none; }
+  .quick-links a:hover { color: var(--green); }
+  .quick-links a::before { content: '→'; color: var(--green); font-weight: 700; }
+
+  /* RATE BOX SIDEBAR */
+  .rate-sidebar { background: var(--navy); border-radius: var(--radius); padding: 14px 16px; color: white; text-align: center; margin-bottom: 10px; }
+  .rate-sidebar .rate-big { font-size: 36px; font-weight: 800; color: var(--amber); }
+  .rate-sidebar .rate-desc { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 4px; }
+
+  /* WARN / INFO */
+  .warn-box { background: #FFF8EC; border: 1px solid #F5D78E; border-radius: var(--radius); padding: 14px 16px; font-size: 13px; color: #7A4F00; line-height: 1.6; margin: 14px 0; }
+  .info-note { background: #EEF2FA; border: 1px solid #C7D4EE; border-radius: var(--radius); padding: 14px 16px; font-size: 13px; color: var(--text2); line-height: 1.6; margin: 14px 0; }
+  .green-box { background: #E9F9F4; border: 1px solid rgba(0,168,120,0.3); border-radius: var(--radius); padding: 14px 16px; font-size: 13px; color: #065F46; line-height: 1.6; margin: 14px 0; }
+
+  /* FOOTER */
+  footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 40px 24px 24px; margin-top: 48px; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 32px; }
+  .footer-brand .logo-text { font-size: 18px; color: white; display: block; margin-bottom: 8px; }
+  .footer-brand p { font-size: 13px; line-height: 1.7; }
+  .footer-col h4 { color: white; font-size: 13px; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,0.55); margin-bottom: 7px; text-decoration: none; }
+  .footer-col a:hover { color: var(--green); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 12px; }
+  .footer-bottom a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .footer-bottom a:hover { color: var(--green); }
+  @media(max-width: 700px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the IRS mileage rate for 2026?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The IRS standard mileage rate for 2026 is 72.5 cents per mile for business use. This rate applies to self-employed workers, gig workers, freelancers, and independent contractors who use their personal vehicle for work." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Uber and DoorDash drivers deduct mileage?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Rideshare and delivery drivers can deduct mileage for every mile driven while working — including miles driven to pick up the first passenger or order of the day. At 72.5 cents per mile in 2026, a driver logging 20,000 business miles saves $14,500 in deductible expenses." }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I use the standard mileage rate or actual expenses?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Most gig workers benefit more from the standard mileage rate (72.5¢/mile in 2026) because it is simpler and often results in a larger deduction. The actual expense method requires tracking every gas receipt, oil change, insurance payment, and depreciation calculation. Use our calculator to see which gives you a bigger deduction." }
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <div class="logo-icon">1099</div>
+      <div class="logo-text">Tax<span>Calcs</span>.com</div>
+    </a>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav">
+      <a href="/calculators.html">Calculators</a>
+      <a href="/deductions.html" class="active">Deductions</a>
+      <a href="/quarterly-taxes.html">Quarterly Taxes</a>
+      <a href="/platforms.html">By Platform</a>
+      <a href="/guides.html">Guides</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/se-tax-calculator.html" class="nav-cta">SE Tax Calculator</a>
+    </nav>
+  </div>
+</header>
+
+<!-- RATE BAR -->
+<div class="rate-bar">
+  🚗 2026 IRS Standard Mileage Rate: <strong>72.5¢ per mile</strong> — Enter your miles below to calculate your deduction instantly
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span>
+      <a href="/deductions.html">Deductions</a><span>›</span>
+      Mileage Deduction Calculator
+    </div>
+    <h1>Mileage Deduction Calculator <em>2026</em></h1>
+    <p>Calculate your exact IRS mileage tax deduction at 72.5¢ per mile. See your total deduction, exact tax savings, and monthly breakdown. Works for Uber, DoorDash, Instacart, Amazon Flex, and all gig workers.</p>
+    <div class="hero-pills">
+      <span class="pill green">✓ 2026 IRS rate: 72.5¢/mile</span>
+      <span class="pill">Tax savings calculated</span>
+      <span class="pill">Monthly breakdown</span>
+      <span class="pill">All platforms covered</span>
+    </div>
+  </div>
+</div>
+
+<!-- TOP AD -->
+<div class="container">
+  <div class="ad-slot ad-728"><!-- AdSense 728x90 -->Advertisement</div>
+</div>
+
+<!-- MAIN -->
+<div class="main-wrap">
+<main>
+
+  <!-- CALCULATOR -->
+  <div class="calc-card">
+    <div class="calc-header">
+      <h2>🚗 Mileage Deduction Calculator 2026</h2>
+      <p>Enter your miles and see your exact deduction and tax savings instantly</p>
+    </div>
+    <div class="calc-body">
+
+      <!-- PLATFORM QUICK SELECT -->
+      <div class="section-divider">🚘 Your Platform <span style="font-weight:400;font-size:10px;color:var(--green);letter-spacing:0;">(optional — prefills typical miles)</span></div>
+      <div class="platform-select">
+        <button class="plat-btn" onclick="setPlatform('uber', this)">Uber / Lyft</button>
+        <button class="plat-btn" onclick="setPlatform('doordash', this)">DoorDash</button>
+        <button class="plat-btn" onclick="setPlatform('instacart', this)">Instacart</button>
+        <button class="plat-btn" onclick="setPlatform('amazon', this)">Amazon Flex</button>
+        <button class="plat-btn" onclick="setPlatform('freelancer', this)">Freelancer</button>
+        <button class="plat-btn" onclick="setPlatform('custom', this)">Custom</button>
+      </div>
+
+      <!-- IRS RATE SELECTOR -->
+      <div class="section-divider">📋 IRS Rate Year</div>
+      <div class="rate-selector">
+        <button class="rate-btn active" onclick="setRate(0.725, this)">
+          <span class="rate-num">72.5¢</span>
+          <span class="rate-year">2026 ← Current</span>
+        </button>
+        <button class="rate-btn" onclick="setRate(0.67, this)">
+          <span class="rate-num">67.0¢</span>
+          <span class="rate-year">2024</span>
+        </button>
+        <button class="rate-btn" onclick="setRate(0.655, this)">
+          <span class="rate-num">65.5¢</span>
+          <span class="rate-year">2023</span>
+        </button>
+      </div>
+
+      <!-- MILES INPUT -->
+      <div class="section-divider">📍 Your Miles</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="total-miles">Total Business Miles <span class="tip">(full year)</span></label>
+          <div class="input-suffix" data-unit="mi">
+            <input type="number" id="total-miles" placeholder="15,000" min="0">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="avg-daily">OR — Average Miles Per Day <span class="tip">(we'll calculate)</span></label>
+          <div class="input-suffix" data-unit="mi/day">
+            <input type="number" id="avg-daily" placeholder="50" min="0" oninput="calcFromDaily()">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="work-days">Days Worked Per Week <span class="tip">(if using daily average)</span></label>
+          <select id="work-days">
+            <option value="3">3 days/week (part-time)</option>
+            <option value="4">4 days/week</option>
+            <option value="5" selected>5 days/week (full-time)</option>
+            <option value="6">6 days/week</option>
+            <option value="7">7 days/week</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="weeks-worked">Weeks Worked This Year</label>
+          <select id="weeks-worked">
+            <option value="12">12 weeks (started Q3)</option>
+            <option value="24">24 weeks (started mid-year)</option>
+            <option value="36">36 weeks (started Q2)</option>
+            <option value="48">48 weeks (full year minus breaks)</option>
+            <option value="52" selected>52 weeks (full year)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- INCOME FOR TAX SAVINGS -->
+      <div class="section-divider">💵 For Tax Savings Calculation</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="gross-income">Annual Gross 1099 Income <span class="tip">(to calculate tax savings)</span></label>
+          <div class="input-prefix"><input type="number" id="gross-income" placeholder="50,000" min="0"></div>
+        </div>
+        <div class="form-group">
+          <label for="tax-bracket">Federal Tax Bracket <span class="tip">(or enter income above)</span></label>
+          <select id="tax-bracket">
+            <option value="0.10">10% bracket</option>
+            <option value="0.12" selected>12% bracket (most gig workers)</option>
+            <option value="0.22">22% bracket</option>
+            <option value="0.24">24% bracket</option>
+            <option value="0.32">32% bracket</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="calc-btn" onclick="calculate()">🚗 Calculate My Mileage Deduction →</button>
+      <button class="reset-btn" onclick="resetForm()">↺ Reset</button>
+
+      <!-- RESULTS -->
+      <div class="results" id="results">
+        <div class="results-header">
+          <h3>🚗 Your 2026 Mileage Deduction</h3>
+          <p id="results-subtitle">Based on your miles driven</p>
+        </div>
+        <div class="results-body">
+
+          <div class="big-result">
+            <div class="big-result-label">Your Total Mileage Deduction</div>
+            <div class="big-result-value" id="r-deduction">$0</div>
+            <div class="big-result-sub" id="r-deduction-sub"></div>
+          </div>
+
+          <div class="result-grid">
+            <div class="r-box green">
+              <div class="r-label">Total Miles</div>
+              <div class="r-value green" id="r-miles">0</div>
+              <div class="r-sub">Business miles logged</div>
+            </div>
+            <div class="r-box amber">
+              <div class="r-label">Tax Savings (SE)</div>
+              <div class="r-value amber" id="r-se-savings">$0</div>
+              <div class="r-sub">Saved on 15.3% SE tax</div>
+            </div>
+            <div class="r-box">
+              <div class="r-label">Tax Savings (Income)</div>
+              <div class="r-value" id="r-income-savings">$0</div>
+              <div class="r-sub" id="r-bracket-sub">At 12% bracket</div>
+            </div>
+          </div>
+
+          <!-- TOTAL TAX SAVINGS -->
+          <div class="tax-savings-box">
+            <div class="tax-savings-row">
+              <span class="label">Mileage deduction amount</span>
+              <span class="val" id="ts-deduction">$0</span>
+            </div>
+            <div class="tax-savings-row">
+              <span class="label">SE tax saved (15.3% × 92.35%)</span>
+              <span class="val green" id="ts-se">$0</span>
+            </div>
+            <div class="tax-savings-row">
+              <span class="label">Income tax saved (your bracket)</span>
+              <span class="val green" id="ts-income">$0</span>
+            </div>
+            <div class="tax-savings-row">
+              <span class="label">💰 Total tax dollars saved</span>
+              <span class="val green" id="ts-total">$0</span>
+            </div>
+          </div>
+
+          <!-- MONTHLY BREAKDOWN -->
+          <div style="font-size:12px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;">Monthly Breakdown</div>
+          <div class="monthly-grid" id="monthly-grid"></div>
+
+          <div class="tracking-tip" id="tracking-tip"></div>
+          <p class="result-note">⚠️ You must keep a mileage log to claim this deduction. The IRS requires date, destination, business purpose, and miles for each trip. See tracking apps below.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- WHAT MILES QUALIFY -->
+  <div class="section">
+    <div class="section-label">What Counts</div>
+    <h2>Which Miles Can You Deduct?</h2>
+    <p>Not every mile you drive counts as a business deduction. The IRS is specific about what qualifies. Here's exactly what gig workers can and cannot deduct:</p>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--green2);font-size:15px;margin-top:0;">✅ Miles You CAN Deduct</h3>
+        <ul class="check-list">
+          <li><span class="icon">✅</span>Miles driven while carrying a passenger (Uber/Lyft)</li>
+          <li><span class="icon">✅</span>Miles driven to pick up a passenger (deadhead miles)</li>
+          <li><span class="icon">✅</span>Miles driving to pick up a delivery order</li>
+          <li><span class="icon">✅</span>Miles while delivering food, groceries, or packages</li>
+          <li><span class="icon">✅</span>Miles driving to a client meeting or job site</li>
+          <li><span class="icon">✅</span>Miles to buy business supplies</li>
+          <li><span class="icon">✅</span>Miles between two different work locations in the same day</li>
+          <li><span class="icon">✅</span>Miles driving to pick up a rental car for work</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="color:var(--red);font-size:15px;margin-top:0;">❌ Miles You CANNOT Deduct</h3>
+        <ul class="check-list">
+          <li><span class="icon">❌</span>Your daily commute from home to a regular workplace</li>
+          <li><span class="icon">❌</span>Personal errands run during a work day</li>
+          <li><span class="icon">❌</span>Miles while the app is off and you're not working</li>
+          <li><span class="icon">❌</span>Driving to get food or coffee for yourself</li>
+          <li><span class="icon">❌</span>Vacation or personal travel</li>
+          <li><span class="icon">❌</span>Miles if you're also claiming actual vehicle expenses for the same car</li>
+          <li><span class="icon">❌</span>Miles for a vehicle you don't own (rental, borrowed)</li>
+          <li><span class="icon">❌</span>Commuting from home to your first pickup (some dispute this — log everything)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="warn-box">
+      ⚠️ <strong>The "first mile" rule for gig workers:</strong> The IRS says your commute from home to your first job location is NOT deductible. However, once you accept your first trip/order, miles from that point onward are deductible. Many Uber and DoorDash drivers log ALL miles from the moment they turn the app on — keep detailed records and consult a CPA on your specific situation.
+    </div>
+  </div>
+
+  <!-- MIDDLE AD -->
+  <div class="ad-slot ad-728" style="margin-bottom:20px;"><!-- AdSense 728x90 -->Advertisement</div>
+
+  <!-- IRS RATES HISTORY -->
+  <div class="section">
+    <div class="section-label">IRS Rates History</div>
+    <h2>IRS Mileage Rates — 2019 to 2026</h2>
+    <p>The IRS adjusts the standard mileage rate annually based on fuel costs, vehicle depreciation, and insurance data. Here's the full history:</p>
+    <table class="info-table">
+      <thead><tr><th>Year</th><th>Rate (¢/mile)</th><th>Change</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr class="current-year"><td><strong>2026 ← Current</strong></td><td><strong>72.5¢</strong></td><td>+0.5¢</td><td>Updated for fuel and vehicle costs</td></tr>
+        <tr><td>2025</td><td>72.0¢</td><td>+3.0¢</td><td>Increased from 2024</td></tr>
+        <tr><td>2024</td><td>67.0¢</td><td>+1.5¢</td><td>IRS mid-year adjustment carried forward</td></tr>
+        <tr><td>2023</td><td>65.5¢</td><td>+3.0¢</td><td>Remained elevated after 2022 spike</td></tr>
+        <tr><td>2022 (H2)</td><td>62.5¢</td><td>+4.0¢</td><td>IRS rare mid-year increase due to fuel surge</td></tr>
+        <tr><td>2022 (H1)</td><td>58.5¢</td><td>+2.5¢</td><td>Started year at 58.5¢</td></tr>
+        <tr><td>2021</td><td>56.0¢</td><td>−1.5¢</td><td>Dropped due to lower fuel prices in 2020</td></tr>
+        <tr><td>2020</td><td>57.5¢</td><td>−0.5¢</td><td>Slight decrease</td></tr>
+        <tr><td>2019</td><td>58.0¢</td><td>+3.5¢</td><td>Significant increase</td></tr>
+      </tbody>
+    </table>
+    <div class="info-note">💡 At 72.5¢/mile, the 2026 rate is near its historic high — great news for gig workers with high mileage. Every 10,000 miles = <strong>$7,250 deduction</strong>.</div>
+
+    <h3>Standard Mileage vs. Actual Expense Method</h3>
+    <p>You have two options for deducting vehicle costs. You must choose one method per vehicle per year and cannot switch mid-year:</p>
+    <table class="info-table">
+      <thead><tr><th>Method</th><th>How It Works</th><th>Best For</th><th>Record Keeping</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Standard Mileage (72.5¢)</strong></td>
+          <td>Multiply total business miles × $0.725</td>
+          <td>Most gig workers, high mileage drivers</td>
+          <td>Just log your miles (date, miles, purpose)</td>
+        </tr>
+        <tr>
+          <td><strong>Actual Expense Method</strong></td>
+          <td>Track real costs: gas, insurance, repairs, depreciation × business-use %</td>
+          <td>Low-mileage drivers with expensive vehicles</td>
+          <td>Every receipt for the entire year</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="green-box">✅ <strong>For almost every Uber, DoorDash, and Instacart driver:</strong> the standard mileage method wins. You drive a lot, so 72.5¢ × high miles = large deduction without any receipt tracking beyond your mileage log.</div>
+  </div>
+
+  <!-- TRACKING APPS -->
+  <div class="section">
+    <div class="section-label">Track Your Miles</div>
+    <h2>Best Mileage Tracking Apps for Gig Workers</h2>
+    <p>The IRS requires a contemporaneous mileage log — meaning you track miles as they happen, not from memory months later. These apps do it automatically using GPS.</p>
+    <div class="app-grid">
+      <div class="app-card">
+        <div class="app-name">Stride</div>
+        <span class="app-price price-free">100% Free</span>
+        <div class="app-desc">Auto-tracks mileage via GPS. Also tracks expenses and calculates your deductions. Most popular among DoorDash and Uber drivers. No premium version needed.</div>
+      </div>
+      <div class="app-card">
+        <div class="app-name">MileIQ</div>
+        <span class="app-price price-paid">$5.99/mo</span>
+        <div class="app-desc">Automatic tracking, swipe left/right to classify trips as business or personal. IRS-compliant reports. Very accurate — used by millions of gig workers.</div>
+      </div>
+      <div class="app-card">
+        <div class="app-name">Everlance</div>
+        <span class="app-price price-paid">Free / $8/mo</span>
+        <div class="app-desc">Automatic GPS tracking, expense management, tax reports. Free plan covers 30 trips/month. Premium adds unlimited trips and mileage reports.</div>
+      </div>
+      <div class="app-card">
+        <div class="app-name">Hurdlr</div>
+        <span class="app-price price-paid">Free / $8/mo</span>
+        <div class="app-desc">Designed for gig economy workers. Combines mileage, expense tracking, and quarterly tax reminders. Connects to bank accounts for auto-expense categorization.</div>
+      </div>
+      <div class="app-card">
+        <div class="app-name">TripLog</div>
+        <span class="app-price price-paid">$5.99/mo</span>
+        <div class="app-desc">IRS-compliant auto-tracking, PDF reports ready for tax time. Good for workers with multiple gig platforms to separate business purposes.</div>
+      </div>
+      <div class="app-card">
+        <div class="app-name">Google Sheets (DIY)</div>
+        <span class="app-price price-free">Free</span>
+        <div class="app-desc">Manual logging: date, start/end location, miles, purpose. Use a template. Not automated but free and fully IRS-compliant if filled out daily.</div>
+      </div>
+    </div>
+    <div class="warn-box">
+      ⚠️ <strong>Uber and DoorDash do NOT track all your miles.</strong> Their apps only count miles while you have an active trip — not deadhead miles (driving to pick up), time between orders, or miles after you drop off. A separate tracking app captures 20–40% more miles that the platform misses.
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section">
+    <div class="section-label">Common Questions</div>
+    <h2>Mileage Deduction FAQ</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What is the IRS mileage rate for 2026? <span class="arrow">▾</span></button>
+        <div class="faq-a">The IRS standard mileage rate for 2026 is <strong>72.5 cents per mile</strong> for business use. This applies to self-employed workers, gig workers, freelancers, and independent contractors. The IRS typically announces the rate in December for the following year. Always verify at IRS.gov before filing.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Does DoorDash track my miles for taxes? <span class="arrow">▾</span></button>
+        <div class="faq-a">DoorDash only tracks miles while you have an active delivery — from acceptance to drop-off. It does <strong>not</strong> track miles driven to pick up the first order, miles between orders when the app is idle, or miles after your last drop-off. Studies show gig workers miss 25–40% of deductible miles by relying only on platform data. Use a separate mileage app like Stride (free) to capture everything.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Can I deduct mileage if I use my car for personal use too? <span class="arrow">▾</span></button>
+        <div class="faq-a">Yes — you only deduct the <em>business percentage</em> of miles driven. Track both total miles and business miles for the year. If you drove 25,000 total miles and 18,000 were for work, your business-use percentage is 72% and you deduct 18,000 × 72.5¢ = $13,050. You do NOT need to track the personal miles — just the business ones.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What records do I need to claim mileage? <span class="arrow">▾</span></button>
+        <div class="faq-a">The IRS requires a <strong>contemporaneous mileage log</strong> with: (1) date of each trip, (2) destination or route, (3) business purpose, and (4) miles driven. "Contemporaneous" means recorded at or near the time of the trip — not reconstructed from memory at tax time. A mileage app satisfies all these requirements automatically. Keep records for at least 3 years after filing.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Can I deduct mileage AND actual vehicle expenses? <span class="arrow">▾</span></button>
+        <div class="faq-a">No — you must choose one method per vehicle per year. If you use the standard mileage rate, you cannot separately deduct gas, insurance, oil changes, or depreciation for that vehicle. If you use actual expenses, you cannot use the standard rate. Most gig workers should use the standard mileage rate — it's simpler and usually results in a larger deduction for high-mileage vehicles.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Does the mileage deduction reduce my self-employment tax? <span class="arrow">▾</span></button>
+        <div class="faq-a">Yes — and this is the part most people miss. Mileage reduces your <strong>net profit</strong>, which is the base for SE tax calculation. So a $7,250 mileage deduction saves you not just income tax but also <strong>$1,109 in SE tax</strong> (15.3% × 92.35% × $7,250). Use our <a href="/se-tax-calculator.html">SE tax calculator</a> to see your full picture including the mileage deduction.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RELATED -->
+  <div class="section">
+    <div class="section-label">More Free Tools</div>
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/se-tax-calculator.html" class="related-card">
+        <h4>🧮 SE Tax Calculator</h4>
+        <p>Full tax bill with mileage already included</p>
+      </a>
+      <a href="/quarterly-tax-calculator.html" class="related-card">
+        <h4>📅 Quarterly Calculator</h4>
+        <p>How much to pay the IRS each quarter</p>
+      </a>
+      <a href="/doordash-tax-calculator.html" class="related-card">
+        <h4>🍔 DoorDash Tax Calculator</h4>
+        <p>DoorDash-specific tax tool with mileage</p>
+      </a>
+      <a href="/uber-lyft-tax-calculator.html" class="related-card">
+        <h4>🚘 Uber & Lyft Calculator</h4>
+        <p>Rideshare tax calculator with deadhead miles</p>
+      </a>
+      <a href="/deductions.html" class="related-card">
+        <h4>✂️ All 20 Deductions</h4>
+        <p>Every tax deduction available to gig workers</p>
+      </a>
+      <a href="/freelancer-tax-calculator.html" class="related-card">
+        <h4>💻 Freelancer Calculator</h4>
+        <p>Real take-home pay after all taxes and deductions</p>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+
+  <div class="sidebar-card" style="padding:14px;">
+    <div class="rate-sidebar">
+      <div style="font-size:12px;color:rgba(255,255,255,0.6);margin-bottom:2px;">2026 IRS Rate</div>
+      <div class="rate-big">72.5¢</div>
+      <div class="rate-desc">per business mile<br>10,000 miles = <strong style="color:var(--amber);">$7,250</strong> deduction</div>
+    </div>
+  </div>
+
+  <div class="cta-card">
+    <h3>🧮 See Your Full Tax Bill</h3>
+    <p>Enter your mileage deduction into our SE Tax Calculator to see exactly how much you owe — and how much you save.</p>
+    <a href="/se-tax-calculator.html">Open SE Tax Calculator →</a>
+  </div>
+
+  <div class="sidebar-card" style="padding:0;overflow:hidden;">
+    <div class="ad-slot ad-300"><!-- AdSense 300x250 -->Advertisement</div>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>Miles → Deduction</h3>
+    <div class="quick-links">
+      <a href="#">5,000 miles = <strong>$3,625</strong></a>
+      <a href="#">10,000 miles = <strong>$7,250</strong></a>
+      <a href="#">15,000 miles = <strong>$10,875</strong></a>
+      <a href="#">20,000 miles = <strong>$14,500</strong></a>
+      <a href="#">25,000 miles = <strong>$18,125</strong></a>
+      <a href="#">30,000 miles = <strong>$21,750</strong></a>
+    </div>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>Quick Links</h3>
+    <div class="quick-links">
+      <a href="/se-tax-calculator.html">SE Tax Calculator</a>
+      <a href="/quarterly-tax-calculator.html">Quarterly Calculator</a>
+      <a href="/deductions.html">All 20 Deductions</a>
+      <a href="/uber-taxes.html">Uber Driver Taxes</a>
+      <a href="/doordash-taxes.html">DoorDash Taxes</a>
+      <a href="/guides.html">All Tax Guides</a>
+      <a href="/faq.html">Full FAQ</a>
+    </div>
+  </div>
+
+  <div class="sidebar-card" style="padding:0;overflow:hidden;">
+    <div class="ad-slot ad-300"><!-- AdSense 300x250 -->Advertisement</div>
+  </div>
+
+</aside>
+</div>
+
+<!-- BOTTOM AD -->
+<div class="container">
+  <div class="ad-slot ad-728"><!-- AdSense 728x90 -->Advertisement</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-text">1099Tax<span style="color:var(--amber)">Calcs</span>.com</span>
+        <p>Free tax calculators built for America's 70 million gig workers and freelancers. Calculate what you owe, discover deductions, and never miss a quarterly deadline.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Calculators</h4>
+        <a href="/se-tax-calculator.html">SE Tax Calculator</a>
+        <a href="/quarterly-tax-calculator.html">Quarterly Calculator</a>
+        <a href="/mileage-calculator.html">Mileage Calculator</a>
+        <a href="/freelancer-tax-calculator.html">Freelancer Calculator</a>
+        <a href="/1099-vs-w2-calculator.html">1099 vs W-2</a>
+      </div>
+      <div class="footer-col">
+        <h4>By Platform</h4>
+        <a href="/uber-taxes.html">Uber Driver Taxes</a>
+        <a href="/doordash-taxes.html">DoorDash Taxes</a>
+        <a href="/instacart-taxes.html">Instacart Taxes</a>
+        <a href="/amazon-flex-taxes.html">Amazon Flex</a>
+        <a href="/upwork-fiverr-taxes.html">Upwork & Fiverr</a>
+      </div>
+      <div class="footer-col">
+        <h4>Guides</h4>
+        <a href="/deductions.html">Top 20 Deductions</a>
+        <a href="/quarterly-taxes.html">Quarterly Tax Guide</a>
+        <a href="/guides.html">All Tax Guides</a>
+        <a href="/faq.html">FAQ</a>
+        <a href="/about.html">About</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 1099TaxCalcs.com — For informational purposes only. Not tax advice.</span>
+      <div style="display:flex;gap:16px;">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+        <a href="/about.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── NAV ──
+function toggleNav() { document.getElementById('main-nav').classList.toggle('open'); }
+
+// ── STATE ──
+let selectedRate = 0.725;
+const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+// ── RATE SELECTOR ──
+function setRate(rate, btn) {
+  selectedRate = rate;
+  document.querySelectorAll('.rate-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+// ── PLATFORM PRESETS ──
+const platformPresets = {
+  uber:       { miles: 22000, days: 5, label: 'Uber / Lyft driver' },
+  doordash:   { miles: 18000, days: 5, label: 'DoorDash driver' },
+  instacart:  { miles: 15000, days: 4, label: 'Instacart shopper' },
+  amazon:     { miles: 20000, days: 5, label: 'Amazon Flex driver' },
+  freelancer: { miles: 5000,  days: 3, label: 'Freelancer' },
+  custom:     { miles: 0,     days: 5, label: 'Custom' }
+};
+function setPlatform(key, btn) {
+  document.querySelectorAll('.plat-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const preset = platformPresets[key];
+  if (preset.miles > 0) document.getElementById('total-miles').value = preset.miles;
+}
+
+// ── CALC FROM DAILY ──
+function calcFromDaily() {
+  const daily = parseFloat(document.getElementById('avg-daily').value) || 0;
+  const days  = parseFloat(document.getElementById('work-days').value) || 5;
+  const weeks = parseFloat(document.getElementById('weeks-worked').value) || 52;
+  if (daily > 0) document.getElementById('total-miles').value = Math.round(daily * days * weeks);
+}
+
+// ── FORMAT ──
+const fmt  = v => '$' + Math.round(v).toLocaleString();
+const fmtN = v => Math.round(v).toLocaleString();
+
+// ── CALCULATE ──
+function calculate() {
+  let totalMiles = parseFloat(document.getElementById('total-miles').value) || 0;
+
+  // If no total miles, try calculating from daily
+  if (totalMiles <= 0) {
+    const daily = parseFloat(document.getElementById('avg-daily').value) || 0;
+    const days  = parseFloat(document.getElementById('work-days').value) || 5;
+    const weeks = parseFloat(document.getElementById('weeks-worked').value) || 52;
+    totalMiles = daily * days * weeks;
+  }
+
+  if (totalMiles <= 0) { alert('Please enter your business miles.'); return; }
+
+  const grossIncome = parseFloat(document.getElementById('gross-income').value) || 0;
+  let bracket = parseFloat(document.getElementById('tax-bracket').value) || 0.12;
+
+  // Auto-detect bracket from income
+  if (grossIncome > 0) {
+    if (grossIncome > 243725) bracket = 0.35;
+    else if (grossIncome > 103350) bracket = 0.24;
+    else if (grossIncome > 52850)  bracket = 0.22;
+    else if (grossIncome > 23850)  bracket = 0.12;
+    else bracket = 0.10;
+    document.getElementById('tax-bracket').value = bracket;
+  }
+
+  // Deduction
+  const deduction    = totalMiles * selectedRate;
+  // SE tax saved: deduction × 92.35% × 15.3%
+  const seSaved      = deduction * 0.9235 * 0.153;
+  // Income tax saved
+  const incomeSaved  = deduction * bracket;
+  const totalSaved   = seSaved + incomeSaved;
+
+  // Monthly breakdown (evenly distributed)
+  const milesPerMonth = totalMiles / 12;
+  const dedPerMonth   = deduction / 12;
+
+  // Update main results
+  document.getElementById('r-deduction').textContent     = fmt(deduction);
+  document.getElementById('r-deduction-sub').textContent = `${fmtN(totalMiles)} miles × ${(selectedRate * 100).toFixed(1)}¢ per mile`;
+  document.getElementById('r-miles').textContent         = fmtN(totalMiles);
+  document.getElementById('r-se-savings').textContent    = fmt(seSaved);
+  document.getElementById('r-income-savings').textContent= fmt(incomeSaved);
+  document.getElementById('r-bracket-sub').textContent   = `At ${(bracket * 100).toFixed(0)}% bracket`;
+  document.getElementById('results-subtitle').textContent= `${fmtN(totalMiles)} miles at ${(selectedRate*100).toFixed(1)}¢/mile`;
+
+  // Tax savings breakdown
+  document.getElementById('ts-deduction').textContent = fmt(deduction);
+  document.getElementById('ts-se').textContent        = fmt(seSaved);
+  document.getElementById('ts-income').textContent    = fmt(incomeSaved);
+  document.getElementById('ts-total').textContent     = fmt(totalSaved);
+
+  // Monthly grid
+  const grid = document.getElementById('monthly-grid');
+  grid.innerHTML = months.map(m => `
+    <div class="month-box">
+      <div class="month-name">${m}</div>
+      <div class="month-miles">${fmtN(milesPerMonth)} mi</div>
+      <div class="month-ded">${fmt(dedPerMonth)}</div>
+    </div>
+  `).join('');
+
+  // Tracking tip
+  const perDay = Math.round(totalMiles / 365);
+  document.getElementById('tracking-tip').innerHTML =
+    `💡 <strong>Tracking tip:</strong> You average ~${perDay} business miles per day. Download <strong>Stride</strong> (free) to auto-track every mile via GPS — it captures trips your gig app misses and generates IRS-ready reports instantly at tax time.`;
+
+  document.getElementById('results').classList.add('show');
+  document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+// ── RESET ──
+function resetForm() {
+  ['total-miles','avg-daily','gross-income'].forEach(id => {
+    document.getElementById(id).value = '';
+  });
+  document.querySelectorAll('.plat-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('results').classList.remove('show');
+}
+
+// ── FAQ ──
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = btn.classList.contains('open');
+  document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+  if (!isOpen) { btn.classList.add('open'); answer.classList.add('open'); }
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Enter') calculate(); });
+</script>
+
+</body>
+</html>
