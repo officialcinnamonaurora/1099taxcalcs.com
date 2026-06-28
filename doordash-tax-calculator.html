@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free DoorDash tax calculator for 2026. Calculate exactly how much you owe in self-employment tax, federal income tax, and quarterly payments as a DoorDash driver. Includes mileage deduction.">
+<meta name="keywords" content="DoorDash tax calculator, DoorDash taxes 2026, how much tax do DoorDash drivers pay, DoorDash self employment tax, DoorDash mileage deduction, DoorDash 1099 tax">
+<meta name="author" content="1099TaxCalcs.com">
+<meta property="og:title" content="DoorDash Tax Calculator 2026 — Free | 1099TaxCalcs.com">
+<meta property="og:description" content="Calculate exactly what you owe in taxes as a DoorDash driver. Includes mileage, hot bag, phone deductions. Free, instant, no signup.">
+<meta property="og:url" content="https://1099taxcalcs.com/doordash-tax-calculator.html">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://1099taxcalcs.com/doordash-tax-calculator.html">
+<title>DoorDash Tax Calculator 2026 — What You Actually Owe | 1099TaxCalcs.com</title>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+<style>
+  :root {
+    --navy:   #0D1F3C;
+    --navy2:  #162847;
+    --green:  #00A878;
+    --green2: #008F65;
+    --amber:  #F5A623;
+    --dd-red: #FF3008;
+    --light:  #F4F7FC;
+    --white:  #FFFFFF;
+    --gray1:  #F0F4FA;
+    --gray2:  #E2E8F4;
+    --gray3:  #94A3B8;
+    --text:   #1A2A44;
+    --text2:  #4A5A72;
+    --red:    #E53E3E;
+    --font:   'Segoe UI', system-ui, -apple-system, sans-serif;
+    --radius: 8px;
+    --shadow: 0 2px 12px rgba(13,31,60,0.10);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); color: var(--text); background: var(--light); font-size: 16px; line-height: 1.6; }
+  a { color: var(--green); text-decoration: none; }
+  a:hover { color: var(--green2); text-decoration: underline; }
+
+  /* HEADER */
+  header { background: var(--navy); padding: 0 24px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+  .header-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-icon { width: 38px; height: 38px; background: var(--green); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: white; letter-spacing: -1px; flex-shrink: 0; }
+  .logo-text { color: white; font-size: 17px; font-weight: 700; }
+  .logo-text span { color: var(--amber); }
+  nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+  nav a { color: rgba(255,255,255,0.85); font-size: 13px; padding: 6px 10px; border-radius: 6px; transition: all 0.15s; white-space: nowrap; }
+  nav a:hover { background: rgba(255,255,255,0.1); color: white; text-decoration: none; }
+  nav a.active { color: var(--amber); }
+  .nav-cta { background: var(--green) !important; color: white !important; font-weight: 600; padding: 7px 14px !important; }
+  .nav-cta:hover { background: var(--green2) !important; }
+  .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: white; margin: 5px 0; border-radius: 2px; }
+  @media(max-width: 768px) {
+    .hamburger { display: block; }
+    nav { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--navy2); padding: 12px 16px; flex-direction: column; align-items: flex-start; gap: 2px; }
+    nav.open { display: flex; }
+    nav a { width: 100%; padding: 10px 12px; }
+  }
+
+  /* DD HERO */
+  .page-hero { background: linear-gradient(135deg, #1a0505 0%, #2d0808 50%, var(--navy2) 100%); color: white; padding: 40px 24px 36px; position: relative; overflow: hidden; }
+  .page-hero::before { content: ''; position: absolute; top: -40px; right: -60px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(255,48,8,0.15) 0%, transparent 70%); border-radius: 50%; }
+  .page-hero-inner { max-width: 1200px; margin: 0 auto; position: relative; }
+  .breadcrumb { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 12px; }
+  .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--green); }
+  .breadcrumb span { margin: 0 6px; }
+  .dd-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,48,8,0.2); border: 1px solid rgba(255,48,8,0.4); color: #FF8A75; font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 14px; }
+  .page-hero h1 { font-size: clamp(24px, 3.5vw, 38px); font-weight: 800; line-height: 1.2; margin-bottom: 10px; }
+  .page-hero h1 em { color: var(--dd-red); font-style: normal; }
+  .page-hero p { font-size: 15px; color: rgba(255,255,255,0.75); max-width: 620px; line-height: 1.7; }
+  .hero-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+  .pill { font-size: 11px; font-weight: 600; padding: 4px 12px; border-radius: 20px; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8); border: 1px solid rgba(255,255,255,0.15); }
+  .pill.green { background: rgba(0,168,120,0.2); color: #5EEAD4; border-color: rgba(0,168,120,0.3); }
+
+  /* INFO BAR */
+  .info-bar { background: var(--dd-red); color: white; padding: 10px 24px; text-align: center; font-size: 13px; font-weight: 600; }
+
+  /* LAYOUT */
+  .main-wrap { max-width: 1200px; margin: 0 auto; padding: 32px 24px; display: grid; grid-template-columns: 1fr 300px; gap: 32px; align-items: start; }
+  @media(max-width: 960px) { .main-wrap { grid-template-columns: 1fr; } }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* ADS */
+  .ad-slot { background: var(--gray1); border: 1px dashed var(--gray2); border-radius: var(--radius); text-align: center; color: var(--gray3); font-size: 11px; padding: 8px; }
+  .ad-728 { width: 100%; height: 90px; line-height: 74px; margin: 20px 0; }
+  .ad-300 { width: 100%; height: 250px; line-height: 234px; }
+
+  /* CALC CARD */
+  .calc-card { background: white; border-radius: 16px; box-shadow: 0 4px 24px rgba(13,31,60,0.13); overflow: hidden; margin-bottom: 24px; }
+  .calc-header { background: var(--dd-red); color: white; padding: 18px 24px; }
+  .calc-header h2 { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+  .calc-header p { font-size: 13px; color: rgba(255,255,255,0.75); }
+  .calc-body { padding: 24px; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media(max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+  .form-group { margin-bottom: 14px; }
+  .form-group label { display: block; font-size: 12px; font-weight: 600; color: var(--text2); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .form-group label .tip { font-size: 11px; color: var(--green); font-weight: 400; text-transform: none; letter-spacing: 0; margin-left: 4px; }
+  .form-group input, .form-group select { width: 100%; padding: 10px 14px; border: 1.5px solid var(--gray2); border-radius: var(--radius); font-size: 15px; color: var(--text); background: var(--gray1); transition: border-color 0.15s; font-family: var(--font); }
+  .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--dd-red); background: white; }
+  .input-prefix { position: relative; }
+  .input-prefix::before { content: '$'; position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--gray3); font-size: 15px; font-weight: 600; }
+  .input-prefix input { padding-left: 26px; }
+  .input-suffix-mi { position: relative; }
+  .input-suffix-mi::after { content: 'miles'; position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: var(--gray3); font-size: 12px; }
+  .input-suffix-mi input { padding-right: 46px; }
+
+  .section-divider { font-size: 11px; font-weight: 700; color: var(--dd-red); text-transform: uppercase; letter-spacing: 0.08em; padding: 10px 0 8px; border-top: 1px solid var(--gray2); margin-top: 4px; display: flex; align-items: center; gap: 8px; }
+  .section-divider::after { content: ''; flex: 1; height: 1px; background: var(--gray2); }
+
+  /* INCOME TYPE TOGGLE */
+  .income-toggle { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1.5px solid var(--gray2); border-radius: var(--radius); overflow: hidden; margin-bottom: 16px; }
+  .income-btn { padding: 10px 14px; background: var(--gray1); border: none; font-size: 13px; font-weight: 600; color: var(--text2); cursor: pointer; font-family: var(--font); transition: all 0.15s; text-align: center; }
+  .income-btn.active { background: var(--dd-red); color: white; }
+  .income-btn:first-child { border-right: 1px solid var(--gray2); }
+
+  .calc-btn { width: 100%; padding: 14px; background: var(--dd-red); color: white; font-size: 16px; font-weight: 700; border: none; border-radius: var(--radius); cursor: pointer; transition: background 0.15s; font-family: var(--font); }
+  .calc-btn:hover { background: #cc2600; }
+  .reset-btn { width: 100%; padding: 9px; background: transparent; color: var(--text2); font-size: 13px; border: 1.5px solid var(--gray2); border-radius: var(--radius); cursor: pointer; font-family: var(--font); margin-top: 8px; transition: all 0.15s; }
+  .reset-btn:hover { border-color: var(--dd-red); color: var(--dd-red); }
+
+  /* RESULTS */
+  .results { display: none; margin-top: 24px; }
+  .results.show { display: block; }
+  .results-header { background: var(--dd-red); color: white; border-radius: 12px 12px 0 0; padding: 14px 20px; }
+  .results-header h3 { font-size: 15px; font-weight: 700; }
+  .results-header p { font-size: 12px; color: rgba(255,255,255,0.7); margin-top: 2px; }
+  .results-body { background: white; border: 1.5px solid var(--gray2); border-top: none; border-radius: 0 0 12px 12px; padding: 20px; }
+
+  .result-total { background: var(--navy); border-radius: var(--radius); padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+  .result-total .label { color: rgba(255,255,255,0.75); font-size: 13px; font-weight: 600; }
+  .result-total .value { font-size: 28px; font-weight: 800; color: var(--amber); }
+
+  .result-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 12px; }
+  @media(max-width: 500px) { .result-grid { grid-template-columns: 1fr; } }
+  .r-box { background: var(--gray1); border-radius: var(--radius); padding: 12px 14px; border-left: 3px solid var(--gray2); }
+  .r-box.green { border-left-color: var(--green); background: #E9F9F4; }
+  .r-box.red { border-left-color: var(--dd-red); background: #FFF0EE; }
+  .r-box.amber { border-left-color: var(--amber); background: #FFF8EC; }
+  .r-box.navy { border-left-color: var(--navy); background: #EEF2FA; }
+  .r-label { font-size: 11px; font-weight: 600; color: var(--text2); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .r-value { font-size: 20px; font-weight: 800; color: var(--navy); }
+  .r-value.green { color: var(--green2); }
+  .r-value.red { color: var(--dd-red); }
+  .r-value.amber { color: #B7791F; }
+  .r-sub { font-size: 11px; color: var(--text2); margin-top: 3px; }
+
+  .quarterly-box { background: #E9F9F4; border: 1.5px solid rgba(0,168,120,0.25); border-radius: var(--radius); padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+  .quarterly-box .ql { font-size: 13px; font-weight: 600; color: var(--navy); }
+  .quarterly-box .qv { font-size: 22px; font-weight: 800; color: var(--green2); }
+
+  /* BREAKDOWN TABLE */
+  .breakdown-table { width: 100%; font-size: 13px; border-collapse: collapse; margin-bottom: 12px; }
+  .breakdown-table td { padding: 7px 4px; border-bottom: 1px solid var(--gray2); color: var(--text2); }
+  .breakdown-table td:last-child { text-align: right; font-weight: 600; color: var(--navy); }
+  .breakdown-table tr:last-child td { border-bottom: none; }
+  .breakdown-table .total-row td { font-weight: 700; color: var(--navy); border-top: 2px solid var(--gray2); padding-top: 10px; font-size: 14px; }
+  .breakdown-table .saved-row td { color: var(--green2); font-weight: 600; }
+
+  .take-home-box { background: linear-gradient(135deg, var(--navy), var(--navy2)); border-radius: var(--radius); padding: 14px 18px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; }
+  .take-home-box .label { color: rgba(255,255,255,0.7); font-size: 13px; }
+  .take-home-box .value { font-size: 24px; font-weight: 800; color: #5EEAD4; }
+
+  .save-tip { background: #FFF8EC; border: 1px solid #F5D78E; border-radius: var(--radius); padding: 12px 14px; font-size: 13px; color: #7A4F00; line-height: 1.6; margin-bottom: 10px; }
+  .result-note { font-size: 11px; color: var(--gray3); text-align: center; margin-top: 10px; line-height: 1.6; }
+
+  /* CONTENT */
+  .section { background: white; border-radius: 12px; padding: 28px; margin-bottom: 20px; box-shadow: var(--shadow); }
+  .section-label { font-size: 11px; font-weight: 700; color: var(--dd-red); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+  .section h2 { font-size: 22px; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
+  .section h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin: 20px 0 8px; }
+  .section p { color: var(--text2); line-height: 1.8; margin-bottom: 12px; }
+  .section ul, .section ol { color: var(--text2); line-height: 1.8; margin: 8px 0 12px 20px; }
+  .section li { margin-bottom: 6px; }
+  .section strong { color: var(--navy); }
+
+  /* DEDUCTION CARDS */
+  .ded-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin-top: 14px; }
+  .ded-card { background: var(--gray1); border: 1.5px solid var(--gray2); border-radius: var(--radius); padding: 14px 16px; }
+  .ded-icon { font-size: 22px; margin-bottom: 6px; }
+  .ded-name { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .ded-amount { font-size: 12px; font-weight: 600; color: var(--green2); margin-bottom: 4px; }
+  .ded-desc { font-size: 12px; color: var(--text2); line-height: 1.5; }
+
+  /* EXAMPLE SCENARIO */
+  .scenario-box { background: #FFF0EE; border: 1.5px solid rgba(255,48,8,0.2); border-radius: var(--radius); padding: 18px 20px; margin: 14px 0; }
+  .scenario-box h4 { font-size: 13px; font-weight: 700; color: var(--dd-red); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; }
+  .scenario-table { width: 100%; font-size: 13px; }
+  .scenario-table td { padding: 5px 0; color: var(--text2); }
+  .scenario-table td:last-child { text-align: right; font-weight: 600; color: var(--navy); }
+  .scenario-table .total-row td { border-top: 1px solid rgba(255,48,8,0.2); padding-top: 8px; font-weight: 700; color: var(--navy); font-size: 14px; }
+  .scenario-table .saved-row td { color: var(--green2); }
+
+  /* INFO TABLE */
+  .info-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 14px 0; }
+  .info-table th { background: var(--navy); color: white; padding: 10px 14px; text-align: left; font-size: 12px; letter-spacing: 0.04em; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid var(--gray2); color: var(--text2); }
+  .info-table tr:nth-child(even) td { background: var(--gray1); }
+  .info-table strong { color: var(--navy); }
+
+  /* BOXES */
+  .warn-box { background: #FFF8EC; border: 1px solid #F5D78E; border-radius: var(--radius); padding: 14px 16px; font-size: 13px; color: #7A4F00; line-height: 1.6; margin: 14px 0; }
+  .info-note { background: #EEF2FA; border: 1px solid #C7D4EE; border-radius: var(--radius); padding: 14px 16px; font-size: 13px; color: var(--text2); line-height: 1.6; margin: 14px 0; }
+  .green-box { background: #E9F9F4; border: 1px solid rgba(0,168,120,0.3); border-radius: var(--radius); padding: 14px 16px; font-size: 13px; color: #065F46; line-height: 1.6; margin: 14px 0; }
+
+  /* FAQ */
+  .faq-list { margin-top: 10px; }
+  .faq-item { border-bottom: 1px solid var(--gray2); }
+  .faq-q { width: 100%; text-align: left; background: none; border: none; padding: 14px 0; font-size: 15px; font-weight: 600; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: var(--font); }
+  .faq-q:hover { color: var(--dd-red); }
+  .faq-q .arrow { font-size: 18px; color: var(--dd-red); transition: transform 0.2s; flex-shrink: 0; margin-left: 12px; }
+  .faq-q.open .arrow { transform: rotate(180deg); }
+  .faq-a { font-size: 14px; color: var(--text2); line-height: 1.8; padding-bottom: 14px; display: none; }
+  .faq-a.open { display: block; }
+
+  /* RELATED */
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; margin-top: 12px; }
+  .related-card { background: var(--gray1); border: 1.5px solid var(--gray2); border-radius: var(--radius); padding: 14px 16px; text-decoration: none; transition: all 0.15s; display: block; }
+  .related-card:hover { border-color: var(--green); background: white; text-decoration: none; }
+  .related-card h4 { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+  .related-card p { font-size: 12px; color: var(--text2); margin: 0; }
+
+  /* SIDEBAR */
+  .sidebar { display: flex; flex-direction: column; gap: 18px; }
+  .sidebar-card { background: white; border-radius: 12px; padding: 18px; box-shadow: var(--shadow); }
+  .sidebar-card h3 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 10px; border-bottom: 2px solid var(--dd-red); padding-bottom: 7px; }
+  .cta-card { background: linear-gradient(135deg, #1a0505, #2d0808); color: white; border-radius: 12px; padding: 18px; }
+  .cta-card h3 { font-size: 14px; font-weight: 700; color: white; margin-bottom: 6px; border: none; padding: 0; }
+  .cta-card p { font-size: 12px; color: rgba(255,255,255,0.7); margin-bottom: 12px; line-height: 1.6; }
+  .cta-card a { display: block; background: var(--dd-red); color: white; text-align: center; padding: 9px; border-radius: var(--radius); font-weight: 700; font-size: 13px; text-decoration: none; }
+  .cta-card a:hover { background: #cc2600; }
+  .quick-links a { display: flex; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--gray2); font-size: 13px; color: var(--text); text-decoration: none; }
+  .quick-links a:last-child { border-bottom: none; }
+  .quick-links a:hover { color: var(--dd-red); }
+  .quick-links a::before { content: '→'; color: var(--dd-red); font-weight: 700; }
+
+  /* DD STATS */
+  .dd-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 14px 0; }
+  .dd-stat { background: var(--gray1); border-radius: var(--radius); padding: 12px; text-align: center; }
+  .dd-stat .val { font-size: 20px; font-weight: 800; color: var(--navy); }
+  .dd-stat .lbl { font-size: 11px; color: var(--text2); margin-top: 2px; line-height: 1.4; }
+
+  /* FOOTER */
+  footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 40px 24px 24px; margin-top: 48px; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 32px; }
+  .footer-brand .logo-text { font-size: 18px; color: white; display: block; margin-bottom: 8px; }
+  .footer-brand p { font-size: 13px; line-height: 1.7; }
+  .footer-col h4 { color: white; font-size: 13px; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,0.55); margin-bottom: 7px; text-decoration: none; }
+  .footer-col a:hover { color: var(--green); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 12px; }
+  .footer-bottom a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .footer-bottom a:hover { color: var(--green); }
+  @media(max-width: 700px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much tax do DoorDash drivers pay?",
+      "acceptedAnswer": { "@type": "Answer", "text": "DoorDash drivers pay self-employment tax of 15.3% on their net profit, plus federal income tax. On $40,000 gross DoorDash income with $8,000 in deductions (mileage, hot bag, phone), a single filer in a no-income-tax state owes approximately $6,100 in SE tax and $2,200 in federal income tax — about $8,300 total, or 21% of gross earnings." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does DoorDash take taxes out of my pay?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. DoorDash does not withhold any taxes from your earnings. As an independent contractor, you are responsible for paying all taxes yourself — including self-employment tax and federal and state income tax. You must make quarterly estimated tax payments to the IRS to avoid penalties." }
+    },
+    {
+      "@type": "Question",
+      "name": "What can DoorDash drivers deduct on their taxes?",
+      "acceptedAnswer": { "@type": "Answer", "text": "DoorDash drivers can deduct: mileage at 72.5 cents per mile (2026), insulated delivery bags, a percentage of their phone bill, phone mounts and car accessories, parking fees, tolls, and a portion of their car insurance and maintenance if using actual expenses. Mileage is typically the largest deduction." }
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <div class="logo-icon">1099</div>
+      <div class="logo-text">Tax<span>Calcs</span>.com</div>
+    </a>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav">
+      <a href="/calculators.html">Calculators</a>
+      <a href="/deductions.html">Deductions</a>
+      <a href="/quarterly-taxes.html">Quarterly Taxes</a>
+      <a href="/platforms.html" class="active">By Platform</a>
+      <a href="/guides.html">Guides</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/se-tax-calculator.html" class="nav-cta">SE Tax Calculator</a>
+    </nav>
+  </div>
+</header>
+
+<!-- INFO BAR -->
+<div class="info-bar">
+  🍕 DoorDash does NOT withhold taxes — you owe 15.3% SE tax + income tax on every dollar you earn. Calculate your exact bill below.
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span>
+      <a href="/platforms.html">By Platform</a><span>›</span>
+      DoorDash Tax Calculator
+    </div>
+    <div class="dd-badge">🍕 DoorDash Specific</div>
+    <h1>DoorDash Tax Calculator <em>2026</em></h1>
+    <p>Find out exactly what you owe the IRS as a DoorDash driver. Includes mileage deduction, hot bag, phone, and all Dasher-specific deductions. Built for both part-time and full-time Dashers.</p>
+    <div class="hero-pills">
+      <span class="pill green">✓ DoorDash-specific deductions</span>
+      <span class="pill">Mileage auto-calculated</span>
+      <span class="pill">All 50 states</span>
+      <span class="pill">Free — no signup</span>
+    </div>
+  </div>
+</div>
+
+<!-- TOP AD -->
+<div class="container">
+  <div class="ad-slot ad-728"><!-- AdSense 728x90 -->Advertisement</div>
+</div>
+
+<!-- MAIN -->
+<div class="main-wrap">
+<main>
+
+  <!-- CALCULATOR -->
+  <div class="calc-card">
+    <div class="calc-header">
+      <h2>🍕 DoorDash Tax Calculator 2026</h2>
+      <p>Enter your DoorDash earnings and miles — get your exact tax bill in seconds</p>
+    </div>
+    <div class="calc-body">
+
+      <!-- INCOME -->
+      <div class="section-divider">💵 DoorDash Earnings</div>
+
+      <!-- WEEKLY / ANNUAL TOGGLE -->
+      <div class="income-toggle" style="margin-bottom:14px;">
+        <button class="income-btn active" onclick="setIncomeType('annual', this)">Enter Annual Total</button>
+        <button class="income-btn" onclick="setIncomeType('weekly', this)">Enter Weekly Average</button>
+      </div>
+
+      <div id="annual-input">
+        <div class="form-group">
+          <label for="gross-annual">Total DoorDash Earnings This Year <span class="tip">(from your DoorDash earnings tab)</span></label>
+          <div class="input-prefix"><input type="number" id="gross-annual" placeholder="42,000" min="0"></div>
+        </div>
+      </div>
+
+      <div id="weekly-input" style="display:none;">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="weekly-earnings">Average Weekly Earnings</label>
+            <div class="input-prefix"><input type="number" id="weekly-earnings" placeholder="800" min="0"></div>
+          </div>
+          <div class="form-group">
+            <label for="weeks-dashing">Weeks You Dashed This Year</label>
+            <select id="weeks-dashing">
+              <option value="12">12 weeks (started Q3)</option>
+              <option value="24">24 weeks (started mid-year)</option>
+              <option value="36">36 weeks (started Q2)</option>
+              <option value="48">48 weeks</option>
+              <option value="52" selected>52 weeks (full year)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="tips">Total Tips Received <span class="tip">(included in above or enter separately)</span></label>
+        <div class="input-prefix"><input type="number" id="tips" placeholder="0" min="0"></div>
+      </div>
+
+      <!-- MILEAGE -->
+      <div class="section-divider">🚗 Mileage (Your Biggest Deduction)</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="total-miles">Total Business Miles Driven <span class="tip">(all miles, not just active deliveries)</span></label>
+          <div class="input-suffix-mi"><input type="number" id="total-miles" placeholder="18,000" min="0"></div>
+        </div>
+        <div class="form-group">
+          <label for="daily-miles">OR — Average Miles Per Day <span class="tip">(we'll estimate annual)</span></label>
+          <div class="input-suffix-mi"><input type="number" id="daily-miles" placeholder="55" min="0" oninput="estimateMiles()"></div>
+        </div>
+      </div>
+      <div class="warn-box" style="margin-bottom:14px;margin-top:0;">
+        ⚠️ <strong>Important:</strong> DoorDash only tracks miles during active deliveries. Log ALL miles — to pick up the first order, between orders, and driving home after your last delivery. Use Stride (free) to capture every mile automatically.
+      </div>
+
+      <!-- DOORDASH-SPECIFIC DEDUCTIONS -->
+      <div class="section-divider">🍕 DoorDash-Specific Deductions</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="hot-bags">Insulated Delivery Bags <span class="tip">(hot bags, pizza bags)</span></label>
+          <div class="input-prefix"><input type="number" id="hot-bags" placeholder="80" min="0"></div>
+        </div>
+        <div class="form-group">
+          <label for="phone-pct">Phone Bill — Business % <span class="tip">(monthly bill × % × 12)</span></label>
+          <div class="input-prefix"><input type="number" id="phone-pct" placeholder="600" min="0"></div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="phone-mount">Car Phone Mount & Accessories</label>
+          <div class="input-prefix"><input type="number" id="phone-mount" placeholder="40" min="0"></div>
+        </div>
+        <div class="form-group">
+          <label for="parking-tolls">Parking Fees & Tolls</label>
+          <div class="input-prefix"><input type="number" id="parking-tolls" placeholder="200" min="0"></div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="data-plan">Mobile Data Plan (extra for navigation)</label>
+          <div class="input-prefix"><input type="number" id="data-plan" placeholder="0" min="0"></div>
+        </div>
+        <div class="form-group">
+          <label for="other-ded">Other Business Expenses</label>
+          <div class="input-prefix"><input type="number" id="other-ded" placeholder="0" min="0"></div>
+        </div>
+      </div>
+
+      <!-- PERSONAL -->
+      <div class="section-divider">👤 Your Info</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="filing">Filing Status</label>
+          <select id="filing">
+            <option value="single">Single</option>
+            <option value="married">Married Filing Jointly</option>
+            <option value="hoh">Head of Household</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="state">State</label>
+          <select id="state">
+            <option value="0">No state tax (TX, FL, WA, NV, SD, WY, AK)</option>
+            <option value="0.0450">Alabama (4.5%)</option>
+            <option value="0.0250">Arizona (2.5%)</option>
+            <option value="0.0930">California (9.3%)</option>
+            <option value="0.0440">Colorado (4.4%)</option>
+            <option value="0.0500">Connecticut (5.0%)</option>
+            <option value="0.0575">Georgia (5.49%)</option>
+            <option value="0.0495">Illinois (4.95%)</option>
+            <option value="0.0315">Indiana (3.15%)</option>
+            <option value="0.0500">Massachusetts (5.0%)</option>
+            <option value="0.0425">Michigan (4.25%)</option>
+            <option value="0.0985">Minnesota (9.85%)</option>
+            <option value="0.0685">New York (6.85%)</option>
+            <option value="0.0450">North Carolina (4.5%)</option>
+            <option value="0.0399">Ohio (3.99%)</option>
+            <option value="0.0875">Oregon (8.75%)</option>
+            <option value="0.0307">Pennsylvania (3.07%)</option>
+            <option value="0.0575">Virginia (5.75%)</option>
+            <option value="0.0765">Wisconsin (7.65%)</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="w2-income">W-2 Job Income (if you also have a regular job) <span class="tip">optional</span></label>
+        <div class="input-prefix"><input type="number" id="w2-income" placeholder="0" min="0"></div>
+      </div>
+
+      <button class="calc-btn" onclick="calculate()">🍕 Calculate My DoorDash Tax Bill →</button>
+      <button class="reset-btn" onclick="resetForm()">↺ Reset Calculator</button>
+
+      <!-- RESULTS -->
+      <div class="results" id="results">
+        <div class="results-header">
+          <h3>📊 Your 2026 DoorDash Tax Estimate</h3>
+          <p id="results-sub">Based on your DoorDash earnings and deductions</p>
+        </div>
+        <div class="results-body">
+
+          <div class="result-total">
+            <div class="label">💰 Total Tax Owed</div>
+            <div class="value" id="r-total">$0</div>
+          </div>
+
+          <div class="result-grid">
+            <div class="r-box red">
+              <div class="r-label">Gross DoorDash Income</div>
+              <div class="r-value red" id="r-gross">$0</div>
+              <div class="r-sub">Before deductions</div>
+            </div>
+            <div class="r-box green">
+              <div class="r-label">Total Deductions</div>
+              <div class="r-value green" id="r-deductions">$0</div>
+              <div class="r-sub">Mileage + Dasher expenses</div>
+            </div>
+            <div class="r-box navy">
+              <div class="r-label">Net Taxable Profit</div>
+              <div class="r-value" id="r-net">$0</div>
+              <div class="r-sub">What IRS taxes you on</div>
+            </div>
+            <div class="r-box amber">
+              <div class="r-label">SE Tax (15.3%)</div>
+              <div class="r-value amber" id="r-se">$0</div>
+              <div class="r-sub">Social Security + Medicare</div>
+            </div>
+          </div>
+
+          <div class="quarterly-box">
+            <div class="ql">📅 Pay each quarter<br><small style="font-weight:400;color:var(--text2);">Next: September 15, 2026</small></div>
+            <div class="qv" id="r-quarterly">$0</div>
+          </div>
+
+          <!-- DETAILED BREAKDOWN -->
+          <table class="breakdown-table">
+            <tr><td>Gross DoorDash Earnings</td><td id="bt-gross">$0</td></tr>
+            <tr class="saved-row"><td>− Mileage Deduction (72.5¢/mi)</td><td id="bt-mileage">$0</td></tr>
+            <tr class="saved-row"><td>− Hot bags, phone, accessories</td><td id="bt-dd-expenses">$0</td></tr>
+            <tr><td>= Net Profit</td><td id="bt-net">$0</td></tr>
+            <tr><td>SE Tax (15.3% on 92.35%)</td><td id="bt-se">$0</td></tr>
+            <tr><td>Federal Income Tax</td><td id="bt-fed">$0</td></tr>
+            <tr><td>State Income Tax</td><td id="bt-state">$0</td></tr>
+            <tr class="total-row"><td>✅ Total Tax Owed</td><td id="bt-total">$0</td></tr>
+          </table>
+
+          <div class="take-home-box">
+            <div class="label">🏠 Your real take-home pay after taxes</div>
+            <div class="value" id="r-takehome">$0</div>
+          </div>
+
+          <div class="save-tip" id="save-tip"></div>
+          <p class="result-note">⚠️ Estimates only — not tax advice. Consult a CPA for your situation. Pay quarterly at IRS.gov/payments.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- HOW DD TAXES WORK -->
+  <div class="section">
+    <div class="section-label">DoorDash & Taxes</div>
+    <h2>How DoorDash Taxes Actually Work</h2>
+    <p>DoorDash treats all Dashers as <strong>independent contractors</strong>, not employees. This means DoorDash pays you 100% of your earnings without withholding a single dollar for taxes. No federal tax withheld. No state tax withheld. No Social Security. No Medicare.</p>
+    <p>This is both good and bad. Good because you get full control of your money. Bad because you are responsible for calculating and paying your own taxes — and the bill is usually bigger than people expect.</p>
+
+    <div class="dd-stats">
+      <div class="dd-stat"><div class="val">7M+</div><div class="lbl">Active DoorDash Dashers in the USA</div></div>
+      <div class="dd-stat"><div class="val">15.3%</div><div class="lbl">SE Tax rate on your net profit</div></div>
+      <div class="dd-stat"><div class="val">$400</div><div class="lbl">Minimum net profit to owe SE tax</div></div>
+      <div class="dd-stat"><div class="val">72.5¢</div><div class="lbl">IRS mileage rate per mile in 2026</div></div>
+    </div>
+
+    <h3>The Two Taxes DoorDash Drivers Owe</h3>
+    <table class="info-table">
+      <thead><tr><th>Tax Type</th><th>Rate</th><th>Applied To</th><th>Who Collects</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Self-Employment Tax</strong></td><td>15.3%</td><td>92.35% of your net profit</td><td>IRS (quarterly)</td></tr>
+        <tr><td><strong>Federal Income Tax</strong></td><td>10–37%</td><td>Taxable income after deductions</td><td>IRS (quarterly)</td></tr>
+        <tr><td><strong>State Income Tax</strong></td><td>0–9.9%</td><td>Varies by state</td><td>State tax agency</td></tr>
+      </tbody>
+    </table>
+
+    <div class="info-note">💡 <strong>The 25-30% rule:</strong> As a Dasher, set aside 25–30% of every payment you receive for taxes. If you earn $200 on a Saturday, immediately transfer $50–60 to your tax savings account. This prevents the April surprise that hits so many first-year Dashers.</div>
+
+    <h3>Does DoorDash Send Me a Tax Form?</h3>
+    <p>Yes — DoorDash sends two forms depending on how you were paid:</p>
+    <ul>
+      <li><strong>1099-NEC:</strong> If you earned $600 or more in Dasher pay (base pay + promotions). Shows your total non-customer payments.</li>
+      <li><strong>1099-K:</strong> If customers paid you $5,000+ through the app (tips via DoorDash payment processing). Threshold drops to $600 starting 2026.</li>
+    </ul>
+    <p>You may receive both forms. If you earned less than $600, DoorDash may not send a form — but you still owe taxes if your net profit exceeds $400.</p>
+  </div>
+
+  <!-- MIDDLE AD -->
+  <div class="ad-slot ad-728" style="margin-bottom:20px;"><!-- AdSense 728x90 -->Advertisement</div>
+
+  <!-- DEDUCTIONS -->
+  <div class="section">
+    <div class="section-label">Save More Money</div>
+    <h2>Every Tax Deduction DoorDash Drivers Can Claim</h2>
+    <p>Deductions reduce your net profit — which reduces both your SE tax and income tax. Every dollar of deductions saves you roughly 27–40 cents in taxes depending on your bracket.</p>
+
+    <div class="ded-grid">
+      <div class="ded-card">
+        <div class="ded-icon">🚗</div>
+        <div class="ded-name">Mileage (Biggest One)</div>
+        <div class="ded-amount">72.5¢ per mile in 2026</div>
+        <div class="ded-desc">Every business mile driven. Track with Stride (free). 18,000 miles = $13,050 deduction — saving ~$2,000 in taxes.</div>
+      </div>
+      <div class="ded-card">
+        <div class="ded-icon">🍕</div>
+        <div class="ded-name">Insulated Delivery Bags</div>
+        <div class="ded-amount">Full cost deductible</div>
+        <div class="ded-desc">Hot bags, pizza bags, grocery totes, coolers — any bag you use for deliveries. Save receipts. Typically $40–150/year.</div>
+      </div>
+      <div class="ded-card">
+        <div class="ded-icon">📱</div>
+        <div class="ded-name">Phone & Data Plan</div>
+        <div class="ded-amount">Business % of bill</div>
+        <div class="ded-desc">If you use your phone primarily for Dashing, deduct 50–80% of your monthly bill. $80/month × 70% × 12 = $672 deduction.</div>
+      </div>
+      <div class="ded-card">
+        <div class="ded-icon">🔌</div>
+        <div class="ded-name">Phone Mount & Charger</div>
+        <div class="ded-amount">Full cost deductible</div>
+        <div class="ded-desc">Car phone mount, USB chargers, car adapters — anything you bought specifically to use the DoorDash app while driving.</div>
+      </div>
+      <div class="ded-card">
+        <div class="ded-icon">🅿️</div>
+        <div class="ded-name">Parking Fees & Tolls</div>
+        <div class="ded-amount">100% deductible</div>
+        <div class="ded-desc">Every parking meter, parking garage fee, and toll paid while making deliveries. Keep receipts or notes in your mileage app.</div>
+      </div>
+      <div class="ded-card">
+        <div class="ded-icon">🧹</div>
+        <div class="ded-name">Car Washes</div>
+        <div class="ded-amount">Business % deductible</div>
+        <div class="ded-desc">If you wash your car to keep it presentable for deliveries, the business-use percentage is deductible. Keep receipts.</div>
+      </div>
+      <div class="ded-card">
+        <div class="ded-icon">💊</div>
+        <div class="ded-name">Health Insurance Premiums</div>
+        <div class="ded-amount">100% if self-employed</div>
+        <div class="ded-desc">If DoorDash is your primary income and you buy your own insurance, 100% of premiums are deductible directly from gross income.</div>
+      </div>
+      <div class="ded-card">
+        <div class="ded-icon">📋</div>
+        <div class="ded-name">Mileage Tracking App</div>
+        <div class="ded-amount">Full cost deductible</div>
+        <div class="ded-desc">MileIQ, Everlance, or Hurdlr subscription fees are fully deductible business expenses. Even small amounts add up.</div>
+      </div>
+    </div>
+
+    <!-- REAL EXAMPLE -->
+    <h3>Real Example: Full-Time Dasher, California, Single</h3>
+    <div class="scenario-box">
+      <h4>📋 Jane — Full-time DoorDash driver, Los Angeles, CA</h4>
+      <table class="scenario-table">
+        <tr><td>Gross DoorDash earnings (base + tips)</td><td>$52,000</td></tr>
+        <tr><td>− Mileage deduction (22,000 miles × 72.5¢)</td><td>− $15,950</td></tr>
+        <tr><td>− Insulated bags, phone, accessories</td><td>− $820</td></tr>
+        <tr><td>− Health insurance premiums</td><td>− $4,200</td></tr>
+        <tr><td>= Net Profit</td><td>$31,030</td></tr>
+        <tr><td>SE Tax (15.3% on 92.35% of $31,030)</td><td>$4,382</td></tr>
+        <tr><td>− ½ SE Tax deduction</td><td>− $2,191</td></tr>
+        <tr><td>− Standard Deduction</td><td>− $15,000</td></tr>
+        <tr><td>Federal Taxable Income</td><td>$13,839</td></tr>
+        <tr><td>Federal Income Tax (~10–12%)</td><td>$1,575</td></tr>
+        <tr><td>California State Tax (~9.3% effective)</td><td>$2,886</td></tr>
+        <tr class="total-row"><td>✅ Total Tax Owed</td><td>$8,843</td></tr>
+        <tr><td>Pay each quarter</td><td>$2,211</td></tr>
+        <tr class="saved-row"><td>💰 Deductions saved Jane in taxes</td><td>~$6,200</td></tr>
+      </table>
+    </div>
+    <div class="green-box">✅ Without those deductions, Jane's tax bill would have been about $15,000. Good recordkeeping saved her <strong>$6,200</strong> — that's money back in her pocket.</div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section">
+    <div class="section-label">Common Questions</div>
+    <h2>DoorDash Tax FAQ</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Does DoorDash withhold taxes from my pay? <span class="arrow">▾</span></button>
+        <div class="faq-a">No. DoorDash pays you as an independent contractor and does not withhold any taxes — not federal, not state, not Social Security or Medicare. Every dollar you earn hits your bank account untaxed. You are 100% responsible for calculating and paying your own taxes, including making quarterly estimated payments to the IRS.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What happens if I don't report my DoorDash income? <span class="arrow">▾</span></button>
+        <div class="faq-a">DoorDash reports your earnings to the IRS via 1099 forms. The IRS receives a copy of everything DoorDash sends you. If you don't report it on your tax return, the IRS will flag a discrepancy and send a CP2000 notice — an automatic audit. You'll owe back taxes plus penalties of 20–25% and interest at 8% annually. Never skip reporting gig income.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Are DoorDash tips taxable? <span class="arrow">▾</span></button>
+        <div class="faq-a">Yes — 100% of tips are taxable income. Tips received through the DoorDash app are included in your 1099 forms. Cash tips must also be reported, even if DoorDash doesn't know about them. The IRS considers all tips as ordinary income subject to both SE tax and income tax.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Can I deduct my car payment as a DoorDash driver? <span class="arrow">▾</span></button>
+        <div class="faq-a">Not the payment itself. You can deduct the business use of your car two ways: (1) Standard mileage at 72.5¢/mile — the easiest and usually best for Dashers with high mileage, or (2) Actual expenses — gas, insurance, oil changes, depreciation — prorated by business-use percentage. You can't combine both methods for the same vehicle. Choose at the start of the year and stick with it.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Do I need to make quarterly tax payments as a Dasher? <span class="arrow">▾</span></button>
+        <div class="faq-a">Yes, if you expect to owe $1,000 or more in federal tax for the year. Since DoorDash doesn't withhold anything, almost every Dasher earning more than $6,000/year needs to make quarterly payments. The 2026 deadlines are April 15, June 16, September 15, and January 15, 2027. Use our <a href="/quarterly-tax-calculator.html">quarterly tax calculator</a> to find your exact amounts.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">How do I find my total DoorDash earnings for the year? <span class="arrow">▾</span></button>
+        <div class="faq-a">In the DoorDash Dasher app: tap your profile → Earnings → select date range → view totals. For tax purposes, use your 1099 form amounts (sent by January 31 of the following year). Your 1099-NEC shows base pay and promotions; your 1099-K shows customer-paid tips if applicable. Add both together for your gross earnings.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RELATED -->
+  <div class="section">
+    <div class="section-label">More Free Tools</div>
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/se-tax-calculator.html" class="related-card">
+        <h4>🧮 SE Tax Calculator</h4>
+        <p>Full self-employment tax calculator with all deductions</p>
+      </a>
+      <a href="/mileage-calculator.html" class="related-card">
+        <h4>🚗 Mileage Calculator</h4>
+        <p>Calculate your exact mileage deduction at 72.5¢/mi</p>
+      </a>
+      <a href="/quarterly-tax-calculator.html" class="related-card">
+        <h4>📅 Quarterly Calculator</h4>
+        <p>How much to pay the IRS each quarter</p>
+      </a>
+      <a href="/uber-lyft-tax-calculator.html" class="related-card">
+        <h4>🚘 Uber & Lyft Calculator</h4>
+        <p>Similar calculator built for rideshare drivers</p>
+      </a>
+      <a href="/instacart-taxes.html" class="related-card">
+        <h4>🛒 Instacart Tax Guide</h4>
+        <p>Shopper-specific tax guide and deductions</p>
+      </a>
+      <a href="/deductions.html" class="related-card">
+        <h4>✂️ All 20 Deductions</h4>
+        <p>Every deduction available to gig workers</p>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+
+  <div class="cta-card">
+    <h3>🚗 Track Every Mile</h3>
+    <p>DoorDash misses 25–40% of your deductible miles. Download Stride (free) to auto-track all miles and save thousands in taxes.</p>
+    <a href="/mileage-calculator.html">Calculate Mileage Savings →</a>
+  </div>
+
+  <div class="sidebar-card" style="padding:0;overflow:hidden;">
+    <div class="ad-slot ad-300"><!-- AdSense 300x250 -->Advertisement</div>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>DoorDash Tax Facts</h3>
+    <div class="quick-links">
+      <a href="#">SE Tax rate: <strong>15.3%</strong></a>
+      <a href="#">Mileage rate: <strong>72.5¢/mile</strong></a>
+      <a href="#">Set aside: <strong>25–30%</strong> of earnings</a>
+      <a href="#">1099-NEC threshold: <strong>$600</strong></a>
+      <a href="#">Q3 deadline: <strong>Sep 15, 2026</strong></a>
+    </div>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>Quick Links</h3>
+    <div class="quick-links">
+      <a href="/se-tax-calculator.html">SE Tax Calculator</a>
+      <a href="/quarterly-tax-calculator.html">Quarterly Calculator</a>
+      <a href="/mileage-calculator.html">Mileage Calculator</a>
+      <a href="/deductions.html">All 20 Deductions</a>
+      <a href="/uber-taxes.html">Uber Driver Taxes</a>
+      <a href="/quarterly-taxes.html">Quarterly Tax Guide</a>
+    </div>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>Best Tax Software</h3>
+    <a href="/tax-software.html" style="display:flex;gap:10px;padding:10px;background:var(--gray1);border-radius:var(--radius);margin-bottom:8px;text-decoration:none;align-items:center;">
+      <span style="font-size:20px;">🟢</span>
+      <div><div style="font-size:13px;font-weight:700;color:var(--navy);">TurboTax Self-Employed</div><div style="font-size:11px;color:var(--text2);">Best for DoorDash drivers</div></div>
+    </a>
+    <a href="/tax-software.html" style="display:flex;gap:10px;padding:10px;background:var(--gray1);border-radius:var(--radius);text-decoration:none;align-items:center;">
+      <span style="font-size:20px;">🔴</span>
+      <div><div style="font-size:13px;font-weight:700;color:var(--navy);">H&R Block Self-Employed</div><div style="font-size:11px;color:var(--text2);">Good value alternative</div></div>
+    </a>
+    <a href="/tax-software.html" style="font-size:12px;color:var(--green);display:block;margin-top:10px;font-weight:600;">Compare all →</a>
+  </div>
+
+  <div class="sidebar-card" style="padding:0;overflow:hidden;">
+    <div class="ad-slot ad-300"><!-- AdSense 300x250 -->Advertisement</div>
+  </div>
+
+</aside>
+</div>
+
+<!-- BOTTOM AD -->
+<div class="container">
+  <div class="ad-slot ad-728"><!-- AdSense 728x90 -->Advertisement</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-text">1099Tax<span style="color:var(--amber)">Calcs</span>.com</span>
+        <p>Free tax calculators built for America's 70 million gig workers and freelancers. Calculate what you owe, discover deductions, and never miss a quarterly deadline.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Calculators</h4>
+        <a href="/se-tax-calculator.html">SE Tax Calculator</a>
+        <a href="/quarterly-tax-calculator.html">Quarterly Calculator</a>
+        <a href="/mileage-calculator.html">Mileage Calculator</a>
+        <a href="/doordash-tax-calculator.html">DoorDash Calculator</a>
+        <a href="/uber-lyft-tax-calculator.html">Uber & Lyft Calculator</a>
+      </div>
+      <div class="footer-col">
+        <h4>By Platform</h4>
+        <a href="/uber-taxes.html">Uber Driver Taxes</a>
+        <a href="/doordash-taxes.html">DoorDash Taxes</a>
+        <a href="/instacart-taxes.html">Instacart Taxes</a>
+        <a href="/amazon-flex-taxes.html">Amazon Flex</a>
+        <a href="/upwork-fiverr-taxes.html">Upwork & Fiverr</a>
+      </div>
+      <div class="footer-col">
+        <h4>Guides</h4>
+        <a href="/deductions.html">Top 20 Deductions</a>
+        <a href="/quarterly-taxes.html">Quarterly Tax Guide</a>
+        <a href="/guides.html">All Tax Guides</a>
+        <a href="/faq.html">FAQ</a>
+        <a href="/about.html">About</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 1099TaxCalcs.com — For informational purposes only. Not tax advice.</span>
+      <div style="display:flex;gap:16px;">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+        <a href="/about.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// NAV
+function toggleNav() { document.getElementById('main-nav').classList.toggle('open'); }
+
+// INCOME TYPE
+let incomeType = 'annual';
+function setIncomeType(type, btn) {
+  incomeType = type;
+  document.querySelectorAll('.income-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('annual-input').style.display  = type === 'annual' ? 'block' : 'none';
+  document.getElementById('weekly-input').style.display  = type === 'weekly' ? 'block' : 'none';
+}
+
+// ESTIMATE MILES FROM DAILY
+function estimateMiles() {
+  const daily = parseFloat(document.getElementById('daily-miles').value) || 0;
+  if (daily > 0) document.getElementById('total-miles').value = Math.round(daily * 5 * 52);
+}
+
+// FORMAT
+const fmt = v => '$' + Math.round(v).toLocaleString();
+
+// FEDERAL TAX
+function calcFedTax(income, status) {
+  let tax = 0;
+  if (status === 'single') {
+    if (income > 609350)      tax = 183647.25 + (income - 609350) * 0.37;
+    else if (income > 243725) tax = 55374.25  + (income - 243725) * 0.35;
+    else if (income > 103350) tax = 18748.25  + (income - 103350) * 0.24;
+    else if (income > 52850)  tax = 6022.25   + (income - 52850)  * 0.22;
+    else if (income > 23850)  tax = 1195.00   + (income - 23850)  * 0.12;
+    else                      tax = income * 0.10;
+  } else if (status === 'married') {
+    if (income > 731200)      tax = 184811.50 + (income - 731200) * 0.37;
+    else if (income > 487450) tax = 99778.50  + (income - 487450) * 0.35;
+    else if (income > 206700) tax = 37499.50  + (income - 206700) * 0.24;
+    else if (income > 105800) tax = 12045.50  + (income - 105800) * 0.22;
+    else if (income > 47700)  tax = 2390.00   + (income - 47700)  * 0.12;
+    else                      tax = income * 0.10;
+  } else {
+    if (income > 609350)      tax = 173623.50 + (income - 609350) * 0.37;
+    else if (income > 243700) tax = 45926.50  + (income - 243700) * 0.35;
+    else if (income > 103350) tax = 16394.50  + (income - 103350) * 0.24;
+    else if (income > 55900)  tax = 5748.50   + (income - 55900)  * 0.22;
+    else if (income > 17400)  tax = 1740.00   + (income - 17400)  * 0.12;
+    else                      tax = income * 0.10;
+  }
+  return Math.max(0, tax);
+}
+
+// CALCULATE
+function calculate() {
+  // Get gross income
+  let gross = 0;
+  if (incomeType === 'annual') {
+    gross = parseFloat(document.getElementById('gross-annual').value) || 0;
+  } else {
+    const weekly = parseFloat(document.getElementById('weekly-earnings').value) || 0;
+    const weeks  = parseFloat(document.getElementById('weeks-dashing').value)   || 52;
+    gross = weekly * weeks;
+  }
+
+  const tips       = parseFloat(document.getElementById('tips').value)         || 0;
+  const totalGross = gross; // tips assumed included in gross
+
+  if (totalGross <= 0) { alert('Please enter your DoorDash earnings.'); return; }
+
+  // Miles
+  let miles = parseFloat(document.getElementById('total-miles').value) || 0;
+  if (miles <= 0) {
+    const daily = parseFloat(document.getElementById('daily-miles').value) || 0;
+    miles = daily * 5 * 52;
+  }
+
+  // DD-specific deductions
+  const hotBags     = parseFloat(document.getElementById('hot-bags').value)     || 0;
+  const phonePct    = parseFloat(document.getElementById('phone-pct').value)     || 0;
+  const phoneMount  = parseFloat(document.getElementById('phone-mount').value)   || 0;
+  const parking     = parseFloat(document.getElementById('parking-tolls').value) || 0;
+  const data        = parseFloat(document.getElementById('data-plan').value)     || 0;
+  const other       = parseFloat(document.getElementById('other-ded').value)     || 0;
+  const w2Income    = parseFloat(document.getElementById('w2-income').value)     || 0;
+  const filing      = document.getElementById('filing').value;
+  const stateRate   = parseFloat(document.getElementById('state').value)         || 0;
+
+  // Mileage deduction
+  const mileageDed  = miles * 0.725;
+  const ddExpenses  = hotBags + phonePct + phoneMount + parking + data + other;
+  const totalDed    = mileageDed + ddExpenses;
+
+  // Net profit
+  const net         = Math.max(0, totalGross - totalDed);
+  const seBase      = net * 0.9235;
+  const seTax       = seBase * 0.153;
+  const halfSE      = seTax / 2;
+
+  // Federal income tax
+  let stdDed = filing === 'married' ? 30000 : filing === 'hoh' ? 22500 : 15000;
+  const totalIncome = net + w2Income;
+  const fedTaxable  = Math.max(0, totalIncome - halfSE - stdDed);
+  const fedTax      = calcFedTax(fedTaxable, filing);
+  const stateTax    = net * stateRate;
+  const totalTax    = seTax + fedTax + stateTax;
+  const quarterly   = totalTax / 4;
+  const takeHome    = totalGross - totalTax;
+
+  // Update DOM
+  document.getElementById('results-sub').textContent = `Based on ${fmt(totalGross)} DoorDash earnings and ${Math.round(miles).toLocaleString()} miles`;
+  document.getElementById('r-total').textContent     = fmt(totalTax);
+  document.getElementById('r-gross').textContent     = fmt(totalGross);
+  document.getElementById('r-deductions').textContent= fmt(totalDed);
+  document.getElementById('r-net').textContent       = fmt(net);
+  document.getElementById('r-se').textContent        = fmt(seTax);
+  document.getElementById('r-quarterly').textContent = fmt(quarterly);
+  document.getElementById('r-takehome').textContent  = fmt(takeHome);
+
+  // Breakdown
+  document.getElementById('bt-gross').textContent      = fmt(totalGross);
+  document.getElementById('bt-mileage').textContent    = miles > 0 ? `− ${fmt(mileageDed)}` : '$0';
+  document.getElementById('bt-dd-expenses').textContent= ddExpenses > 0 ? `− ${fmt(ddExpenses)}` : '$0';
+  document.getElementById('bt-net').textContent        = fmt(net);
+  document.getElementById('bt-se').textContent         = fmt(seTax);
+  document.getElementById('bt-fed').textContent        = fmt(fedTax);
+  document.getElementById('bt-state').textContent      = stateRate > 0 ? fmt(stateTax) : '$0';
+  document.getElementById('bt-total').textContent      = fmt(totalTax);
+
+  // Tip
+  const setAsidePct = Math.round((totalTax / totalGross) * 100);
+  const perWeek     = Math.round(totalGross / 52);
+  const taxPerWeek  = Math.round(totalTax / 52);
+  let tip = `💡 Set aside <strong>${setAsidePct}%</strong> of every payment (about <strong>${fmt(taxPerWeek)}/week</strong> based on your earnings). `;
+  if (miles === 0) tip += `⚠️ You didn't enter any miles — tracking mileage could save you <strong>${fmt(perWeek * 0.18 * 0.153 * 12)}</strong> or more in taxes. <a href="/mileage-calculator.html">Calculate your mileage savings →</a>`;
+  else tip += `Your ${Math.round(miles).toLocaleString()} miles saved you <strong>${fmt(mileageDed * 0.27)}</strong> in taxes. `;
+  document.getElementById('save-tip').innerHTML = tip;
+
+  document.getElementById('results').classList.add('show');
+  document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+// RESET
+function resetForm() {
+  ['gross-annual','weekly-earnings','tips','total-miles','daily-miles',
+   'hot-bags','phone-pct','phone-mount','parking-tolls','data-plan','other-ded','w2-income'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = '';
+  });
+  document.getElementById('results').classList.remove('show');
+}
+
+// FAQ
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = btn.classList.contains('open');
+  document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+  if (!isOpen) { btn.classList.add('open'); answer.classList.add('open'); }
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Enter') calculate(); });
+</script>
+
+</body>
+</html>
