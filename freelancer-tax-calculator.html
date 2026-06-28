@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free freelancer tax calculator for 2026. See your real take-home pay after self-employment tax, federal income tax, and state tax. Built for Upwork, Fiverr, and all independent contractors.">
+<meta name="keywords" content="freelancer tax calculator, freelancer take home pay calculator, Upwork tax calculator, Fiverr tax calculator, independent contractor tax 2026, self employed take home pay, freelance income after tax">
+<meta name="author" content="1099TaxCalcs.com">
+<meta property="og:title" content="Freelancer Take-Home Pay Calculator 2026 | 1099TaxCalcs.com">
+<meta property="og:description" content="See your real take-home pay as a freelancer after all taxes. Enter your rate and hours — get your actual net income instantly.">
+<meta property="og:url" content="https://1099taxcalcs.com/freelancer-tax-calculator.html">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://1099taxcalcs.com/freelancer-tax-calculator.html">
+<title>Freelancer Take-Home Pay Calculator 2026 — Real Net Income | 1099TaxCalcs.com</title>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+<style>
+  :root {
+    --navy:   #0D1F3C;
+    --navy2:  #162847;
+    --green:  #00A878;
+    --green2: #008F65;
+    --amber:  #F5A623;
+    --purple: #6B46C1;
+    --purple2:#553C9A;
+    --light:  #F4F7FC;
+    --white:  #FFFFFF;
+    --gray1:  #F0F4FA;
+    --gray2:  #E2E8F4;
+    --gray3:  #94A3B8;
+    --text:   #1A2A44;
+    --text2:  #4A5A72;
+    --red:    #E53E3E;
+    --font:   'Segoe UI', system-ui, -apple-system, sans-serif;
+    --radius: 8px;
+    --shadow: 0 2px 12px rgba(13,31,60,0.10);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); color: var(--text); background: var(--light); font-size: 16px; line-height: 1.6; }
+  a { color: var(--green); text-decoration: none; }
+  a:hover { color: var(--green2); text-decoration: underline; }
+
+  /* HEADER */
+  header { background: var(--navy); padding: 0 24px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+  .header-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-icon { width: 38px; height: 38px; background: var(--green); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: white; letter-spacing: -1px; flex-shrink: 0; }
+  .logo-text { color: white; font-size: 17px; font-weight: 700; }
+  .logo-text span { color: var(--amber); }
+  nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+  nav a { color: rgba(255,255,255,0.85); font-size: 13px; padding: 6px 10px; border-radius: 6px; transition: all 0.15s; white-space: nowrap; }
+  nav a:hover { background: rgba(255,255,255,0.1); color: white; text-decoration: none; }
+  nav a.active { color: var(--amber); }
+  .nav-cta { background: var(--green) !important; color: white !important; font-weight: 600; padding: 7px 14px !important; }
+  .nav-cta:hover { background: var(--green2) !important; }
+  .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: white; margin: 5px 0; border-radius: 2px; }
+  @media(max-width: 768px) {
+    .hamburger { display: block; }
+    nav { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--navy2); padding: 12px 16px; flex-direction: column; align-items: flex-start; gap: 2px; }
+    nav.open { display: flex; }
+    nav a { width: 100%; padding: 10px 12px; }
+  }
+
+  /* HERO */
+  .page-hero { background: linear-gradient(135deg, #1a0d2e 0%, #2d1657 50%, var(--navy2) 100%); color: white; padding: 40px 24px 36px; position: relative; overflow: hidden; }
+  .page-hero::before { content: ''; position: absolute; top: -60px; right: -60px; width: 320px; height: 320px; background: radial-gradient(circle, rgba(107,70,193,0.2) 0%, transparent 70%); border-radius: 50%; }
+  .page-hero-inner { max-width: 1200px; margin: 0 auto; position: relative; }
+  .breadcrumb { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 12px; }
+  .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--green); }
+  .breadcrumb span { margin: 0 6px; }
+  .fl-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(107,70,193,0.25); border: 1px solid rgba(107,70,193,0.4); color: #C4B5FD; font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 14px; }
+  .page-hero h1 { font-size: clamp(24px, 3.5vw, 38px); font-weight: 800; line-height: 1.2; margin-bottom: 10px; }
+  .page-hero h1 em { color: var(--amber); font-style: normal; }
+  .page-hero p { font-size: 15px; color: rgba(255,255,255,0.75); max-width: 620px; line-height: 1.7; }
+  .hero-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+  .pill { font-size: 11px; font-weight: 600; padding: 4px 12px; border-radius: 20px; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8); border: 1px solid rgba(255,255,255,0.15); }
+  .pill.green { background: rgba(0,168,120,0.2); color: #5EEAD4; border-color: rgba(0,168,120,0.3); }
+
+  /* LAYOUT */
+  .main-wrap { max-width: 1200px; margin: 0 auto; padding: 32px 24px; display: grid; grid-template-columns: 1fr 300px; gap: 32px; align-items: start; }
+  @media(max-width: 960px) { .main-wrap { grid-template-columns: 1fr; } }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* ADS */
+  .ad-slot { background: var(--gray1); border: 1px dashed var(--gray2); border-radius: var(--radius); text-align: center; color: var(--gray3); font-size: 11px; padding: 8px; }
+  .ad-728 { width: 100%; height: 90px; line-height: 74px; margin: 20px 0; }
+  .ad-300 { width: 100%; height: 250px; line-height: 234px; }
+
+  /* CALC CARD */
+  .calc-card { background: white; border-radius: 16px; box-shadow: 0 4px 24px rgba(13,31,60,0.13); overflow: hidden; margin-bottom: 24px; }
+  .calc-header { background: linear-gradient(135deg, #1a0d2e, #2d1657); color: white; padding: 18px 24px; }
+  .calc-header h2 { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+  .calc-header p { font-size: 13px; color: rgba(255,255,255,0.65); }
+  .calc-body { padding: 24px; }
+
+  /* INPUT MODE TOGGLE */
+  .mode-toggle { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1.5px solid var(--gray2); border-radius: var(--radius); overflow: hidden; margin-bottom: 18px; }
+  .mode-btn { padding: 10px 8px; background: var(--gray1); border: none; font-size: 12px; font-weight: 600; color: var(--text2); cursor: pointer; font-family: var(--font); transition: all 0.15s; text-align: center; border-right: 1px solid var(--gray2); line-height: 1.4; }
+  .mode-btn:last-child { border-right: none; }
+  .mode-btn.active { background: var(--purple); color: white; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media(max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+  .form-group { margin-bottom: 14px; }
+  .form-group label { display: block; font-size: 12px; font-weight: 600; color: var(--text2); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .form-group label .tip { font-size: 11px; color: var(--purple); font-weight: 400; text-transform: none; letter-spacing: 0; margin-left: 4px; }
+  .form-group input, .form-group select { width: 100%; padding: 10px 14px; border: 1.5px solid var(--gray2); border-radius: var(--radius); font-size: 15px; color: var(--text); background: var(--gray1); transition: border-color 0.15s; font-family: var(--font); }
+  .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--purple); background: white; }
+  .input-prefix { position: relative; }
+  .input-prefix::before { content: '$'; position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--gray3); font-size: 15px; font-weight: 600; }
+  .input-prefix input { padding-left: 26px; }
+  .input-rate { position: relative; }
+  .input-rate::before { content: '$'; position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--gray3); font-size: 15px; font-weight: 600; }
+  .input-rate::after { content: attr(data-unit); position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: var(--gray3); font-size: 12px; }
+  .input-rate input { padding-left: 26px; padding-right: 52px; }
+  .input-pct { position: relative; }
+  .input-pct::after { content: '%'; position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: var(--gray3); font-size: 15px; font-weight: 600; }
+  .input-pct input { padding-right: 32px; }
+
+  .section-divider { font-size: 11px; font-weight: 700; color: var(--purple); text-transform: uppercase; letter-spacing: 0.08em; padding: 10px 0 8px; border-top: 1px solid var(--gray2); margin-top: 4px; display: flex; align-items: center; gap: 8px; }
+  .section-divider::after { content: ''; flex: 1; height: 1px; background: var(--gray2); }
+
+  .calc-btn { width: 100%; padding: 14px; background: var(--purple); color: white; font-size: 16px; font-weight: 700; border: none; border-radius: var(--radius); cursor: pointer; transition: background 0.15s; font-family: var(--font); }
+  .calc-btn:hover { background: var(--purple2); }
+  .reset-btn { width: 100%; padding: 9px; background: transparent; color: var(--text2); font-size: 13px; border: 1.5px solid var(--gray2); border-radius: var(--radius); cursor: pointer; font-family: var(--font); margin-top: 8px; transition: all 0.15s; }
+  .reset-btn:hover { border-color: var(--purple); color: var(--purple); }
+
+  /* RESULTS */
+  .results { display: none; margin-top: 24px; }
+  .results.show { display: block; }
+  .results-header { background: linear-gradient(135deg, #1a0d2e, #2d1657); color: white; border-radius: 12px 12px 0 0; padding: 14px 20px; }
+  .results-header h3 { font-size: 15px; font-weight: 700; }
+  .results-header p { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 2px; }
+  .results-body { background: white; border: 1.5px solid var(--gray2); border-top: none; border-radius: 0 0 12px 12px; padding: 20px; }
+
+  /* TAKE HOME BIG */
+  .takehome-big { background: linear-gradient(135deg, var(--green2), var(--green)); border-radius: 12px; padding: 20px 24px; text-align: center; margin-bottom: 14px; }
+  .takehome-label { color: rgba(255,255,255,0.8); font-size: 13px; margin-bottom: 4px; }
+  .takehome-value { font-size: 48px; font-weight: 800; color: white; line-height: 1.1; }
+  .takehome-sub { color: rgba(255,255,255,0.75); font-size: 13px; margin-top: 6px; }
+
+  /* INCOME VISUAL BAR */
+  .income-bar-wrap { margin-bottom: 16px; }
+  .income-bar-label { display: flex; justify-content: space-between; font-size: 12px; color: var(--text2); margin-bottom: 6px; }
+  .income-bar { height: 28px; background: var(--gray2); border-radius: 6px; overflow: hidden; display: flex; }
+  .bar-takehome { background: var(--green); height: 100%; transition: width 0.5s ease; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: white; min-width: 0; overflow: hidden; }
+  .bar-se { background: #B7791F; height: 100%; transition: width 0.5s ease; }
+  .bar-fed { background: var(--navy); height: 100%; transition: width 0.5s ease; }
+  .bar-state { background: var(--purple); height: 100%; transition: width 0.5s ease; }
+  .bar-legend { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+  .legend-item { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--text2); }
+  .legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+  .result-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 12px; }
+  @media(max-width: 500px) { .result-grid { grid-template-columns: 1fr; } }
+  .r-box { background: var(--gray1); border-radius: var(--radius); padding: 12px 14px; border-left: 3px solid var(--gray2); }
+  .r-box.green { border-left-color: var(--green); background: #E9F9F4; }
+  .r-box.amber { border-left-color: var(--amber); background: #FFF8EC; }
+  .r-box.purple { border-left-color: var(--purple); background: #F5F0FF; }
+  .r-box.navy { border-left-color: var(--navy); background: #EEF2FA; }
+  .r-label { font-size: 11px; font-weight: 600; color: var(--text2); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .r-value { font-size: 20px; font-weight: 800; color: var(--navy); }
+  .r-value.green { color: var(--green2); }
+  .r-value.amber { color: #B7791F; }
+  .r-value.purple { color: var(--purple2); }
+  .r-sub { font-size: 11px; color: var(--text2); margin-top: 3px; }
+
+  .quarterly-box { background: #E9F9F4; border: 1.5px solid rgba(0,168,120,0.25); border-radius: var(--radius); padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+  .quarterly-box .ql { font-size: 13px; font-weight: 600; color: var(--navy); }
+  .quarterly-box .qv { font-size: 22px; font-weight: 800; color: var(--green2); }
+
+  /* RATE COMPARISON */
+  .rate-compare { background: #F5F0FF; border: 1.5px solid rgba(107,70,193,0.2); border-radius: var(--radius); padding: 16px 18px; margin-bottom: 12px; }
+  .rate-compare h4 { font-size: 13px; font-weight: 700; color: var(--purple2); margin-bottom: 12px; }
+  .rate-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid rgba(107,70,193,0.1); font-size: 13px; }
+  .rate-row:last-child { border-bottom: none; font-weight: 700; font-size: 14px; color: var(--navy); }
+  .rate-row .rl { color: var(--text2); }
+  .rate-row .rv { font-weight: 600; color: var(--navy); }
+  .rate-row .rv.green { color: var(--green2); }
+
+  .breakdown-table { width: 100%; font-size: 13px; border-collapse: collapse; margin-bottom: 12px; }
+  .breakdown-table td { padding: 7px 4px; border-bottom: 1px solid var(--gray2); color: var(--text2); }
+  .breakdown-table td:last-child { text-align: right; font-weight: 600; color: var(--navy); }
+  .breakdown-table tr:last-child td { border-bottom: none; }
+  .breakdown-table .total-row td { font-weight: 700; color: var(--navy); border-top: 2px solid var(--gray2); padding-top: 10px; font-size: 14px; }
+  .breakdown-table .saved-row td { color: var(--green2); }
+
+  .rate-rec { background: #FFF8EC; border: 1px solid #F5D78E; border-radius: var(--radius); padding: 12px 14px; font-size: 13px; color: #7A4F00; line-height: 1.6; margin-bottom: 10px; }
+  .result-note { font-size: 11px; color: var(--gray3); text-align: center; margin-top: 10px; line-height: 1.6; }
+
+  /* CONTENT */
+  .section { background: white; border-radius: 12px; padding: 28px; margin-bottom: 20px; box-shadow: var(--shadow); }
+  .section-label { font-size: 11px; font-weight: 700; color: var(--purple); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+  .section h2 { font-size: 22px; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
+  .section h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin: 20px 0 8px; }
+  .section p { color: var(--text2); line-height: 1.8; margin-bottom: 12px; }
+  .section ul, .section ol { color: var(--text2); line-height: 1.8; margin: 8px 0 12px 20px; }
+  .section li { margin-bottom: 6px; }
+  .section strong { color: var(--navy); }
+
+  /* PLATFORM FEE TABLE */
+  .info-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 14px 0; }
+  .info-table th { background: var(--navy); color: white; padding: 10px 14px; text-align: left; font-size: 12px; letter-spacing: 0.04em; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid var(--gray2); color: var(--text2); }
+  .info-table tr:nth-child(even) td { background: var(--gray1); }
+  .info-table strong { color: var(--navy); }
+
+  /* RATE CALC EXAMPLES */
+  .rate-examples { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; margin-top: 14px; }
+  .rate-ex { background: var(--gray1); border: 1.5px solid var(--gray2); border-radius: var(--radius); padding: 14px; text-align: center; }
+  .rate-ex .rate { font-size: 20px; font-weight: 800; color: var(--purple); }
+  .rate-ex .label { font-size: 11px; color: var(--text2); margin: 3px 0; }
+  .rate-ex .takehome { font-size: 16px; font-weight: 700; color: var(--green2); }
+  .rate-ex .annual { font-size: 11px; color: var(--text2); }
+
+  /* DEDUCTIONS */
+  .ded-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin-top: 14px; }
+  .ded-card { background: var(--gray1); border: 1.5px solid var(--gray2); border-radius: var(--radius); padding: 14px 16px; }
+  .ded-icon { font-size: 22px; margin-bottom: 6px; }
+  .ded-name { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .ded-amount { font-size: 12px; font-weight: 600; color: var(--green2); margin-bottom: 4px; }
+  .ded-desc { font-size: 12px; color: var(--text2); line-height: 1.5; }
+
+  /* SCENARIO */
+  .scenario-box { background: #F5F0FF; border: 1.5px solid rgba(107,70,193,0.2); border-radius: var(--radius); padding: 18px 20px; margin: 14px 0; }
+  .scenario-box h4 { font-size: 13px; font-weight: 700; color: var(--purple2); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; }
+  .scenario-table { width: 100%; font-size: 13px; }
+  .scenario-table td { padding: 5px 0; color: var(--text2); }
+  .scenario-table td:last-child { text-align: right; font-weight: 600; color: var(--navy); }
+  .scenario-table .total-row td { border-top: 1px solid rgba(107,70,193,0.2); padding-top: 8px; font-weight: 700; font-size: 14px; }
+  .scenario-table .saved-row td { color: var(--green2); }
+
+  /* BOXES */
+  .warn-box { background: #FFF8EC; border: 1px solid #F5D78E; border-radius: var(--radius); padding: 14px 16px; font-size: 13px; color: #7A4F00; line-height: 1.6; margin: 14px 0; }
+  .info-note { background: #EEF2FA; border: 1px solid #C7D4EE; border-radius: var(--radius); padding: 14px 16px; font-size: 13px; color: var(--text2); line-height: 1.6; margin: 14px 0; }
+  .green-box { background: #E9F9F4; border: 1px solid rgba(0,168,120,0.3); border-radius: var(--radius); padding: 14px 16px; font-size: 13px; color: #065F46; line-height: 1.6; margin: 14px 0; }
+  .purple-box { background: #F5F0FF; border: 1px solid rgba(107,70,193,0.25); border-radius: var(--radius); padding: 14px 16px; font-size: 13px; color: var(--purple2); line-height: 1.6; margin: 14px 0; }
+
+  /* FAQ */
+  .faq-list { margin-top: 10px; }
+  .faq-item { border-bottom: 1px solid var(--gray2); }
+  .faq-q { width: 100%; text-align: left; background: none; border: none; padding: 14px 0; font-size: 15px; font-weight: 600; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: var(--font); }
+  .faq-q:hover { color: var(--purple); }
+  .faq-q .arrow { font-size: 18px; color: var(--purple); transition: transform 0.2s; flex-shrink: 0; margin-left: 12px; }
+  .faq-q.open .arrow { transform: rotate(180deg); }
+  .faq-a { font-size: 14px; color: var(--text2); line-height: 1.8; padding-bottom: 14px; display: none; }
+  .faq-a.open { display: block; }
+
+  /* RELATED */
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; margin-top: 12px; }
+  .related-card { background: var(--gray1); border: 1.5px solid var(--gray2); border-radius: var(--radius); padding: 14px 16px; text-decoration: none; transition: all 0.15s; display: block; }
+  .related-card:hover { border-color: var(--green); background: white; text-decoration: none; }
+  .related-card h4 { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+  .related-card p { font-size: 12px; color: var(--text2); margin: 0; }
+
+  /* SIDEBAR */
+  .sidebar { display: flex; flex-direction: column; gap: 18px; }
+  .sidebar-card { background: white; border-radius: 12px; padding: 18px; box-shadow: var(--shadow); }
+  .sidebar-card h3 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 10px; border-bottom: 2px solid var(--purple); padding-bottom: 7px; }
+  .cta-card { background: linear-gradient(135deg, #1a0d2e, #2d1657); color: white; border-radius: 12px; padding: 18px; }
+  .cta-card h3 { font-size: 14px; font-weight: 700; color: white; margin-bottom: 6px; border: none; padding: 0; }
+  .cta-card p { font-size: 12px; color: rgba(255,255,255,0.7); margin-bottom: 12px; line-height: 1.6; }
+  .cta-card a { display: block; background: var(--purple); color: white; text-align: center; padding: 9px; border-radius: var(--radius); font-weight: 700; font-size: 13px; text-decoration: none; }
+  .cta-card a:hover { background: var(--purple2); }
+  .quick-links a { display: flex; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--gray2); font-size: 13px; color: var(--text); text-decoration: none; }
+  .quick-links a:last-child { border-bottom: none; }
+  .quick-links a:hover { color: var(--purple); }
+  .quick-links a::before { content: '→'; color: var(--purple); font-weight: 700; }
+
+  /* FOOTER */
+  footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 40px 24px 24px; margin-top: 48px; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 32px; }
+  .footer-brand .logo-text { font-size: 18px; color: white; display: block; margin-bottom: 8px; }
+  .footer-brand p { font-size: 13px; line-height: 1.7; }
+  .footer-col h4 { color: white; font-size: 13px; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,0.55); margin-bottom: 7px; text-decoration: none; }
+  .footer-col a:hover { color: var(--green); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 12px; }
+  .footer-bottom a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .footer-bottom a:hover { color: var(--green); }
+  @media(max-width: 700px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much tax do freelancers pay on their income?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Freelancers pay self-employment tax of 15.3% on their net profit, plus federal income tax at their bracket rate. On $75,000 gross with $10,000 in deductions, a single freelancer pays approximately $9,100 in SE tax and $5,200 in federal income tax — about $14,300 total, leaving a take-home of roughly $60,700." }
+    },
+    {
+      "@type": "Question",
+      "name": "What hourly rate should a freelancer charge to make $100,000 per year?",
+      "acceptedAnswer": { "@type": "Answer", "text": "To net $100,000 after taxes as a single freelancer, you need to earn approximately $145,000-$155,000 in gross freelance income depending on your state. At 50 billable weeks and 40 hours per week, that is roughly $72-78 per hour. At 30 billable hours per week, you need $93-100 per hour." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Upwork take taxes out of my earnings?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Upwork does not withhold any taxes from your earnings. They pay you as an independent contractor and deduct their service fee (5-20%) from your gross contract value, then pay you the remainder. You are responsible for paying all self-employment tax and income tax on your Upwork earnings through quarterly estimated payments to the IRS." }
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <div class="logo-icon">1099</div>
+      <div class="logo-text">Tax<span>Calcs</span>.com</div>
+    </a>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav">
+      <a href="/calculators.html">Calculators</a>
+      <a href="/deductions.html">Deductions</a>
+      <a href="/quarterly-taxes.html">Quarterly Taxes</a>
+      <a href="/platforms.html" class="active">By Platform</a>
+      <a href="/guides.html">Guides</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/se-tax-calculator.html" class="nav-cta">SE Tax Calculator</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span>
+      <a href="/calculators.html">Calculators</a><span>›</span>
+      Freelancer Take-Home Calculator
+    </div>
+    <div class="fl-badge">💻 Upwork · Fiverr · Direct Clients · All Freelancers</div>
+    <h1>Freelancer Take-Home Pay Calculator <em>2026</em></h1>
+    <p>See exactly what you keep after self-employment tax, federal income tax, and state tax. Enter your hourly rate, project fees, or annual income — get your real net pay instantly.</p>
+    <div class="hero-pills">
+      <span class="pill green">✓ Platform fees included</span>
+      <span class="pill">Hourly + project + annual</span>
+      <span class="pill">What rate to charge tool</span>
+      <span class="pill">All 50 states</span>
+    </div>
+  </div>
+</div>
+
+<!-- TOP AD -->
+<div class="container">
+  <div class="ad-slot ad-728"><!-- AdSense 728x90 -->Advertisement</div>
+</div>
+
+<!-- MAIN -->
+<div class="main-wrap">
+<main>
+
+  <!-- CALCULATOR -->
+  <div class="calc-card">
+    <div class="calc-header">
+      <h2>💻 Freelancer Take-Home Pay Calculator 2026</h2>
+      <p>Choose how you earn — enter your income — see your real take-home pay</p>
+    </div>
+    <div class="calc-body">
+
+      <!-- INPUT MODE -->
+      <div class="section-divider">📊 How Do You Want to Enter Income?</div>
+      <div class="mode-toggle">
+        <button class="mode-btn active" onclick="setMode('hourly', this)">⏱️ Hourly Rate<br><small style="font-weight:400;font-size:10px;">Enter rate + hours</small></button>
+        <button class="mode-btn" onclick="setMode('project', this)">📋 Project Fees<br><small style="font-weight:400;font-size:10px;">Enter per-project income</small></button>
+        <button class="mode-btn" onclick="setMode('annual', this)">📅 Annual Total<br><small style="font-weight:400;font-size:10px;">Enter yearly income</small></button>
+      </div>
+
+      <!-- HOURLY MODE -->
+      <div id="mode-hourly">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="hourly-rate">Your Hourly Rate <span class="tip">(what you charge clients)</span></label>
+            <div class="input-rate" data-unit="/hr">
+              <input type="number" id="hourly-rate" placeholder="85" min="0">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="hours-week">Billable Hours Per Week</label>
+            <select id="hours-week">
+              <option value="10">10 hrs/week (part-time)</option>
+              <option value="20">20 hrs/week (half-time)</option>
+              <option value="25">25 hrs/week</option>
+              <option value="30" selected>30 hrs/week (common for freelancers)</option>
+              <option value="35">35 hrs/week</option>
+              <option value="40">40 hrs/week (full-time)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="weeks-year">Billable Weeks Per Year <span class="tip">(minus vacation/gaps)</span></label>
+            <select id="weeks-year">
+              <option value="40">40 weeks (20% downtime)</option>
+              <option value="44">44 weeks (typical freelancer)</option>
+              <option value="48" selected>48 weeks (2 weeks vacation + gaps)</option>
+              <option value="50">50 weeks</option>
+              <option value="52">52 weeks (no time off)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="platform-hourly">Platform <span class="tip">(for fee deduction)</span></label>
+            <select id="platform-hourly">
+              <option value="0">Direct clients (no platform fee)</option>
+              <option value="0.05">Upwork — 5% (over $10k with client)</option>
+              <option value="0.10">Upwork — 10% ($500–$10k with client)</option>
+              <option value="0.20">Upwork — 20% (first $500 with client)</option>
+              <option value="0.20">Fiverr — 20% (all orders)</option>
+              <option value="0.08">Toptal — 8% (approx)</option>
+              <option value="0.10">Freelancer.com — 10%</option>
+              <option value="0.15">Guru.com — 15%</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT MODE -->
+      <div id="mode-project" style="display:none;">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="avg-project">Average Project Value</label>
+            <div class="input-prefix"><input type="number" id="avg-project" placeholder="3,500" min="0"></div>
+          </div>
+          <div class="form-group">
+            <label for="projects-year">Projects Per Year</label>
+            <select id="projects-year">
+              <option value="4">4 projects/year</option>
+              <option value="6">6 projects/year</option>
+              <option value="8">8 projects/year</option>
+              <option value="12" selected>12 projects/year (1/month)</option>
+              <option value="18">18 projects/year</option>
+              <option value="24">24 projects/year</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="platform-project">Platform Fee</label>
+          <select id="platform-project">
+            <option value="0">Direct clients (no platform fee)</option>
+            <option value="0.05">Upwork — 5%</option>
+            <option value="0.10">Upwork — 10%</option>
+            <option value="0.20">Upwork — 20% (new clients)</option>
+            <option value="0.20">Fiverr — 20%</option>
+            <option value="0.10">Freelancer.com — 10%</option>
+            <option value="0.15">Guru.com — 15%</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- ANNUAL MODE -->
+      <div id="mode-annual" style="display:none;">
+        <div class="form-group">
+          <label for="annual-gross">Total Annual Freelance Income <span class="tip">(before platform fees)</span></label>
+          <div class="input-prefix"><input type="number" id="annual-gross" placeholder="95,000" min="0"></div>
+        </div>
+        <div class="form-group">
+          <label for="platform-annual">Platform Fee Rate</label>
+          <select id="platform-annual">
+            <option value="0">Direct clients (no fee)</option>
+            <option value="0.05">Upwork — 5%</option>
+            <option value="0.10">Upwork — 10%</option>
+            <option value="0.20">Fiverr — 20%</option>
+            <option value="0.10">Freelancer.com — 10%</option>
+            <option value="0.15">Guru.com — 15%</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- DEDUCTIONS -->
+      <div class="section-divider">✂️ Freelancer Deductions</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="home-office">Home Office <span class="tip">(sq ft × $5, max $1,500)</span></label>
+          <div class="input-prefix"><input type="number" id="home-office" placeholder="1,200" min="0"></div>
+        </div>
+        <div class="form-group">
+          <label for="equipment">Equipment & Hardware <span class="tip">(laptop, monitors, etc.)</span></label>
+          <div class="input-prefix"><input type="number" id="equipment" placeholder="2,000" min="0"></div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="software">Software & Subscriptions <span class="tip">(Adobe, Figma, etc.)</span></label>
+          <div class="input-prefix"><input type="number" id="software" placeholder="1,800" min="0"></div>
+        </div>
+        <div class="form-group">
+          <label for="internet">Internet & Phone Bill <span class="tip">(business %)</span></label>
+          <div class="input-prefix"><input type="number" id="internet" placeholder="900" min="0"></div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="health-ins">Health Insurance Premiums</label>
+          <div class="input-prefix"><input type="number" id="health-ins" placeholder="5,400" min="0"></div>
+        </div>
+        <div class="form-group">
+          <label for="other-ded">Other Business Expenses <span class="tip">(courses, marketing, etc.)</span></label>
+          <div class="input-prefix"><input type="number" id="other-ded" placeholder="1,200" min="0"></div>
+        </div>
+      </div>
+
+      <!-- PERSONAL INFO -->
+      <div class="section-divider">👤 Your Info</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="filing">Filing Status</label>
+          <select id="filing">
+            <option value="single">Single</option>
+            <option value="married">Married Filing Jointly</option>
+            <option value="hoh">Head of Household</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="state">State</label>
+          <select id="state">
+            <option value="0">No state tax (TX, FL, WA, NV, SD, WY, AK)</option>
+            <option value="0.0450">Alabama (4.5%)</option>
+            <option value="0.0250">Arizona (2.5%)</option>
+            <option value="0.0490">Arkansas (4.9%)</option>
+            <option value="0.0930">California (9.3%)</option>
+            <option value="0.0440">Colorado (4.4%)</option>
+            <option value="0.0500">Connecticut (5.0%)</option>
+            <option value="0.0575">Georgia (5.49%)</option>
+            <option value="0.0495">Illinois (4.95%)</option>
+            <option value="0.0315">Indiana (3.15%)</option>
+            <option value="0.0500">Massachusetts (5.0%)</option>
+            <option value="0.0425">Michigan (4.25%)</option>
+            <option value="0.0985">Minnesota (9.85%)</option>
+            <option value="0.0685">New York (6.85%)</option>
+            <option value="0.0450">North Carolina (4.5%)</option>
+            <option value="0.0399">Ohio (3.99%)</option>
+            <option value="0.0875">Oregon (8.75%)</option>
+            <option value="0.0307">Pennsylvania (3.07%)</option>
+            <option value="0.0575">Virginia (5.75%)</option>
+            <option value="0.0765">Wisconsin (7.65%)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- TARGET NET INCOME TOOL -->
+      <div class="section-divider">🎯 What Rate Do I Need To Charge?</div>
+      <div class="form-group">
+        <label for="target-net">Desired Annual Take-Home Pay <span class="tip">(we'll calculate the rate you need to charge)</span></label>
+        <div class="input-prefix"><input type="number" id="target-net" placeholder="80,000" min="0"></div>
+      </div>
+
+      <button class="calc-btn" onclick="calculate()">💻 Calculate My Take-Home Pay →</button>
+      <button class="reset-btn" onclick="resetForm()">↺ Reset</button>
+
+      <!-- RESULTS -->
+      <div class="results" id="results">
+        <div class="results-header">
+          <h3>💰 Your 2026 Freelancer Take-Home Pay</h3>
+          <p id="results-sub">Based on your freelance income and deductions</p>
+        </div>
+        <div class="results-body">
+
+          <!-- BIG TAKE HOME -->
+          <div class="takehome-big">
+            <div class="takehome-label">Your Annual Take-Home Pay</div>
+            <div class="takehome-value" id="r-takehome">$0</div>
+            <div class="takehome-sub" id="r-takehome-sub"></div>
+          </div>
+
+          <!-- VISUAL BAR -->
+          <div class="income-bar-wrap">
+            <div class="income-bar-label">
+              <span>$0</span>
+              <span id="bar-gross-label">$0 gross</span>
+            </div>
+            <div class="income-bar">
+              <div class="bar-takehome" id="bar-takehome" style="width:0%">Take-Home</div>
+              <div class="bar-se" id="bar-se" style="width:0%"></div>
+              <div class="bar-fed" id="bar-fed" style="width:0%"></div>
+              <div class="bar-state" id="bar-state" style="width:0%"></div>
+            </div>
+            <div class="bar-legend">
+              <div class="legend-item"><div class="legend-dot" style="background:var(--green);"></div>Take-Home (<span id="leg-takehome">0%</span>)</div>
+              <div class="legend-item"><div class="legend-dot" style="background:#B7791F;"></div>SE Tax (<span id="leg-se">0%</span>)</div>
+              <div class="legend-item"><div class="legend-dot" style="background:var(--navy);"></div>Federal Tax (<span id="leg-fed">0%</span>)</div>
+              <div class="legend-item"><div class="legend-dot" style="background:var(--purple);"></div>State Tax (<span id="leg-state">0%</span>)</div>
+            </div>
+          </div>
+
+          <div class="result-grid">
+            <div class="r-box">
+              <div class="r-label">Gross Income</div>
+              <div class="r-value" id="r-gross">$0</div>
+              <div class="r-sub">Before taxes & fees</div>
+            </div>
+            <div class="r-box green">
+              <div class="r-label">Total Deductions</div>
+              <div class="r-value green" id="r-deductions">$0</div>
+              <div class="r-sub">Platform fees + expenses</div>
+            </div>
+            <div class="r-box amber">
+              <div class="r-label">SE Tax (15.3%)</div>
+              <div class="r-value amber" id="r-se">$0</div>
+              <div class="r-sub">Social Security + Medicare</div>
+            </div>
+            <div class="r-box navy">
+              <div class="r-label">Income Tax (Fed + State)</div>
+              <div class="r-value" id="r-income-tax">$0</div>
+              <div class="r-sub" id="r-income-sub"></div>
+            </div>
+          </div>
+
+          <div class="quarterly-box">
+            <div class="ql">📅 Pay each quarter to IRS<br><small style="font-weight:400;color:var(--text2);">Next: September 15, 2026</small></div>
+            <div class="qv" id="r-quarterly">$0</div>
+          </div>
+
+          <!-- EFFECTIVE RATES -->
+          <div class="rate-compare">
+            <h4>📊 Your Effective Tax Rates</h4>
+            <div class="rate-row"><span class="rl">Gross freelance income</span><span class="rv" id="rc-gross">$0</span></div>
+            <div class="rate-row"><span class="rl">Effective SE tax rate</span><span class="rv" id="rc-se-rate">0%</span></div>
+            <div class="rate-row"><span class="rl">Effective federal income tax rate</span><span class="rv" id="rc-fed-rate">0%</span></div>
+            <div class="rate-row"><span class="rl">Total effective tax rate</span><span class="rv" id="rc-total-rate">0%</span></div>
+            <div class="rate-row"><span class="rl">💰 Take-home rate</span><span class="rv green" id="rc-takehome-rate">0%</span></div>
+          </div>
+
+          <!-- BREAKDOWN TABLE -->
+          <table class="breakdown-table">
+            <tr><td>Gross Freelance Income</td><td id="bt-gross">$0</td></tr>
+            <tr class="saved-row"><td>− Platform Fee</td><td id="bt-platform">$0</td></tr>
+            <tr class="saved-row"><td>− Business Deductions</td><td id="bt-deductions">$0</td></tr>
+            <tr><td>= Net Profit (taxable)</td><td id="bt-net">$0</td></tr>
+            <tr><td>SE Tax (15.3% on 92.35%)</td><td id="bt-se">$0</td></tr>
+            <tr><td>Federal Income Tax</td><td id="bt-fed">$0</td></tr>
+            <tr><td>State Income Tax</td><td id="bt-state">$0</td></tr>
+            <tr class="total-row"><td>✅ Total Tax</td><td id="bt-total">$0</td></tr>
+          </table>
+
+          <!-- RATE RECOMMENDATION -->
+          <div class="rate-rec" id="rate-rec"></div>
+          <p class="result-note">⚠️ Estimates only — not tax advice. Consult a CPA for your exact situation. Results assume standard deduction.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PLATFORM FEES SECTION -->
+  <div class="section">
+    <div class="section-label">Know Your Real Earnings</div>
+    <h2>Platform Fees — What You Actually Earn After Upwork & Fiverr</h2>
+    <p>Before taxes even enter the picture, freelancing platforms take a percentage of every dollar you earn. Understanding these fees is critical for pricing your services correctly.</p>
+
+    <table class="info-table">
+      <thead><tr><th>Platform</th><th>Fee Structure</th><th>On $50,000/year</th><th>Your Net After Fee</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Direct Clients</strong></td><td>0% — no platform fee</td><td>$0</td><td><strong>$50,000</strong></td></tr>
+        <tr><td><strong>Upwork</strong></td><td>20% on first $500, 10% up to $10k, 5% above</td><td>~$5,300</td><td>~$44,700</td></tr>
+        <tr><td><strong>Fiverr</strong></td><td>20% flat on all orders</td><td>$10,000</td><td>$40,000</td></tr>
+        <tr><td><strong>Toptal</strong></td><td>~8% (built into client billing)</td><td>~$4,000</td><td>~$46,000</td></tr>
+        <tr><td><strong>Freelancer.com</strong></td><td>10% (min $5)</td><td>$5,000</td><td>$45,000</td></tr>
+        <tr><td><strong>Guru.com</strong></td><td>5–15% based on membership</td><td>$4,500</td><td>$45,500</td></tr>
+      </tbody>
+    </table>
+
+    <div class="warn-box">
+      ⚠️ <strong>Fiverr pricing math:</strong> If you want to earn $80/hour after Fiverr's 20% fee, you must charge clients <strong>$100/hour</strong>. Always work backward from your desired net rate when setting Fiverr or Upwork prices.
+    </div>
+
+    <div class="green-box">✅ <strong>The real cost of platforms:</strong> Upwork's fee structure rewards long-term client relationships. Once you cross $10,000 billed with a single client, your fee drops to 5% — making Upwork much more competitive for ongoing work than one-off projects.</div>
+  </div>
+
+  <!-- MIDDLE AD -->
+  <div class="ad-slot ad-728" style="margin-bottom:20px;"><!-- AdSense 728x90 -->Advertisement</div>
+
+  <!-- WHAT RATE TO CHARGE -->
+  <div class="section">
+    <div class="section-label">Pricing Your Services</div>
+    <h2>What Hourly Rate Do You Need to Charge?</h2>
+    <p>Most freelancers dramatically underprice themselves because they don't account for taxes, platform fees, unpaid time (admin, marketing, gaps between clients), and benefits they now pay themselves. Here's what real take-home looks like at common rates:</p>
+
+    <div class="rate-examples">
+      <div class="rate-ex">
+        <div class="rate">$50/hr</div>
+        <div class="label">30 hrs/wk, 48 wks</div>
+        <div class="takehome">~$45,200</div>
+        <div class="annual">annual take-home (single, no state tax)</div>
+      </div>
+      <div class="rate-ex">
+        <div class="rate">$75/hr</div>
+        <div class="label">30 hrs/wk, 48 wks</div>
+        <div class="takehome">~$68,100</div>
+        <div class="annual">annual take-home (single, no state tax)</div>
+      </div>
+      <div class="rate-ex">
+        <div class="rate">$100/hr</div>
+        <div class="label">30 hrs/wk, 48 wks</div>
+        <div class="takehome">~$89,500</div>
+        <div class="annual">annual take-home (single, no state tax)</div>
+      </div>
+      <div class="rate-ex">
+        <div class="rate">$125/hr</div>
+        <div class="label">30 hrs/wk, 48 wks</div>
+        <div class="takehome">~$107,200</div>
+        <div class="annual">annual take-home (single, no state tax)</div>
+      </div>
+      <div class="rate-ex">
+        <div class="rate">$150/hr</div>
+        <div class="label">30 hrs/wk, 48 wks</div>
+        <div class="takehome">~$122,800</div>
+        <div class="annual">annual take-home (single, no state tax)</div>
+      </div>
+      <div class="rate-ex">
+        <div class="rate">$200/hr</div>
+        <div class="label">30 hrs/wk, 48 wks</div>
+        <div class="takehome">~$149,400</div>
+        <div class="annual">annual take-home (single, no state tax)</div>
+      </div>
+    </div>
+
+    <div class="purple-box">💡 <strong>The freelance multiplier rule:</strong> To match a $75,000 W-2 salary (with benefits), you need to earn roughly $110,000–$125,000 in gross freelance income. The extra covers: SE tax (employer's share), health insurance, retirement contributions, vacation time, and unpaid gaps between projects.</div>
+
+    <!-- REAL EXAMPLE -->
+    <h3>Real Example: Upwork Developer, California, Single</h3>
+    <div class="scenario-box">
+      <h4>📋 Sofia — Freelance developer, Upwork, San Francisco, CA</h4>
+      <table class="scenario-table">
+        <tr><td>Gross Upwork billing ($95/hr × 30 hrs × 48 wks)</td><td>$136,800</td></tr>
+        <tr><td>− Upwork service fees (~8% blended)</td><td>− $10,944</td></tr>
+        <tr><td>Net received from Upwork</td><td>$125,856</td></tr>
+        <tr><td>− Home office deduction</td><td>− $1,500</td></tr>
+        <tr><td>− Software subscriptions (GitHub, tools, Adobe)</td><td>− $3,600</td></tr>
+        <tr><td>− Health insurance premiums</td><td>− $7,200</td></tr>
+        <tr><td>− Equipment (laptop, monitors)</td><td>− $2,800</td></tr>
+        <tr><td>− Internet & phone</td><td>− $1,080</td></tr>
+        <tr><td>= Net Profit</td><td>$109,676</td></tr>
+        <tr><td>SE Tax</td><td>$15,474</td></tr>
+        <tr><td>Federal Income Tax (~24% effective)</td><td>$16,900</td></tr>
+        <tr><td>California State Tax (~8.5% effective)</td><td>$9,322</td></tr>
+        <tr class="total-row"><td>✅ Total Tax</td><td>$41,696</td></tr>
+        <tr class="saved-row"><td>🏠 Annual Take-Home</td><td>$84,160</td></tr>
+        <tr class="saved-row"><td>💰 Deductions saved Sofia</td><td>~$7,200 in taxes</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- DEDUCTIONS -->
+  <div class="section">
+    <div class="section-label">Reduce Your Tax Bill</div>
+    <h2>Top Tax Deductions for Freelancers</h2>
+    <p>Unlike gig workers, freelancers have more varied and often larger deductions. Every dollar of deductions reduces both your SE tax and income tax.</p>
+    <div class="ded-grid">
+      <div class="ded-card">
+        <div class="ded-icon">🏠</div>
+        <div class="ded-name">Home Office</div>
+        <div class="ded-amount">Up to $1,500/year (simplified)</div>
+        <div class="ded-desc">Dedicated workspace = $5/sq ft, max 300 sq ft. Or use actual expenses method for larger deduction. Must be used exclusively for work.</div>
+      </div>
+      <div class="ded-card">
+        <div class="ded-icon">💻</div>
+        <div class="ded-name">Equipment & Hardware</div>
+        <div class="ded-amount">100% deductible (Section 179)</div>
+        <div class="ded-desc">Laptop, monitors, keyboard, webcam, microphone, external drives — any hardware used for your freelance work. Deduct the full cost in year of purchase.</div>
+      </div>
+      <div class="ded-card">
+        <div class="ded-icon">🔧</div>
+        <div class="ded-name">Software & Subscriptions</div>
+        <div class="ded-amount">100% deductible</div>
+        <div class="ded-desc">Adobe CC, Figma, GitHub, Notion, Slack, Zoom, project management tools — any software you use for client work. Monthly or annual fees all deductible.</div>
+      </div>
+      <div class="ded-card">
+        <div class="ded-icon">🌐</div>
+        <div class="ded-name">Internet & Phone</div>
+        <div class="ded-amount">Business % deductible</div>
+        <div class="ded-desc">If you work from home, deduct 50–80% of your internet bill. Phone bill business percentage is also deductible. Add up to $1,500–$2,000/year in deductions.</div>
+      </div>
+      <div class="ded-card">
+        <div class="ded-icon">💊</div>
+        <div class="ded-name">Health Insurance</div>
+        <div class="ded-amount">100% of premiums</div>
+        <div class="ded-desc">If freelancing is your primary income and you buy your own insurance, deduct 100% of premiums for yourself, spouse, and dependents. Often $5,000–$15,000/year.</div>
+      </div>
+      <div class="ded-card">
+        <div class="ded-icon">📚</div>
+        <div class="ded-name">Education & Courses</div>
+        <div class="ded-amount">100% if work-related</div>
+        <div class="ded-desc">Udemy, Coursera, LinkedIn Learning, books, conferences — any education that improves skills in your current field is deductible. Not for switching careers.</div>
+      </div>
+      <div class="ded-card">
+        <div class="ded-icon">💰</div>
+        <div class="ded-name">SEP-IRA Contributions</div>
+        <div class="ded-amount">Up to $70,000/year in 2026</div>
+        <div class="ded-desc">Contribute up to 25% of net self-employment income to a SEP-IRA. Fully deductible and reduces both income tax and SE tax base. Biggest tax lever available.</div>
+      </div>
+      <div class="ded-card">
+        <div class="ded-icon">🌍</div>
+        <div class="ded-name">Platform Fees</div>
+        <div class="ded-amount">100% deductible</div>
+        <div class="ded-desc">Upwork, Fiverr, and other platform fees are deductible business expenses. Deduct them on Schedule C — they reduce your net profit and therefore your SE tax.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section">
+    <div class="section-label">Common Questions</div>
+    <h2>Freelancer Tax FAQ</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Do I have to pay taxes on Upwork income? <span class="arrow">▾</span></button>
+        <div class="faq-a">Yes. Upwork reports your earnings to the IRS and sends you a 1099-K if you earned $5,000 or more (dropping to $600 in 2026) or a 1099-NEC for other payments. Even without a form, you are legally required to report all freelance income over $400 net. Upwork does not withhold taxes — you pay them yourself quarterly.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Is Upwork's service fee tax deductible? <span class="arrow">▾</span></button>
+        <div class="faq-a">Yes — Upwork's service fee (5–20%) is a legitimate business expense deductible on Schedule C. However, be careful: Upwork may report your gross contract value on your 1099-K (before their fee). In that case, you need to separately deduct the fee on your tax return. Keep records of all fees paid. TurboTax Self-Employed handles this automatically if you input it correctly.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">How do I pay taxes as a Fiverr seller? <span class="arrow">▾</span></button>
+        <div class="faq-a">As a Fiverr seller, you owe SE tax (15.3%) and income tax on all your Fiverr earnings minus Fiverr's 20% fee and any other business expenses. Fiverr will send you a 1099-K if you earned $5,000+ (or $600+ starting 2026). Make quarterly estimated payments to the IRS at IRS.gov/payments to avoid penalties. Use our calculator above — select "Fiverr — 20%" as your platform fee.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Can I deduct my home office if I work from home? <span class="arrow">▾</span></button>
+        <div class="faq-a">Yes — if you have a dedicated workspace used exclusively and regularly for work. The simplified method: $5 per square foot, up to 300 sq ft = maximum $1,500/year deduction. The actual expense method can yield larger deductions if you rent or have a large home — deduct the percentage of your home used for work × actual home expenses (rent, utilities, insurance). Most freelancers use the simplified method for ease.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What's the best retirement account for freelancers? <span class="arrow">▾</span></button>
+        <div class="faq-a">A <strong>SEP-IRA</strong> or <strong>Solo 401(k)</strong> are the two best options. SEP-IRA: contribute up to 25% of net self-employment income, maximum $70,000 for 2026. Easy to set up at Fidelity or Vanguard in 20 minutes. Solo 401(k): higher contribution limits if you want to max out — up to $70,000 combined employee + employer contributions. Both reduce your taxable income dollar for dollar. A $20,000 SEP-IRA contribution saves roughly $5,000–$7,000 in taxes depending on your bracket.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Should I form an LLC or S-Corp as a freelancer? <span class="arrow">▾</span></button>
+        <div class="faq-a">For most freelancers earning under $80,000/year: an LLC adds legal protection but doesn't save taxes — you still pay SE tax on all profits. Above $80,000–$100,000: an S-Corp election can save significant SE tax by splitting income into salary + distributions. The salary portion pays SE tax; distributions do not. The savings can be $5,000–$15,000/year but comes with added complexity (payroll, separate tax return). Consult a CPA before making this decision.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RELATED -->
+  <div class="section">
+    <div class="section-label">More Free Tools</div>
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/se-tax-calculator.html" class="related-card">
+        <h4>🧮 SE Tax Calculator</h4>
+        <p>Full self-employment tax with all deductions</p>
+      </a>
+      <a href="/quarterly-tax-calculator.html" class="related-card">
+        <h4>📅 Quarterly Calculator</h4>
+        <p>How much to pay the IRS each quarter</p>
+      </a>
+      <a href="/1099-vs-w2-calculator.html" class="related-card">
+        <h4>⚖️ 1099 vs W-2 Comparison</h4>
+        <p>Is freelancing better than a salaried job?</p>
+      </a>
+      <a href="/doordash-tax-calculator.html" class="related-card">
+        <h4>🍔 DoorDash Calculator</h4>
+        <p>Built for DoorDash drivers specifically</p>
+      </a>
+      <a href="/deductions.html" class="related-card">
+        <h4>✂️ All 20 Deductions</h4>
+        <p>Every deduction for self-employed workers</p>
+      </a>
+      <a href="/upwork-fiverr-taxes.html" class="related-card">
+        <h4>💼 Upwork & Fiverr Tax Guide</h4>
+        <p>Full tax guide for platform freelancers</p>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+
+  <div class="cta-card">
+    <h3>💰 Know Your Rate</h3>
+    <p>Use our calculator above to find exactly what hourly rate you need to charge to hit your income goal after all taxes and platform fees.</p>
+    <a href="#calculator">Calculate Your Rate →</a>
+  </div>
+
+  <div class="sidebar-card" style="padding:0;overflow:hidden;">
+    <div class="ad-slot ad-300"><!-- AdSense 300x250 -->Advertisement</div>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>Freelancer Tax Facts</h3>
+    <div class="quick-links">
+      <a href="#">SE Tax rate: <strong>15.3%</strong></a>
+      <a href="#">Fiverr fee: <strong>20% flat</strong></a>
+      <a href="#">Upwork fee: <strong>5–20%</strong></a>
+      <a href="#">Home office max: <strong>$1,500/yr</strong></a>
+      <a href="#">SEP-IRA max: <strong>$70,000/yr</strong></a>
+      <a href="#">Set aside: <strong>25–35%</strong></a>
+    </div>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>Quick Links</h3>
+    <div class="quick-links">
+      <a href="/se-tax-calculator.html">SE Tax Calculator</a>
+      <a href="/quarterly-tax-calculator.html">Quarterly Calculator</a>
+      <a href="/deductions.html">All 20 Deductions</a>
+      <a href="/upwork-fiverr-taxes.html">Upwork & Fiverr Guide</a>
+      <a href="/quarterly-taxes.html">Quarterly Tax Guide</a>
+      <a href="/faq.html">Full FAQ</a>
+    </div>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>Best Tax Software</h3>
+    <a href="/tax-software.html" style="display:flex;gap:10px;padding:10px;background:var(--gray1);border-radius:var(--radius);margin-bottom:8px;text-decoration:none;align-items:center;">
+      <span style="font-size:20px;">🟢</span>
+      <div><div style="font-size:13px;font-weight:700;color:var(--navy);">TurboTax Self-Employed</div><div style="font-size:11px;color:var(--text2);">Best for Upwork/Fiverr freelancers</div></div>
+    </a>
+    <a href="/tax-software.html" style="display:flex;gap:10px;padding:10px;background:var(--gray1);border-radius:var(--radius);text-decoration:none;align-items:center;">
+      <span style="font-size:20px;">🔴</span>
+      <div><div style="font-size:13px;font-weight:700;color:var(--navy);">H&R Block Self-Employed</div><div style="font-size:11px;color:var(--text2);">Great value alternative</div></div>
+    </a>
+    <a href="/tax-software.html" style="font-size:12px;color:var(--green);display:block;margin-top:10px;font-weight:600;">Compare all →</a>
+  </div>
+
+  <div class="sidebar-card" style="padding:0;overflow:hidden;">
+    <div class="ad-slot ad-300"><!-- AdSense 300x250 -->Advertisement</div>
+  </div>
+
+</aside>
+</div>
+
+<!-- BOTTOM AD -->
+<div class="container">
+  <div class="ad-slot ad-728"><!-- AdSense 728x90 -->Advertisement</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-text">1099Tax<span style="color:var(--amber)">Calcs</span>.com</span>
+        <p>Free tax calculators built for America's 70 million gig workers and freelancers. Calculate what you owe, discover deductions, and never miss a quarterly deadline.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Calculators</h4>
+        <a href="/se-tax-calculator.html">SE Tax Calculator</a>
+        <a href="/quarterly-tax-calculator.html">Quarterly Calculator</a>
+        <a href="/mileage-calculator.html">Mileage Calculator</a>
+        <a href="/doordash-tax-calculator.html">DoorDash Calculator</a>
+        <a href="/freelancer-tax-calculator.html">Freelancer Calculator</a>
+      </div>
+      <div class="footer-col">
+        <h4>By Platform</h4>
+        <a href="/uber-taxes.html">Uber Driver Taxes</a>
+        <a href="/doordash-taxes.html">DoorDash Taxes</a>
+        <a href="/instacart-taxes.html">Instacart Taxes</a>
+        <a href="/upwork-fiverr-taxes.html">Upwork & Fiverr</a>
+        <a href="/amazon-flex-taxes.html">Amazon Flex</a>
+      </div>
+      <div class="footer-col">
+        <h4>Guides</h4>
+        <a href="/deductions.html">Top 20 Deductions</a>
+        <a href="/quarterly-taxes.html">Quarterly Tax Guide</a>
+        <a href="/guides.html">All Tax Guides</a>
+        <a href="/faq.html">FAQ</a>
+        <a href="/about.html">About</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 1099TaxCalcs.com — For informational purposes only. Not tax advice.</span>
+      <div style="display:flex;gap:16px;">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+        <a href="/about.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// NAV
+function toggleNav() { document.getElementById('main-nav').classList.toggle('open'); }
+
+// INPUT MODE
+let currentMode = 'hourly';
+function setMode(mode, btn) {
+  currentMode = mode;
+  document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('mode-hourly').style.display  = mode === 'hourly'  ? 'block' : 'none';
+  document.getElementById('mode-project').style.display = mode === 'project' ? 'block' : 'none';
+  document.getElementById('mode-annual').style.display  = mode === 'annual'  ? 'block' : 'none';
+  document.getElementById('results').classList.remove('show');
+}
+
+// FORMAT
+const fmt    = v  => '$' + Math.round(v).toLocaleString();
+const fmtPct = v  => (v * 100).toFixed(1) + '%';
+const fmtPctN= v  => v.toFixed(1) + '%';
+
+// FEDERAL TAX
+function calcFedTax(income, status) {
+  let tax = 0;
+  if (status === 'single') {
+    if (income > 609350)      tax = 183647.25 + (income - 609350) * 0.37;
+    else if (income > 243725) tax = 55374.25  + (income - 243725) * 0.35;
+    else if (income > 103350) tax = 18748.25  + (income - 103350) * 0.24;
+    else if (income > 52850)  tax = 6022.25   + (income - 52850)  * 0.22;
+    else if (income > 23850)  tax = 1195.00   + (income - 23850)  * 0.12;
+    else                      tax = income * 0.10;
+  } else if (status === 'married') {
+    if (income > 731200)      tax = 184811.50 + (income - 731200) * 0.37;
+    else if (income > 487450) tax = 99778.50  + (income - 487450) * 0.35;
+    else if (income > 206700) tax = 37499.50  + (income - 206700) * 0.24;
+    else if (income > 105800) tax = 12045.50  + (income - 105800) * 0.22;
+    else if (income > 47700)  tax = 2390.00   + (income - 47700)  * 0.12;
+    else                      tax = income * 0.10;
+  } else {
+    if (income > 609350)      tax = 173623.50 + (income - 609350) * 0.37;
+    else if (income > 243700) tax = 45926.50  + (income - 243700) * 0.35;
+    else if (income > 103350) tax = 16394.50  + (income - 103350) * 0.24;
+    else if (income > 55900)  tax = 5748.50   + (income - 55900)  * 0.22;
+    else if (income > 17400)  tax = 1740.00   + (income - 17400)  * 0.12;
+    else                      tax = income * 0.10;
+  }
+  return Math.max(0, tax);
+}
+
+// CALCULATE
+function calculate() {
+  const filing    = document.getElementById('filing').value;
+  const stateRate = parseFloat(document.getElementById('state').value) || 0;
+
+  // Get gross and platform fee
+  let gross = 0, platformFeeRate = 0;
+  if (currentMode === 'hourly') {
+    const rate  = parseFloat(document.getElementById('hourly-rate').value) || 0;
+    const hrs   = parseFloat(document.getElementById('hours-week').value)  || 30;
+    const wks   = parseFloat(document.getElementById('weeks-year').value)  || 48;
+    gross = rate * hrs * wks;
+    platformFeeRate = parseFloat(document.getElementById('platform-hourly').value) || 0;
+  } else if (currentMode === 'project') {
+    const avgProj  = parseFloat(document.getElementById('avg-project').value)    || 0;
+    const projYear = parseFloat(document.getElementById('projects-year').value)  || 12;
+    gross = avgProj * projYear;
+    platformFeeRate = parseFloat(document.getElementById('platform-project').value) || 0;
+  } else {
+    gross = parseFloat(document.getElementById('annual-gross').value) || 0;
+    platformFeeRate = parseFloat(document.getElementById('platform-annual').value) || 0;
+  }
+
+  if (gross <= 0) { alert('Please enter your income details.'); return; }
+
+  // Platform fee deduction
+  const platformFee = gross * platformFeeRate;
+  const afterPlatform = gross - platformFee;
+
+  // Business deductions
+  const homeOffice = parseFloat(document.getElementById('home-office').value) || 0;
+  const equipment  = parseFloat(document.getElementById('equipment').value)   || 0;
+  const software   = parseFloat(document.getElementById('software').value)    || 0;
+  const internet   = parseFloat(document.getElementById('internet').value)    || 0;
+  const healthIns  = parseFloat(document.getElementById('health-ins').value)  || 0;
+  const otherDed   = parseFloat(document.getElementById('other-ded').value)   || 0;
+  const bizDed     = homeOffice + equipment + software + internet + healthIns + otherDed;
+  const totalDed   = platformFee + bizDed;
+
+  // Net profit
+  const net       = Math.max(0, afterPlatform - bizDed);
+  const seBase    = net * 0.9235;
+  const seTax     = seBase * 0.153;
+  const halfSE    = seTax / 2;
+  let stdDed      = filing === 'married' ? 30000 : filing === 'hoh' ? 22500 : 15000;
+  const fedTaxable= Math.max(0, net - halfSE - stdDed);
+  const fedTax    = calcFedTax(fedTaxable, filing);
+  const stateTax  = net * stateRate;
+  const totalTax  = seTax + fedTax + stateTax;
+  const takeHome  = gross - totalTax - platformFee;
+  const quarterly = totalTax / 4;
+
+  // Effective rates
+  const effSE     = gross > 0 ? seTax / gross : 0;
+  const effFed    = gross > 0 ? fedTax / gross : 0;
+  const effTotal  = gross > 0 ? totalTax / gross : 0;
+  const effTH     = gross > 0 ? takeHome / gross : 0;
+
+  // Target rate recommendation
+  const targetNet = parseFloat(document.getElementById('target-net').value) || 0;
+  let rateRec = '';
+  if (targetNet > 0 && currentMode === 'hourly') {
+    const hrs = parseFloat(document.getElementById('hours-week').value) || 30;
+    const wks = parseFloat(document.getElementById('weeks-year').value) || 48;
+    const neededGross = targetNet / (effTH > 0 ? effTH : 0.65);
+    const neededRate  = neededGross / (hrs * wks);
+    rateRec = `🎯 <strong>To take home ${fmt(targetNet)}/year:</strong> You need to charge approximately <strong>${fmt(neededRate)}/hour</strong> at ${hrs} billable hours/week for ${wks} weeks. ${platformFeeRate > 0 ? `After platform fees, that means setting your platform rate to ${fmt(neededRate / (1 - platformFeeRate))}/hour.` : ''}`;
+  } else if (targetNet > 0) {
+    const neededGross = targetNet / (effTH > 0 ? effTH : 0.65);
+    rateRec = `🎯 <strong>To take home ${fmt(targetNet)}/year:</strong> You need to earn approximately <strong>${fmt(neededGross)}/year</strong> in gross freelance income.`;
+  }
+
+  // Get mode-specific label
+  let modeLabel = 'freelance income';
+  if (currentMode === 'hourly') {
+    const rate = parseFloat(document.getElementById('hourly-rate').value) || 0;
+    const hrs  = parseFloat(document.getElementById('hours-week').value)  || 30;
+    const wks  = parseFloat(document.getElementById('weeks-year').value)  || 48;
+    modeLabel = `${fmt(rate)}/hr × ${hrs} hrs × ${wks} weeks`;
+  }
+
+  // Update DOM
+  document.getElementById('results-sub').textContent = `Based on ${fmt(gross)} gross (${modeLabel})`;
+  document.getElementById('r-takehome').textContent  = fmt(takeHome);
+  document.getElementById('r-takehome-sub').textContent = `${fmt(takeHome / 12)}/month · ${fmt(takeHome / 52)}/week · ${fmtPctN(effTH * 100)}% of gross`;
+  document.getElementById('r-gross').textContent      = fmt(gross);
+  document.getElementById('r-deductions').textContent = fmt(totalDed);
+  document.getElementById('r-se').textContent         = fmt(seTax);
+  document.getElementById('r-income-tax').textContent = fmt(fedTax + stateTax);
+  document.getElementById('r-income-sub').textContent = stateRate > 0 ? `${fmt(fedTax)} federal + ${fmt(stateTax)} state` : 'Federal only (no state tax)';
+  document.getElementById('r-quarterly').textContent  = fmt(quarterly);
+
+  // Bar chart
+  document.getElementById('bar-gross-label').textContent = `${fmt(gross)} gross`;
+  const thPct    = Math.round(effTH * 100);
+  const sePct    = Math.round(effSE * 100);
+  const fedPct   = Math.round(effFed * 100);
+  const statePct = Math.round((stateTax / gross) * 100);
+  document.getElementById('bar-takehome').style.width = thPct + '%';
+  document.getElementById('bar-se').style.width        = sePct + '%';
+  document.getElementById('bar-fed').style.width       = fedPct + '%';
+  document.getElementById('bar-state').style.width     = statePct + '%';
+  document.getElementById('leg-takehome').textContent  = thPct + '%';
+  document.getElementById('leg-se').textContent        = sePct + '%';
+  document.getElementById('leg-fed').textContent       = fedPct + '%';
+  document.getElementById('leg-state').textContent     = statePct + '%';
+
+  // Rate compare
+  document.getElementById('rc-gross').textContent       = fmt(gross);
+  document.getElementById('rc-se-rate').textContent     = fmtPct(effSE);
+  document.getElementById('rc-fed-rate').textContent    = fmtPct(effFed);
+  document.getElementById('rc-total-rate').textContent  = fmtPct(effTotal);
+  document.getElementById('rc-takehome-rate').textContent = fmtPct(effTH);
+
+  // Breakdown
+  document.getElementById('bt-gross').textContent      = fmt(gross);
+  document.getElementById('bt-platform').textContent   = platformFee > 0 ? `− ${fmt(platformFee)}` : '$0';
+  document.getElementById('bt-deductions').textContent = bizDed > 0 ? `− ${fmt(bizDed)}` : '$0';
+  document.getElementById('bt-net').textContent        = fmt(net);
+  document.getElementById('bt-se').textContent         = fmt(seTax);
+  document.getElementById('bt-fed').textContent        = fmt(fedTax);
+  document.getElementById('bt-state').textContent      = stateRate > 0 ? fmt(stateTax) : '$0';
+  document.getElementById('bt-total').textContent      = fmt(totalTax);
+
+  document.getElementById('rate-rec').innerHTML = rateRec || `💡 Enter a <strong>Desired Take-Home</strong> above to see what rate you need to charge to hit your income goal.`;
+
+  document.getElementById('results').classList.add('show');
+  document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+// RESET
+function resetForm() {
+  ['hourly-rate','avg-project','annual-gross','home-office','equipment','software',
+   'internet','health-ins','other-ded','target-net'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = '';
+  });
+  document.getElementById('results').classList.remove('show');
+}
+
+// FAQ
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = btn.classList.contains('open');
+  document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+  if (!isOpen) { btn.classList.add('open'); answer.classList.add('open'); }
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Enter') calculate(); });
+</script>
+
+</body>
+</html>
