@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free quarterly estimated tax calculator for 1099 workers and freelancers. Calculate exactly how much to pay the IRS each quarter in 2026. Avoid underpayment penalties.">
+<meta name="keywords" content="quarterly tax calculator, estimated tax calculator 2026, quarterly estimated tax, 1099 quarterly payments, how much to pay quarterly taxes, self employed quarterly tax">
+<meta name="author" content="1099TaxCalcs.com">
+<meta property="og:title" content="Quarterly Tax Calculator 2026 — Free | 1099TaxCalcs.com">
+<meta property="og:description" content="Calculate exactly how much to pay the IRS each quarter. Never get penalized again. Free, instant, no signup.">
+<meta property="og:url" content="https://1099taxcalcs.com/quarterly-tax-calculator.html">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://1099taxcalcs.com/quarterly-tax-calculator.html">
+<title>Quarterly Tax Calculator 2026 — Never Miss a Payment | 1099TaxCalcs.com</title>
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+<style>
+  :root {
+    --navy:   #0D1F3C;
+    --navy2:  #162847;
+    --green:  #00A878;
+    --green2: #008F65;
+    --amber:  #F5A623;
+    --light:  #F4F7FC;
+    --white:  #FFFFFF;
+    --gray1:  #F0F4FA;
+    --gray2:  #E2E8F4;
+    --gray3:  #94A3B8;
+    --text:   #1A2A44;
+    --text2:  #4A5A72;
+    --red:    #E53E3E;
+    --font:   'Segoe UI', system-ui, -apple-system, sans-serif;
+    --radius: 8px;
+    --shadow: 0 2px 12px rgba(13,31,60,0.10);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); color: var(--text); background: var(--light); font-size: 16px; line-height: 1.6; }
+  a { color: var(--green); text-decoration: none; }
+  a:hover { color: var(--green2); text-decoration: underline; }
+
+  /* HEADER */
+  header { background: var(--navy); padding: 0 24px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+  .header-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-icon { width: 38px; height: 38px; background: var(--green); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: white; letter-spacing: -1px; flex-shrink: 0; }
+  .logo-text { color: white; font-size: 17px; font-weight: 700; }
+  .logo-text span { color: var(--amber); }
+  nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+  nav a { color: rgba(255,255,255,0.85); font-size: 13px; padding: 6px 10px; border-radius: 6px; transition: all 0.15s; white-space: nowrap; }
+  nav a:hover { background: rgba(255,255,255,0.1); color: white; text-decoration: none; }
+  nav a.active { color: var(--amber); }
+  .nav-cta { background: var(--green) !important; color: white !important; font-weight: 600; padding: 7px 14px !important; }
+  .nav-cta:hover { background: var(--green2) !important; }
+  .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: white; margin: 5px 0; border-radius: 2px; }
+  @media(max-width: 768px) {
+    .hamburger { display: block; }
+    nav { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--navy2); padding: 12px 16px; flex-direction: column; align-items: flex-start; gap: 2px; }
+    nav.open { display: flex; }
+    nav a { width: 100%; padding: 10px 12px; }
+  }
+
+  /* PAGE HERO */
+  .page-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%); color: white; padding: 40px 24px 36px; }
+  .page-hero-inner { max-width: 1200px; margin: 0 auto; }
+  .breadcrumb { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 12px; }
+  .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--green); }
+  .breadcrumb span { margin: 0 6px; }
+  .page-hero h1 { font-size: clamp(24px, 3.5vw, 38px); font-weight: 800; line-height: 1.2; margin-bottom: 10px; }
+  .page-hero h1 em { color: var(--amber); font-style: normal; }
+  .page-hero p { font-size: 15px; color: rgba(255,255,255,0.75); max-width: 620px; line-height: 1.7; }
+  .hero-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+  .pill { font-size: 11px; font-weight: 600; padding: 4px 12px; border-radius: 20px; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8); border: 1px solid rgba(255,255,255,0.15); }
+  .pill.green { background: rgba(0,168,120,0.2); color: #5EEAD4; border-color: rgba(0,168,120,0.3); }
+
+  /* DEADLINE COUNTDOWN BAR */
+  .countdown-bar { background: var(--amber); color: var(--navy); padding: 10px 24px; text-align: center; font-size: 13px; font-weight: 600; }
+  .countdown-bar span { margin: 0 6px; }
+
+  /* LAYOUT */
+  .main-wrap { max-width: 1200px; margin: 0 auto; padding: 32px 24px; display: grid; grid-template-columns: 1fr 300px; gap: 32px; align-items: start; }
+  @media(max-width: 960px) { .main-wrap { grid-template-columns: 1fr; } }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* AD SLOTS */
+  .ad-slot { background: var(--gray1); border: 1px dashed var(--gray2); border-radius: var(--radius); text-align: center; color: var(--gray3); font-size: 11px; padding: 8px; }
+  .ad-728 { width: 100%; height: 90px; line-height: 74px; margin: 20px 0; }
+  .ad-300 { width: 100%; height: 250px; line-height: 234px; }
+
+  /* CALCULATOR CARD */
+  .calc-card { background: white; border-radius: 16px; box-shadow: 0 4px 24px rgba(13,31,60,0.13); overflow: hidden; margin-bottom: 24px; }
+  .calc-header { background: var(--navy); color: white; padding: 18px 24px; }
+  .calc-header h2 { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+  .calc-header p { font-size: 13px; color: rgba(255,255,255,0.65); }
+  .calc-body { padding: 24px; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media(max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+  .form-group { margin-bottom: 14px; }
+  .form-group label { display: block; font-size: 12px; font-weight: 600; color: var(--text2); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .form-group label .tip { font-size: 11px; color: var(--green); font-weight: 400; text-transform: none; letter-spacing: 0; margin-left: 4px; }
+  .form-group input, .form-group select { width: 100%; padding: 10px 14px; border: 1.5px solid var(--gray2); border-radius: var(--radius); font-size: 15px; color: var(--text); background: var(--gray1); transition: border-color 0.15s; font-family: var(--font); }
+  .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--green); background: white; }
+  .input-prefix { position: relative; }
+  .input-prefix::before { content: '$'; position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--gray3); font-size: 15px; font-weight: 600; }
+  .input-prefix input { padding-left: 26px; }
+
+  .section-divider { font-size: 11px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 0.08em; padding: 10px 0 8px; border-top: 1px solid var(--gray2); margin-top: 4px; display: flex; align-items: center; gap: 8px; }
+  .section-divider::after { content: ''; flex: 1; height: 1px; background: var(--gray2); }
+
+  /* METHOD TOGGLE */
+  .method-toggle { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1.5px solid var(--gray2); border-radius: var(--radius); overflow: hidden; margin-bottom: 18px; }
+  .method-btn { padding: 10px 14px; background: var(--gray1); border: none; font-size: 13px; font-weight: 600; color: var(--text2); cursor: pointer; font-family: var(--font); transition: all 0.15s; text-align: center; line-height: 1.4; }
+  .method-btn.active { background: var(--green); color: white; }
+  .method-btn:first-child { border-right: 1px solid var(--gray2); }
+
+  .method-panel { display: none; }
+  .method-panel.active { display: block; }
+
+  .calc-btn { width: 100%; padding: 14px; background: var(--green); color: white; font-size: 16px; font-weight: 700; border: none; border-radius: var(--radius); cursor: pointer; transition: background 0.15s; font-family: var(--font); letter-spacing: 0.01em; }
+  .calc-btn:hover { background: var(--green2); }
+  .reset-btn { width: 100%; padding: 9px; background: transparent; color: var(--text2); font-size: 13px; border: 1.5px solid var(--gray2); border-radius: var(--radius); cursor: pointer; font-family: var(--font); margin-top: 8px; transition: all 0.15s; }
+  .reset-btn:hover { border-color: var(--green); color: var(--green); }
+
+  /* RESULTS */
+  .results { display: none; margin-top: 24px; }
+  .results.show { display: block; }
+
+  .results-header { background: var(--navy); color: white; border-radius: 12px 12px 0 0; padding: 14px 20px; }
+  .results-header h3 { font-size: 15px; font-weight: 700; }
+  .results-header p { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 2px; }
+  .results-body { background: white; border: 1.5px solid var(--gray2); border-top: none; border-radius: 0 0 12px 12px; padding: 20px; }
+
+  /* QUARTER CARDS */
+  .quarter-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
+  @media(max-width: 500px) { .quarter-grid { grid-template-columns: 1fr; } }
+  .q-card { border-radius: var(--radius); padding: 14px 16px; border: 1.5px solid var(--gray2); }
+  .q-card.passed { background: var(--gray1); border-color: var(--gray2); opacity: 0.75; }
+  .q-card.current { background: #E9F9F4; border-color: var(--green); }
+  .q-card.upcoming { background: var(--gray1); border-color: var(--gray2); }
+  .q-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+  .q-name { font-size: 13px; font-weight: 700; color: var(--navy); }
+  .q-status { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 20px; }
+  .status-passed { background: var(--gray2); color: var(--gray3); }
+  .status-current { background: rgba(0,168,120,0.15); color: var(--green2); }
+  .status-upcoming { background: #E6F1FB; color: #185FA5; }
+  .q-amount { font-size: 24px; font-weight: 800; color: var(--navy); margin-bottom: 3px; }
+  .q-amount.current { color: var(--green2); }
+  .q-deadline { font-size: 11px; color: var(--text2); }
+  .q-income { font-size: 11px; color: var(--text2); margin-top: 4px; }
+
+  .total-row-big { background: var(--navy); border-radius: var(--radius); padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+  .total-row-big .label { color: rgba(255,255,255,0.75); font-size: 13px; font-weight: 600; }
+  .total-row-big .value { font-size: 26px; font-weight: 800; color: var(--amber); }
+
+  .effective-rate { display: flex; gap: 10px; margin-bottom: 14px; }
+  .rate-box { flex: 1; background: var(--gray1); border-radius: var(--radius); padding: 10px 12px; text-align: center; }
+  .rate-label { font-size: 11px; color: var(--text2); margin-bottom: 3px; }
+  .rate-value { font-size: 18px; font-weight: 800; color: var(--navy); }
+
+  .penalty-box { background: #FFF0F0; border: 1px solid #FFCCCC; border-radius: var(--radius); padding: 12px 14px; font-size: 13px; color: #8B0000; margin-bottom: 12px; line-height: 1.6; }
+  .penalty-box strong { color: var(--red); }
+  .safe-box { background: #E9F9F4; border: 1px solid rgba(0,168,120,0.3); border-radius: var(--radius); padding: 12px 14px; font-size: 13px; color: #065F46; margin-bottom: 12px; line-height: 1.6; }
+  .safe-box strong { color: var(--green2); }
+  .result-note { font-size: 11px; color: var(--gray3); text-align: center; margin-top: 10px; line-height: 1.6; }
+
+  /* HOW TO PAY STEPS */
+  .pay-steps { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
+  @media(max-width: 600px) { .pay-steps { grid-template-columns: 1fr; } }
+  .pay-step { background: var(--gray1); border-radius: var(--radius); padding: 14px 16px; border-left: 3px solid var(--green); }
+  .pay-step-num { font-size: 11px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 5px; }
+  .pay-step h4 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .pay-step p { font-size: 13px; color: var(--text2); margin: 0; line-height: 1.5; }
+
+  /* CONTENT SECTIONS */
+  .section { background: white; border-radius: 12px; padding: 28px; margin-bottom: 20px; box-shadow: var(--shadow); }
+  .section-label { font-size: 11px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+  .section h2 { font-size: 22px; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
+  .section h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin: 20px 0 8px; }
+  .section p { color: var(--text2); line-height: 1.8; margin-bottom: 12px; }
+  .section ul, .section ol { color: var(--text2); line-height: 1.8; margin: 8px 0 12px 20px; }
+  .section li { margin-bottom: 6px; }
+  .section strong { color: var(--navy); }
+
+  /* DEADLINE TABLE */
+  .deadline-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 14px 0; }
+  .deadline-table th { background: var(--navy); color: white; padding: 10px 14px; text-align: left; font-size: 12px; letter-spacing: 0.04em; }
+  .deadline-table td { padding: 10px 14px; border-bottom: 1px solid var(--gray2); color: var(--text2); vertical-align: top; }
+  .deadline-table tr:nth-child(even) td { background: var(--gray1); }
+  .deadline-table tr.current-q td { background: #E9F9F4; font-weight: 600; color: var(--navy); }
+  .deadline-table strong { color: var(--navy); }
+  .due-badge { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 20px; }
+  .badge-passed { background: var(--gray2); color: var(--gray3); }
+  .badge-now { background: rgba(0,168,120,0.15); color: var(--green2); }
+  .badge-next { background: #E6F1FB; color: #185FA5; }
+
+  /* PENALTY TABLE */
+  .info-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 14px 0; }
+  .info-table th { background: var(--navy); color: white; padding: 10px 14px; text-align: left; font-size: 12px; letter-spacing: 0.04em; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid var(--gray2); color: var(--text2); }
+  .info-table tr:nth-child(even) td { background: var(--gray1); }
+  .info-table strong { color: var(--navy); }
+
+  /* WARN / INFO BOXES */
+  .warn-box { background: #FFF8EC; border: 1px solid #F5D78E; border-radius: var(--radius); padding: 14px 16px; font-size: 13px; color: #7A4F00; line-height: 1.6; margin: 14px 0; }
+  .warn-box strong { color: #5A3800; }
+  .info-note { background: #EEF2FA; border: 1px solid #C7D4EE; border-radius: var(--radius); padding: 14px 16px; font-size: 13px; color: var(--text2); line-height: 1.6; margin: 14px 0; }
+  .green-box { background: #E9F9F4; border: 1px solid rgba(0,168,120,0.3); border-radius: var(--radius); padding: 14px 16px; font-size: 13px; color: #065F46; line-height: 1.6; margin: 14px 0; }
+
+  /* FAQ */
+  .faq-list { margin-top: 10px; }
+  .faq-item { border-bottom: 1px solid var(--gray2); }
+  .faq-q { width: 100%; text-align: left; background: none; border: none; padding: 14px 0; font-size: 15px; font-weight: 600; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: var(--font); }
+  .faq-q:hover { color: var(--green); }
+  .faq-q .arrow { font-size: 18px; color: var(--green); transition: transform 0.2s; flex-shrink: 0; margin-left: 12px; }
+  .faq-q.open .arrow { transform: rotate(180deg); }
+  .faq-a { font-size: 14px; color: var(--text2); line-height: 1.8; padding-bottom: 14px; display: none; }
+  .faq-a.open { display: block; }
+
+  /* RELATED */
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; margin-top: 12px; }
+  .related-card { background: var(--gray1); border: 1.5px solid var(--gray2); border-radius: var(--radius); padding: 14px 16px; text-decoration: none; transition: all 0.15s; display: block; }
+  .related-card:hover { border-color: var(--green); background: white; text-decoration: none; }
+  .related-card h4 { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+  .related-card p { font-size: 12px; color: var(--text2); margin: 0; }
+
+  /* SIDEBAR */
+  .sidebar { display: flex; flex-direction: column; gap: 18px; }
+  .sidebar-card { background: white; border-radius: 12px; padding: 18px; box-shadow: var(--shadow); }
+  .sidebar-card h3 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 10px; border-bottom: 2px solid var(--green); padding-bottom: 7px; }
+  .cta-card { background: linear-gradient(135deg, var(--navy), var(--navy2)); color: white; border-radius: 12px; padding: 18px; }
+  .cta-card h3 { font-size: 14px; font-weight: 700; color: white; margin-bottom: 6px; border: none; padding: 0; }
+  .cta-card p { font-size: 12px; color: rgba(255,255,255,0.7); margin-bottom: 12px; line-height: 1.6; }
+  .cta-card a { display: block; background: var(--green); color: white; text-align: center; padding: 9px; border-radius: var(--radius); font-weight: 700; font-size: 13px; text-decoration: none; }
+  .cta-card a:hover { background: var(--green2); }
+  .quick-links a { display: flex; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--gray2); font-size: 13px; color: var(--text); text-decoration: none; }
+  .quick-links a:last-child { border-bottom: none; }
+  .quick-links a:hover { color: var(--green); }
+  .quick-links a::before { content: '→'; color: var(--green); font-weight: 700; }
+
+  /* DEADLINE SIDEBAR */
+  .deadline-sidebar { display: flex; flex-direction: column; gap: 8px; }
+  .ds-item { display: flex; justify-content: space-between; align-items: center; padding: 8px 10px; border-radius: var(--radius); background: var(--gray1); }
+  .ds-item.current { background: #E9F9F4; border: 1px solid rgba(0,168,120,0.3); }
+  .ds-label { font-size: 12px; font-weight: 600; color: var(--navy); }
+  .ds-date { font-size: 11px; color: var(--text2); }
+  .ds-badge { font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 20px; }
+
+  /* FOOTER */
+  footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 40px 24px 24px; margin-top: 48px; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 32px; }
+  .footer-brand .logo-text { font-size: 18px; color: white; display: block; margin-bottom: 8px; }
+  .footer-brand p { font-size: 13px; line-height: 1.7; }
+  .footer-col h4 { color: white; font-size: 13px; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,0.55); margin-bottom: 7px; text-decoration: none; }
+  .footer-col a:hover { color: var(--green); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 12px; }
+  .footer-bottom a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .footer-bottom a:hover { color: var(--green); }
+  @media(max-width: 700px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } }
+</style>
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When are quarterly estimated taxes due in 2026?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The four 2026 quarterly estimated tax deadlines are: April 15 (Q1), June 16 (Q2), September 15 (Q3), and January 15, 2027 (Q4). Missing these deadlines triggers an IRS underpayment penalty." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much should I pay in quarterly estimated taxes?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Pay at least 90% of your current year's estimated tax liability, OR 100% of last year's total tax bill (whichever is smaller). This is called the safe harbor rule and protects you from underpayment penalties." }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I miss a quarterly tax payment?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The IRS charges an underpayment penalty of approximately 8% annually on the amount underpaid for each quarter missed. The penalty is calculated per quarter, so missing Q1 costs more than missing Q4." }
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <div class="logo-icon">1099</div>
+      <div class="logo-text">Tax<span>Calcs</span>.com</div>
+    </a>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav">
+      <a href="/calculators.html">Calculators</a>
+      <a href="/deductions.html">Deductions</a>
+      <a href="/quarterly-taxes.html" class="active">Quarterly Taxes</a>
+      <a href="/platforms.html">By Platform</a>
+      <a href="/guides.html">Guides</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/se-tax-calculator.html" class="nav-cta">SE Tax Calculator</a>
+    </nav>
+  </div>
+</header>
+
+<!-- COUNTDOWN BAR -->
+<div class="countdown-bar">
+  ⏰ Next quarterly deadline: <span><strong>September 15, 2026 (Q3)</strong></span> — <span id="days-left"></span> days away — <a href="#calculator" style="color:var(--navy);text-decoration:underline;font-weight:700;">Calculate your Q3 payment →</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span>
+      <a href="/calculators.html">Calculators</a><span>›</span>
+      Quarterly Tax Calculator
+    </div>
+    <h1>Quarterly Estimated Tax Calculator <em>2026</em></h1>
+    <p>Find out exactly how much to send the IRS each quarter. Never get hit with an underpayment penalty again. Enter your income once — get all four quarterly payment amounts instantly.</p>
+    <div class="hero-pills">
+      <span class="pill green">✓ All 4 quarters calculated</span>
+      <span class="pill">Safe harbor amounts included</span>
+      <span class="pill">All 50 states</span>
+      <span class="pill">Penalty calculator built in</span>
+    </div>
+  </div>
+</div>
+
+<!-- TOP AD -->
+<div class="container">
+  <div class="ad-slot ad-728"><!-- AdSense 728x90 -->Advertisement</div>
+</div>
+
+<!-- MAIN WRAP -->
+<div class="main-wrap" id="calculator">
+<main>
+
+  <!-- CALCULATOR -->
+  <div class="calc-card">
+    <div class="calc-header">
+      <h2>📅 Quarterly Tax Calculator 2026</h2>
+      <p>Choose your calculation method below — current year estimate or last year's safe harbor</p>
+    </div>
+    <div class="calc-body">
+
+      <!-- METHOD TOGGLE -->
+      <div class="section-divider">📊 Calculation Method</div>
+      <div class="method-toggle">
+        <button class="method-btn active" onclick="setMethod('estimate', this)">
+          Method 1: Estimate This Year<br><small style="font-weight:400;font-size:11px;">Based on what you expect to earn</small>
+        </button>
+        <button class="method-btn" onclick="setMethod('lastyear', this)">
+          Method 2: Use Last Year's Tax<br><small style="font-weight:400;font-size:11px;">100% safe harbor — zero penalty risk</small>
+        </button>
+      </div>
+
+      <!-- METHOD 1: ESTIMATE -->
+      <div class="method-panel active" id="panel-estimate">
+        <div class="section-divider">💵 Expected 2026 Income</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="q1-income">Q1 Income (Jan–Mar) <span class="tip">actual or estimate</span></label>
+            <div class="input-prefix"><input type="number" id="q1-income" placeholder="12,000" min="0"></div>
+          </div>
+          <div class="form-group">
+            <label for="q2-income">Q2 Income (Apr–May) <span class="tip">actual or estimate</span></label>
+            <div class="input-prefix"><input type="number" id="q2-income" placeholder="12,000" min="0"></div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="q3-income">Q3 Income (Jun–Aug) <span class="tip">estimate</span></label>
+            <div class="input-prefix"><input type="number" id="q3-income" placeholder="12,000" min="0"></div>
+          </div>
+          <div class="form-group">
+            <label for="q4-income">Q4 Income (Sep–Dec) <span class="tip">estimate</span></label>
+            <div class="input-prefix"><input type="number" id="q4-income" placeholder="12,000" min="0"></div>
+          </div>
+        </div>
+        <div class="section-divider">✂️ Annual Deductions</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="annual-expenses">Total Business Expenses</label>
+            <div class="input-prefix"><input type="number" id="annual-expenses" placeholder="8,000" min="0"></div>
+          </div>
+          <div class="form-group">
+            <label for="annual-miles">Business Miles (full year)</label>
+            <div class="input-prefix" style="position:relative;">
+              <input type="number" id="annual-miles" placeholder="15,000" min="0" style="padding-left:14px;">
+              <span style="position:absolute;right:12px;top:50%;transform:translateY(-50%);color:var(--gray3);font-size:12px;">mi</span>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="annual-health">Health Insurance Premiums</label>
+            <div class="input-prefix"><input type="number" id="annual-health" placeholder="4,800" min="0"></div>
+          </div>
+          <div class="form-group">
+            <label for="annual-other">Other Deductions</label>
+            <div class="input-prefix"><input type="number" id="annual-other" placeholder="2,000" min="0"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- METHOD 2: LAST YEAR -->
+      <div class="method-panel" id="panel-lastyear">
+        <div class="warn-box" style="margin-bottom:16px;">
+          💡 <strong>Safe Harbor Method:</strong> Pay 100% of last year's total federal tax bill, divided evenly across 4 quarters. This <strong>guarantees zero underpayment penalty</strong> regardless of how much you earn this year. If last year's AGI was over $150,000, pay 110% instead.
+        </div>
+        <div class="form-group">
+          <label for="last-year-tax">Last Year's Total Federal Tax (from your 2025 Form 1040, Line 24)</label>
+          <div class="input-prefix"><input type="number" id="last-year-tax" placeholder="8,500" min="0"></div>
+        </div>
+        <div class="form-group">
+          <label for="last-year-agi">Last Year's Adjusted Gross Income (AGI) <span class="tip">determines 100% vs 110% rule</span></label>
+          <div class="input-prefix"><input type="number" id="last-year-agi" placeholder="55,000" min="0"></div>
+        </div>
+      </div>
+
+      <!-- SHARED: FILING STATUS & STATE -->
+      <div class="section-divider">👤 Your Info</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="filing">Filing Status</label>
+          <select id="filing">
+            <option value="single">Single</option>
+            <option value="married">Married Filing Jointly</option>
+            <option value="hoh">Head of Household</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="state">State</label>
+          <select id="state">
+            <option value="0">No state tax (TX, FL, WA, NV, SD, WY, AK)</option>
+            <option value="0.0450">Alabama (4.5%)</option>
+            <option value="0.0250">Arizona (2.5%)</option>
+            <option value="0.0490">Arkansas (4.9%)</option>
+            <option value="0.0930">California (9.3%)</option>
+            <option value="0.0440">Colorado (4.4%)</option>
+            <option value="0.0500">Connecticut (5.0%)</option>
+            <option value="0.0575">Georgia (5.49%)</option>
+            <option value="0.0495">Illinois (4.95%)</option>
+            <option value="0.0315">Indiana (3.15%)</option>
+            <option value="0.0500">Massachusetts (5.0%)</option>
+            <option value="0.0425">Michigan (4.25%)</option>
+            <option value="0.0985">Minnesota (9.85%)</option>
+            <option value="0.0685">New York (6.85%)</option>
+            <option value="0.0450">North Carolina (4.5%)</option>
+            <option value="0.0399">Ohio (3.99%)</option>
+            <option value="0.0875">Oregon (8.75%)</option>
+            <option value="0.0307">Pennsylvania (3.07%)</option>
+            <option value="0.0575">Virginia (5.75%)</option>
+            <option value="0.0765">Wisconsin (7.65%)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="already-paid">Amount Already Paid to IRS This Year (if any) <span class="tip">optional</span></label>
+        <div class="input-prefix"><input type="number" id="already-paid" placeholder="0" min="0"></div>
+      </div>
+
+      <button class="calc-btn" onclick="calculate()">📅 Calculate My Quarterly Payments →</button>
+      <button class="reset-btn" onclick="resetForm()">↺ Reset</button>
+
+      <!-- RESULTS -->
+      <div class="results" id="results">
+        <div class="results-header">
+          <h3>📊 Your 2026 Quarterly Payment Schedule</h3>
+          <p>Based on your estimated income and deductions</p>
+        </div>
+        <div class="results-body">
+
+          <div class="quarter-grid">
+            <div class="q-card passed" id="q1-card">
+              <div class="q-header">
+                <span class="q-name">Q1 — Jan to Mar</span>
+                <span class="q-status status-passed">Passed</span>
+              </div>
+              <div class="q-amount" id="q1-amount">$0</div>
+              <div class="q-deadline">Due: April 15, 2026</div>
+              <div class="q-income" id="q1-income-line"></div>
+            </div>
+            <div class="q-card passed" id="q2-card">
+              <div class="q-header">
+                <span class="q-name">Q2 — Apr to May</span>
+                <span class="q-status status-passed">Passed</span>
+              </div>
+              <div class="q-amount" id="q2-amount">$0</div>
+              <div class="q-deadline">Due: June 16, 2026</div>
+              <div class="q-income" id="q2-income-line"></div>
+            </div>
+            <div class="q-card current" id="q3-card">
+              <div class="q-header">
+                <span class="q-name">Q3 — Jun to Aug</span>
+                <span class="q-status status-current">⚡ Pay Now</span>
+              </div>
+              <div class="q-amount current" id="q3-amount">$0</div>
+              <div class="q-deadline">Due: <strong>September 15, 2026</strong></div>
+              <div class="q-income" id="q3-income-line"></div>
+            </div>
+            <div class="q-card upcoming" id="q4-card">
+              <div class="q-header">
+                <span class="q-name">Q4 — Sep to Dec</span>
+                <span class="q-status status-upcoming">Upcoming</span>
+              </div>
+              <div class="q-amount" id="q4-amount">$0</div>
+              <div class="q-deadline">Due: January 15, 2027</div>
+              <div class="q-income" id="q4-income-line"></div>
+            </div>
+          </div>
+
+          <div class="total-row-big">
+            <div class="label">💰 Total Estimated Annual Tax</div>
+            <div class="value" id="r-total">$0</div>
+          </div>
+
+          <div class="effective-rate">
+            <div class="rate-box"><div class="rate-label">Effective Total Rate</div><div class="rate-value" id="r-eff-rate">0%</div></div>
+            <div class="rate-box"><div class="rate-label">SE Tax Owed</div><div class="rate-value" id="r-se">$0</div></div>
+            <div class="rate-box"><div class="rate-label">Federal Income Tax</div><div class="rate-value" id="r-fed">$0</div></div>
+            <div class="rate-box"><div class="rate-label">Remaining to Pay</div><div class="rate-value" id="r-remaining">$0</div></div>
+          </div>
+
+          <div class="safe-box" id="safe-msg"></div>
+          <div class="penalty-box" id="penalty-msg" style="display:none;"></div>
+
+          <p class="result-note">⚠️ Estimates only — not tax advice. Consult a CPA for your exact amounts. Pay at IRS.gov/payments using Direct Pay (free).</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- HOW TO PAY -->
+  <div class="section">
+    <div class="section-label">Step by Step</div>
+    <h2>How to Actually Pay Quarterly Taxes</h2>
+    <p>Once you know your amount, paying is simple. The IRS offers three free payment methods — no paper checks needed.</p>
+    <div class="pay-steps">
+      <div class="pay-step">
+        <div class="pay-step-num">Step 1</div>
+        <h4>Go to IRS Direct Pay</h4>
+        <p>Visit <strong>IRS.gov/payments</strong> → click "Make a Payment" → select "Estimated Tax" and tax year 2026. No account or login required.</p>
+      </div>
+      <div class="pay-step">
+        <div class="pay-step-num">Step 2</div>
+        <h4>Verify your identity</h4>
+        <p>IRS will ask for your name, SSN, date of birth, and address. It cross-checks with a prior year return. Have your 2025 tax return handy.</p>
+      </div>
+      <div class="pay-step">
+        <div class="pay-step-num">Step 3</div>
+        <h4>Enter payment amount</h4>
+        <p>Enter the quarterly amount from the calculator above. Select your payment date (on or before the deadline). Choose bank account (ACH) — it's free.</p>
+      </div>
+      <div class="pay-step">
+        <div class="pay-step-num">Step 4</div>
+        <h4>Save your confirmation</h4>
+        <p>Screenshot or print the confirmation number. At tax time, report quarterly payments on Form 1040 Line 26 — this reduces your final tax bill.</p>
+      </div>
+    </div>
+    <div class="info-note">📱 <strong>Alternative:</strong> Use the free <strong>IRS2Go app</strong> (iOS/Android) to pay in under 2 minutes. Also accepts credit cards via Pay1040.com (1.87% fee — usually not worth it unless you're earning card rewards).</div>
+  </div>
+
+  <!-- MIDDLE AD -->
+  <div class="ad-slot ad-728" style="margin-bottom:20px;"><!-- AdSense 728x90 -->Advertisement</div>
+
+  <!-- DEADLINES -->
+  <div class="section">
+    <div class="section-label">2026 Payment Schedule</div>
+    <h2>All 2026 Quarterly Tax Deadlines</h2>
+    <p>The IRS sets four payment deadlines each year. These apply to everyone who expects to owe $1,000 or more in federal tax for the year — including gig workers, freelancers, and independent contractors.</p>
+
+    <table class="deadline-table">
+      <thead>
+        <tr><th>Quarter</th><th>Income Period Covered</th><th>Due Date</th><th>Status</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Q1 2026</strong></td>
+          <td>January 1 – March 31</td>
+          <td>April 15, 2026</td>
+          <td><span class="due-badge badge-passed">Passed</span></td>
+          <td>Same day as regular tax filing deadline</td>
+        </tr>
+        <tr>
+          <td><strong>Q2 2026</strong></td>
+          <td>April 1 – May 31</td>
+          <td>June 16, 2026</td>
+          <td><span class="due-badge badge-passed">Passed</span></td>
+          <td>Note: only 2 months, not 3</td>
+        </tr>
+        <tr class="current-q">
+          <td><strong>Q3 2026 ⚡</strong></td>
+          <td>June 1 – August 31</td>
+          <td><strong>September 15, 2026</strong></td>
+          <td><span class="due-badge badge-now">Pay Now</span></td>
+          <td>Use calculator above for your amount</td>
+        </tr>
+        <tr>
+          <td><strong>Q4 2026</strong></td>
+          <td>September 1 – December 31</td>
+          <td>January 15, 2027</td>
+          <td><span class="due-badge badge-next">Upcoming</span></td>
+          <td>Or file your return by Feb 1, 2027 instead</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="warn-box">
+      ⚠️ <strong>Q2 is only 2 months long (April–May),</strong> not 3. This catches many gig workers off guard. The June 16 deadline covers income earned in April and May only — not June. June income is reported in Q3.
+    </div>
+
+    <h3>What If a Deadline Falls on a Weekend or Holiday?</h3>
+    <p>If the deadline falls on a weekend or federal holiday, it automatically moves to the next business day. The June 16, 2026 deadline is already adjusted for this — June 15 falls on a Sunday.</p>
+  </div>
+
+  <!-- SAFE HARBOR -->
+  <div class="section">
+    <div class="section-label">Avoid Penalties</div>
+    <h2>The Safe Harbor Rule — Your Penalty Shield</h2>
+    <p>The IRS will <strong>never charge you an underpayment penalty</strong> if you meet either of these two safe harbor thresholds — even if you end up owing more at tax time:</p>
+
+    <table class="info-table">
+      <thead><tr><th>Safe Harbor Rule</th><th>Who It Applies To</th><th>How to Qualify</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>90% Rule</strong></td>
+          <td>Everyone</td>
+          <td>Pay at least 90% of your <em>current year's</em> actual tax liability through quarterly payments</td>
+        </tr>
+        <tr>
+          <td><strong>100% of Prior Year</strong></td>
+          <td>AGI $150,000 or less</td>
+          <td>Pay 100% of your prior year (2025) total tax bill, split evenly across 4 quarters</td>
+        </tr>
+        <tr>
+          <td><strong>110% of Prior Year</strong></td>
+          <td>AGI over $150,000</td>
+          <td>Pay 110% of your 2025 total tax bill, split across 4 quarters</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="green-box">
+      ✅ <strong>The easiest approach:</strong> Use Method 2 (last year's tax) in our calculator above. Take your 2025 Form 1040 Line 24 amount, divide by 4, and pay that each quarter. You're 100% penalty-proof — even if your income doubles this year.
+    </div>
+
+    <h3>What Is the Underpayment Penalty?</h3>
+    <p>If you don't meet a safe harbor and underpay, the IRS charges interest on the shortfall. For 2026, the underpayment rate is <strong>8% annually</strong> (the federal short-term rate + 3 percentage points). It's calculated per quarter — so missing Q1 is more expensive than missing Q4.</p>
+    <p>On a $2,000 underpayment for a full quarter, the penalty is about <strong>$40</strong> — not catastrophic, but avoidable.</p>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section">
+    <div class="section-label">Common Questions</div>
+    <h2>Quarterly Tax FAQ</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Do I have to pay quarterly taxes as a gig worker? <span class="arrow">▾</span></button>
+        <div class="faq-a">You are required to make quarterly estimated payments if you expect to owe at least <strong>$1,000 in federal tax</strong> for the year after subtracting withholding and credits. Almost every full-time gig worker crosses this threshold. Part-time gig workers with a W-2 job may avoid quarterly payments if their W-2 withholding covers enough of their total tax bill.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What if my income is uneven throughout the year? <span class="arrow">▾</span></button>
+        <div class="faq-a">That's normal for gig workers. You can use the <strong>annualized income installment method</strong> (IRS Form 2210-AI) to calculate each quarter based on actual income earned that quarter rather than equal installments. This is especially useful if you earn most of your income in Q3 or Q4. Our Method 1 calculator above estimates this automatically by letting you enter income per quarter.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Can I skip Q1 and Q2 if I just started gig work? <span class="arrow">▾</span></button>
+        <div class="faq-a">Yes — you only owe quarterly payments for the quarters in which you had income. If you started driving for DoorDash in June 2026, your first required payment is Q3 (due September 15). However, you'll want to pay enough in Q3 and Q4 to meet the safe harbor or 90% threshold for the year.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Does my state also require quarterly payments? <span class="arrow">▾</span></button>
+        <div class="faq-a">Most states with income taxes mirror the federal quarterly system but have their own deadlines and thresholds. California, New York, and Oregon in particular have strict state estimated tax requirements. Check your state's tax agency website — California uses FTB.ca.gov, New York uses Tax.ny.gov. Our calculator includes state tax in your total estimate but for state payment mechanics, check your state's instructions.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">I overpaid quarterly — do I get a refund? <span class="arrow">▾</span></button>
+        <div class="faq-a">Yes. If your quarterly payments exceed your final tax bill, the overpayment becomes a refund when you file your annual return — or you can apply it to next year's estimated taxes. Most gig workers prefer to apply it forward rather than wait for the refund check.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Is there a minimum payment to avoid the quarterly penalty? <span class="arrow">▾</span></button>
+        <div class="faq-a">The IRS waives the underpayment penalty if the total amount owed after credits is less than <strong>$1,000</strong>. So if your total annual tax liability is under $1,000 after any withholding, you don't need to make quarterly payments. Also — no penalty if you had zero tax liability last year (2025).</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RELATED -->
+  <div class="section">
+    <div class="section-label">More Free Tools</div>
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/se-tax-calculator.html" class="related-card">
+        <h4>🧮 SE Tax Calculator</h4>
+        <p>Calculate your full self-employment tax bill</p>
+      </a>
+      <a href="/mileage-calculator.html" class="related-card">
+        <h4>🚗 Mileage Calculator</h4>
+        <p>72.5¢/mi deduction — enter miles, get savings</p>
+      </a>
+      <a href="/doordash-tax-calculator.html" class="related-card">
+        <h4>🍔 DoorDash Calculator</h4>
+        <p>DoorDash-specific tax calculator</p>
+      </a>
+      <a href="/uber-lyft-tax-calculator.html" class="related-card">
+        <h4>🚘 Uber & Lyft Calculator</h4>
+        <p>Rideshare driver tax estimator</p>
+      </a>
+      <a href="/freelancer-tax-calculator.html" class="related-card">
+        <h4>💻 Freelancer Calculator</h4>
+        <p>Real take-home pay after all taxes</p>
+      </a>
+      <a href="/deductions.html" class="related-card">
+        <h4>✂️ Top 20 Deductions</h4>
+        <p>Every deduction that reduces your quarterly bill</p>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+
+  <div class="cta-card">
+    <h3>⚡ Q3 Deadline Coming</h3>
+    <p>September 15, 2026 — calculate your exact Q3 payment above and pay at IRS.gov/payments today.</p>
+    <a href="#calculator">Calculate Now →</a>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>📅 2026 Deadlines</h3>
+    <div class="deadline-sidebar">
+      <div class="ds-item">
+        <div><div class="ds-label">Q1 — April 15</div><div class="ds-date">Jan–Mar income</div></div>
+        <span class="ds-badge badge-passed" style="background:var(--gray2);color:var(--gray3);">Passed</span>
+      </div>
+      <div class="ds-item">
+        <div><div class="ds-label">Q2 — June 16</div><div class="ds-date">Apr–May income</div></div>
+        <span class="ds-badge badge-passed" style="background:var(--gray2);color:var(--gray3);">Passed</span>
+      </div>
+      <div class="ds-item current">
+        <div><div class="ds-label">Q3 — Sep 15 ⚡</div><div class="ds-date">Jun–Aug income</div></div>
+        <span class="ds-badge" style="background:rgba(0,168,120,0.15);color:var(--green2);">Pay Now</span>
+      </div>
+      <div class="ds-item">
+        <div><div class="ds-label">Q4 — Jan 15, 2027</div><div class="ds-date">Sep–Dec income</div></div>
+        <span class="ds-badge" style="background:#E6F1FB;color:#185FA5;">Upcoming</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar-card" style="padding:0;overflow:hidden;">
+    <div class="ad-slot ad-300"><!-- AdSense 300x250 -->Advertisement</div>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>Quick Links</h3>
+    <div class="quick-links">
+      <a href="/se-tax-calculator.html">SE Tax Calculator</a>
+      <a href="/mileage-calculator.html">Mileage Calculator</a>
+      <a href="/deductions.html">Top 20 Deductions</a>
+      <a href="/uber-taxes.html">Uber Driver Taxes</a>
+      <a href="/doordash-taxes.html">DoorDash Taxes</a>
+      <a href="/quarterly-taxes.html">Quarterly Tax Guide</a>
+      <a href="/faq.html">Full FAQ</a>
+    </div>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>Best Tax Software for 1099</h3>
+    <a href="/tax-software.html" style="display:flex;gap:10px;padding:10px;background:var(--gray1);border-radius:var(--radius);margin-bottom:8px;text-decoration:none;align-items:center;">
+      <span style="font-size:20px;">🟢</span>
+      <div><div style="font-size:13px;font-weight:700;color:var(--navy);">TurboTax Self-Employed</div><div style="font-size:11px;color:var(--text2);">Best overall for 1099 filers</div></div>
+    </a>
+    <a href="/tax-software.html" style="display:flex;gap:10px;padding:10px;background:var(--gray1);border-radius:var(--radius);margin-bottom:8px;text-decoration:none;align-items:center;">
+      <span style="font-size:20px;">🔴</span>
+      <div><div style="font-size:13px;font-weight:700;color:var(--navy);">H&R Block Self-Employed</div><div style="font-size:11px;color:var(--text2);">Great value, easy to use</div></div>
+    </a>
+    <a href="/tax-software.html" style="font-size:12px;color:var(--green);display:block;margin-top:8px;font-weight:600;">Compare all →</a>
+  </div>
+
+  <div class="sidebar-card" style="padding:0;overflow:hidden;">
+    <div class="ad-slot ad-300"><!-- AdSense 300x250 -->Advertisement</div>
+  </div>
+
+</aside>
+</div>
+
+<!-- BOTTOM AD -->
+<div class="container">
+  <div class="ad-slot ad-728"><!-- AdSense 728x90 -->Advertisement</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-text">1099Tax<span style="color:var(--amber)">Calcs</span>.com</span>
+        <p>Free tax calculators built for America's 70 million gig workers and freelancers. Calculate what you owe, discover deductions, and never miss a quarterly deadline.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Calculators</h4>
+        <a href="/se-tax-calculator.html">SE Tax Calculator</a>
+        <a href="/quarterly-tax-calculator.html">Quarterly Calculator</a>
+        <a href="/mileage-calculator.html">Mileage Calculator</a>
+        <a href="/freelancer-tax-calculator.html">Freelancer Calculator</a>
+        <a href="/1099-vs-w2-calculator.html">1099 vs W-2</a>
+      </div>
+      <div class="footer-col">
+        <h4>By Platform</h4>
+        <a href="/uber-taxes.html">Uber Driver Taxes</a>
+        <a href="/doordash-taxes.html">DoorDash Taxes</a>
+        <a href="/instacart-taxes.html">Instacart Taxes</a>
+        <a href="/amazon-flex-taxes.html">Amazon Flex</a>
+        <a href="/upwork-fiverr-taxes.html">Upwork & Fiverr</a>
+      </div>
+      <div class="footer-col">
+        <h4>Guides</h4>
+        <a href="/deductions.html">Top 20 Deductions</a>
+        <a href="/quarterly-taxes.html">Quarterly Tax Guide</a>
+        <a href="/guides.html">All Tax Guides</a>
+        <a href="/faq.html">FAQ</a>
+        <a href="/about.html">About</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 1099TaxCalcs.com — For informational purposes only. Not tax advice.</span>
+      <div style="display:flex;gap:16px;">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+        <a href="/about.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── NAV ──
+function toggleNav() { document.getElementById('main-nav').classList.toggle('open'); }
+
+// ── COUNTDOWN ──
+const q3Deadline = new Date('2026-09-15');
+const today = new Date();
+const daysLeft = Math.ceil((q3Deadline - today) / (1000 * 60 * 60 * 24));
+document.getElementById('days-left').textContent = daysLeft > 0 ? daysLeft : '0';
+
+// ── METHOD TOGGLE ──
+let currentMethod = 'estimate';
+function setMethod(method, btn) {
+  currentMethod = method;
+  document.querySelectorAll('.method-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.method-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('panel-' + method).classList.add('active');
+  document.getElementById('results').classList.remove('show');
+}
+
+// ── FORMAT ──
+const fmt = v => '$' + Math.round(v).toLocaleString();
+const fmtPct = v => (v * 100).toFixed(1) + '%';
+
+// ── FEDERAL TAX ──
+function calcFedTax(income, status) {
+  let tax = 0;
+  if (status === 'single') {
+    if (income > 609350)      tax = 183647.25 + (income - 609350) * 0.37;
+    else if (income > 243725) tax = 55374.25  + (income - 243725) * 0.35;
+    else if (income > 103350) tax = 18748.25  + (income - 103350) * 0.24;
+    else if (income > 52850)  tax = 6022.25   + (income - 52850)  * 0.22;
+    else if (income > 23850)  tax = 1195.00   + (income - 23850)  * 0.12;
+    else                      tax = income * 0.10;
+  } else if (status === 'married') {
+    if (income > 731200)      tax = 184811.50 + (income - 731200) * 0.37;
+    else if (income > 487450) tax = 99778.50  + (income - 487450) * 0.35;
+    else if (income > 206700) tax = 37499.50  + (income - 206700) * 0.24;
+    else if (income > 105800) tax = 12045.50  + (income - 105800) * 0.22;
+    else if (income > 47700)  tax = 2390.00   + (income - 47700)  * 0.12;
+    else                      tax = income * 0.10;
+  } else {
+    if (income > 609350)      tax = 173623.50 + (income - 609350) * 0.37;
+    else if (income > 243700) tax = 45926.50  + (income - 243700) * 0.35;
+    else if (income > 103350) tax = 16394.50  + (income - 103350) * 0.24;
+    else if (income > 55900)  tax = 5748.50   + (income - 55900)  * 0.22;
+    else if (income > 17400)  tax = 1740.00   + (income - 17400)  * 0.12;
+    else                      tax = income * 0.10;
+  }
+  return Math.max(0, tax);
+}
+
+// ── CALCULATE ──
+function calculate() {
+  const filing     = document.getElementById('filing').value;
+  const stateRate  = parseFloat(document.getElementById('state').value) || 0;
+  const alreadyPaid= parseFloat(document.getElementById('already-paid').value) || 0;
+
+  let totalTax = 0, seTax = 0, fedTax = 0, grossTotal = 0;
+  let q1Tax = 0, q2Tax = 0, q3Tax = 0, q4Tax = 0;
+  let q1Inc = 0, q2Inc = 0, q3Inc = 0, q4Inc = 0;
+
+  if (currentMethod === 'estimate') {
+    q1Inc = parseFloat(document.getElementById('q1-income').value) || 0;
+    q2Inc = parseFloat(document.getElementById('q2-income').value) || 0;
+    q3Inc = parseFloat(document.getElementById('q3-income').value) || 0;
+    q4Inc = parseFloat(document.getElementById('q4-income').value) || 0;
+    grossTotal = q1Inc + q2Inc + q3Inc + q4Inc;
+
+    if (grossTotal <= 0) { alert('Please enter at least one quarter of expected income.'); return; }
+
+    const expenses  = parseFloat(document.getElementById('annual-expenses').value) || 0;
+    const miles     = parseFloat(document.getElementById('annual-miles').value)    || 0;
+    const health    = parseFloat(document.getElementById('annual-health').value)   || 0;
+    const otherDed  = parseFloat(document.getElementById('annual-other').value)    || 0;
+    const mileageDed= miles * 0.725;
+    const totalDed  = expenses + mileageDed + health + otherDed;
+    const net       = Math.max(0, grossTotal - totalDed);
+    const seBase    = net * 0.9235;
+    seTax           = seBase * 0.153;
+    const halfSE    = seTax / 2;
+    let stdDed = filing === 'married' ? 30000 : filing === 'hoh' ? 22500 : 15000;
+    const fedTaxable= Math.max(0, net - halfSE - stdDed);
+    fedTax          = calcFedTax(fedTaxable, filing);
+    const stateTax  = net * stateRate;
+    totalTax        = seTax + fedTax + stateTax;
+
+    // Distribute by income proportion
+    const totalInc = grossTotal || 1;
+    q1Tax = totalTax * (q1Inc / totalInc);
+    q2Tax = totalTax * (q2Inc / totalInc);
+    q3Tax = totalTax * (q3Inc / totalInc);
+    q4Tax = totalTax * (q4Inc / totalInc);
+
+  } else {
+    // Safe harbor method
+    const lastYearTax = parseFloat(document.getElementById('last-year-tax').value) || 0;
+    const lastYearAGI = parseFloat(document.getElementById('last-year-agi').value) || 0;
+    if (lastYearTax <= 0) { alert('Please enter your last year tax amount.'); return; }
+    const multiplier = lastYearAGI > 150000 ? 1.10 : 1.00;
+    totalTax = lastYearTax * multiplier;
+    seTax = 0; fedTax = totalTax;
+    q1Tax = q2Tax = q3Tax = q4Tax = totalTax / 4;
+    grossTotal = lastYearTax;
+  }
+
+  // Show results
+  document.getElementById('q1-amount').textContent = fmt(q1Tax);
+  document.getElementById('q2-amount').textContent = fmt(q2Tax);
+  document.getElementById('q3-amount').textContent = fmt(q3Tax);
+  document.getElementById('q4-amount').textContent = fmt(q4Tax);
+  if (currentMethod === 'estimate') {
+    document.getElementById('q1-income-line').textContent = q1Inc > 0 ? `Income: ${fmt(q1Inc)}` : '';
+    document.getElementById('q2-income-line').textContent = q2Inc > 0 ? `Income: ${fmt(q2Inc)}` : '';
+    document.getElementById('q3-income-line').textContent = q3Inc > 0 ? `Income: ${fmt(q3Inc)}` : '';
+    document.getElementById('q4-income-line').textContent = q4Inc > 0 ? `Income: ${fmt(q4Inc)}` : '';
+  }
+
+  document.getElementById('r-total').textContent     = fmt(totalTax);
+  document.getElementById('r-se').textContent        = fmt(seTax);
+  document.getElementById('r-fed').textContent       = fmt(fedTax);
+  const remaining = Math.max(0, totalTax - alreadyPaid);
+  document.getElementById('r-remaining').textContent = fmt(remaining);
+  const effRate = grossTotal > 0 ? totalTax / grossTotal : 0;
+  document.getElementById('r-eff-rate').textContent  = fmtPct(effRate);
+
+  // Safe harbor message
+  const safeHarborAmount = totalTax;
+  const quarterlyAmount  = safeHarborAmount / 4;
+  document.getElementById('safe-msg').innerHTML =
+    `✅ <strong>Safe Harbor:</strong> Pay <strong>${fmt(quarterlyAmount)}</strong> per quarter to meet safe harbor and avoid all underpayment penalties. Pay at <a href="https://www.irs.gov/payments" target="_blank" rel="noopener">IRS.gov/payments</a> using Direct Pay (free, no account needed).`;
+
+  // Penalty warning if already paid is low
+  const penaltyEl = document.getElementById('penalty-msg');
+  if (alreadyPaid > 0 && alreadyPaid < totalTax * 0.90) {
+    const shortfall = totalTax * 0.90 - alreadyPaid;
+    penaltyEl.style.display = 'block';
+    penaltyEl.innerHTML = `⚠️ <strong>Penalty Risk:</strong> You've paid ${fmt(alreadyPaid)} but need ${fmt(totalTax * 0.90)} (90% safe harbor). You may face an underpayment penalty on the <strong>${fmt(shortfall)} shortfall</strong>. Catch up immediately with your Q3 payment.`;
+  } else {
+    penaltyEl.style.display = 'none';
+  }
+
+  document.getElementById('results').classList.add('show');
+  document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+// ── RESET ──
+function resetForm() {
+  ['q1-income','q2-income','q3-income','q4-income','annual-expenses','annual-miles',
+   'annual-health','annual-other','last-year-tax','last-year-agi','already-paid'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = '';
+  });
+  document.getElementById('results').classList.remove('show');
+}
+
+// ── FAQ ──
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = btn.classList.contains('open');
+  document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+  if (!isOpen) { btn.classList.add('open'); answer.classList.add('open'); }
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Enter') calculate(); });
+</script>
+
+</body>
+</html>
