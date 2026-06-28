@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free self-employment tax calculator for 2026. Calculate your exact SE tax (15.3%), federal income tax, state tax, and quarterly payments. Built for 1099 workers, freelancers, and gig workers.">
+<meta name="keywords" content="self employment tax calculator, SE tax calculator 2026, 1099 tax calculator, freelancer tax calculator, gig worker tax calculator, self employed tax estimator">
+<meta name="author" content="1099TaxCalcs.com">
+<meta property="og:title" content="Self-Employment Tax Calculator 2026 | 1099TaxCalcs.com">
+<meta property="og:description" content="Calculate your exact self-employment tax, federal income tax, state tax, and quarterly payments. Free, instant, no signup.">
+<meta property="og:url" content="https://1099taxcalcs.com/se-tax-calculator.html">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://1099taxcalcs.com/se-tax-calculator.html">
+<title>Self-Employment Tax Calculator 2026 — Free & Instant | 1099TaxCalcs.com</title>
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+<style>
+  :root {
+    --navy:   #0D1F3C;
+    --navy2:  #162847;
+    --green:  #00A878;
+    --green2: #008F65;
+    --amber:  #F5A623;
+    --light:  #F4F7FC;
+    --white:  #FFFFFF;
+    --gray1:  #F0F4FA;
+    --gray2:  #E2E8F4;
+    --gray3:  #94A3B8;
+    --text:   #1A2A44;
+    --text2:  #4A5A72;
+    --red:    #E53E3E;
+    --font:   'Segoe UI', system-ui, -apple-system, sans-serif;
+    --radius: 8px;
+    --shadow: 0 2px 12px rgba(13,31,60,0.10);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); color: var(--text); background: var(--light); font-size: 16px; line-height: 1.6; }
+  a { color: var(--green); text-decoration: none; }
+  a:hover { color: var(--green2); text-decoration: underline; }
+
+  /* ── HEADER ── */
+  header { background: var(--navy); padding: 0 24px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+  .header-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-icon { width: 38px; height: 38px; background: var(--green); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: white; letter-spacing: -1px; flex-shrink: 0; }
+  .logo-text { color: white; font-size: 17px; font-weight: 700; line-height: 1.2; }
+  .logo-text span { color: var(--amber); }
+  nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+  nav a { color: rgba(255,255,255,0.85); font-size: 13px; padding: 6px 10px; border-radius: 6px; transition: all 0.15s; white-space: nowrap; }
+  nav a:hover { background: rgba(255,255,255,0.1); color: white; text-decoration: none; }
+  nav a.active { color: var(--amber); }
+  .nav-cta { background: var(--green) !important; color: white !important; font-weight: 600; padding: 7px 14px !important; }
+  .nav-cta:hover { background: var(--green2) !important; }
+  .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: white; margin: 5px 0; border-radius: 2px; }
+  @media(max-width: 768px) {
+    .hamburger { display: block; }
+    nav { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--navy2); padding: 12px 16px; flex-direction: column; align-items: flex-start; gap: 2px; }
+    nav.open { display: flex; }
+    nav a { width: 100%; padding: 10px 12px; }
+  }
+
+  /* ── PAGE HERO ── */
+  .page-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%); color: white; padding: 40px 24px 36px; }
+  .page-hero-inner { max-width: 1200px; margin: 0 auto; }
+  .breadcrumb { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 12px; }
+  .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--green); }
+  .breadcrumb span { margin: 0 6px; }
+  .page-hero h1 { font-size: clamp(24px, 3.5vw, 38px); font-weight: 800; line-height: 1.2; margin-bottom: 10px; }
+  .page-hero h1 em { color: var(--amber); font-style: normal; }
+  .page-hero p { font-size: 15px; color: rgba(255,255,255,0.75); max-width: 600px; line-height: 1.7; }
+  .hero-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+  .pill { font-size: 11px; font-weight: 600; padding: 4px 12px; border-radius: 20px; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8); border: 1px solid rgba(255,255,255,0.15); }
+  .pill.green { background: rgba(0,168,120,0.2); color: #5EEAD4; border-color: rgba(0,168,120,0.3); }
+
+  /* ── LAYOUT ── */
+  .main-wrap { max-width: 1200px; margin: 0 auto; padding: 32px 24px; display: grid; grid-template-columns: 1fr 300px; gap: 32px; align-items: start; }
+  @media(max-width: 960px) { .main-wrap { grid-template-columns: 1fr; } }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* ── AD SLOTS ── */
+  .ad-slot { background: var(--gray1); border: 1px dashed var(--gray2); border-radius: var(--radius); text-align: center; color: var(--gray3); font-size: 11px; padding: 8px; }
+  .ad-728 { width: 100%; height: 90px; line-height: 74px; margin: 20px 0; }
+  .ad-300 { width: 100%; height: 250px; line-height: 234px; }
+
+  /* ── CALCULATOR CARD ── */
+  .calc-card { background: white; border-radius: 16px; box-shadow: 0 4px 24px rgba(13,31,60,0.13); overflow: hidden; margin-bottom: 28px; }
+  .calc-header { background: var(--navy); color: white; padding: 18px 24px; }
+  .calc-header h2 { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+  .calc-header p { font-size: 13px; color: rgba(255,255,255,0.65); }
+  .calc-body { padding: 24px; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media(max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+  .form-group { margin-bottom: 14px; }
+  .form-group label { display: block; font-size: 12px; font-weight: 600; color: var(--text2); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .form-group label .tooltip { font-size: 11px; color: var(--green); cursor: help; margin-left: 4px; font-weight: 400; text-transform: none; letter-spacing: 0; }
+  .form-group input, .form-group select { width: 100%; padding: 10px 14px; border: 1.5px solid var(--gray2); border-radius: var(--radius); font-size: 15px; color: var(--text); background: var(--gray1); transition: border-color 0.15s; font-family: var(--font); }
+  .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--green); background: white; }
+  .input-prefix { position: relative; }
+  .input-prefix::before { content: '$'; position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--gray3); font-size: 15px; font-weight: 600; }
+  .input-prefix input { padding-left: 26px; }
+  .input-suffix { position: relative; }
+  .input-suffix::after { content: 'mi'; position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: var(--gray3); font-size: 13px; }
+  .input-suffix input { padding-right: 36px; }
+
+  .section-divider { font-size: 11px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 0.08em; padding: 10px 0 8px; border-top: 1px solid var(--gray2); margin-top: 6px; display: flex; align-items: center; gap: 8px; }
+  .section-divider::after { content: ''; flex: 1; height: 1px; background: var(--gray2); }
+
+  .calc-btn { width: 100%; padding: 14px; background: var(--green); color: white; font-size: 16px; font-weight: 700; border: none; border-radius: var(--radius); cursor: pointer; transition: background 0.15s; font-family: var(--font); letter-spacing: 0.01em; }
+  .calc-btn:hover { background: var(--green2); }
+  .calc-btn:active { transform: scale(0.99); }
+
+  .reset-btn { width: 100%; padding: 9px; background: transparent; color: var(--text2); font-size: 13px; border: 1.5px solid var(--gray2); border-radius: var(--radius); cursor: pointer; font-family: var(--font); margin-top: 8px; transition: all 0.15s; }
+  .reset-btn:hover { border-color: var(--green); color: var(--green); }
+
+  /* ── RESULTS ── */
+  .results { display: none; margin-top: 24px; }
+  .results.show { display: block; }
+  .results-header { background: var(--navy); color: white; border-radius: 12px 12px 0 0; padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; }
+  .results-header h3 { font-size: 15px; font-weight: 700; }
+  .results-header span { font-size: 12px; color: rgba(255,255,255,0.6); }
+  .results-body { background: white; border: 1.5px solid var(--gray2); border-top: none; border-radius: 0 0 12px 12px; padding: 20px; }
+
+  .result-main { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
+  @media(max-width: 500px) { .result-main { grid-template-columns: 1fr; } }
+
+  .r-box { background: var(--gray1); border-radius: var(--radius); padding: 14px 16px; border-left: 3px solid var(--gray2); }
+  .r-box.green { border-left-color: var(--green); background: #E9F9F4; }
+  .r-box.amber { border-left-color: var(--amber); background: #FFF8EC; }
+  .r-box.navy { border-left-color: var(--navy); background: #EEF2FA; }
+  .r-box.red { border-left-color: var(--red); background: #FFF0F0; }
+  .r-label { font-size: 11px; font-weight: 600; color: var(--text2); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .r-value { font-size: 22px; font-weight: 800; color: var(--navy); }
+  .r-value.green { color: var(--green2); }
+  .r-value.amber { color: #B7791F; }
+  .r-value.red { color: var(--red); }
+  .r-sub { font-size: 11px; color: var(--text2); margin-top: 3px; }
+
+  .result-total { background: var(--navy); border-radius: var(--radius); padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+  .result-total-label { color: rgba(255,255,255,0.75); font-size: 13px; font-weight: 600; }
+  .result-total-value { font-size: 28px; font-weight: 800; color: var(--amber); }
+
+  .quarterly-box { background: #E9F9F4; border: 1.5px solid rgba(0,168,120,0.25); border-radius: var(--radius); padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+  .quarterly-box .ql { font-size: 13px; font-weight: 600; color: var(--navy); }
+  .quarterly-box .qv { font-size: 22px; font-weight: 800; color: var(--green2); }
+
+  .breakdown-table { width: 100%; font-size: 13px; border-collapse: collapse; margin-bottom: 12px; }
+  .breakdown-table td { padding: 7px 4px; border-bottom: 1px solid var(--gray2); color: var(--text2); }
+  .breakdown-table td:last-child { text-align: right; font-weight: 600; color: var(--navy); }
+  .breakdown-table tr:last-child td { border-bottom: none; }
+  .breakdown-table .total-row td { font-weight: 700; color: var(--navy); border-top: 2px solid var(--gray2); padding-top: 10px; font-size: 14px; }
+
+  .save-tip { background: #FFF8EC; border: 1px solid #F5D78E; border-radius: var(--radius); padding: 12px 14px; font-size: 13px; color: #7A4F00; line-height: 1.6; }
+  .save-tip strong { color: var(--navy); }
+  .result-note { font-size: 11px; color: var(--gray3); text-align: center; margin-top: 10px; line-height: 1.6; }
+
+  /* ── CONTENT SECTIONS ── */
+  .section { background: white; border-radius: 12px; padding: 28px; margin-bottom: 20px; box-shadow: var(--shadow); }
+  .section-label { font-size: 11px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+  .section h2 { font-size: 22px; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
+  .section h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin: 20px 0 8px; }
+  .section p { color: var(--text2); line-height: 1.8; margin-bottom: 14px; }
+  .section ul, .section ol { color: var(--text2); line-height: 1.8; margin: 10px 0 14px 20px; }
+  .section li { margin-bottom: 6px; }
+  .section strong { color: var(--navy); }
+
+  /* ── FORMULA BOX ── */
+  .formula-box { background: var(--navy); color: white; border-radius: var(--radius); padding: 18px 20px; margin: 16px 0; font-family: 'Courier New', monospace; font-size: 14px; line-height: 1.8; }
+  .formula-box .comment { color: rgba(255,255,255,0.45); }
+  .formula-box .highlight { color: var(--amber); font-weight: 700; }
+
+  /* ── EXAMPLE BOX ── */
+  .example-box { background: #E9F9F4; border: 1.5px solid rgba(0,168,120,0.3); border-radius: var(--radius); padding: 18px 20px; margin: 16px 0; }
+  .example-box h4 { font-size: 13px; font-weight: 700; color: var(--green2); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
+  .example-box table { width: 100%; font-size: 13px; }
+  .example-box td { padding: 5px 0; color: var(--text2); }
+  .example-box td:last-child { text-align: right; font-weight: 600; color: var(--navy); }
+  .example-box .total-row td { border-top: 1px solid rgba(0,168,120,0.3); padding-top: 8px; font-weight: 700; color: var(--navy); font-size: 14px; }
+
+  /* ── STEP BOXES ── */
+  .steps { counter-reset: step; }
+  .step { display: flex; gap: 14px; margin-bottom: 18px; align-items: flex-start; }
+  .step-num { width: 32px; height: 32px; background: var(--green); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; flex-shrink: 0; margin-top: 2px; }
+  .step-content h4 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .step-content p { font-size: 14px; color: var(--text2); margin: 0; line-height: 1.6; }
+
+  /* ── INFO TABLE ── */
+  .info-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 14px 0; }
+  .info-table th { background: var(--navy); color: white; padding: 10px 14px; text-align: left; font-size: 12px; letter-spacing: 0.04em; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid var(--gray2); color: var(--text2); }
+  .info-table tr:nth-child(even) td { background: var(--gray1); }
+  .info-table tr:hover td { background: #E9F9F4; }
+  .info-table strong { color: var(--navy); }
+
+  /* ── WARNING BOX ── */
+  .warn-box { background: #FFF8EC; border: 1px solid #F5D78E; border-radius: var(--radius); padding: 14px 16px; font-size: 13px; color: #7A4F00; line-height: 1.6; margin: 14px 0; }
+  .warn-box strong { color: #5A3800; }
+  .info-note { background: #EEF2FA; border: 1px solid #C7D4EE; border-radius: var(--radius); padding: 14px 16px; font-size: 13px; color: var(--text2); line-height: 1.6; margin: 14px 0; }
+
+  /* ── FAQ ── */
+  .faq-list { margin-top: 10px; }
+  .faq-item { border-bottom: 1px solid var(--gray2); }
+  .faq-q { width: 100%; text-align: left; background: none; border: none; padding: 14px 0; font-size: 15px; font-weight: 600; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: var(--font); }
+  .faq-q:hover { color: var(--green); }
+  .faq-q .arrow { font-size: 18px; color: var(--green); transition: transform 0.2s; flex-shrink: 0; margin-left: 12px; }
+  .faq-q.open .arrow { transform: rotate(180deg); }
+  .faq-a { font-size: 14px; color: var(--text2); line-height: 1.8; padding-bottom: 14px; display: none; }
+  .faq-a.open { display: block; }
+
+  /* ── RELATED CALCS ── */
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; margin-top: 12px; }
+  .related-card { background: var(--gray1); border: 1.5px solid var(--gray2); border-radius: var(--radius); padding: 14px 16px; text-decoration: none; transition: all 0.15s; display: block; }
+  .related-card:hover { border-color: var(--green); background: white; text-decoration: none; }
+  .related-card h4 { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+  .related-card p { font-size: 12px; color: var(--text2); margin: 0; }
+
+  /* ── SIDEBAR ── */
+  .sidebar { display: flex; flex-direction: column; gap: 18px; }
+  .sidebar-card { background: white; border-radius: 12px; padding: 18px; box-shadow: var(--shadow); }
+  .sidebar-card h3 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 10px; border-bottom: 2px solid var(--green); padding-bottom: 7px; }
+  .cta-card { background: linear-gradient(135deg, var(--navy), var(--navy2)); color: white; border-radius: 12px; padding: 18px; }
+  .cta-card h3 { font-size: 14px; font-weight: 700; color: white; margin-bottom: 6px; border: none; padding: 0; }
+  .cta-card p { font-size: 12px; color: rgba(255,255,255,0.7); margin-bottom: 12px; line-height: 1.6; }
+  .cta-card a { display: block; background: var(--green); color: white; text-align: center; padding: 9px; border-radius: var(--radius); font-weight: 700; font-size: 13px; text-decoration: none; }
+  .cta-card a:hover { background: var(--green2); }
+  .quick-links a { display: flex; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--gray2); font-size: 13px; color: var(--text); text-decoration: none; }
+  .quick-links a:last-child { border-bottom: none; }
+  .quick-links a:hover { color: var(--green); }
+  .quick-links a::before { content: '→'; color: var(--green); font-weight: 700; }
+
+  /* ── KEY NUMBERS ── */
+  .key-numbers { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 14px 0; }
+  .kn-box { background: var(--gray1); border-radius: var(--radius); padding: 12px 14px; text-align: center; border: 1.5px solid var(--gray2); }
+  .kn-value { font-size: 22px; font-weight: 800; color: var(--navy); }
+  .kn-label { font-size: 11px; color: var(--text2); margin-top: 3px; line-height: 1.4; }
+
+  /* ── FOOTER ── */
+  footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 40px 24px 24px; margin-top: 48px; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 32px; }
+  .footer-brand .logo-text { font-size: 18px; color: white; display: block; margin-bottom: 8px; }
+  .footer-brand p { font-size: 13px; line-height: 1.7; }
+  .footer-col h4 { color: white; font-size: 13px; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,0.55); margin-bottom: 7px; text-decoration: none; }
+  .footer-col a:hover { color: var(--green); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 12px; }
+  .footer-bottom a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .footer-bottom a:hover { color: var(--green); }
+  @media(max-width: 700px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } }
+</style>
+
+<!-- Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the self-employment tax rate for 2026?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The self-employment tax rate for 2026 is 15.3%. This is made up of 12.4% for Social Security (on income up to $176,100) and 2.9% for Medicare (on all income). High earners above $200,000 pay an additional 0.9% Medicare surtax." }
+    },
+    {
+      "@type": "Question",
+      "name": "How is self-employment tax calculated?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Self-employment tax is calculated on 92.35% of your net profit (gross income minus business expenses). Multiply that amount by 15.3% to get your SE tax. You can then deduct 50% of the SE tax from your gross income before calculating income tax." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I pay self-employment tax on top of income tax?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Self-employment tax (15.3%) is separate from federal income tax. You owe both. The IRS lets you deduct 50% of your SE tax from your gross income, which reduces your income tax bill slightly." }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Calculate Self-Employment Tax",
+  "description": "Step-by-step guide to calculating your self-employment tax as a 1099 worker or freelancer.",
+  "step": [
+    { "@type": "HowToStep", "name": "Calculate net profit", "text": "Subtract your business expenses from your gross 1099 income." },
+    { "@type": "HowToStep", "name": "Multiply by 92.35%", "text": "The IRS only taxes 92.35% of your net profit for SE tax purposes." },
+    { "@type": "HowToStep", "name": "Multiply by 15.3%", "text": "Apply the 15.3% SE tax rate to get your SE tax amount." },
+    { "@type": "HowToStep", "name": "Deduct half from income", "text": "Deduct 50% of your SE tax from gross income before calculating income tax." },
+    { "@type": "HowToStep", "name": "Add federal income tax", "text": "Calculate your federal income tax using the standard brackets and deduction." }
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <div class="logo-icon">1099</div>
+      <div class="logo-text">Tax<span>Calcs</span>.com</div>
+    </a>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav">
+      <a href="/calculators.html">Calculators</a>
+      <a href="/deductions.html">Deductions</a>
+      <a href="/quarterly-taxes.html">Quarterly Taxes</a>
+      <a href="/platforms.html">By Platform</a>
+      <a href="/guides.html">Guides</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/se-tax-calculator.html" class="nav-cta active">SE Tax Calculator</a>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span>
+      <a href="/calculators.html">Calculators</a><span>›</span>
+      Self-Employment Tax Calculator
+    </div>
+    <h1>Self-Employment Tax Calculator <em>2026</em></h1>
+    <p>Calculate your exact SE tax (15.3%), federal income tax, state tax, and quarterly payment amount. Includes all deductions. Updated for 2026 IRS rates.</p>
+    <div class="hero-pills">
+      <span class="pill green">✓ Free — No signup</span>
+      <span class="pill">Updated for 2026</span>
+      <span class="pill">Includes all 50 states</span>
+      <span class="pill">All major deductions</span>
+      <span class="pill">Quarterly breakdown</span>
+    </div>
+  </div>
+</div>
+
+<!-- TOP AD -->
+<div class="container">
+  <div class="ad-slot ad-728">
+    <!-- Google AdSense 728x90 -->
+    Advertisement
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-wrap">
+  <main>
+
+    <!-- CALCULATOR -->
+    <div class="calc-card">
+      <div class="calc-header">
+        <h2>🧮 Self-Employment Tax Calculator 2026</h2>
+        <p>Enter your income and deductions below — results appear instantly</p>
+      </div>
+      <div class="calc-body">
+
+        <!-- INCOME -->
+        <div class="section-divider">💵 Income</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="gross">Gross 1099 Income <span class="tooltip">(before expenses)</span></label>
+            <div class="input-prefix"><input type="number" id="gross" placeholder="60,000" min="0"></div>
+          </div>
+          <div class="form-group">
+            <label for="other">Other Income (W-2, etc.) <span class="tooltip">(optional)</span></label>
+            <div class="input-prefix"><input type="number" id="other" placeholder="0" min="0"></div>
+          </div>
+        </div>
+
+        <!-- DEDUCTIONS -->
+        <div class="section-divider">✂️ Deductions (reduces your tax)</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="expenses">General Business Expenses</label>
+            <div class="input-prefix"><input type="number" id="expenses" placeholder="5,000" min="0"></div>
+          </div>
+          <div class="form-group">
+            <label for="miles">Business Miles Driven <span class="tooltip">(72.5¢/mi in 2026)</span></label>
+            <div class="input-suffix"><input type="number" id="miles" placeholder="10,000" min="0"></div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="homeoffice">Home Office Deduction <span class="tooltip">(sq ft × $5 simplified)</span></label>
+            <div class="input-prefix"><input type="number" id="homeoffice" placeholder="1,500" min="0"></div>
+          </div>
+          <div class="form-group">
+            <label for="health">Health Insurance Premiums</label>
+            <div class="input-prefix"><input type="number" id="health" placeholder="4,800" min="0"></div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="retirement">SEP-IRA / Solo 401(k) Contributions</label>
+            <div class="input-prefix"><input type="number" id="retirement" placeholder="0" min="0"></div>
+          </div>
+          <div class="form-group">
+            <label for="other_deductions">Other Deductions <span class="tooltip">(phone, software, etc.)</span></label>
+            <div class="input-prefix"><input type="number" id="other_deductions" placeholder="1,200" min="0"></div>
+          </div>
+        </div>
+
+        <!-- PERSONAL INFO -->
+        <div class="section-divider">👤 Personal Info</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="filing">Filing Status</label>
+            <select id="filing">
+              <option value="single">Single</option>
+              <option value="married">Married Filing Jointly</option>
+              <option value="hoh">Head of Household</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="state">State</label>
+            <select id="state">
+              <option value="0">No state income tax (TX, FL, WA, NV, SD, WY, AK, NH, TN)</option>
+              <option value="0.0450">Alabama (avg 4.5%)</option>
+              <option value="0.0170">Alaska (0% — no income tax)</option>
+              <option value="0.0250">Arizona (2.5% flat)</option>
+              <option value="0.0490">Arkansas (avg 4.9%)</option>
+              <option value="0.0930">California (avg 9.3%)</option>
+              <option value="0.0440">Colorado (4.4% flat)</option>
+              <option value="0.0500">Connecticut (avg 5.0%)</option>
+              <option value="0.0660">Delaware (avg 6.6%)</option>
+              <option value="0.0575">Georgia (5.49% flat)</option>
+              <option value="0.0110">Hawaii (avg 8.25%)</option>
+              <option value="0.0580">Idaho (avg 5.8%)</option>
+              <option value="0.0495">Illinois (4.95% flat)</option>
+              <option value="0.0315">Indiana (3.15% flat)</option>
+              <option value="0.0570">Iowa (avg 5.7%)</option>
+              <option value="0.0570">Kansas (avg 5.7%)</option>
+              <option value="0.0450">Kentucky (4.5% flat)</option>
+              <option value="0.0425">Louisiana (avg 4.25%)</option>
+              <option value="0.0715">Maine (avg 7.15%)</option>
+              <option value="0.0575">Maryland (avg 5.75%)</option>
+              <option value="0.0500">Massachusetts (5.0% flat)</option>
+              <option value="0.0425">Michigan (4.25% flat)</option>
+              <option value="0.0985">Minnesota (avg 9.85%)</option>
+              <option value="0.0500">Mississippi (avg 4.7%)</option>
+              <option value="0.0495">Missouri (avg 4.95%)</option>
+              <option value="0.0590">Montana (avg 5.9%)</option>
+              <option value="0.0684">Nebraska (avg 6.84%)</option>
+              <option value="0.0553">New Jersey (avg 5.53%)</option>
+              <option value="0.0590">New Mexico (avg 5.9%)</option>
+              <option value="0.0685">New York (avg 6.85%)</option>
+              <option value="0.0450">North Carolina (4.5% flat)</option>
+              <option value="0.0250">North Dakota (avg 2.5%)</option>
+              <option value="0.0399">Ohio (avg 3.99%)</option>
+              <option value="0.0475">Oklahoma (avg 4.75%)</option>
+              <option value="0.0875">Oregon (avg 8.75%)</option>
+              <option value="0.0307">Pennsylvania (3.07% flat)</option>
+              <option value="0.0599">Rhode Island (avg 5.99%)</option>
+              <option value="0.0640">South Carolina (avg 6.4%)</option>
+              <option value="0.0465">Utah (4.65% flat)</option>
+              <option value="0.0875">Vermont (avg 8.75%)</option>
+              <option value="0.0575">Virginia (avg 5.75%)</option>
+              <option value="0.0650">West Virginia (avg 6.5%)</option>
+              <option value="0.0765">Wisconsin (avg 7.65%)</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="calc-btn" onclick="calculate()">⚡ Calculate My Self-Employment Tax →</button>
+        <button class="reset-btn" onclick="resetForm()">↺ Reset Calculator</button>
+
+        <!-- RESULTS -->
+        <div class="results" id="results">
+          <div class="results-header">
+            <h3>📊 Your 2026 Tax Estimate</h3>
+            <span>Based on your inputs</span>
+          </div>
+          <div class="results-body">
+
+            <div class="result-main">
+              <div class="r-box green">
+                <div class="r-label">Net Profit (Taxable)</div>
+                <div class="r-value green" id="r-net">$0</div>
+                <div class="r-sub" id="r-net-sub"></div>
+              </div>
+              <div class="r-box">
+                <div class="r-label">SE Tax (15.3%)</div>
+                <div class="r-value" id="r-se">$0</div>
+                <div class="r-sub">Social Security + Medicare</div>
+              </div>
+              <div class="r-box navy">
+                <div class="r-label">Federal Income Tax</div>
+                <div class="r-value" id="r-fed">$0</div>
+                <div class="r-sub" id="r-fed-sub"></div>
+              </div>
+              <div class="r-box">
+                <div class="r-label">State Income Tax (est.)</div>
+                <div class="r-value" id="r-state">$0</div>
+                <div class="r-sub" id="r-state-sub"></div>
+              </div>
+            </div>
+
+            <div class="result-total">
+              <div class="result-total-label">💰 Total Estimated Tax Owed</div>
+              <div class="result-total-value" id="r-total">$0</div>
+            </div>
+
+            <div class="quarterly-box">
+              <div class="ql">📅 Pay this much each quarter<br><small style="font-weight:400;color:var(--text2);">Next deadline: Sep 15, 2026 (Q3)</small></div>
+              <div class="qv" id="r-quarterly">$0</div>
+            </div>
+
+            <!-- BREAKDOWN TABLE -->
+            <table class="breakdown-table" id="breakdown-table">
+              <tr><td>Gross 1099 Income</td><td id="bt-gross">$0</td></tr>
+              <tr><td>− Total Deductions</td><td id="bt-deductions">$0</td></tr>
+              <tr><td>= Net Profit</td><td id="bt-net">$0</td></tr>
+              <tr><td>× 92.35% (IRS SE base)</td><td id="bt-sebase">$0</td></tr>
+              <tr><td>SE Tax (15.3%)</td><td id="bt-se">$0</td></tr>
+              <tr><td>− ½ SE Tax deduction</td><td id="bt-halfse">$0</td></tr>
+              <tr><td>− Standard Deduction</td><td id="bt-std">$0</td></tr>
+              <tr><td>Federal Taxable Income</td><td id="bt-taxable">$0</td></tr>
+              <tr class="total-row"><td>✅ Total Tax Owed</td><td id="bt-total">$0</td></tr>
+            </table>
+
+            <div class="save-tip" id="save-tip"></div>
+            <p class="result-note">⚠️ Estimates only — not tax advice. Consult a CPA for your exact situation. Results assume standard deduction and no tax credits.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CONTENT: WHAT IS SE TAX -->
+    <div class="section">
+      <div class="section-label">The Basics</div>
+      <h2>What Is Self-Employment Tax?</h2>
+      <p>Self-employment tax (SE tax) is the Social Security and Medicare tax that every 1099 worker, freelancer, and independent contractor must pay. When you work a regular W-2 job, your employer pays half of these taxes for you. When you work for yourself, <strong>you pay the entire 15.3%</strong>.</p>
+      <p>This trips up millions of gig workers every year. You see $60,000 in income and think your taxes will be similar to an employee earning $60,000 — but they're significantly higher because of SE tax.</p>
+
+      <div class="key-numbers">
+        <div class="kn-box"><div class="kn-value">15.3%</div><div class="kn-label">Total SE Tax Rate</div></div>
+        <div class="kn-box"><div class="kn-value">12.4%</div><div class="kn-label">Social Security Portion</div></div>
+        <div class="kn-box"><div class="kn-value">2.9%</div><div class="kn-label">Medicare Portion</div></div>
+        <div class="kn-box"><div class="kn-value">$176,100</div><div class="kn-label">2026 SS Wage Cap</div></div>
+      </div>
+
+      <div class="warn-box">
+        ⚠️ <strong>SE tax is on top of income tax.</strong> A freelancer earning $50,000 net profit pays roughly $7,065 in SE tax PLUS federal income tax. Many first-year gig workers don't realize this and face a surprise bill in April.
+      </div>
+
+      <h3>Who Has to Pay SE Tax?</h3>
+      <p>You must pay SE tax if your <strong>net self-employment earnings are $400 or more</strong> in a year. This applies to:</p>
+      <ul>
+        <li>Rideshare drivers (Uber, Lyft)</li>
+        <li>Delivery drivers (DoorDash, Instacart, Amazon Flex, Grubhub)</li>
+        <li>Freelancers (Upwork, Fiverr, direct clients)</li>
+        <li>Independent contractors of any kind</li>
+        <li>Anyone receiving a 1099-NEC or 1099-K form</li>
+        <li>Side hustle income over $400 net — even without a 1099</li>
+      </ul>
+    </div>
+
+    <!-- MIDDLE AD -->
+    <div class="ad-slot ad-728" style="margin: 0 0 20px;">
+      <!-- Google AdSense 728x90 -->
+      Advertisement
+    </div>
+
+    <!-- HOW TO CALCULATE -->
+    <div class="section">
+      <div class="section-label">Step by Step</div>
+      <h2>How to Calculate Self-Employment Tax</h2>
+      <p>The IRS uses a specific formula to calculate SE tax. Here it is broken down into 5 simple steps — the same formula our calculator uses above.</p>
+
+      <div class="formula-box">
+        <span class="comment">// Step 1: Net Profit</span><br>
+        Net Profit = Gross Income − Business Expenses<br><br>
+        <span class="comment">// Step 2: SE Tax Base (IRS rule: 92.35% of net)</span><br>
+        SE Base = Net Profit × <span class="highlight">0.9235</span><br><br>
+        <span class="comment">// Step 3: SE Tax</span><br>
+        SE Tax = SE Base × <span class="highlight">0.153</span><br><br>
+        <span class="comment">// Step 4: Deduct half of SE tax from income</span><br>
+        Adjusted Income = Net Profit − (SE Tax ÷ 2)<br><br>
+        <span class="comment">// Step 5: Apply standard deduction, then income tax brackets</span><br>
+        Federal Income Tax = brackets(Adjusted Income − Standard Deduction)
+      </div>
+
+      <div class="example-box">
+        <h4>📋 Real Example — DoorDash Driver, Single, Texas, $55,000 gross</h4>
+        <table>
+          <tr><td>Gross DoorDash income</td><td>$55,000</td></tr>
+          <tr><td>− Business expenses (mileage 15,000 mi + phone)</td><td>− $11,650</td></tr>
+          <tr><td>= Net Profit</td><td>$43,350</td></tr>
+          <tr><td>× 92.35% (IRS SE base)</td><td>$40,033</td></tr>
+          <tr><td>SE Tax (15.3%)</td><td>$6,125</td></tr>
+          <tr><td>− ½ SE Tax deduction</td><td>− $3,062</td></tr>
+          <tr><td>− Standard Deduction (Single 2026)</td><td>− $15,000</td></tr>
+          <tr><td>= Federal Taxable Income</td><td>$25,288</td></tr>
+          <tr><td>Federal Income Tax (10–12% bracket)</td><td>$2,729</td></tr>
+          <tr><td>State Tax (Texas = $0)</td><td>$0</td></tr>
+          <tr class="total-row"><td>✅ Total Tax Owed</td><td>$8,854</td></tr>
+          <tr><td>Pay each quarter</td><td>$2,214</td></tr>
+        </table>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h4>Track your income and expenses all year</h4>
+            <p>Save every receipt. Log every business mile. The IRS taxes your <em>net profit</em>, not your gross income. Every dollar of expenses reduces your SE tax by 15.3 cents and your income tax by your marginal rate.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h4>Set aside 25–30% of every payment</h4>
+            <p>Move it immediately to a separate savings account. Do not touch it. This covers your SE tax plus income tax. If you earn $1,000 from Uber, transfer $250–300 to your tax savings account that same day.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h4>Pay quarterly — not just in April</h4>
+            <p>If you expect to owe $1,000 or more, the IRS requires quarterly estimated payments. Missing them triggers a penalty even if you pay everything in April. The four 2026 deadlines are April 15, June 16, September 15, and January 15, 2027.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h4>File Schedule SE with your 1040</h4>
+            <p>At tax time, you report your self-employment income on Schedule C (profit/loss from business) and calculate SE tax on Schedule SE. These attach to your Form 1040. Most tax software handles this automatically.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2026 BRACKETS -->
+    <div class="section">
+      <div class="section-label">2026 IRS Data</div>
+      <h2>2026 Federal Income Tax Brackets</h2>
+      <p>After calculating SE tax, you also owe federal income tax. Here are the 2026 brackets for single filers (after the $15,000 standard deduction):</p>
+      <table class="info-table">
+        <thead><tr><th>Tax Rate</th><th>Taxable Income (Single)</th><th>Taxable Income (Married)</th></tr></thead>
+        <tbody>
+          <tr><td><strong>10%</strong></td><td>$0 – $11,925</td><td>$0 – $23,850</td></tr>
+          <tr><td><strong>12%</strong></td><td>$11,926 – $48,475</td><td>$23,851 – $96,950</td></tr>
+          <tr><td><strong>22%</strong></td><td>$48,476 – $103,350</td><td>$96,951 – $206,700</td></tr>
+          <tr><td><strong>24%</strong></td><td>$103,351 – $197,300</td><td>$206,701 – $394,600</td></tr>
+          <tr><td><strong>32%</strong></td><td>$197,301 – $243,725</td><td>$394,601 – $487,450</td></tr>
+          <tr><td><strong>35%</strong></td><td>$243,726 – $609,350</td><td>$487,451 – $731,200</td></tr>
+          <tr><td><strong>37%</strong></td><td>Over $609,350</td><td>Over $731,200</td></tr>
+        </tbody>
+      </table>
+      <div class="info-note">💡 <strong>Most gig workers fall in the 10–22% federal bracket.</strong> At $50,000 net profit as a single filer, your effective federal income tax rate is around 11–13% after the standard deduction and SE tax deduction.</div>
+
+      <h3>2026 Standard Deductions</h3>
+      <table class="info-table">
+        <thead><tr><th>Filing Status</th><th>Standard Deduction</th></tr></thead>
+        <tbody>
+          <tr><td>Single</td><td><strong>$15,000</strong></td></tr>
+          <tr><td>Married Filing Jointly</td><td><strong>$30,000</strong></td></tr>
+          <tr><td>Head of Household</td><td><strong>$22,500</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- DEDUCTIONS -->
+    <div class="section">
+      <div class="section-label">Reduce Your Bill</div>
+      <h2>Key Deductions That Reduce SE Tax</h2>
+      <p>Unlike W-2 employees, you can deduct real business expenses that directly reduce your net profit — and therefore reduce both your SE tax and income tax.</p>
+
+      <table class="info-table">
+        <thead><tr><th>Deduction</th><th>How It Works</th><th>Typical Savings</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Mileage (72.5¢/mi)</strong></td><td>Log every business mile. 10,000 miles = $7,250 deduction</td><td>$1,109 in SE tax</td></tr>
+          <tr><td><strong>Home Office</strong></td><td>Dedicated workspace: $5/sq ft simplified method (max 300 sq ft)</td><td>Up to $1,500 deduction</td></tr>
+          <tr><td><strong>Health Insurance</strong></td><td>100% of premiums for self + family deducted from gross income</td><td>Varies — often $3,000–$8,000</td></tr>
+          <tr><td><strong>Phone & Internet</strong></td><td>Business-use percentage of monthly bills</td><td>$500–$2,000 deduction</td></tr>
+          <tr><td><strong>½ SE Tax</strong></td><td>IRS auto-deduction — reduces income tax (not SE tax itself)</td><td>Saves $300–$1,500</td></tr>
+          <tr><td><strong>SEP-IRA</strong></td><td>Contribute up to 25% of net income, max $70,000</td><td>Huge — reduces income tax</td></tr>
+          <tr><td><strong>QBI Deduction</strong></td><td>Deduct up to 20% of qualified business income</td><td>Often $1,000–$5,000+</td></tr>
+        </tbody>
+      </table>
+      <a href="/deductions.html" style="display:inline-block;margin-top:10px;font-weight:700;">See all 20 deductions for gig workers →</a>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section">
+      <div class="section-label">Common Questions</div>
+      <h2>Self-Employment Tax FAQ</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Is self-employment tax the same as income tax? <span class="arrow">▾</span></button>
+          <div class="faq-a">No — they are two completely separate taxes. Self-employment tax (15.3%) covers Social Security and Medicare. Federal income tax is calculated separately on your taxable income using the regular brackets. You owe both. Most gig workers owe SE tax + 10–22% income tax on their net profit.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Why is SE tax calculated on 92.35% of net profit, not 100%? <span class="arrow">▾</span></button>
+          <div class="faq-a">The IRS designed this to give self-employed workers a slight break. When you're an employee, your employer pays half the FICA taxes on your gross wages. To replicate this, the IRS lets you calculate SE tax on 92.35% of net profit instead of the full 100%. It's a small reduction — on $50,000 net, you save about $590 in SE tax versus calculating on the full amount.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Do I owe SE tax if I also have a W-2 job? <span class="arrow">▾</span></button>
+          <div class="faq-a">Yes. Your W-2 employer already withholds Social Security and Medicare on your wages. But your 1099 side income is separate — you owe the full 15.3% SE tax on your net self-employment profit, even if you also have W-2 income. The Social Security wage cap ($176,100 for 2026) applies across both combined, so very high earners may see some reduction.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What if I can't afford to pay my SE tax? <span class="arrow">▾</span></button>
+          <div class="faq-a">File your return on time regardless — late filing penalties are worse than late payment penalties. Then set up an IRS payment plan at IRS.gov/opa. The IRS also has an Offer in Compromise program for those who genuinely cannot pay. Interest accrues, but you won't face criminal issues for an inability to pay as long as you file and communicate with the IRS.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Can I deduct my car payment as a 1099 worker? <span class="arrow">▾</span></button>
+          <div class="faq-a">Not the payment itself — but you can deduct the business use of your car. You have two options: (1) Standard mileage rate at 72.5¢/mile for all business miles in 2026, or (2) Actual expense method — track real costs (gas, insurance, repairs, depreciation) and multiply by your business-use percentage. You must choose one method and stick with it for that vehicle. Most delivery and rideshare drivers get more with the mileage method.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How do I actually pay self-employment tax to the IRS? <span class="arrow">▾</span></button>
+          <div class="faq-a">Pay quarterly using IRS Direct Pay (free at IRS.gov/payments) or the IRS2Go app. You don't need to fill out a separate form — just pay the estimated amount. At year end, file Schedule SE with your Form 1040 to calculate the exact amount owed. Any overpayment becomes a refund; any underpayment gets added to your bill. See our <a href="/quarterly-taxes.html">quarterly tax payment guide</a> for step-by-step instructions.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RELATED CALCULATORS -->
+    <div class="section">
+      <div class="section-label">More Free Tools</div>
+      <h2>Related Calculators</h2>
+      <div class="related-grid">
+        <a href="/quarterly-tax-calculator.html" class="related-card">
+          <h4>📅 Quarterly Tax Calculator</h4>
+          <p>How much to pay each quarter to avoid IRS penalties</p>
+        </a>
+        <a href="/mileage-calculator.html" class="related-card">
+          <h4>🚗 Mileage Deduction Calculator</h4>
+          <p>Enter your miles, see your exact deduction at 72.5¢/mi</p>
+        </a>
+        <a href="/doordash-tax-calculator.html" class="related-card">
+          <h4>🍔 DoorDash Tax Calculator</h4>
+          <p>Built specifically for DoorDash drivers with delivery deductions</p>
+        </a>
+        <a href="/uber-lyft-tax-calculator.html" class="related-card">
+          <h4>🚘 Uber & Lyft Tax Calculator</h4>
+          <p>Rideshare-specific calculator with mileage auto-calculation</p>
+        </a>
+        <a href="/freelancer-tax-calculator.html" class="related-card">
+          <h4>💻 Freelancer Take-Home Calculator</h4>
+          <p>See your real take-home pay after all taxes</p>
+        </a>
+        <a href="/1099-vs-w2-calculator.html" class="related-card">
+          <h4>⚖️ 1099 vs W-2 Comparison</h4>
+          <p>Is it better financially to be a contractor or employee?</p>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="cta-card">
+      <h3>🧮 8 Free Calculators</h3>
+      <p>We have a free calculator for every type of gig worker — Uber, DoorDash, freelancers, and more.</p>
+      <a href="/calculators.html">View All Calculators →</a>
+    </div>
+
+    <div class="sidebar-card" style="padding:0;overflow:hidden;">
+      <div class="ad-slot ad-300">
+        <!-- Google AdSense 300x250 -->
+        Advertisement
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <h3>2026 Key Numbers</h3>
+      <div class="quick-links">
+        <a href="/se-tax-calculator.html">SE Tax Rate: <strong>15.3%</strong></a>
+        <a href="/mileage-calculator.html">Mileage Rate: <strong>72.5¢/mi</strong></a>
+        <a href="/quarterly-taxes.html">Q3 Deadline: <strong>Sep 15, 2026</strong></a>
+        <a href="/guides/standard-deduction.html">Standard Deduction: <strong>$15,000</strong></a>
+        <a href="/guides/sep-ira.html">SEP-IRA Max: <strong>$70,000</strong></a>
+        <a href="/guides/ss-wage-base.html">SS Wage Cap: <strong>$176,100</strong></a>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <h3>Quick Links</h3>
+      <div class="quick-links">
+        <a href="/quarterly-tax-calculator.html">Quarterly Calculator</a>
+        <a href="/deductions.html">Top 20 Deductions</a>
+        <a href="/quarterly-taxes.html">How to Pay Quarterly</a>
+        <a href="/uber-taxes.html">Uber Driver Taxes</a>
+        <a href="/doordash-taxes.html">DoorDash Taxes</a>
+        <a href="/guides.html">All Tax Guides</a>
+        <a href="/faq.html">Full FAQ</a>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <h3>Best Tax Software for 1099</h3>
+      <a href="/tax-software.html" style="display:flex;gap:10px;padding:10px;background:var(--gray1);border-radius:var(--radius);margin-bottom:8px;text-decoration:none;align-items:center;">
+        <span style="font-size:20px;">🟢</span>
+        <div><div style="font-size:13px;font-weight:700;color:var(--navy);">TurboTax Self-Employed</div><div style="font-size:11px;color:var(--text2);">Best overall for 1099 filers</div></div>
+      </a>
+      <a href="/tax-software.html" style="display:flex;gap:10px;padding:10px;background:var(--gray1);border-radius:var(--radius);margin-bottom:8px;text-decoration:none;align-items:center;">
+        <span style="font-size:20px;">🔴</span>
+        <div><div style="font-size:13px;font-weight:700;color:var(--navy);">H&R Block Self-Employed</div><div style="font-size:11px;color:var(--text2);">Great value, easy interface</div></div>
+      </a>
+      <a href="/tax-software.html" style="display:flex;gap:10px;padding:10px;background:var(--gray1);border-radius:var(--radius);text-decoration:none;align-items:center;">
+        <span style="font-size:20px;">🔵</span>
+        <div><div style="font-size:13px;font-weight:700;color:var(--navy);">TaxSlayer Self-Employed</div><div style="font-size:11px;color:var(--text2);">Most affordable option</div></div>
+      </a>
+      <a href="/tax-software.html" style="font-size:12px;color:var(--green);display:block;margin-top:10px;font-weight:600;">Full comparison →</a>
+    </div>
+
+    <div class="sidebar-card" style="padding:0;overflow:hidden;">
+      <div class="ad-slot ad-300">
+        <!-- Google AdSense 300x250 -->
+        Advertisement
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+<!-- BOTTOM AD -->
+<div class="container">
+  <div class="ad-slot ad-728">Advertisement</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-text">1099Tax<span style="color:var(--amber)">Calcs</span>.com</span>
+        <p>Free tax calculators built for America's 70 million gig workers and freelancers. Calculate what you owe, discover deductions, and never miss a quarterly deadline.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Calculators</h4>
+        <a href="/se-tax-calculator.html">SE Tax Calculator</a>
+        <a href="/quarterly-tax-calculator.html">Quarterly Calculator</a>
+        <a href="/mileage-calculator.html">Mileage Calculator</a>
+        <a href="/freelancer-tax-calculator.html">Freelancer Calculator</a>
+        <a href="/1099-vs-w2-calculator.html">1099 vs W-2</a>
+      </div>
+      <div class="footer-col">
+        <h4>By Platform</h4>
+        <a href="/uber-taxes.html">Uber Driver Taxes</a>
+        <a href="/doordash-taxes.html">DoorDash Taxes</a>
+        <a href="/instacart-taxes.html">Instacart Taxes</a>
+        <a href="/amazon-flex-taxes.html">Amazon Flex</a>
+        <a href="/upwork-fiverr-taxes.html">Upwork & Fiverr</a>
+      </div>
+      <div class="footer-col">
+        <h4>Guides</h4>
+        <a href="/deductions.html">Top 20 Deductions</a>
+        <a href="/quarterly-taxes.html">Quarterly Tax Guide</a>
+        <a href="/guides.html">All Tax Guides</a>
+        <a href="/faq.html">FAQ</a>
+        <a href="/about.html">About</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 1099TaxCalcs.com — For informational purposes only. Not tax advice. Consult a CPA for your specific situation.</span>
+      <div style="display:flex;gap:16px;">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+        <a href="/about.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── NAV ──
+function toggleNav() { document.getElementById('main-nav').classList.toggle('open'); }
+
+// ── FORMAT ──
+const fmt = v => '$' + Math.round(v).toLocaleString();
+
+// ── CALCULATE ──
+function calculate() {
+  const gross       = parseFloat(document.getElementById('gross').value)           || 0;
+  const otherIncome = parseFloat(document.getElementById('other').value)            || 0;
+  const expenses    = parseFloat(document.getElementById('expenses').value)         || 0;
+  const miles       = parseFloat(document.getElementById('miles').value)            || 0;
+  const homeoffice  = parseFloat(document.getElementById('homeoffice').value)       || 0;
+  const health      = parseFloat(document.getElementById('health').value)           || 0;
+  const retirement  = parseFloat(document.getElementById('retirement').value)       || 0;
+  const otherDed    = parseFloat(document.getElementById('other_deductions').value) || 0;
+  const filing      = document.getElementById('filing').value;
+  const stateRate   = parseFloat(document.getElementById('state').value)            || 0;
+
+  if (gross <= 0) { alert('Please enter your gross 1099 income.'); return; }
+
+  // Mileage deduction at 2026 IRS rate
+  const mileageDed = miles * 0.725;
+
+  // Total deductions from self-employment income
+  const totalDed = expenses + mileageDed + homeoffice + health + retirement + otherDed;
+
+  // Net profit
+  const net = Math.max(0, gross - totalDed);
+
+  // SE tax base (92.35% of net)
+  const seBase = net * 0.9235;
+
+  // SE tax
+  const seTax = seBase * 0.153;
+
+  // Half SE tax deduction (reduces income tax, not SE tax)
+  const halfSE = seTax / 2;
+
+  // Standard deduction
+  let stdDed = 15000;
+  if (filing === 'married') stdDed = 30000;
+  if (filing === 'hoh')     stdDed = 22500;
+
+  // Federal taxable income
+  const totalGross  = net + otherIncome;
+  const fedTaxable  = Math.max(0, totalGross - halfSE - stdDed);
+
+  // Federal income tax brackets 2026
+  function calcFedTax(income, status) {
+    let tax = 0;
+    if (status === 'single') {
+      if (income > 609350)      tax = 183647.25 + (income - 609350) * 0.37;
+      else if (income > 243725) tax = 55374.25  + (income - 243725) * 0.35;
+      else if (income > 103350) tax = 18748.25  + (income - 103350) * 0.24;
+      else if (income > 52850)  tax = 6022.25   + (income - 52850)  * 0.22;
+      else if (income > 23850)  tax = 1195.00   + (income - 23850)  * 0.12;
+      else                      tax = income * 0.10;
+    } else if (status === 'married') {
+      if (income > 731200)      tax = 184811.50 + (income - 731200) * 0.37;
+      else if (income > 487450) tax = 99778.50  + (income - 487450) * 0.35;
+      else if (income > 206700) tax = 37499.50  + (income - 206700) * 0.24;
+      else if (income > 105800) tax = 12045.50  + (income - 105800) * 0.22;
+      else if (income > 47700)  tax = 2390.00   + (income - 47700)  * 0.12;
+      else                      tax = income * 0.10;
+    } else {
+      if (income > 609350)      tax = 173623.50 + (income - 609350) * 0.37;
+      else if (income > 243700) tax = 45926.50  + (income - 243700) * 0.35;
+      else if (income > 103350) tax = 16394.50  + (income - 103350) * 0.24;
+      else if (income > 55900)  tax = 5748.50   + (income - 55900)  * 0.22;
+      else if (income > 17400)  tax = 1740.00   + (income - 17400)  * 0.12;
+      else                      tax = income * 0.10;
+    }
+    return Math.max(0, tax);
+  }
+
+  const fedTax   = calcFedTax(fedTaxable, filing);
+  const stateTax = net * stateRate;
+  const total    = seTax + fedTax + stateTax;
+  const quarterly= total / 4;
+
+  // Update results
+  document.getElementById('r-net').textContent       = fmt(net);
+  document.getElementById('r-net-sub').textContent   = `After ${fmt(totalDed)} in deductions`;
+  document.getElementById('r-se').textContent        = fmt(seTax);
+  document.getElementById('r-fed').textContent       = fmt(fedTax);
+  document.getElementById('r-fed-sub').textContent   = `On ${fmt(fedTaxable)} taxable income`;
+  document.getElementById('r-state').textContent     = stateRate > 0 ? fmt(stateTax) : '$0 (no state tax)';
+  document.getElementById('r-state-sub').textContent = stateRate > 0 ? `At ${(stateRate*100).toFixed(2)}% state rate` : 'Lucky you!';
+  document.getElementById('r-total').textContent     = fmt(total);
+  document.getElementById('r-quarterly').textContent = fmt(quarterly);
+
+  // Breakdown table
+  document.getElementById('bt-gross').textContent      = fmt(gross);
+  document.getElementById('bt-deductions').textContent = `− ${fmt(totalDed)}`;
+  document.getElementById('bt-net').textContent        = fmt(net);
+  document.getElementById('bt-sebase').textContent     = fmt(seBase);
+  document.getElementById('bt-se').textContent         = fmt(seTax);
+  document.getElementById('bt-halfse').textContent     = `− ${fmt(halfSE)}`;
+  document.getElementById('bt-std').textContent        = `− ${fmt(stdDed)}`;
+  document.getElementById('bt-taxable').textContent    = fmt(fedTaxable);
+  document.getElementById('bt-total').textContent      = fmt(total);
+
+  // Savings tip
+  const setAside = Math.round((total / gross) * 100);
+  const mileageSavings = Math.round(mileageDed * 0.153);
+  let tip = `💡 <strong>Set aside ${setAside}% of every payment</strong> for taxes. `;
+  if (miles > 0) tip += `Your ${miles.toLocaleString()} business miles saved you <strong>${fmt(mileageSavings)}</strong> in SE tax alone. `;
+  if (totalDed < gross * 0.1) tip += `You may have more deductions available — <a href="/deductions.html">see all 20 →</a>`;
+  document.getElementById('save-tip').innerHTML = tip;
+
+  // Show results
+  const resultsEl = document.getElementById('results');
+  resultsEl.classList.add('show');
+  resultsEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+// ── RESET ──
+function resetForm() {
+  ['gross','other','expenses','miles','homeoffice','health','retirement','other_deductions'].forEach(id => {
+    document.getElementById(id).value = '';
+  });
+  document.getElementById('filing').selectedIndex = 0;
+  document.getElementById('state').selectedIndex  = 0;
+  document.getElementById('results').classList.remove('show');
+}
+
+// ── FAQ ──
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = btn.classList.contains('open');
+  document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+  if (!isOpen) { btn.classList.add('open'); answer.classList.add('open'); }
+}
+
+// Enter key
+document.addEventListener('keydown', e => { if (e.key === 'Enter') calculate(); });
+</script>
+
+</body>
+</html>
