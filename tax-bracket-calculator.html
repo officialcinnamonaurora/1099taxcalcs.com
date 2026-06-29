@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free tax bracket calculator for 2026. Find which federal tax bracket your 1099 or gig income falls into. See your marginal rate, effective rate, and exact tax owed by bracket.">
+<meta name="keywords" content="tax bracket calculator 2026, what tax bracket am I in, federal tax brackets 2026, gig worker tax bracket, 1099 tax bracket finder, marginal tax rate calculator, effective tax rate calculator">
+<meta name="author" content="1099TaxCalcs.com">
+<meta property="og:title" content="Tax Bracket Calculator 2026 — Find Your Rate | 1099TaxCalcs.com">
+<meta property="og:description" content="Find exactly which federal tax bracket your income falls into. See marginal rate, effective rate, and taxes owed in each bracket. Free and instant.">
+<meta property="og:url" content="https://1099taxcalcs.com/tax-bracket-calculator.html">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://1099taxcalcs.com/tax-bracket-calculator.html">
+<title>Tax Bracket Calculator 2026 — Find Your Federal Tax Rate | 1099TaxCalcs.com</title>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+<style>
+  :root {
+    --navy:   #0D1F3C;
+    --navy2:  #162847;
+    --green:  #00A878;
+    --green2: #008F65;
+    --amber:  #F5A623;
+    --light:  #F4F7FC;
+    --gray1:  #F0F4FA;
+    --gray2:  #E2E8F4;
+    --gray3:  #94A3B8;
+    --text:   #1A2A44;
+    --text2:  #4A5A72;
+    --font:   'Segoe UI', system-ui, -apple-system, sans-serif;
+    --radius: 8px;
+    --shadow: 0 2px 12px rgba(13,31,60,0.10);
+    /* bracket colors */
+    --b10: #6EE7B7; --b12: #34D399; --b22: #FBBF24;
+    --b24: #F59E0B; --b32: #F97316; --b35: #EF4444; --b37: #DC2626;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); color: var(--text); background: var(--light); font-size: 16px; line-height: 1.6; }
+  a { color: var(--green); text-decoration: none; }
+  a:hover { color: var(--green2); text-decoration: underline; }
+
+  /* HEADER */
+  header { background: var(--navy); padding: 0 24px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+  .header-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-icon { width: 38px; height: 38px; background: var(--green); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: white; letter-spacing: -1px; flex-shrink: 0; }
+  .logo-text { color: white; font-size: 17px; font-weight: 700; }
+  .logo-text span { color: var(--amber); }
+  nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+  nav a { color: rgba(255,255,255,0.85); font-size: 13px; padding: 6px 10px; border-radius: 6px; transition: all 0.15s; white-space: nowrap; }
+  nav a:hover { background: rgba(255,255,255,0.1); color: white; text-decoration: none; }
+  nav a.active { color: var(--amber); }
+  .nav-cta { background: var(--green) !important; color: white !important; font-weight: 600; padding: 7px 14px !important; }
+  .nav-cta:hover { background: var(--green2) !important; }
+  .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: white; margin: 5px 0; border-radius: 2px; }
+  @media(max-width: 768px) {
+    .hamburger { display: block; }
+    nav { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--navy2); padding: 12px 16px; flex-direction: column; align-items: flex-start; gap: 2px; }
+    nav.open { display: flex; }
+    nav a { width: 100%; padding: 10px 12px; }
+  }
+
+  /* HERO */
+  .page-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%); color: white; padding: 40px 24px 36px; }
+  .page-hero-inner { max-width: 1200px; margin: 0 auto; }
+  .breadcrumb { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 12px; }
+  .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--green); }
+  .breadcrumb span { margin: 0 6px; }
+  .page-hero h1 { font-size: clamp(24px, 3.5vw, 38px); font-weight: 800; line-height: 1.2; margin-bottom: 10px; }
+  .page-hero h1 em { color: var(--amber); font-style: normal; }
+  .page-hero p { font-size: 15px; color: rgba(255,255,255,0.75); max-width: 620px; line-height: 1.7; }
+  .hero-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+  .pill { font-size: 11px; font-weight: 600; padding: 4px 12px; border-radius: 20px; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8); border: 1px solid rgba(255,255,255,0.15); }
+  .pill.green { background: rgba(0,168,120,0.2); color: #5EEAD4; border-color: rgba(0,168,120,0.3); }
+
+  /* LAYOUT */
+  .main-wrap { max-width: 1200px; margin: 0 auto; padding: 32px 24px; display: grid; grid-template-columns: 1fr 300px; gap: 32px; align-items: start; }
+  @media(max-width: 960px) { .main-wrap { grid-template-columns: 1fr; } }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  .ad-slot { background: var(--gray1); border: 1px dashed var(--gray2); border-radius: var(--radius); text-align: center; color: var(--gray3); font-size: 11px; padding: 8px; }
+  .ad-728 { width: 100%; height: 90px; line-height: 74px; margin: 20px 0; }
+  .ad-300 { width: 100%; height: 250px; line-height: 234px; }
+
+  /* CALC CARD */
+  .calc-card { background: white; border-radius: 16px; box-shadow: 0 4px 24px rgba(13,31,60,0.13); overflow: hidden; margin-bottom: 24px; }
+  .calc-header { background: var(--navy); color: white; padding: 18px 24px; }
+  .calc-header h2 { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+  .calc-header p { font-size: 13px; color: rgba(255,255,255,0.65); }
+  .calc-body { padding: 24px; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media(max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+  .form-group { margin-bottom: 14px; }
+  .form-group label { display: block; font-size: 12px; font-weight: 600; color: var(--text2); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .form-group label .tip { font-size: 11px; color: var(--green); font-weight: 400; text-transform: none; letter-spacing: 0; margin-left: 4px; }
+  .form-group input, .form-group select { width: 100%; padding: 10px 14px; border: 1.5px solid var(--gray2); border-radius: var(--radius); font-size: 15px; color: var(--text); background: var(--gray1); transition: border-color 0.15s; font-family: var(--font); }
+  .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--green); background: white; }
+  .input-prefix { position: relative; }
+  .input-prefix::before { content: '$'; position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--gray3); font-size: 15px; font-weight: 600; }
+  .input-prefix input { padding-left: 26px; }
+  .section-divider { font-size: 11px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 0.08em; padding: 10px 0 8px; border-top: 1px solid var(--gray2); margin-top: 4px; display: flex; align-items: center; gap: 8px; }
+  .section-divider::after { content: ''; flex: 1; height: 1px; background: var(--gray2); }
+
+  .calc-btn { width: 100%; padding: 14px; background: var(--green); color: white; font-size: 16px; font-weight: 700; border: none; border-radius: var(--radius); cursor: pointer; transition: background 0.15s; font-family: var(--font); }
+  .calc-btn:hover { background: var(--green2); }
+  .reset-btn { width: 100%; padding: 9px; background: transparent; color: var(--text2); font-size: 13px; border: 1.5px solid var(--gray2); border-radius: var(--radius); cursor: pointer; font-family: var(--font); margin-top: 8px; transition: all 0.15s; }
+  .reset-btn:hover { border-color: var(--green); color: var(--green); }
+
+  /* RESULTS */
+  .results { display: none; margin-top: 24px; }
+  .results.show { display: block; }
+  .results-header { background: var(--navy); color: white; border-radius: 12px 12px 0 0; padding: 14px 20px; }
+  .results-header h3 { font-size: 15px; font-weight: 700; }
+  .results-header p { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 2px; }
+  .results-body { background: white; border: 1.5px solid var(--gray2); border-top: none; border-radius: 0 0 12px 12px; padding: 20px; }
+
+  /* BRACKET HIGHLIGHT */
+  .your-bracket { border-radius: var(--radius); padding: 16px 20px; margin-bottom: 14px; text-align: center; }
+  .bracket-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; opacity: 0.8; }
+  .bracket-rate { font-size: 52px; font-weight: 800; line-height: 1; margin-bottom: 4px; }
+  .bracket-desc { font-size: 13px; opacity: 0.85; }
+
+  /* KEY NUMBERS */
+  .key-numbers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 14px; }
+  @media(max-width: 500px) { .key-numbers { grid-template-columns: 1fr 1fr; } }
+  .kn-box { background: var(--gray1); border-radius: var(--radius); padding: 12px 14px; border-left: 3px solid var(--gray2); }
+  .kn-box.green { border-left-color: var(--green); background: #E9F9F4; }
+  .kn-box.amber { border-left-color: var(--amber); background: #FFF8EC; }
+  .kn-box.navy { border-left-color: var(--navy); }
+  .kn-label { font-size: 11px; font-weight: 600; color: var(--text2); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .kn-value { font-size: 20px; font-weight: 800; color: var(--navy); }
+  .kn-value.green { color: var(--green2); }
+  .kn-value.amber { color: #B7791F; }
+
+  /* BRACKET BREAKDOWN BAR */
+  .breakdown-title { font-size: 12px; font-weight: 700; color: var(--text2); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
+  .bracket-bar-wrap { margin-bottom: 16px; }
+  .bracket-bar-row { margin-bottom: 8px; }
+  .bracket-bar-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3px; }
+  .bracket-bar-label { font-size: 12px; font-weight: 600; color: var(--text); }
+  .bracket-bar-amounts { font-size: 11px; color: var(--text2); }
+  .bracket-bar-track { height: 18px; background: var(--gray2); border-radius: 4px; overflow: hidden; }
+  .bracket-bar-fill { height: 100%; border-radius: 4px; transition: width 0.4s ease; display: flex; align-items: center; padding-left: 6px; }
+  .bracket-bar-fill span { font-size: 10px; font-weight: 700; color: white; white-space: nowrap; overflow: hidden; }
+  .bracket-bar-row.inactive .bracket-bar-label { color: var(--gray3); }
+  .bracket-bar-row.inactive .bracket-bar-track { opacity: 0.4; }
+  .bracket-bar-row.active-bracket .bracket-bar-label { font-weight: 800; }
+
+  /* FULL BREAKDOWN TABLE */
+  .breakdown-table { width: 100%; font-size: 13px; border-collapse: collapse; margin-bottom: 14px; }
+  .breakdown-table th { background: var(--navy); color: white; padding: 8px 12px; text-align: left; font-size: 11px; letter-spacing: 0.04em; }
+  .breakdown-table td { padding: 8px 12px; border-bottom: 1px solid var(--gray2); color: var(--text2); }
+  .breakdown-table tr.your-row td { font-weight: 700; }
+  .breakdown-table tr:last-child td { border-bottom: none; }
+  .bracket-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+
+  /* SE NOTE */
+  .se-note { background: #FFF8EC; border: 1px solid #F5D78E; border-radius: var(--radius); padding: 12px 14px; font-size: 13px; color: #7A4F00; line-height: 1.6; margin-bottom: 10px; }
+  .result-note { font-size: 11px; color: var(--gray3); text-align: center; margin-top: 10px; line-height: 1.6; }
+
+  /* CONTENT SECTIONS */
+  .section { background: white; border-radius: 12px; padding: 28px; margin-bottom: 20px; box-shadow: var(--shadow); }
+  .section-label { font-size: 11px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+  .section h2 { font-size: 22px; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
+  .section h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin: 20px 0 8px; }
+  .section p { color: var(--text2); line-height: 1.8; margin-bottom: 12px; }
+  .section ul { color: var(--text2); line-height: 1.8; margin: 8px 0 12px 20px; }
+  .section li { margin-bottom: 6px; }
+  .section strong { color: var(--navy); }
+
+  /* STATIC BRACKET TABLE */
+  .bracket-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 14px 0; }
+  .bracket-table th { background: var(--navy); color: white; padding: 10px 14px; text-align: left; font-size: 12px; letter-spacing: 0.04em; }
+  .bracket-table td { padding: 10px 14px; border-bottom: 1px solid var(--gray2); color: var(--text2); }
+  .bracket-table td:first-child { font-weight: 700; }
+  .bracket-table .rate-cell { font-weight: 800; font-size: 15px; }
+  .rate-10  { color: #059669; }
+  .rate-12  { color: #10B981; }
+  .rate-22  { color: #D97706; }
+  .rate-24  { color: #F59E0B; }
+  .rate-32  { color: #EA580C; }
+  .rate-35  { color: #DC2626; }
+  .rate-37  { color: #9B1C1C; }
+  .bracket-table tr:nth-child(even) td { background: var(--gray1); }
+
+  /* MARGINAL VS EFFECTIVE */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 14px; }
+  @media(max-width: 600px) { .two-col { grid-template-columns: 1fr; } }
+  .concept-card { border-radius: var(--radius); padding: 16px 18px; }
+  .concept-card.marginal { background: #FFF8EC; border: 1.5px solid rgba(245,166,35,0.3); }
+  .concept-card.effective { background: #E9F9F4; border: 1.5px solid rgba(0,168,120,0.3); }
+  .concept-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+  .concept-card.marginal h4 { color: #B7791F; }
+  .concept-card.effective h4 { color: var(--green2); }
+  .concept-card p { font-size: 13px; color: var(--text2); line-height: 1.6; margin: 0; }
+
+  /* BOXES */
+  .warn-box { background: #FFF8EC; border: 1px solid #F5D78E; border-radius: var(--radius); padding: 14px 16px; font-size: 13px; color: #7A4F00; line-height: 1.6; margin: 14px 0; }
+  .info-note { background: #EEF2FA; border: 1px solid #C7D4EE; border-radius: var(--radius); padding: 14px 16px; font-size: 13px; color: var(--text2); line-height: 1.6; margin: 14px 0; }
+  .green-box { background: #E9F9F4; border: 1px solid rgba(0,168,120,0.3); border-radius: var(--radius); padding: 14px 16px; font-size: 13px; color: #065F46; line-height: 1.6; margin: 14px 0; }
+
+  /* FAQ */
+  .faq-list { margin-top: 10px; }
+  .faq-item { border-bottom: 1px solid var(--gray2); }
+  .faq-q { width: 100%; text-align: left; background: none; border: none; padding: 14px 0; font-size: 15px; font-weight: 600; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: var(--font); }
+  .faq-q:hover { color: var(--green); }
+  .faq-q .arrow { font-size: 18px; color: var(--green); transition: transform 0.2s; flex-shrink: 0; margin-left: 12px; }
+  .faq-q.open .arrow { transform: rotate(180deg); }
+  .faq-a { font-size: 14px; color: var(--text2); line-height: 1.8; padding-bottom: 14px; display: none; }
+  .faq-a.open { display: block; }
+
+  /* RELATED */
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; margin-top: 12px; }
+  .related-card { background: var(--gray1); border: 1.5px solid var(--gray2); border-radius: var(--radius); padding: 14px 16px; text-decoration: none; transition: all 0.15s; display: block; }
+  .related-card:hover { border-color: var(--green); background: white; text-decoration: none; }
+  .related-card h4 { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+  .related-card p { font-size: 12px; color: var(--text2); margin: 0; }
+
+  /* SIDEBAR */
+  .sidebar { display: flex; flex-direction: column; gap: 18px; }
+  .sidebar-card { background: white; border-radius: 12px; padding: 18px; box-shadow: var(--shadow); }
+  .sidebar-card h3 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 10px; border-bottom: 2px solid var(--green); padding-bottom: 7px; }
+  .cta-card { background: linear-gradient(135deg, var(--navy), var(--navy2)); color: white; border-radius: 12px; padding: 18px; }
+  .cta-card h3 { font-size: 14px; font-weight: 700; color: white; margin-bottom: 6px; border: none; padding: 0; }
+  .cta-card p { font-size: 12px; color: rgba(255,255,255,0.7); margin-bottom: 12px; line-height: 1.6; }
+  .cta-card a { display: block; background: var(--green); color: white; text-align: center; padding: 9px; border-radius: var(--radius); font-weight: 700; font-size: 13px; text-decoration: none; }
+  .cta-card a:hover { background: var(--green2); }
+  .quick-links a { display: flex; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--gray2); font-size: 13px; color: var(--text); text-decoration: none; }
+  .quick-links a:last-child { border-bottom: none; }
+  .quick-links a:hover { color: var(--green); }
+  .quick-links a::before { content: '→'; color: var(--green); font-weight: 700; }
+
+  /* MINI BRACKET SIDEBAR */
+  .mini-bracket { display: flex; flex-direction: column; gap: 4px; }
+  .mb-row { display: flex; align-items: center; gap: 8px; padding: 5px 6px; border-radius: 4px; }
+  .mb-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .mb-rate { font-size: 12px; font-weight: 700; color: var(--navy); min-width: 30px; }
+  .mb-range { font-size: 11px; color: var(--text2); }
+
+  /* FOOTER */
+  footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 40px 24px 24px; margin-top: 48px; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 32px; }
+  .footer-brand .logo-text { font-size: 18px; color: white; display: block; margin-bottom: 8px; }
+  .footer-brand p { font-size: 13px; line-height: 1.7; }
+  .footer-col h4 { color: white; font-size: 13px; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,0.55); margin-bottom: 7px; text-decoration: none; }
+  .footer-col a:hover { color: var(--green); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 12px; }
+  .footer-bottom a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .footer-bottom a:hover { color: var(--green); }
+  @media(max-width: 700px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the federal tax brackets for 2026?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The 2026 federal income tax brackets for single filers are: 10% on income up to $11,925; 12% on $11,926–$48,475; 22% on $48,476–$103,350; 24% on $103,351–$197,300; 32% on $197,301–$243,725; 35% on $243,726–$609,350; and 37% on income over $609,350. These apply after deductions like the $15,000 standard deduction." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between marginal and effective tax rate?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Your marginal tax rate is the rate on your last dollar of income — the bracket you fall into. Your effective tax rate is the average rate you pay across all your income. Because the US uses a progressive tax system, only income above each threshold is taxed at the higher rate. Someone in the 22% bracket does not pay 22% on all their income — they pay 10% on the first portion, 12% on the next, and 22% only on income above $48,475." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do gig workers pay the same income tax rates as employees?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — the federal income tax brackets are identical for 1099 gig workers and W-2 employees. The key difference is that gig workers also pay self-employment tax (15.3%) on top of income tax, while W-2 employees pay only 7.65% FICA with their employer covering the other half." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <div class="logo-icon">1099</div>
+      <div class="logo-text">Tax<span>Calcs</span>.com</div>
+    </a>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
+    <nav id="main-nav">
+      <a href="/calculators.html" class="active">Calculators</a>
+      <a href="/deductions.html">Deductions</a>
+      <a href="/quarterly-taxes.html">Quarterly Taxes</a>
+      <a href="/platforms.html">By Platform</a>
+      <a href="/guides.html">Guides</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/se-tax-calculator.html" class="nav-cta">SE Tax Calculator</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/calculators.html">Calculators</a><span>›</span>Tax Bracket Calculator</div>
+    <h1>Tax Bracket Calculator <em>2026</em></h1>
+    <p>Find exactly which federal tax bracket your income falls into. See your marginal rate, effective rate, and a visual breakdown of taxes owed in each bracket — all instantly.</p>
+    <div class="hero-pills">
+      <span class="pill green">✓ All 7 brackets visualized</span>
+      <span class="pill">Marginal vs effective rate</span>
+      <span class="pill">SE tax included for 1099</span>
+      <span class="pill">All filing statuses</span>
+    </div>
+  </div>
+</div>
+
+<!-- TOP AD -->
+<div class="container">
+  <div class="ad-slot ad-728"><!-- AdSense 728x90 -->Advertisement</div>
+</div>
+
+<!-- MAIN -->
+<div class="main-wrap">
+<main>
+
+  <!-- CALCULATOR -->
+  <div class="calc-card">
+    <div class="calc-header">
+      <h2>📊 Tax Bracket Finder 2026</h2>
+      <p>Enter your income below — your bracket and full breakdown appear instantly</p>
+    </div>
+    <div class="calc-body">
+
+      <div class="section-divider">💵 Your Income</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="gross">Gross Income <span class="tip">(1099 or W-2 — or both)</span></label>
+          <div class="input-prefix"><input type="number" id="gross" placeholder="65,000" min="0" oninput="liveUpdate()"></div>
+        </div>
+        <div class="form-group">
+          <label for="income-type">Income Type</label>
+          <select id="income-type" onchange="liveUpdate()">
+            <option value="1099">1099 / Gig / Freelance income</option>
+            <option value="w2">W-2 salary only</option>
+            <option value="both">Both 1099 and W-2</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row" id="w2-row" style="display:none;">
+        <div class="form-group">
+          <label for="w2-income">W-2 Salary Amount <span class="tip">(if both)</span></label>
+          <div class="input-prefix"><input type="number" id="w2-income" placeholder="40,000" min="0" oninput="liveUpdate()"></div>
+        </div>
+        <div class="form-group"></div>
+      </div>
+
+      <div class="section-divider">✂️ Deductions</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="deductions">Business Deductions <span class="tip">(1099 only — mileage, expenses)</span></label>
+          <div class="input-prefix"><input type="number" id="deductions" placeholder="8,000" min="0" oninput="liveUpdate()"></div>
+        </div>
+        <div class="form-group">
+          <label for="std-ded">Standard Deduction</label>
+          <select id="std-ded" onchange="liveUpdate()">
+            <option value="15000">$15,000 — Single (2026)</option>
+            <option value="30000">$30,000 — Married Filing Jointly</option>
+            <option value="22500">$22,500 — Head of Household</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="section-divider">👤 Filing Status</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="filing">Filing Status</label>
+          <select id="filing" onchange="syncStdDed(); liveUpdate();">
+            <option value="single">Single</option>
+            <option value="married">Married Filing Jointly</option>
+            <option value="hoh">Head of Household</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="state">State Tax Rate <span class="tip">(for total tax view)</span></label>
+          <select id="state" onchange="liveUpdate()">
+            <option value="0">No state tax (TX, FL, WA, NV...)</option>
+            <option value="0.0250">Arizona (2.5%)</option>
+            <option value="0.0930">California (9.3%)</option>
+            <option value="0.0440">Colorado (4.4%)</option>
+            <option value="0.0500">Connecticut / MA (5.0%)</option>
+            <option value="0.0575">Georgia (5.49%)</option>
+            <option value="0.0495">Illinois (4.95%)</option>
+            <option value="0.0425">Michigan (4.25%)</option>
+            <option value="0.0985">Minnesota (9.85%)</option>
+            <option value="0.0685">New York (6.85%)</option>
+            <option value="0.0450">North Carolina (4.5%)</option>
+            <option value="0.0399">Ohio (3.99%)</option>
+            <option value="0.0875">Oregon (8.75%)</option>
+            <option value="0.0307">Pennsylvania (3.07%)</option>
+            <option value="0.0575">Virginia (5.75%)</option>
+            <option value="0.0765">Wisconsin (7.65%)</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="calc-btn" onclick="calculate()">📊 Find My Tax Bracket →</button>
+      <button class="reset-btn" onclick="resetForm()">↺ Reset</button>
+
+      <!-- RESULTS -->
+      <div class="results" id="results">
+        <div class="results-header">
+          <h3>📊 Your 2026 Tax Bracket Results</h3>
+          <p id="results-sub">Federal income tax breakdown</p>
+        </div>
+        <div class="results-body">
+
+          <!-- YOUR BRACKET -->
+          <div class="your-bracket" id="your-bracket">
+            <div class="bracket-label">Your Marginal Tax Bracket</div>
+            <div class="bracket-rate" id="bracket-rate">22%</div>
+            <div class="bracket-desc" id="bracket-desc"></div>
+          </div>
+
+          <!-- KEY NUMBERS -->
+          <div class="key-numbers">
+            <div class="kn-box green">
+              <div class="kn-label">Taxable Income</div>
+              <div class="kn-value green" id="kn-taxable">$0</div>
+            </div>
+            <div class="kn-box amber">
+              <div class="kn-label">Effective Rate</div>
+              <div class="kn-value amber" id="kn-eff">0%</div>
+            </div>
+            <div class="kn-box navy">
+              <div class="kn-label">Federal Tax Owed</div>
+              <div class="kn-value" id="kn-fedtax">$0</div>
+            </div>
+            <div class="kn-box">
+              <div class="kn-label">SE Tax (if 1099)</div>
+              <div class="kn-value" id="kn-se">$0</div>
+            </div>
+            <div class="kn-box">
+              <div class="kn-label">State Tax</div>
+              <div class="kn-value" id="kn-state">$0</div>
+            </div>
+            <div class="kn-box green">
+              <div class="kn-label">Take-Home Pay</div>
+              <div class="kn-value green" id="kn-takehome">$0</div>
+            </div>
+          </div>
+
+          <!-- VISUAL BRACKET BARS -->
+          <div class="breakdown-title">How Your Income Is Taxed — Bracket by Bracket</div>
+          <div class="bracket-bar-wrap" id="bracket-bars"></div>
+
+          <!-- FULL TABLE -->
+          <table class="breakdown-table" id="breakdown-table">
+            <thead>
+              <tr>
+                <th>Bracket</th>
+                <th>Rate</th>
+                <th>Income in Bracket</th>
+                <th>Tax Owed</th>
+              </tr>
+            </thead>
+            <tbody id="breakdown-tbody"></tbody>
+          </table>
+
+          <div class="se-note" id="se-note" style="display:none;"></div>
+          <p class="result-note">⚠️ Estimates only — not tax advice. Results assume standard deduction and no additional credits.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT IS A TAX BRACKET -->
+  <div class="section">
+    <div class="section-label">Understanding Tax Brackets</div>
+    <h2>How Federal Tax Brackets Actually Work</h2>
+    <p>The biggest tax myth in America: "If I earn more, I'll pay a higher rate on ALL my income." This is completely false. The US uses a <strong>progressive tax system</strong> — you only pay the higher rate on income above each threshold.</p>
+
+    <div class="two-col">
+      <div class="concept-card marginal">
+        <h4>⚡ Marginal Tax Rate</h4>
+        <p>The rate that applies to your <em>last dollar</em> of income. This is the bracket you "fall into." If you're in the 22% bracket, your marginal rate is 22% — but only on income above $48,475. Everything below that threshold is taxed at lower rates.</p>
+      </div>
+      <div class="concept-card effective">
+        <h4>📊 Effective Tax Rate</h4>
+        <p>The <em>average</em> rate you actually pay across all your income. Always lower than your marginal rate. A person in the 22% bracket typically has an effective rate of 12–15%. This is the number that truly reflects your tax burden.</p>
+      </div>
+    </div>
+
+    <div class="info-note" style="margin-top:16px;">
+      💡 <strong>Example:</strong> A single filer with $65,000 in taxable income is in the 22% bracket — but they pay 10% on the first $11,925, 12% on income from $11,926–$48,475, and only 22% on the remaining $16,525 above $48,475. Their total federal tax is approximately $9,200, giving an effective rate of about 14.1% — not 22%.
+    </div>
+
+    <h3>2026 Federal Tax Brackets — Single Filers</h3>
+    <table class="bracket-table">
+      <thead><tr><th>Rate</th><th>Taxable Income Range</th><th>Tax on This Portion</th><th>Cumulative Tax at Top</th></tr></thead>
+      <tbody>
+        <tr><td class="rate-cell rate-10">10%</td><td>$0 – $11,925</td><td>$0 – $1,193</td><td>$1,193</td></tr>
+        <tr><td class="rate-cell rate-12">12%</td><td>$11,926 – $48,475</td><td>Up to $4,386</td><td>$5,579</td></tr>
+        <tr><td class="rate-cell rate-22">22%</td><td>$48,476 – $103,350</td><td>Up to $12,074</td><td>$17,653</td></tr>
+        <tr><td class="rate-cell rate-24">24%</td><td>$103,351 – $197,300</td><td>Up to $22,548</td><td>$40,201</td></tr>
+        <tr><td class="rate-cell rate-32">32%</td><td>$197,301 – $243,725</td><td>Up to $14,856</td><td>$55,057</td></tr>
+        <tr><td class="rate-cell rate-35">35%</td><td>$243,726 – $609,350</td><td>Up to $127,936</td><td>$182,993</td></tr>
+        <tr><td class="rate-cell rate-37">37%</td><td>Over $609,350</td><td>37¢ per dollar above</td><td>—</td></tr>
+      </tbody>
+    </table>
+
+    <h3>2026 Brackets — Married Filing Jointly</h3>
+    <table class="bracket-table">
+      <thead><tr><th>Rate</th><th>Taxable Income Range</th><th>Cumulative Tax at Top</th></tr></thead>
+      <tbody>
+        <tr><td class="rate-cell rate-10">10%</td><td>$0 – $23,850</td><td>$2,385</td></tr>
+        <tr><td class="rate-cell rate-12">12%</td><td>$23,851 – $96,950</td><td>$11,157</td></tr>
+        <tr><td class="rate-cell rate-22">22%</td><td>$96,951 – $206,700</td><td>$35,302</td></tr>
+        <tr><td class="rate-cell rate-24">24%</td><td>$206,701 – $394,600</td><td>$80,398</td></tr>
+        <tr><td class="rate-cell rate-32">32%</td><td>$394,601 – $487,450</td><td>$110,119</td></tr>
+        <tr><td class="rate-cell rate-35">35%</td><td>$487,451 – $731,200</td><td>$195,429</td></tr>
+        <tr><td class="rate-cell rate-37">37%</td><td>Over $731,200</td><td>37¢ per dollar above</td></tr>
+      </tbody>
+    </table>
+
+    <div class="warn-box">⚠️ <strong>Important for 1099 workers:</strong> These brackets apply to your <em>net profit after deductions</em> — not your gross income. A gig worker earning $80,000 gross who deducts $15,000 in mileage and expenses has $65,000 in net profit. After the $15,000 standard deduction, they're taxed on $50,000 — putting them in the 22% bracket's lower range, not higher.</div>
+  </div>
+
+  <!-- MIDDLE AD -->
+  <div class="ad-slot ad-728" style="margin-bottom:20px;"><!-- AdSense 728x90 -->Advertisement</div>
+
+  <!-- 1099 BRACKET SPECIFICS -->
+  <div class="section">
+    <div class="section-label">1099 Workers Specifically</div>
+    <h2>Tax Brackets for Gig Workers — What's Different</h2>
+    <p>As a 1099 worker, you pay the same federal income tax brackets as everyone else — but you also owe self-employment tax on top. Here's the complete picture:</p>
+    <ul>
+      <li><strong>SE Tax (15.3%):</strong> Calculated on 92.35% of your net profit, paid before income tax is considered. You deduct half of SE tax from gross income before calculating income tax.</li>
+      <li><strong>Standard deduction ($15,000 single, 2026):</strong> Reduces your taxable income further.</li>
+      <li><strong>Business deductions:</strong> Mileage, home office, equipment — all reduce net profit before both SE tax and income tax.</li>
+      <li><strong>QBI deduction:</strong> Many gig workers can deduct up to 20% of qualified business income, potentially dropping them a full bracket.</li>
+    </ul>
+
+    <div class="green-box">✅ <strong>Strategy tip:</strong> If your taxable income is just above a bracket threshold (e.g., $50,000 when the 22% bracket starts at $48,476), maxing your SEP-IRA or deducting additional business expenses could push you back into the 12% bracket — saving you 10 cents on every dollar above the threshold.</div>
+
+    <h3>Total Tax Rate for 1099 Workers by Income Level</h3>
+    <table class="bracket-table">
+      <thead><tr><th>Net 1099 Profit</th><th>SE Tax</th><th>Fed Income Tax</th><th>Total Tax</th><th>Effective Total Rate</th></tr></thead>
+      <tbody>
+        <tr><td><strong>$25,000</strong></td><td>$3,532</td><td>$733</td><td>$4,265</td><td>17.1%</td></tr>
+        <tr><td><strong>$40,000</strong></td><td>$5,651</td><td>$2,066</td><td>$7,717</td><td>19.3%</td></tr>
+        <tr><td><strong>$60,000</strong></td><td>$8,477</td><td>$5,050</td><td>$13,527</td><td>22.5%</td></tr>
+        <tr><td><strong>$80,000</strong></td><td>$11,302</td><td>$8,900</td><td>$20,202</td><td>25.3%</td></tr>
+        <tr><td><strong>$100,000</strong></td><td>$14,130</td><td>$13,600</td><td>$27,730</td><td>27.7%</td></tr>
+        <tr><td><strong>$150,000</strong></td><td>$21,192</td><td>$26,500</td><td>$47,692</td><td>31.8%</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:var(--gray3);">*Single filer, no state tax, standard deduction applied, no additional deductions beyond SE tax half-deduction.</p>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section">
+    <div class="section-label">Common Questions</div>
+    <h2>Tax Bracket FAQ</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Does earning more money put ALL my income in a higher bracket? <span class="arrow">▾</span></button>
+        <div class="faq-a">No — this is the most common tax myth in America. The US uses a marginal tax system. Only the income above each threshold is taxed at the higher rate. If you're a single filer and earn $50,000 taxable income, you pay 10% on the first $11,925, 12% on the next $36,550, and only 22% on the last $1,525 above $48,475. Earning more never makes your total tax bill go down — but it also doesn't mean suddenly paying 22% on everything.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What is taxable income vs gross income? <span class="arrow">▾</span></button>
+        <div class="faq-a">Gross income is everything you earn. Taxable income is what the IRS actually taxes you on — after deductions. For 1099 workers: start with gross income, subtract business expenses (mileage, home office, equipment), subtract half of SE tax, subtract the standard deduction ($15,000 for single filers in 2026). The result is taxable income. A freelancer earning $80,000 gross with $20,000 in deductions has only $60,000 in taxable income — putting them in a much lower bracket than their gross suggests.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">How does the standard deduction work for 1099 workers? <span class="arrow">▾</span></button>
+        <div class="faq-a">The standard deduction reduces your taxable income before applying brackets. For 2026, it's $15,000 for single filers, $30,000 for married filing jointly, and $22,500 for head of household. This is in addition to business deductions — you subtract business expenses first to get net profit, then subtract the standard deduction from net profit to get taxable income. Both apply.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Will the 2026 tax brackets change from 2025? <span class="arrow">▾</span></button>
+        <div class="faq-a">The brackets are adjusted annually for inflation. The 2026 brackets shown here reflect IRS inflation adjustments — each threshold is slightly higher than 2025, meaning you can earn more before crossing into a higher bracket. The rates themselves (10%, 12%, 22%, 24%, 32%, 35%, 37%) remain the same as established by the Tax Cuts and Jobs Act. These rates are scheduled to remain through 2025 and discussions around TCJA extension may affect 2026+ rates — check IRS.gov for the most current official guidance.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">How can I lower my tax bracket as a gig worker? <span class="arrow">▾</span></button>
+        <div class="faq-a">Several strategies can reduce your taxable income and potentially drop you into a lower bracket: (1) Maximize business deductions — mileage, home office, equipment, software; (2) Contribute to a SEP-IRA or Solo 401(k) — contributions reduce net profit dollar-for-dollar; (3) Claim the QBI deduction (up to 20% of net business income); (4) Deduct health insurance premiums in full if self-employed; (5) Time large income or deductions strategically across years. Use our <a href="/se-tax-calculator.html">SE tax calculator</a> to model different scenarios.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RELATED -->
+  <div class="section">
+    <div class="section-label">More Free Tools</div>
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="/se-tax-calculator.html" class="related-card"><h4>🧮 SE Tax Calculator</h4><p>Full tax bill including SE tax and all deductions</p></a>
+      <a href="/quarterly-tax-calculator.html" class="related-card"><h4>📅 Quarterly Calculator</h4><p>How much to pay the IRS each quarter</p></a>
+      <a href="/mileage-calculator.html" class="related-card"><h4>🚗 Mileage Calculator</h4><p>Reduce your bracket with mileage deductions</p></a>
+      <a href="/freelancer-tax-calculator.html" class="related-card"><h4>💻 Freelancer Calculator</h4><p>Real take-home pay for freelancers</p></a>
+      <a href="/1099-vs-w2-calculator.html" class="related-card"><h4>⚖️ 1099 vs W-2</h4><p>Which income type leaves more in your pocket</p></a>
+      <a href="/deductions.html" class="related-card"><h4>✂️ All 20 Deductions</h4><p>Lower your bracket with every available deduction</p></a>
+    </div>
+  </div>
+
+</main>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+
+  <div class="cta-card">
+    <h3>🧮 Calculate Your Full Tax Bill</h3>
+    <p>See your complete tax picture — SE tax, income tax, deductions, and quarterly payments — in one place.</p>
+    <a href="/se-tax-calculator.html">Open SE Tax Calculator →</a>
+  </div>
+
+  <div class="sidebar-card" style="padding:0;overflow:hidden;">
+    <div class="ad-slot ad-300"><!-- AdSense 300x250 -->Advertisement</div>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>2026 Brackets (Single)</h3>
+    <div class="mini-bracket">
+      <div class="mb-row"><div class="mb-dot" style="background:var(--b10);"></div><span class="mb-rate">10%</span><span class="mb-range">$0–$11,925</span></div>
+      <div class="mb-row"><div class="mb-dot" style="background:var(--b12);"></div><span class="mb-rate">12%</span><span class="mb-range">$11,926–$48,475</span></div>
+      <div class="mb-row"><div class="mb-dot" style="background:var(--b22);"></div><span class="mb-rate">22%</span><span class="mb-range">$48,476–$103,350</span></div>
+      <div class="mb-row"><div class="mb-dot" style="background:var(--b24);"></div><span class="mb-rate">24%</span><span class="mb-range">$103,351–$197,300</span></div>
+      <div class="mb-row"><div class="mb-dot" style="background:var(--b32);"></div><span class="mb-rate">32%</span><span class="mb-range">$197,301–$243,725</span></div>
+      <div class="mb-row"><div class="mb-dot" style="background:var(--b35);"></div><span class="mb-rate">35%</span><span class="mb-range">$243,726–$609,350</span></div>
+      <div class="mb-row"><div class="mb-dot" style="background:var(--b37);"></div><span class="mb-rate">37%</span><span class="mb-range">Over $609,350</span></div>
+    </div>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>Quick Links</h3>
+    <div class="quick-links">
+      <a href="/se-tax-calculator.html">SE Tax Calculator</a>
+      <a href="/quarterly-tax-calculator.html">Quarterly Calculator</a>
+      <a href="/mileage-calculator.html">Mileage Calculator</a>
+      <a href="/deductions.html">All 20 Deductions</a>
+      <a href="/quarterly-taxes.html">Quarterly Tax Guide</a>
+      <a href="/faq.html">Full FAQ</a>
+    </div>
+  </div>
+
+  <div class="sidebar-card" style="padding:0;overflow:hidden;">
+    <div class="ad-slot ad-300"><!-- AdSense 300x250 -->Advertisement</div>
+  </div>
+
+</aside>
+</div>
+
+<!-- BOTTOM AD -->
+<div class="container">
+  <div class="ad-slot ad-728"><!-- AdSense 728x90 -->Advertisement</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-text">1099Tax<span style="color:var(--amber)">Calcs</span>.com</span>
+        <p>Free tax calculators built for America's 70 million gig workers and freelancers. Calculate what you owe, discover deductions, and never miss a quarterly deadline.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Calculators</h4>
+        <a href="/se-tax-calculator.html">SE Tax Calculator</a>
+        <a href="/quarterly-tax-calculator.html">Quarterly Calculator</a>
+        <a href="/mileage-calculator.html">Mileage Calculator</a>
+        <a href="/freelancer-tax-calculator.html">Freelancer Calculator</a>
+        <a href="/1099-vs-w2-calculator.html">1099 vs W-2</a>
+      </div>
+      <div class="footer-col">
+        <h4>By Platform</h4>
+        <a href="/uber-taxes.html">Uber Driver Taxes</a>
+        <a href="/doordash-taxes.html">DoorDash Taxes</a>
+        <a href="/instacart-taxes.html">Instacart Taxes</a>
+        <a href="/upwork-fiverr-taxes.html">Upwork & Fiverr</a>
+        <a href="/amazon-flex-taxes.html">Amazon Flex</a>
+      </div>
+      <div class="footer-col">
+        <h4>Guides</h4>
+        <a href="/deductions.html">Top 20 Deductions</a>
+        <a href="/quarterly-taxes.html">Quarterly Tax Guide</a>
+        <a href="/guides.html">All Tax Guides</a>
+        <a href="/faq.html">FAQ</a>
+        <a href="/about.html">About</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 1099TaxCalcs.com — For informational purposes only. Not tax advice.</span>
+      <div style="display:flex;gap:16px;">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+        <a href="/about.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// NAV
+function toggleNav() { document.getElementById('main-nav').classList.toggle('open'); }
+
+// SYNC STANDARD DEDUCTION WITH FILING STATUS
+function syncStdDed() {
+  const filing = document.getElementById('filing').value;
+  const stdDedEl = document.getElementById('std-ded');
+  stdDedEl.value = filing === 'married' ? '30000' : filing === 'hoh' ? '22500' : '15000';
+}
+
+// SHOW/HIDE W-2 ROW
+document.getElementById('income-type').addEventListener('change', function() {
+  document.getElementById('w2-row').style.display = this.value === 'both' ? 'grid' : 'none';
+});
+
+// BRACKET DATA
+const BRACKETS = {
+  single: [
+    { rate: 0.10, min: 0,       max: 11925,  color: '#6EE7B7' },
+    { rate: 0.12, min: 11925,   max: 48475,  color: '#34D399' },
+    { rate: 0.22, min: 48475,   max: 103350, color: '#FBBF24' },
+    { rate: 0.24, min: 103350,  max: 197300, color: '#F59E0B' },
+    { rate: 0.32, min: 197300,  max: 243725, color: '#F97316' },
+    { rate: 0.35, min: 243725,  max: 609350, color: '#EF4444' },
+    { rate: 0.37, min: 609350,  max: Infinity, color: '#DC2626' },
+  ],
+  married: [
+    { rate: 0.10, min: 0,       max: 23850,  color: '#6EE7B7' },
+    { rate: 0.12, min: 23850,   max: 96950,  color: '#34D399' },
+    { rate: 0.22, min: 96950,   max: 206700, color: '#FBBF24' },
+    { rate: 0.24, min: 206700,  max: 394600, color: '#F59E0B' },
+    { rate: 0.32, min: 394600,  max: 487450, color: '#F97316' },
+    { rate: 0.35, min: 487450,  max: 731200, color: '#EF4444' },
+    { rate: 0.37, min: 731200,  max: Infinity, color: '#DC2626' },
+  ],
+  hoh: [
+    { rate: 0.10, min: 0,       max: 17400,  color: '#6EE7B7' },
+    { rate: 0.12, min: 17400,   max: 55900,  color: '#34D399' },
+    { rate: 0.22, min: 55900,   max: 103350, color: '#FBBF24' },
+    { rate: 0.24, min: 103350,  max: 197300, color: '#F59E0B' },
+    { rate: 0.32, min: 197300,  max: 243725, color: '#F97316' },
+    { rate: 0.35, min: 243725,  max: 609350, color: '#EF4444' },
+    { rate: 0.37, min: 609350,  max: Infinity, color: '#DC2626' },
+  ]
+};
+
+const fmt     = v => '$' + Math.round(v).toLocaleString();
+const fmtPct  = v => (v * 100).toFixed(1) + '%';
+
+function getBrackets(filing) {
+  return BRACKETS[filing] || BRACKETS.single;
+}
+
+function calcFedTax(taxable, filing) {
+  const brackets = getBrackets(filing);
+  let tax = 0, yourBracket = brackets[0];
+  for (const b of brackets) {
+    if (taxable <= b.min) break;
+    const inBracket = Math.min(taxable, b.max === Infinity ? taxable : b.max) - b.min;
+    tax += inBracket * b.rate;
+    if (taxable > b.min) yourBracket = b;
+  }
+  return { tax: Math.max(0, tax), bracket: yourBracket, brackets };
+}
+
+function calculate() {
+  const gross      = parseFloat(document.getElementById('gross').value)        || 0;
+  const incType    = document.getElementById('income-type').value;
+  const w2Income   = parseFloat(document.getElementById('w2-income').value)    || 0;
+  const deductions = parseFloat(document.getElementById('deductions').value)   || 0;
+  const stdDed     = parseFloat(document.getElementById('std-ded').value)      || 15000;
+  const filing     = document.getElementById('filing').value;
+  const stateRate  = parseFloat(document.getElementById('state').value)        || 0;
+
+  if (gross <= 0) { alert('Please enter your income.'); return; }
+
+  const is1099  = incType === '1099' || incType === 'both';
+  const totalW2 = incType === 'w2' ? gross : (incType === 'both' ? w2Income : 0);
+  const total1099 = is1099 ? gross : 0;
+
+  // 1099 net profit
+  const net1099 = Math.max(0, total1099 - deductions);
+
+  // SE tax on 1099 portion
+  const seBase  = net1099 * 0.9235;
+  const seTax   = is1099 ? seBase * 0.153 : 0;
+  const halfSE  = seTax / 2;
+
+  // Taxable income
+  const totalIncome = net1099 + totalW2;
+  const taxable = Math.max(0, totalIncome - halfSE - stdDed);
+
+  // Federal tax
+  const { tax: fedTax, bracket: yourBracket, brackets } = calcFedTax(taxable, filing);
+
+  // State tax
+  const stateTax = totalIncome * stateRate;
+
+  // Take home
+  const totalTax = seTax + fedTax + stateTax;
+  const takeHome = (total1099 || totalW2) - totalTax;
+
+  const effRate  = taxable > 0 ? fedTax / taxable : 0;
+  const effTotal = (total1099 || totalW2) > 0 ? totalTax / (total1099 || totalW2) : 0;
+
+  // UPDATE BRACKET DISPLAY
+  const bracketEl = document.getElementById('your-bracket');
+  bracketEl.style.background = yourBracket.color + '22';
+  bracketEl.style.border = `1.5px solid ${yourBracket.color}55`;
+  document.getElementById('bracket-rate').textContent = Math.round(yourBracket.rate * 100) + '%';
+  document.getElementById('bracket-rate').style.color = yourBracket.color;
+  document.getElementById('bracket-desc').textContent =
+    `Your top marginal rate — but your effective rate is only ${fmtPct(effRate)}`;
+
+  // KEY NUMBERS
+  document.getElementById('kn-taxable').textContent  = fmt(taxable);
+  document.getElementById('kn-eff').textContent      = fmtPct(effRate);
+  document.getElementById('kn-fedtax').textContent   = fmt(fedTax);
+  document.getElementById('kn-se').textContent       = is1099 ? fmt(seTax) : 'N/A (W-2)';
+  document.getElementById('kn-state').textContent    = stateRate > 0 ? fmt(stateTax) : '$0';
+  document.getElementById('kn-takehome').textContent = fmt(takeHome);
+
+  // VISUAL BARS
+  const barsEl = document.getElementById('bracket-bars');
+  barsEl.innerHTML = '';
+  let yourBracketIdx = -1;
+  brackets.forEach((b, i) => { if (taxable > b.min) yourBracketIdx = i; });
+
+  brackets.forEach((b, i) => {
+    const inBracket = taxable > b.min
+      ? Math.min(taxable, b.max === Infinity ? taxable : b.max) - b.min
+      : 0;
+    const taxInBracket = inBracket * b.rate;
+    const maxInBracket = b.max === Infinity ? (taxable - b.min) : (b.max - b.min);
+    const fillPct = maxInBracket > 0 ? Math.min(100, (inBracket / maxInBracket) * 100) : 0;
+
+    const isActive = i === yourBracketIdx;
+    const hasIncome = inBracket > 0;
+
+    const row = document.createElement('div');
+    row.className = 'bracket-bar-row' + (isActive ? ' active-bracket' : '') + (!hasIncome ? ' inactive' : '');
+    row.innerHTML = `
+      <div class="bracket-bar-header">
+        <span class="bracket-bar-label" style="${isActive ? `color:${b.color};` : ''}">${Math.round(b.rate * 100)}% bracket ${isActive ? '← You are here' : ''}</span>
+        <span class="bracket-bar-amounts">${hasIncome ? fmt(inBracket) + ' taxed → ' + fmt(taxInBracket) : 'No income in this bracket'}</span>
+      </div>
+      <div class="bracket-bar-track">
+        <div class="bracket-bar-fill" style="width:${fillPct}%;background:${b.color};">
+          ${fillPct > 15 ? `<span>${Math.round(fillPct)}%</span>` : ''}
+        </div>
+      </div>`;
+    barsEl.appendChild(row);
+  });
+
+  // BREAKDOWN TABLE
+  const tbody = document.getElementById('breakdown-tbody');
+  tbody.innerHTML = '';
+  let totalFed = 0;
+  brackets.forEach((b, i) => {
+    const inBracket = taxable > b.min
+      ? Math.min(taxable, b.max === Infinity ? taxable : b.max) - b.min
+      : 0;
+    const taxInBracket = inBracket * b.rate;
+    totalFed += taxInBracket;
+    const isYour = i === yourBracketIdx;
+    const tr = document.createElement('tr');
+    if (isYour) tr.className = 'your-row';
+    tr.innerHTML = `
+      <td><span class="bracket-dot" style="background:${b.color};"></span>${Math.round(b.rate * 100)}%${isYour ? ' ← you' : ''}</td>
+      <td style="color:${b.color};font-weight:700;">${Math.round(b.rate * 100)}%</td>
+      <td>${inBracket > 0 ? fmt(inBracket) : '—'}</td>
+      <td>${taxInBracket > 0 ? fmt(taxInBracket) : '—'}</td>`;
+    tbody.appendChild(tr);
+  });
+  // Total row
+  const totalTr = document.createElement('tr');
+  totalTr.className = 'your-row';
+  totalTr.style.borderTop = '2px solid var(--gray2)';
+  totalTr.innerHTML = `<td colspan="3" style="font-weight:800;color:var(--navy);">Total Federal Income Tax</td><td style="font-weight:800;color:var(--navy);">${fmt(fedTax)}</td>`;
+  tbody.appendChild(totalTr);
+
+  // SE NOTE
+  const seNoteEl = document.getElementById('se-note');
+  if (is1099) {
+    seNoteEl.style.display = 'block';
+    seNoteEl.innerHTML = `⚠️ <strong>1099 workers also owe SE Tax:</strong> ${fmt(seTax)} on top of the federal income tax above. Your total federal + SE tax bill is <strong>${fmt(fedTax + seTax)}</strong> — an effective total rate of <strong>${fmtPct(effTotal)}</strong> on your gross income. <a href="/se-tax-calculator.html">See the full breakdown →</a>`;
+  } else {
+    seNoteEl.style.display = 'none';
+  }
+
+  document.getElementById('results-sub').textContent = `${fmt(taxable)} taxable income — ${filing} filer`;
+  document.getElementById('results').classList.add('show');
+  document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+// LIVE UPDATE (recalculate on input change)
+let liveTimer;
+function liveUpdate() {
+  clearTimeout(liveTimer);
+  liveTimer = setTimeout(() => {
+    const g = parseFloat(document.getElementById('gross').value) || 0;
+    if (g > 0) calculate();
+  }, 600);
+}
+
+function resetForm() {
+  ['gross','w2-income','deductions'].forEach(id => {
+    document.getElementById(id).value = '';
+  });
+  document.getElementById('results').classList.remove('show');
+}
+
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = btn.classList.contains('open');
+  document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+  if (!isOpen) { btn.classList.add('open'); answer.classList.add('open'); }
+}
+</script>
+</body>
+</html>
