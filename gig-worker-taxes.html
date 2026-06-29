@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Complete gig worker tax guide for 2026. Everything Uber, DoorDash, Instacart, and freelance workers need to know about self-employment tax, deductions, quarterly payments, and filing.">
+<meta name="keywords" content="gig worker taxes, how gig worker taxes work, 1099 tax guide 2026, gig economy taxes explained, self employed tax guide, DoorDash Uber tax guide, freelancer taxes how to">
+<meta name="author" content="1099TaxCalcs.com">
+<meta property="og:title" content="Complete Gig Worker Tax Guide 2026 | 1099TaxCalcs.com">
+<meta property="og:description" content="Everything you need to know about gig worker taxes in 2026. SE tax, deductions, quarterly payments, filing — explained in plain English.">
+<meta property="og:url" content="https://1099taxcalcs.com/guides/gig-worker-taxes.html">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://1099taxcalcs.com/guides/gig-worker-taxes.html">
+<title>Complete Gig Worker Tax Guide 2026 — Everything You Need to Know | 1099TaxCalcs.com</title>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+<style>
+  :root {
+    --navy:   #0D1F3C;
+    --navy2:  #162847;
+    --green:  #00A878;
+    --green2: #008F65;
+    --amber:  #F5A623;
+    --light:  #F4F7FC;
+    --gray1:  #F0F4FA;
+    --gray2:  #E2E8F4;
+    --gray3:  #94A3B8;
+    --text:   #1A2A44;
+    --text2:  #4A5A72;
+    --red:    #E53E3E;
+    --font:   'Segoe UI', system-ui, -apple-system, sans-serif;
+    --radius: 8px;
+    --shadow: 0 2px 12px rgba(13,31,60,0.10);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); color: var(--text); background: var(--light); font-size: 16px; line-height: 1.6; }
+  a { color: var(--green); text-decoration: none; }
+  a:hover { color: var(--green2); text-decoration: underline; }
+
+  /* HEADER */
+  header { background: var(--navy); padding: 0 24px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+  .header-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-icon { width: 38px; height: 38px; background: var(--green); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: white; letter-spacing: -1px; flex-shrink: 0; }
+  .logo-text { color: white; font-size: 17px; font-weight: 700; }
+  .logo-text span { color: var(--amber); }
+  nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+  nav a { color: rgba(255,255,255,0.85); font-size: 13px; padding: 6px 10px; border-radius: 6px; transition: all 0.15s; white-space: nowrap; }
+  nav a:hover { background: rgba(255,255,255,0.1); color: white; text-decoration: none; }
+  nav a.active { color: var(--amber); }
+  .nav-cta { background: var(--green) !important; color: white !important; font-weight: 600; padding: 7px 14px !important; }
+  .nav-cta:hover { background: var(--green2) !important; }
+  .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: white; margin: 5px 0; border-radius: 2px; }
+  @media(max-width: 768px) {
+    .hamburger { display: block; }
+    nav { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--navy2); padding: 12px 16px; flex-direction: column; align-items: flex-start; gap: 2px; }
+    nav.open { display: flex; }
+    nav a { width: 100%; padding: 10px 12px; }
+  }
+
+  /* HERO */
+  .page-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%); color: white; padding: 48px 24px 40px; }
+  .page-hero-inner { max-width: 1200px; margin: 0 auto; }
+  .breadcrumb { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 14px; }
+  .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--green); }
+  .breadcrumb span { margin: 0 6px; }
+  .guide-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(0,168,120,0.2); border: 1px solid rgba(0,168,120,0.4); color: #5EEAD4; font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+  .page-hero h1 { font-size: clamp(26px, 4vw, 42px); font-weight: 800; line-height: 1.15; margin-bottom: 14px; }
+  .page-hero h1 em { color: var(--amber); font-style: normal; }
+  .page-hero p { font-size: 16px; color: rgba(255,255,255,0.78); max-width: 640px; line-height: 1.75; margin-bottom: 20px; }
+  .guide-meta { display: flex; gap: 20px; flex-wrap: wrap; }
+  .meta-item { display: flex; align-items: center; gap: 6px; font-size: 13px; color: rgba(255,255,255,0.55); }
+  .meta-item strong { color: rgba(255,255,255,0.8); }
+
+  /* LAYOUT */
+  .main-wrap { max-width: 1200px; margin: 0 auto; padding: 32px 24px; display: grid; grid-template-columns: 1fr 300px; gap: 36px; align-items: start; }
+  @media(max-width: 960px) { .main-wrap { grid-template-columns: 1fr; } }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  .ad-slot { background: var(--gray1); border: 1px dashed var(--gray2); border-radius: var(--radius); text-align: center; color: var(--gray3); font-size: 11px; padding: 8px; }
+  .ad-728 { width: 100%; height: 90px; line-height: 74px; margin: 20px 0; }
+  .ad-300 { width: 100%; height: 250px; line-height: 234px; }
+
+  /* ARTICLE */
+  article { background: white; border-radius: 12px; padding: 36px 40px; box-shadow: var(--shadow); }
+  @media(max-width: 600px) { article { padding: 24px 20px; } }
+
+  /* TABLE OF CONTENTS */
+  .toc { background: var(--gray1); border-radius: var(--radius); border: 1.5px solid var(--gray2); padding: 20px 24px; margin-bottom: 36px; }
+  .toc h3 { font-size: 13px; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px; }
+  .toc ol { list-style: none; counter-reset: toc; padding: 0; }
+  .toc li { counter-increment: toc; margin-bottom: 6px; }
+  .toc li::before { content: counter(toc) '.'; color: var(--green); font-weight: 700; margin-right: 8px; font-size: 13px; }
+  .toc a { font-size: 14px; color: var(--text2); }
+  .toc a:hover { color: var(--green); }
+
+  /* SECTION HEADINGS */
+  .guide-section { margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid var(--gray2); }
+  .guide-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .section-num { display: inline-block; background: var(--green); color: white; font-size: 11px; font-weight: 700; padding: 2px 10px; border-radius: 20px; margin-bottom: 10px; letter-spacing: 0.04em; }
+  .guide-section h2 { font-size: 26px; font-weight: 800; color: var(--navy); margin-bottom: 14px; line-height: 1.2; }
+  .guide-section h3 { font-size: 19px; font-weight: 700; color: var(--navy); margin: 24px 0 10px; }
+  .guide-section h4 { font-size: 16px; font-weight: 700; color: var(--navy); margin: 18px 0 8px; }
+  .guide-section p { color: var(--text2); line-height: 1.85; margin-bottom: 14px; font-size: 15px; }
+  .guide-section ul, .guide-section ol { color: var(--text2); line-height: 1.85; margin: 10px 0 14px 24px; font-size: 15px; }
+  .guide-section li { margin-bottom: 7px; }
+  .guide-section strong { color: var(--navy); }
+  .guide-section a { color: var(--green); }
+
+  /* CALLOUT BOXES */
+  .callout { border-radius: var(--radius); padding: 16px 18px; margin: 18px 0; font-size: 14px; line-height: 1.7; }
+  .callout.green { background: #E9F9F4; border-left: 4px solid var(--green); color: #065F46; }
+  .callout.amber { background: #FFF8EC; border-left: 4px solid var(--amber); color: #7A4F00; }
+  .callout.red { background: #FFF0F0; border-left: 4px solid var(--red); color: #7A1F1F; }
+  .callout.navy { background: #EEF2FA; border-left: 4px solid var(--navy); color: var(--text2); }
+  .callout strong { display: block; margin-bottom: 4px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; }
+
+  /* FORMULA BOX */
+  .formula { background: var(--navy); color: white; border-radius: var(--radius); padding: 18px 22px; margin: 18px 0; font-family: 'Courier New', monospace; font-size: 14px; line-height: 1.9; }
+  .formula .comment { color: rgba(255,255,255,0.4); }
+  .formula .highlight { color: var(--amber); font-weight: 700; }
+  .formula .result { color: #6EE7B7; font-weight: 700; }
+
+  /* EXAMPLE BOXES */
+  .example { background: #F5F0FF; border: 1.5px solid rgba(107,70,193,0.2); border-radius: var(--radius); padding: 18px 20px; margin: 18px 0; }
+  .example-title { font-size: 12px; font-weight: 700; color: #553C9A; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; }
+  .example-table { width: 100%; font-size: 14px; }
+  .example-table td { padding: 5px 0; color: var(--text2); }
+  .example-table td:last-child { text-align: right; font-weight: 600; color: var(--navy); }
+  .example-table .total td { border-top: 1px solid rgba(107,70,193,0.2); padding-top: 8px; font-weight: 700; font-size: 15px; }
+  .example-table .saved td { color: var(--green2); }
+
+  /* STEP BOXES */
+  .steps { counter-reset: step; }
+  .step-box { display: flex; gap: 16px; margin-bottom: 20px; align-items: flex-start; }
+  .step-num { width: 36px; height: 36px; background: var(--green); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px; flex-shrink: 0; margin-top: 2px; }
+  .step-content h4 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 5px; }
+  .step-content p { font-size: 14px; color: var(--text2); margin: 0; line-height: 1.7; }
+
+  /* DEADLINE TABLE */
+  .deadline-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 14px 0; }
+  .deadline-table th { background: var(--navy); color: white; padding: 10px 14px; text-align: left; font-size: 12px; letter-spacing: 0.04em; }
+  .deadline-table td { padding: 10px 14px; border-bottom: 1px solid var(--gray2); color: var(--text2); }
+  .deadline-table tr.current td { background: #E9F9F4; font-weight: 600; color: var(--navy); }
+  .deadline-table tr:last-child td { border-bottom: none; }
+  .badge { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 20px; }
+  .badge.green { background: rgba(0,168,120,0.15); color: var(--green2); }
+  .badge.amber { background: #FFF8EC; color: #B7791F; }
+  .badge.gray  { background: var(--gray2); color: var(--gray3); }
+
+  /* DEDUCTION LIST */
+  .ded-list { list-style: none !important; margin-left: 0 !important; }
+  .ded-list li { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--gray2); }
+  .ded-list li:last-child { border-bottom: none; }
+  .ded-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+  .ded-text strong { display: block; font-size: 14px; color: var(--navy); }
+  .ded-text span { font-size: 13px; color: var(--text2); }
+  .ded-amount { font-size: 12px; font-weight: 700; color: var(--green2); white-space: nowrap; margin-left: auto; flex-shrink: 0; padding-left: 10px; }
+
+  /* CTA INLINE */
+  .inline-cta { background: linear-gradient(135deg, var(--navy), var(--navy2)); border-radius: 12px; padding: 24px 28px; margin: 28px 0; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .inline-cta-text h3 { font-size: 17px; font-weight: 700; color: white; margin-bottom: 4px; }
+  .inline-cta-text p { font-size: 13px; color: rgba(255,255,255,0.7); margin: 0; }
+  .inline-cta-btn { display: inline-block; background: var(--green); color: white; padding: 10px 22px; border-radius: var(--radius); font-weight: 700; font-size: 14px; text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+  .inline-cta-btn:hover { background: var(--green2); text-decoration: none; color: white; }
+
+  /* KEY NUMBERS GRID */
+  .stat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; margin: 16px 0; }
+  .stat-box { background: var(--gray1); border-radius: var(--radius); padding: 14px; text-align: center; border: 1.5px solid var(--gray2); }
+  .stat-val { font-size: 24px; font-weight: 800; color: var(--navy); }
+  .stat-lbl { font-size: 11px; color: var(--text2); margin-top: 3px; line-height: 1.4; }
+
+  /* SIDEBAR */
+  .sidebar { display: flex; flex-direction: column; gap: 18px; }
+  .sidebar-card { background: white; border-radius: 12px; padding: 18px; box-shadow: var(--shadow); }
+  .sidebar-card h3 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 10px; border-bottom: 2px solid var(--green); padding-bottom: 7px; }
+  .cta-card { background: linear-gradient(135deg, var(--navy), var(--navy2)); color: white; border-radius: 12px; padding: 18px; }
+  .cta-card h3 { font-size: 14px; font-weight: 700; color: white; margin-bottom: 6px; border: none; padding: 0; }
+  .cta-card p { font-size: 12px; color: rgba(255,255,255,0.7); margin-bottom: 12px; line-height: 1.6; }
+  .cta-card a { display: block; background: var(--green); color: white; text-align: center; padding: 9px; border-radius: var(--radius); font-weight: 700; font-size: 13px; text-decoration: none; }
+  .cta-card a:hover { background: var(--green2); }
+  .quick-links a { display: flex; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--gray2); font-size: 13px; color: var(--text); text-decoration: none; }
+  .quick-links a:last-child { border-bottom: none; }
+  .quick-links a:hover { color: var(--green); }
+  .quick-links a::before { content: '→'; color: var(--green); font-weight: 700; }
+
+  /* STICKY TOC SIDEBAR */
+  .toc-sidebar { position: sticky; top: 84px; }
+  .toc-sidebar ol { list-style: none; counter-reset: stoc; padding: 0; }
+  .toc-sidebar li { counter-increment: stoc; margin-bottom: 5px; font-size: 13px; }
+  .toc-sidebar li::before { content: counter(stoc) '.'; color: var(--green); font-weight: 700; margin-right: 6px; }
+  .toc-sidebar a { color: var(--text2); font-size: 13px; }
+  .toc-sidebar a:hover { color: var(--green); }
+
+  /* FOOTER */
+  footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 40px 24px 24px; margin-top: 48px; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 32px; }
+  .footer-brand .logo-text { font-size: 18px; color: white; display: block; margin-bottom: 8px; }
+  .footer-brand p { font-size: 13px; line-height: 1.7; }
+  .footer-col h4 { color: white; font-size: 13px; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,0.55); margin-bottom: 7px; text-decoration: none; }
+  .footer-col a:hover { color: var(--green); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 12px; }
+  .footer-bottom a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .footer-bottom a:hover { color: var(--green); }
+  @media(max-width: 700px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1/-1; } }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Complete Gig Worker Tax Guide 2026",
+  "description": "Everything Uber, DoorDash, Instacart, and freelance workers need to know about self-employment tax, deductions, quarterly payments, and filing in 2026.",
+  "author": { "@type": "Organization", "name": "1099TaxCalcs.com" },
+  "publisher": { "@type": "Organization", "name": "1099TaxCalcs.com" },
+  "dateModified": "2026-06-01",
+  "mainEntityOfPage": "https://1099taxcalcs.com/guides/gig-worker-taxes.html"
+}
+</script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <div class="logo-icon">1099</div>
+      <div class="logo-text">Tax<span>Calcs</span>.com</div>
+    </a>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
+    <nav id="main-nav">
+      <a href="/calculators.html">Calculators</a>
+      <a href="/deductions.html">Deductions</a>
+      <a href="/quarterly-taxes.html">Quarterly Taxes</a>
+      <a href="/platforms.html">By Platform</a>
+      <a href="/guides.html" class="active">Guides</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/se-tax-calculator.html" class="nav-cta">Calculate My Taxes →</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/guides.html">Guides</a><span>›</span>Gig Worker Tax Guide</div>
+    <div class="guide-badge">📚 Complete Guide — Updated for 2026</div>
+    <h1>Complete Gig Worker Tax Guide <em>2026</em></h1>
+    <p>Everything Uber, DoorDash, Instacart, Lyft, Instacart, Upwork, and freelance workers need to know about self-employment tax, deductions, quarterly payments, and how to file. Written in plain English — no accountant jargon.</p>
+    <div class="guide-meta">
+      <div class="meta-item">📅 <strong>Updated:</strong> June 2026</div>
+      <div class="meta-item">⏱️ <strong>Read time:</strong> 12 minutes</div>
+      <div class="meta-item">👥 <strong>For:</strong> All 1099 gig workers and freelancers</div>
+    </div>
+  </div>
+</div>
+
+<!-- TOP AD -->
+<div class="container">
+  <div class="ad-slot ad-728"><!-- AdSense 728x90 -->Advertisement</div>
+</div>
+
+<!-- MAIN -->
+<div class="main-wrap">
+<main>
+<article>
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc">
+    <h3>📋 What's in this guide</h3>
+    <ol>
+      <li><a href="#how-it-works">How gig worker taxes work</a></li>
+      <li><a href="#what-you-owe">The two taxes you owe</a></li>
+      <li><a href="#calculate">How to calculate what you owe</a></li>
+      <li><a href="#deductions">Top deductions that reduce your bill</a></li>
+      <li><a href="#quarterly">Quarterly payments — deadlines and how to pay</a></li>
+      <li><a href="#forms">Tax forms — what you receive and what you file</a></li>
+      <li><a href="#filing">How to file your annual return</a></li>
+      <li><a href="#software">Best tax software for gig workers</a></li>
+      <li><a href="#mistakes">Top mistakes gig workers make</a></li>
+      <li><a href="#checklist">Year-round tax checklist</a></li>
+    </ol>
+  </div>
+
+  <!-- SECTION 1: HOW IT WORKS -->
+  <div class="guide-section" id="how-it-works">
+    <div class="section-num">Section 1</div>
+    <h2>How Gig Worker Taxes Work</h2>
+
+    <p>When you work a traditional W-2 job, your employer handles taxes automatically — withholding federal income tax, state income tax, Social Security, and Medicare from every paycheck. You never see that money. By April, your refund or small bill is the only reminder that taxes even exist.</p>
+
+    <p>Gig work is completely different. Every platform — Uber, DoorDash, Instacart, Upwork, Fiverr, Amazon Flex — pays you as an <strong>independent contractor</strong>. They hand you 100% of your earnings and walk away. No withholding. No W-4 form. No employer looking out for your tax bill.</p>
+
+    <p>This means three things:</p>
+    <ul>
+      <li>You receive more money per paycheck, but owe a large lump sum at tax time</li>
+      <li>You must calculate and pay taxes yourself — quarterly, not annually</li>
+      <li>You pay taxes that employees never see: the self-employment tax</li>
+    </ul>
+
+    <div class="callout amber">
+      <strong>⚠️ The #1 mistake new gig workers make</strong>
+      Spending all their gig income thinking taxes are being handled. They're not. When April comes, a first-year DoorDash driver earning $40,000 can owe $8,000–$10,000 with no money set aside. This is avoidable — but only if you plan ahead.
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-box"><div class="stat-val">70M+</div><div class="stat-lbl">Gig workers in the USA in 2026</div></div>
+      <div class="stat-box"><div class="stat-val">$400</div><div class="stat-lbl">Net profit minimum before you owe SE tax</div></div>
+      <div class="stat-box"><div class="stat-val">15.3%</div><div class="stat-lbl">Self-employment tax rate on net profit</div></div>
+      <div class="stat-box"><div class="stat-val">4</div><div class="stat-lbl">Quarterly tax payment deadlines per year</div></div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: WHAT YOU OWE -->
+  <div class="guide-section" id="what-you-owe">
+    <div class="section-num">Section 2</div>
+    <h2>The Two Taxes Every Gig Worker Owes</h2>
+
+    <p>As a gig worker, you owe two completely separate taxes. Many people only know about one — and that mistake costs them hundreds or thousands of dollars in surprises.</p>
+
+    <h3>Tax 1: Self-Employment Tax (15.3%)</h3>
+    <p>This is the tax that surprises most new gig workers. When you work a W-2 job, you and your employer each pay 7.65% for Social Security and Medicare. As a gig worker, you are both the employee and the employer — so you pay the <strong>full 15.3%</strong> yourself.</p>
+    <p>Self-employment tax breaks down into:</p>
+    <ul>
+      <li><strong>Social Security: 12.4%</strong> — applies to net earnings up to $176,100 in 2026</li>
+      <li><strong>Medicare: 2.9%</strong> — applies to all net earnings with no cap</li>
+      <li><strong>Additional Medicare: 0.9%</strong> — applies to earnings over $200,000 (single)</li>
+    </ul>
+
+    <div class="callout green">
+      <strong>✅ The good news</strong>
+      The IRS only applies SE tax to 92.35% of your net profit (not 100%) to partially compensate for the fact that employees only pay on their gross wages. You also get to deduct 50% of SE tax from your gross income before calculating income tax.
+    </div>
+
+    <h3>Tax 2: Federal Income Tax</h3>
+    <p>After calculating SE tax, you also owe regular federal income tax on your taxable income. The rate depends on your bracket — from 10% to 37%. For most gig workers earning $25,000–$80,000 net, you'll fall in the 10–22% federal bracket.</p>
+    <p>These are calculated separately. SE tax is on your net profit. Income tax is on a lower number (net profit minus half of SE tax minus the standard deduction).</p>
+
+    <div class="formula">
+      <span class="comment">// Step 1: Net Profit</span><br>
+      Net Profit = Gross Income − Business Expenses<br><br>
+      <span class="comment">// Step 2: SE Tax</span><br>
+      SE Tax = Net Profit × 0.9235 × <span class="highlight">0.153</span><br><br>
+      <span class="comment">// Step 3: Taxable Income for income tax</span><br>
+      Taxable Income = Net Profit − (SE Tax ÷ 2) − Standard Deduction<br><br>
+      <span class="comment">// Step 4: Federal Income Tax</span><br>
+      Income Tax = <span class="highlight">brackets applied to Taxable Income</span><br><br>
+      <span class="result">Total Owed = SE Tax + Income Tax + State Tax</span>
+    </div>
+
+    <div class="example">
+      <div class="example-title">📋 Real Example — Uber Driver, Texas, Single, $55,000 gross</div>
+      <table class="example-table">
+        <tr><td>Gross Uber earnings</td><td>$55,000</td></tr>
+        <tr><td>− Mileage deduction (18,000 miles × 72.5¢)</td><td>−$13,050</td></tr>
+        <tr><td>− Phone, accessories</td><td>−$800</td></tr>
+        <tr><td>= Net Profit</td><td>$41,150</td></tr>
+        <tr><td>SE Tax (15.3% on 92.35%)</td><td>$5,809</td></tr>
+        <tr><td>− ½ SE Tax deduction</td><td>−$2,905</td></tr>
+        <tr><td>− Standard Deduction</td><td>−$15,000</td></tr>
+        <tr><td>= Federal Taxable Income</td><td>$23,245</td></tr>
+        <tr><td>Federal Income Tax (~10–12%)</td><td>$2,411</td></tr>
+        <tr><td>Texas state tax</td><td>$0</td></tr>
+        <tr class="total"><td>✅ Total Tax Owed</td><td>$8,220</td></tr>
+        <tr class="saved"><td>💰 Quarterly payment (÷4)</td><td>$2,055</td></tr>
+      </table>
+    </div>
+
+    <div class="inline-cta">
+      <div class="inline-cta-text">
+        <h3>🧮 Calculate your exact tax bill</h3>
+        <p>Enter your specific income and deductions for a precise estimate</p>
+      </div>
+      <a href="/se-tax-calculator.html" class="inline-cta-btn">Open SE Tax Calculator →</a>
+    </div>
+  </div>
+
+  <!-- SECTION 3: CALCULATE -->
+  <div class="guide-section" id="calculate">
+    <div class="section-num">Section 3</div>
+    <h2>How to Calculate What You Owe</h2>
+
+    <p>You don't need an accountant to estimate your tax bill. Here's the complete step-by-step process:</p>
+
+    <div class="steps">
+      <div class="step-box">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>Find your total gig income for the year</h4>
+          <p>Add up all earnings from every platform — Uber, DoorDash, Upwork, direct clients, all of it. Include base pay, tips, bonuses, and incentives. This is your gross income.</p>
+        </div>
+      </div>
+      <div class="step-box">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>Subtract all business deductions</h4>
+          <p>Mileage (72.5¢/mile in 2026), home office, equipment, software, phone bill percentage, health insurance, and any other legitimate business expense. The result is your net profit.</p>
+        </div>
+      </div>
+      <div class="step-box">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>Calculate SE tax</h4>
+          <p>Multiply net profit × 0.9235 × 0.153. This is your SE tax. Write it down — you'll need it for step 4.</p>
+        </div>
+      </div>
+      <div class="step-box">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h4>Calculate federal income tax</h4>
+          <p>Take net profit, subtract half of SE tax, subtract your standard deduction ($15,000 single in 2026). Apply the 2026 tax brackets to this number.</p>
+        </div>
+      </div>
+      <div class="step-box">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <h4>Add state income tax</h4>
+          <p>If your state has income tax, multiply your net profit by your state's rate. Texas, Florida, Washington, and Nevada have no state income tax — lucky you.</p>
+        </div>
+      </div>
+      <div class="step-box">
+        <div class="step-num">6</div>
+        <div class="step-content">
+          <h4>Divide by 4 for quarterly payments</h4>
+          <p>Your total annual tax estimate ÷ 4 = what you pay each quarter. Set this aside immediately from every payment you receive.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout green">
+      <strong>✅ The 25–30% rule of thumb</strong>
+      Set aside 25% of every gig payment if you're in a no-income-tax state. Set aside 30–35% if you're in California, New York, or another high-tax state. Transfer this to a separate savings account immediately every time you get paid.
+    </div>
+  </div>
+
+  <!-- AD MID -->
+  <div class="ad-slot ad-728" style="margin-bottom:32px;"><!-- AdSense 728x90 -->Advertisement</div>
+
+  <!-- SECTION 4: DEDUCTIONS -->
+  <div class="guide-section" id="deductions">
+    <div class="section-num">Section 4</div>
+    <h2>Top Tax Deductions That Reduce Your Bill</h2>
+
+    <p>You only pay SE tax and income tax on your <strong>net profit</strong> — not your gross income. Every dollar of legitimate deduction reduces your net profit, which reduces both SE tax and income tax. This is how professional gig workers slash their tax bills legally.</p>
+
+    <ul class="ded-list">
+      <li>
+        <div class="ded-icon">🚗</div>
+        <div class="ded-text"><strong>Mileage — 72.5¢ per mile (2026)</strong><span>Every business mile you drive. Track with Stride (free). 15,000 miles = $10,875 deduction. Saves roughly $1,664 in SE tax alone.</span></div>
+        <div class="ded-amount">72.5¢/mile</div>
+      </li>
+      <li>
+        <div class="ded-icon">🏠</div>
+        <div class="ded-text"><strong>Home Office Deduction</strong><span>Dedicated work space: $5/sq ft (simplified method), max 300 sq ft = up to $1,500/year. Must be used exclusively for work.</span></div>
+        <div class="ded-amount">Up to $1,500</div>
+      </li>
+      <li>
+        <div class="ded-icon">📱</div>
+        <div class="ded-text"><strong>Phone & Internet (business %)</strong><span>If you use your phone for gig work, deduct 50–80% of your monthly bill. $80/month × 70% × 12 = $672 deduction.</span></div>
+        <div class="ded-amount">50–80% of bill</div>
+      </li>
+      <li>
+        <div class="ded-icon">💊</div>
+        <div class="ded-text"><strong>Health Insurance Premiums</strong><span>If gig work is your primary income and you pay your own insurance, 100% of premiums are deductible from gross income.</span></div>
+        <div class="ded-amount">100% of premiums</div>
+      </li>
+      <li>
+        <div class="ded-icon">💻</div>
+        <div class="ded-text"><strong>Equipment & Tools (Section 179)</strong><span>Laptop, camera, tools, delivery bags, dash cam — any equipment purchased for business. Deduct the full cost in the year of purchase.</span></div>
+        <div class="ded-amount">Full cost</div>
+      </li>
+      <li>
+        <div class="ded-icon">🔧</div>
+        <div class="ded-text"><strong>Software & Subscriptions</strong><span>Mileage tracking apps (MileIQ), accounting software, design tools, any SaaS used for your gig work.</span></div>
+        <div class="ded-amount">Full cost</div>
+      </li>
+      <li>
+        <div class="ded-icon">💰</div>
+        <div class="ded-text"><strong>½ of SE Tax (IRS automatic)</strong><span>The IRS lets you deduct 50% of your SE tax from gross income. This reduces your income tax bill. Calculated on Schedule SE — tax software handles it automatically.</span></div>
+        <div class="ded-amount">50% of SE tax</div>
+      </li>
+      <li>
+        <div class="ded-icon">🏦</div>
+        <div class="ded-text"><strong>SEP-IRA Contributions</strong><span>Contribute up to 25% of net self-employment income (max $70,000 in 2026) pre-tax. Opens in 20 minutes at Fidelity or Vanguard. Biggest deduction available to gig workers.</span></div>
+        <div class="ded-amount">Up to $70,000</div>
+      </li>
+      <li>
+        <div class="ded-icon">📉</div>
+        <div class="ded-text"><strong>QBI Deduction</strong><span>Qualified Business Income deduction — many gig workers can deduct up to 20% of net business income. Often missed because it's automatic on Schedule C filers.</span></div>
+        <div class="ded-amount">Up to 20% of income</div>
+      </li>
+      <li>
+        <div class="ded-icon">🅿️</div>
+        <div class="ded-text"><strong>Parking & Tolls</strong><span>Every parking meter and toll paid while working. 100% deductible. Keep notes in your mileage app.</span></div>
+        <div class="ded-amount">100%</div>
+      </li>
+    </ul>
+
+    <div class="inline-cta">
+      <div class="inline-cta-text">
+        <h3>🚗 Calculate your mileage deduction</h3>
+        <p>Enter your miles and see exactly how much you save in taxes</p>
+      </div>
+      <a href="/mileage-calculator.html" class="inline-cta-btn">Mileage Calculator →</a>
+    </div>
+  </div>
+
+  <!-- SECTION 5: QUARTERLY -->
+  <div class="guide-section" id="quarterly">
+    <div class="section-num">Section 5</div>
+    <h2>Quarterly Tax Payments — Deadlines and How to Pay</h2>
+
+    <p>If you expect to owe $1,000 or more in federal tax for the year, the IRS requires you to make quarterly estimated tax payments. Almost every full-time gig worker hits this threshold. Missing quarterly payments triggers an underpayment penalty of roughly 8% annually — not catastrophic, but completely avoidable.</p>
+
+    <h3>2026 Quarterly Tax Deadlines</h3>
+    <table class="deadline-table">
+      <thead><tr><th>Quarter</th><th>Income Period</th><th>Due Date</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Q1 2026</strong></td><td>Jan 1 – Mar 31</td><td>April 15, 2026</td><td><span class="badge gray">Passed</span></td></tr>
+        <tr><td><strong>Q2 2026</strong></td><td>Apr 1 – May 31</td><td>June 16, 2026</td><td><span class="badge gray">Passed</span></td></tr>
+        <tr class="current"><td><strong>Q3 2026 ⚡</strong></td><td>Jun 1 – Aug 31</td><td>September 15, 2026</td><td><span class="badge green">Pay Now</span></td></tr>
+        <tr><td><strong>Q4 2026</strong></td><td>Sep 1 – Dec 31</td><td>January 15, 2027</td><td><span class="badge amber">Upcoming</span></td></tr>
+      </tbody>
+    </table>
+
+    <h3>How to pay quarterly taxes (step by step)</h3>
+    <div class="steps">
+      <div class="step-box">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>Go to IRS.gov/payments</h4>
+          <p>Click "Make a Payment" → select "Estimated Tax" → select tax year 2026. No account or login required. It's free.</p>
+        </div>
+      </div>
+      <div class="step-box">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>Verify your identity</h4>
+          <p>The IRS will ask for your name, SSN, date of birth, and address. It cross-checks against a prior year tax return. Have your 2025 return handy.</p>
+        </div>
+      </div>
+      <div class="step-box">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>Enter your payment amount</h4>
+          <p>Use the quarterly amount from our <a href="/quarterly-tax-calculator.html">quarterly tax calculator</a>. Choose ACH (bank transfer) — it's free and instant.</p>
+        </div>
+      </div>
+      <div class="step-box">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h4>Screenshot your confirmation</h4>
+          <p>Save the confirmation number. At year end, report all quarterly payments on Form 1040 Line 26 to get credit for what you've already paid.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3>The safe harbor rule — pay this and you're penalty-proof</h3>
+    <p>Pay at least <strong>90% of your current year's total tax</strong>, OR <strong>100% of last year's total tax bill</strong> (110% if your AGI exceeded $150,000), and the IRS cannot charge you an underpayment penalty — regardless of how much you actually owe in April.</p>
+    <p>The easiest approach: look at your 2025 Form 1040 Line 24 amount. Divide by 4. Pay that amount each quarter. You're completely penalty-proof, even if your income doubles this year.</p>
+  </div>
+
+  <!-- SECTION 6: FORMS -->
+  <div class="guide-section" id="forms">
+    <div class="section-num">Section 6</div>
+    <h2>Tax Forms — What You Receive and What You File</h2>
+
+    <h3>Forms platforms send you (by January 31)</h3>
+    <ul>
+      <li><strong>1099-NEC:</strong> "Nonemployee Compensation" — sent if a platform paid you $600 or more in base pay, bonuses, or incentives. This is the main form from Uber, DoorDash, Upwork, etc.</li>
+      <li><strong>1099-K:</strong> Sent when you received $5,000 or more through a payment processor in 2024–2025. Starting 2026, the threshold drops to $600. You may receive this from PayPal, Venmo, Stripe, or the gig platform itself for tip income.</li>
+      <li><strong>1099-MISC:</strong> Less common. Used for prizes, awards, or miscellaneous payments over $600.</li>
+    </ul>
+
+    <div class="callout amber">
+      <strong>⚠️ You must report ALL income, even without a form</strong>
+      If you earned less than $600, the platform may not send a 1099-NEC — but the IRS still expects you to report it. Any net gig income over $400 is subject to SE tax. The threshold for reporting is NOT $600 — it's $400 net profit.
+    </div>
+
+    <h3>Forms you file at tax time</h3>
+    <ul>
+      <li><strong>Schedule C (Profit or Loss from Business):</strong> Where you report all gig income and deductions. One Schedule C per type of business (e.g., one for rideshare, one for freelancing if they're truly separate businesses).</li>
+      <li><strong>Schedule SE (Self-Employment Tax):</strong> Calculates your SE tax based on Schedule C net profit. This is where the 15.3% comes from. Tax software generates this automatically.</li>
+      <li><strong>Form 1040:</strong> Your main annual return. Attaches Schedule C and Schedule SE. Due April 15 (or October 15 with an extension — but any tax owed is still due April 15).</li>
+      <li><strong>Form 1040-ES:</strong> Used for quarterly estimated payments (though most people just pay online at IRS Direct Pay without this form).</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 7: FILING -->
+  <div class="guide-section" id="filing">
+    <div class="section-num">Section 7</div>
+    <h2>How to File Your Annual Tax Return</h2>
+
+    <p>Annual returns are due April 15 (or the next business day if it falls on a weekend). Extensions give you until October 15 — but do NOT extend your time to pay any tax owed.</p>
+
+    <h3>Option 1: Tax software (recommended for most gig workers)</h3>
+    <p>TurboTax Self-Employed, H&R Block Self-Employed, and TaxSlayer Self-Employed all handle Schedule C, Schedule SE, and quarterly payment tracking automatically. Cost: $50–$120. Worth every penny given the complexity of 1099 taxes.</p>
+    <p>When you sit down to file, you'll need:</p>
+    <ul>
+      <li>All 1099-NEC and 1099-K forms from every platform</li>
+      <li>Your total business deductions (mileage log, receipts, or mileage app export)</li>
+      <li>Record of all quarterly estimated payments made during the year</li>
+      <li>Prior year return for reference (AGI is needed for e-filing)</li>
+      <li>Bank account info for direct deposit refund or payment</li>
+    </ul>
+
+    <h3>Option 2: Hire a CPA</h3>
+    <p>Cost: $200–$600 for a straightforward Schedule C return. Worth it if you have multiple income streams, made a lot of money, or want professional advice on deductions. A good CPA usually pays for themselves in tax savings discovered.</p>
+
+    <div class="callout navy">
+      <strong>💡 File even if you can't pay</strong>
+      If you can't pay your full tax bill, file on time anyway. The failure-to-file penalty (5% per month, up to 25%) is far worse than the failure-to-pay penalty (0.5% per month). File on time, then set up a payment plan at IRS.gov/opa.
+    </div>
+  </div>
+
+  <!-- SECTION 8: SOFTWARE -->
+  <div class="guide-section" id="software">
+    <div class="section-num">Section 8</div>
+    <h2>Best Tax Software for Gig Workers</h2>
+
+    <p>Not all tax software handles self-employment well. You specifically need software with <strong>Schedule C support</strong> — the form where gig income lives. Here are the top options:</p>
+
+    <h4>TurboTax Self-Employed (~$119 + state)</h4>
+    <p>Best overall for complex gig situations. Excellent interview-style questions walk you through every deduction. Strong mileage tracking integration. Import your Uber and Lyft annual summaries directly. Worth the premium price if you have multiple income streams or significant deductions.</p>
+
+    <h4>H&R Block Self-Employed (~$85 + state)</h4>
+    <p>Excellent value. Interface is slightly less polished than TurboTax but covers all the same deductions. Good option if you've used H&R Block before or want in-person help available as backup.</p>
+
+    <h4>TaxSlayer Self-Employed (~$47 + state)</h4>
+    <p>Most affordable option. Handles Schedule C and Schedule SE correctly. Less hand-holding than TurboTax — good if you're comfortable with basic tax concepts and want to save money.</p>
+
+    <h4>Free options (limited)</h4>
+    <p>IRS Free File is available if your AGI is under $79,000 — but most partners don't support Schedule C properly. IRS Free Fillable Forms work if you know exactly what you're doing. For first-year gig workers, paid software is strongly recommended.</p>
+  </div>
+
+  <!-- SECTION 9: MISTAKES -->
+  <div class="guide-section" id="mistakes">
+    <div class="section-num">Section 9</div>
+    <h2>Top Mistakes Gig Workers Make on Taxes</h2>
+
+    <ul>
+      <li><strong>Not setting money aside:</strong> The number one problem. Set aside 25–30% of every payment automatically. Move it to a separate account the same day you get paid.</li>
+      <li><strong>Missing quarterly payments:</strong> Missing Q1 costs more than missing Q4 because penalties accumulate. Pay something every quarter — even an estimate is better than nothing.</li>
+      <li><strong>Not tracking mileage:</strong> This is your largest deduction. Relying only on app-reported miles misses 25–40% of deductible miles. Use Stride or MileIQ from day one.</li>
+      <li><strong>Not deducting the home office:</strong> If you have a dedicated workspace, that's $1,500/year in deductions — most gig workers skip it thinking it's complicated. The simplified method takes 2 minutes.</li>
+      <li><strong>Not reporting all income:</strong> The IRS gets copies of your 1099 forms. Any mismatch triggers an automatic audit notice. Report everything, even amounts under $600.</li>
+      <li><strong>Filing late:</strong> Extensions only extend the filing deadline, not the payment deadline. Tax owed April 15 accrues interest even if you file in October.</li>
+      <li><strong>Mixing personal and business expenses:</strong> Use a separate bank account or at minimum a separate credit card for business expenses. Makes recordkeeping dramatically easier and audit-proof.</li>
+      <li><strong>Forgetting the QBI deduction:</strong> Up to 20% of net business income is deductible through the Qualified Business Income deduction. Tax software calculates this automatically — just make sure it's applied.</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 10: CHECKLIST -->
+  <div class="guide-section" id="checklist">
+    <div class="section-num">Section 10</div>
+    <h2>Year-Round Tax Checklist for Gig Workers</h2>
+
+    <h3>Every day / every payment</h3>
+    <ul>
+      <li>✅ Set aside 25–30% of every payment received</li>
+      <li>✅ Log all business miles in your tracking app</li>
+      <li>✅ Save receipts for any business purchase</li>
+    </ul>
+
+    <h3>Every quarter</h3>
+    <ul>
+      <li>✅ Calculate this quarter's estimated tax (use our <a href="/quarterly-tax-calculator.html">quarterly calculator</a>)</li>
+      <li>✅ Pay at IRS.gov/payments by the deadline</li>
+      <li>✅ Screenshot the confirmation number</li>
+    </ul>
+
+    <h3>January — after tax year ends</h3>
+    <ul>
+      <li>✅ Wait for all 1099 forms (due by January 31)</li>
+      <li>✅ Export your mileage log for the full year</li>
+      <li>✅ Compile all business expenses into a spreadsheet</li>
+      <li>✅ Check that quarterly payments are recorded</li>
+    </ul>
+
+    <h3>February–March — file early</h3>
+    <ul>
+      <li>✅ File your return early to avoid identity theft refund fraud</li>
+      <li>✅ Use tax software (TurboTax Self-Employed recommended)</li>
+      <li>✅ Review Schedule C before submitting</li>
+      <li>✅ Set up direct deposit for any refund</li>
+    </ul>
+
+    <div class="callout green">
+      <strong>✅ Your next action right now</strong>
+      If you haven't made your Q3 2026 quarterly payment (due September 15), use our <a href="/quarterly-tax-calculator.html">quarterly tax calculator</a> to find your exact amount and pay at IRS.gov/payments today. Takes less than 10 minutes.
+    </div>
+  </div>
+
+</article>
+</main>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+
+  <div class="cta-card">
+    <h3>🧮 Calculate Your Tax Bill</h3>
+    <p>Use our free calculators to find exactly what you owe — including all deductions.</p>
+    <a href="/se-tax-calculator.html">SE Tax Calculator →</a>
+  </div>
+
+  <div class="sidebar-card toc-sidebar">
+    <h3>In This Guide</h3>
+    <ol>
+      <li><a href="#how-it-works">How it works</a></li>
+      <li><a href="#what-you-owe">Two taxes you owe</a></li>
+      <li><a href="#calculate">How to calculate</a></li>
+      <li><a href="#deductions">Top deductions</a></li>
+      <li><a href="#quarterly">Quarterly payments</a></li>
+      <li><a href="#forms">Tax forms</a></li>
+      <li><a href="#filing">How to file</a></li>
+      <li><a href="#software">Tax software</a></li>
+      <li><a href="#mistakes">Common mistakes</a></li>
+      <li><a href="#checklist">Year-round checklist</a></li>
+    </ol>
+  </div>
+
+  <div class="sidebar-card" style="padding:0;overflow:hidden;">
+    <div class="ad-slot ad-300"><!-- AdSense 300x250 -->Advertisement</div>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>Free Calculators</h3>
+    <div class="quick-links">
+      <a href="/se-tax-calculator.html">SE Tax Calculator</a>
+      <a href="/quarterly-tax-calculator.html">Quarterly Calculator</a>
+      <a href="/mileage-calculator.html">Mileage Calculator</a>
+      <a href="/doordash-tax-calculator.html">DoorDash Calculator</a>
+      <a href="/uber-lyft-tax-calculator.html">Uber & Lyft Calculator</a>
+      <a href="/freelancer-tax-calculator.html">Freelancer Calculator</a>
+    </div>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>Key 2026 Numbers</h3>
+    <div class="quick-links">
+      <a href="#">SE Tax Rate: <strong>15.3%</strong></a>
+      <a href="#">Mileage Rate: <strong>72.5¢/mi</strong></a>
+      <a href="#">Standard Deduction: <strong>$15,000</strong></a>
+      <a href="#">SEP-IRA Max: <strong>$70,000</strong></a>
+      <a href="#">File if net earnings &gt; <strong>$400</strong></a>
+      <a href="#">Q3 Deadline: <strong>Sep 15, 2026</strong></a>
+    </div>
+  </div>
+
+  <div class="sidebar-card" style="padding:0;overflow:hidden;">
+    <div class="ad-slot ad-300"><!-- AdSense 300x250 -->Advertisement</div>
+  </div>
+
+</aside>
+</div>
+
+<!-- BOTTOM AD -->
+<div class="container">
+  <div class="ad-slot ad-728"><!-- AdSense 728x90 -->Advertisement</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-text">1099Tax<span style="color:var(--amber)">Calcs</span>.com</span>
+        <p>Free tax calculators built for America's 70 million gig workers and freelancers. Calculate what you owe, discover deductions, and never miss a quarterly deadline.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Calculators</h4>
+        <a href="/se-tax-calculator.html">SE Tax Calculator</a>
+        <a href="/quarterly-tax-calculator.html">Quarterly Calculator</a>
+        <a href="/mileage-calculator.html">Mileage Calculator</a>
+        <a href="/freelancer-tax-calculator.html">Freelancer Calculator</a>
+        <a href="/1099-vs-w2-calculator.html">1099 vs W-2</a>
+      </div>
+      <div class="footer-col">
+        <h4>By Platform</h4>
+        <a href="/uber-taxes.html">Uber Driver Taxes</a>
+        <a href="/doordash-taxes.html">DoorDash Taxes</a>
+        <a href="/instacart-taxes.html">Instacart Taxes</a>
+        <a href="/upwork-fiverr-taxes.html">Upwork & Fiverr</a>
+        <a href="/amazon-flex-taxes.html">Amazon Flex</a>
+      </div>
+      <div class="footer-col">
+        <h4>Guides</h4>
+        <a href="/guides/gig-worker-taxes.html">Gig Worker Tax Guide</a>
+        <a href="/deductions.html">Top 20 Deductions</a>
+        <a href="/quarterly-taxes.html">Quarterly Tax Guide</a>
+        <a href="/faq.html">FAQ</a>
+        <a href="/about.html">About</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 1099TaxCalcs.com — For informational purposes only. Not tax advice. Consult a CPA for your specific situation.</span>
+      <div style="display:flex;gap:16px;">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+        <a href="/about.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleNav() { document.getElementById('main-nav').classList.toggle('open'); }
+</script>
+</body>
+</html>
