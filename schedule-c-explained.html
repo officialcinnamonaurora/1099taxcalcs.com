@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Schedule C explained for gig workers and freelancers in 2026. Line-by-line walkthrough of how to fill out Schedule C, what counts as income, and where to enter every deduction.">
+<meta name="keywords" content="Schedule C explained, how to fill out Schedule C, Schedule C for gig workers, Schedule C line by line, profit or loss from business, Schedule C deductions, Schedule C 1099">
+<meta name="author" content="1099TaxCalcs.com">
+<meta property="og:title" content="Schedule C Explained — Line-by-Line Guide for Gig Workers (2026)">
+<meta property="og:description" content="Complete walkthrough of Schedule C for 1099 workers — what goes on every line, common mistakes, and how it connects to Schedule SE and Form 1040.">
+<meta property="og:url" content="https://1099taxcalcs.com/guides/schedule-c-explained.html">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://1099taxcalcs.com/guides/schedule-c-explained.html">
+<title>Schedule C Explained — Line-by-Line Guide for Gig Workers (2026) | 1099TaxCalcs.com</title>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+<style>
+  :root {
+    --navy:   #0D1F3C;
+    --navy2:  #162847;
+    --green:  #00A878;
+    --green2: #008F65;
+    --amber:  #F5A623;
+    --light:  #F4F7FC;
+    --gray1:  #F0F4FA;
+    --gray2:  #E2E8F4;
+    --gray3:  #94A3B8;
+    --text:   #1A2A44;
+    --text2:  #4A5A72;
+    --red:    #E53E3E;
+    --font:   'Segoe UI', system-ui, -apple-system, sans-serif;
+    --radius: 8px;
+    --shadow: 0 2px 12px rgba(13,31,60,0.10);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); color: var(--text); background: var(--light); font-size: 16px; line-height: 1.6; }
+  a { color: var(--green); text-decoration: none; }
+  a:hover { color: var(--green2); text-decoration: underline; }
+
+  header { background: var(--navy); padding: 0 24px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+  .header-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-icon { width: 38px; height: 38px; background: var(--green); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: white; letter-spacing: -1px; flex-shrink: 0; }
+  .logo-text { color: white; font-size: 17px; font-weight: 700; }
+  .logo-text span { color: var(--amber); }
+  nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+  nav a { color: rgba(255,255,255,0.85); font-size: 13px; padding: 6px 10px; border-radius: 6px; transition: all 0.15s; white-space: nowrap; }
+  nav a:hover { background: rgba(255,255,255,0.1); color: white; text-decoration: none; }
+  nav a.active { color: var(--amber); }
+  .nav-cta { background: var(--green) !important; color: white !important; font-weight: 600; padding: 7px 14px !important; }
+  .nav-cta:hover { background: var(--green2) !important; }
+  .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: white; margin: 5px 0; border-radius: 2px; }
+  @media(max-width: 768px) {
+    .hamburger { display: block; }
+    nav { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--navy2); padding: 12px 16px; flex-direction: column; align-items: flex-start; gap: 2px; }
+    nav.open { display: flex; }
+    nav a { width: 100%; padding: 10px 12px; }
+  }
+
+  .page-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%); color: white; padding: 48px 24px 40px; }
+  .page-hero-inner { max-width: 1200px; margin: 0 auto; }
+  .breadcrumb { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 14px; }
+  .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--green); }
+  .breadcrumb span { margin: 0 6px; }
+  .guide-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(0,168,120,0.2); border: 1px solid rgba(0,168,120,0.4); color: #5EEAD4; font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+  .page-hero h1 { font-size: clamp(24px, 4vw, 40px); font-weight: 800; line-height: 1.15; margin-bottom: 14px; }
+  .page-hero h1 em { color: var(--amber); font-style: normal; }
+  .page-hero p { font-size: 16px; color: rgba(255,255,255,0.78); max-width: 640px; line-height: 1.75; margin-bottom: 20px; }
+  .guide-meta { display: flex; gap: 20px; flex-wrap: wrap; }
+  .meta-item { display: flex; align-items: center; gap: 6px; font-size: 13px; color: rgba(255,255,255,0.55); }
+  .meta-item strong { color: rgba(255,255,255,0.8); }
+
+  .main-wrap { max-width: 1200px; margin: 0 auto; padding: 32px 24px; display: grid; grid-template-columns: 1fr 300px; gap: 36px; align-items: start; }
+  @media(max-width: 960px) { .main-wrap { grid-template-columns: 1fr; } }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  .ad-slot { background: var(--gray1); border: 1px dashed var(--gray2); border-radius: var(--radius); text-align: center; color: var(--gray3); font-size: 11px; padding: 8px; }
+  .ad-728 { width: 100%; height: 90px; line-height: 74px; margin: 20px 0; }
+  .ad-300 { width: 100%; height: 250px; line-height: 234px; }
+
+  article { background: white; border-radius: 12px; padding: 36px 40px; box-shadow: var(--shadow); }
+  @media(max-width: 600px) { article { padding: 24px 18px; } }
+
+  .toc { background: var(--gray1); border-radius: var(--radius); border: 1.5px solid var(--gray2); padding: 20px 24px; margin-bottom: 36px; }
+  .toc h3 { font-size: 13px; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px; }
+  .toc ol { list-style: none; counter-reset: toc; padding: 0; }
+  .toc li { counter-increment: toc; margin-bottom: 6px; }
+  .toc li::before { content: counter(toc) '.'; color: var(--green); font-weight: 700; margin-right: 8px; font-size: 13px; min-width: 18px; display: inline-block; }
+  .toc a { font-size: 14px; color: var(--text2); }
+  .toc a:hover { color: var(--green); }
+
+  .guide-section { margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid var(--gray2); }
+  .guide-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .section-num { display: inline-block; background: var(--green); color: white; font-size: 11px; font-weight: 700; padding: 2px 10px; border-radius: 20px; margin-bottom: 10px; letter-spacing: 0.04em; }
+  .guide-section h2 { font-size: 26px; font-weight: 800; color: var(--navy); margin-bottom: 14px; line-height: 1.2; }
+  .guide-section h3 { font-size: 19px; font-weight: 700; color: var(--navy); margin: 24px 0 10px; }
+  .guide-section h4 { font-size: 16px; font-weight: 700; color: var(--navy); margin: 18px 0 8px; }
+  .guide-section p { color: var(--text2); line-height: 1.85; margin-bottom: 14px; font-size: 15px; }
+  .guide-section ul, .guide-section ol { color: var(--text2); line-height: 1.85; margin: 10px 0 14px 24px; font-size: 15px; }
+  .guide-section li { margin-bottom: 7px; }
+  .guide-section strong { color: var(--navy); }
+
+  .callout { border-radius: var(--radius); padding: 16px 18px; margin: 18px 0; font-size: 14px; line-height: 1.7; }
+  .callout.green { background: #E9F9F4; border-left: 4px solid var(--green); color: #065F46; }
+  .callout.amber { background: #FFF8EC; border-left: 4px solid var(--amber); color: #7A4F00; }
+  .callout.red   { background: #FFF0F0; border-left: 4px solid var(--red);   color: #7A1F1F; }
+  .callout.navy  { background: #EEF2FA; border-left: 4px solid var(--navy);  color: var(--text2); }
+  .callout strong { display: block; margin-bottom: 4px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; }
+
+  /* SCHEDULE C LINE TABLE - styled like the actual form */
+  .schedule-form { border: 2px solid var(--navy); border-radius: var(--radius); overflow: hidden; margin: 18px 0; }
+  .schedule-header { background: var(--navy); color: white; padding: 12px 16px; font-size: 13px; font-weight: 700; }
+  .schedule-row { display: grid; grid-template-columns: 50px 1fr 140px; border-bottom: 1px solid var(--gray2); }
+  .schedule-row:last-child { border-bottom: none; }
+  .schedule-row:nth-child(even) { background: var(--gray1); }
+  .schedule-line-num { background: var(--navy2); color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px; padding: 10px 4px; }
+  .schedule-desc { padding: 10px 14px; }
+  .schedule-desc strong { font-size: 13px; color: var(--navy); display: block; }
+  .schedule-desc span { font-size: 12px; color: var(--text2); }
+  .schedule-amt { display: flex; align-items: center; justify-content: center; font-size: 12px; color: var(--gray3); font-style: italic; padding: 0 10px; text-align: center; }
+  @media(max-width: 600px) {
+    .schedule-row { grid-template-columns: 36px 1fr; }
+    .schedule-amt { display: none; }
+  }
+
+  /* PART HEADER */
+  .part-header { background: var(--green); color: white; padding: 10px 16px; font-size: 13px; font-weight: 700; margin: 24px 0 0; border-radius: var(--radius) var(--radius) 0 0; }
+
+  /* SECTION SUBTABLE */
+  .info-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 14px 0; }
+  .info-table th { background: var(--navy); color: white; padding: 10px 14px; text-align: left; font-size: 12px; letter-spacing: 0.04em; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid var(--gray2); color: var(--text2); }
+  .info-table tr:nth-child(even) td { background: var(--gray1); }
+  .info-table strong { color: var(--navy); }
+
+  /* STEP BOXES */
+  .step-box { display: flex; gap: 16px; margin-bottom: 18px; align-items: flex-start; }
+  .step-num { width: 34px; height: 34px; background: var(--green); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; flex-shrink: 0; margin-top: 2px; }
+  .step-content h4 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .step-content p { font-size: 14px; color: var(--text2); margin: 0; line-height: 1.65; }
+
+  /* EXAMPLE FORM FILLED */
+  .example { background: #F0FFF9; border: 1.5px solid rgba(0,168,120,0.25); border-radius: var(--radius); padding: 18px 20px; margin: 18px 0; }
+  .example-title { font-size: 12px; font-weight: 700; color: var(--green2); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; }
+  .example-table { width: 100%; font-size: 14px; border-collapse: collapse; }
+  .example-table td { padding: 6px 0; color: var(--text2); border-bottom: 1px solid rgba(0,168,120,0.1); }
+  .example-table td:last-child { text-align: right; font-weight: 600; color: var(--navy); }
+  .example-table tr:last-child td { border-bottom: none; }
+  .example-table .total td { border-top: 2px solid rgba(0,168,120,0.2); padding-top: 8px; font-weight: 700; font-size: 15px; color: var(--navy); }
+  .example-table .lineno { font-weight: 700; color: var(--green2); display: inline-block; width: 50px; }
+
+  /* DEDUCTION LINE GRID */
+  .ded-line-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; margin: 14px 0; }
+  .ded-line-card { background: var(--gray1); border: 1.5px solid var(--gray2); border-radius: var(--radius); padding: 12px 14px; }
+  .ded-line-num { display: inline-block; background: var(--navy); color: white; font-size: 11px; font-weight: 700; padding: 1px 8px; border-radius: 10px; margin-bottom: 6px; }
+  .ded-line-card h5 { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+  .ded-line-card p { font-size: 12px; color: var(--text2); margin: 0; line-height: 1.4; }
+
+  /* INLINE CTA */
+  .inline-cta { background: linear-gradient(135deg, var(--navy), var(--navy2)); border-radius: 12px; padding: 22px 26px; margin: 28px 0; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .inline-cta-text h3 { font-size: 16px; font-weight: 700; color: white; margin-bottom: 3px; }
+  .inline-cta-text p { font-size: 13px; color: rgba(255,255,255,0.7); margin: 0; }
+  .inline-cta-btn { display: inline-block; background: var(--green); color: white; padding: 10px 22px; border-radius: var(--radius); font-weight: 700; font-size: 14px; text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+  .inline-cta-btn:hover { background: var(--green2); text-decoration: none; color: white; }
+
+  /* FAQ */
+  .faq-list { margin-top: 10px; }
+  .faq-item { border-bottom: 1px solid var(--gray2); }
+  .faq-q { width: 100%; text-align: left; background: none; border: none; padding: 14px 0; font-size: 15px; font-weight: 600; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: var(--font); }
+  .faq-q:hover { color: var(--green); }
+  .faq-q .arrow { font-size: 18px; color: var(--green); transition: transform 0.2s; flex-shrink: 0; margin-left: 12px; }
+  .faq-q.open .arrow { transform: rotate(180deg); }
+  .faq-a { font-size: 14px; color: var(--text2); line-height: 1.8; padding-bottom: 14px; display: none; }
+  .faq-a.open { display: block; }
+
+  /* SIDEBAR */
+  .sidebar { display: flex; flex-direction: column; gap: 18px; }
+  .sidebar-card { background: white; border-radius: 12px; padding: 18px; box-shadow: var(--shadow); }
+  .sidebar-card h3 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 10px; border-bottom: 2px solid var(--green); padding-bottom: 7px; }
+  .cta-card { background: linear-gradient(135deg, var(--navy), var(--navy2)); color: white; border-radius: 12px; padding: 18px; }
+  .cta-card h3 { font-size: 14px; font-weight: 700; color: white; margin-bottom: 6px; border: none; padding: 0; }
+  .cta-card p { font-size: 12px; color: rgba(255,255,255,0.7); margin-bottom: 12px; line-height: 1.6; }
+  .cta-card a { display: block; background: var(--green); color: white; text-align: center; padding: 9px; border-radius: var(--radius); font-weight: 700; font-size: 13px; text-decoration: none; }
+  .cta-card a:hover { background: var(--green2); }
+  .quick-links a { display: flex; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--gray2); font-size: 13px; color: var(--text); text-decoration: none; }
+  .quick-links a:last-child { border-bottom: none; }
+  .quick-links a:hover { color: var(--green); }
+  .quick-links a::before { content: '→'; color: var(--green); font-weight: 700; }
+  .toc-sidebar { position: sticky; top: 84px; }
+  .toc-sidebar ol { list-style: none; counter-reset: stoc; padding: 0; }
+  .toc-sidebar li { counter-increment: stoc; margin-bottom: 5px; }
+  .toc-sidebar li::before { content: counter(stoc) '.'; color: var(--green); font-weight: 700; margin-right: 6px; }
+  .toc-sidebar a { color: var(--text2); font-size: 13px; }
+  .toc-sidebar a:hover { color: var(--green); }
+
+  footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 40px 24px 24px; margin-top: 48px; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 32px; }
+  .footer-brand .logo-text { font-size: 18px; color: white; display: block; margin-bottom: 8px; }
+  .footer-brand p { font-size: 13px; line-height: 1.7; }
+  .footer-col h4 { color: white; font-size: 13px; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,0.55); margin-bottom: 7px; text-decoration: none; }
+  .footer-col a:hover { color: var(--green); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 12px; }
+  .footer-bottom a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .footer-bottom a:hover { color: var(--green); }
+  @media(max-width: 700px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1/-1; } }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Schedule C Explained — Line-by-Line Guide for Gig Workers (2026)",
+  "description": "Complete line-by-line walkthrough of Schedule C for 1099 workers, freelancers, and gig workers.",
+  "author": { "@type": "Organization", "name": "1099TaxCalcs.com" },
+  "publisher": { "@type": "Organization", "name": "1099TaxCalcs.com" },
+  "dateModified": "2026-06-01",
+  "mainEntityOfPage": "https://1099taxcalcs.com/guides/schedule-c-explained.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Schedule C used for?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Schedule C (Profit or Loss from Business) is the IRS form used to report income and expenses from a business you operate as a sole proprietor, including gig work, freelancing, and independent contracting. It calculates your net profit or loss, which then flows to Schedule SE for self-employment tax and to Form 1040 for income tax." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a separate Schedule C for each gig platform?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. If all your gig work falls under the same general business activity (such as transportation/delivery services), you can combine Uber, DoorDash, and Instacart income on one Schedule C. You only need separate Schedule C forms if you operate genuinely distinct businesses, such as rideshare driving and freelance graphic design." }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if Schedule C shows a loss instead of a profit?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A loss on Schedule C can offset other income on your tax return, potentially reducing your overall tax bill. However, you owe no self-employment tax on a loss. If you show losses in 3 or more of the last 5 years, the IRS may classify your activity as a hobby rather than a business, which limits your ability to deduct losses." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <div class="logo-icon">1099</div>
+      <div class="logo-text">Tax<span>Calcs</span>.com</div>
+    </a>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
+    <nav id="main-nav">
+      <a href="/calculators.html">Calculators</a>
+      <a href="/deductions.html">Deductions</a>
+      <a href="/quarterly-taxes.html">Quarterly Taxes</a>
+      <a href="/platforms.html">By Platform</a>
+      <a href="/guides.html" class="active">Guides</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/se-tax-calculator.html" class="nav-cta">Calculate My Taxes →</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/guides.html">Guides</a><span>›</span>Schedule C Explained</div>
+    <div class="guide-badge">📚 Complete Guide — Line by Line</div>
+    <h1>Schedule C Explained <em>— Line by Line</em></h1>
+    <p>Schedule C is where every gig worker, freelancer, and independent contractor reports business income and expenses. Here's a complete walkthrough of every important line — what goes where, common mistakes, and how it connects to your final tax bill.</p>
+    <div class="guide-meta">
+      <div class="meta-item">📅 <strong>Updated:</strong> June 2026</div>
+      <div class="meta-item">⏱️ <strong>Read time:</strong> 9 minutes</div>
+      <div class="meta-item">📄 <strong>Form:</strong> Schedule C (Form 1040)</div>
+    </div>
+  </div>
+</div>
+
+<!-- TOP AD -->
+<div class="container">
+  <div class="ad-slot ad-728"><!-- AdSense 728x90 -->Advertisement</div>
+</div>
+
+<!-- MAIN -->
+<div class="main-wrap">
+<main>
+<article>
+
+  <div class="toc">
+    <h3>📋 What's covered</h3>
+    <ol>
+      <li><a href="#what-is">What is Schedule C?</a></li>
+      <li><a href="#who-files">Who needs to file Schedule C?</a></li>
+      <li><a href="#part1">Part I — Income (lines 1–7)</a></li>
+      <li><a href="#part2">Part II — Expenses (lines 8–28)</a></li>
+      <li><a href="#part3">Part III, IV, V — Cost of goods, vehicle, other expenses</a></li>
+      <li><a href="#example">Complete filled-out example</a></li>
+      <li><a href="#connects">How Schedule C connects to Schedule SE and Form 1040</a></li>
+      <li><a href="#multiple">Multiple gigs — one Schedule C or several?</a></li>
+      <li><a href="#mistakes">Common Schedule C mistakes</a></li>
+      <li><a href="#faq">Frequently asked questions</a></li>
+    </ol>
+  </div>
+
+  <!-- SECTION 1 -->
+  <div class="guide-section" id="what-is">
+    <div class="section-num">Section 1</div>
+    <h2>What Is Schedule C?</h2>
+    <p>Schedule C, officially titled "Profit or Loss from Business," is the IRS form where sole proprietors — including gig workers, freelancers, and independent contractors — report their business income and expenses. It calculates your <strong>net profit or loss</strong>, which is the foundation for everything else in your tax return.</p>
+    <p>Think of Schedule C as your business's mini income statement. Part I totals your income. Part II totals your expenses. The difference is your net profit — the number that determines your self-employment tax (via Schedule SE) and contributes to your overall taxable income (via Form 1040).</p>
+
+    <div class="callout navy">
+      <strong>💡 Schedule C is not optional paperwork</strong>
+      If you're self-employed with any gig income, Schedule C isn't an extra form you can skip — it's the required method for reporting that income. Most tax software (TurboTax, H&R Block) builds Schedule C automatically as you answer questions about your gig work.
+    </div>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="guide-section" id="who-files">
+    <div class="section-num">Section 2</div>
+    <h2>Who Needs to File Schedule C?</h2>
+    <p>You need to file Schedule C if you operated a business as a sole proprietor or single-member LLC during the tax year and had income or expenses to report. This includes:</p>
+    <ul>
+      <li>Gig drivers: Uber, Lyft, DoorDash, Instacart, Amazon Flex</li>
+      <li>Freelancers: Upwork, Fiverr, direct clients</li>
+      <li>Independent consultants of any kind</li>
+      <li>Online sellers (Etsy, eBay) operating as a business</li>
+      <li>Side hustlers with any self-employment income over $400 net</li>
+    </ul>
+    <p>You file <strong>one Schedule C per business</strong>. If you drive for multiple delivery and rideshare apps, that's typically one business (transportation services) and one Schedule C. If you also freelance as a graphic designer on the side, that's a genuinely separate business and needs its own Schedule C.</p>
+  </div>
+
+  <!-- SECTION 3: PART I -->
+  <div class="guide-section" id="part1">
+    <div class="section-num">Section 3</div>
+    <h2>Part I — Income (Lines 1–7)</h2>
+    <p>Part I of Schedule C totals your gross business income. Here's what goes on each line:</p>
+
+    <div class="schedule-form">
+      <div class="schedule-header">PART I — INCOME</div>
+      <div class="schedule-row">
+        <div class="schedule-line-num">1</div>
+        <div class="schedule-desc"><strong>Gross receipts or sales</strong><span>Total income from all 1099-NEC, 1099-K forms, and any cash/unreported income from your business</span></div>
+        <div class="schedule-amt">Your total gross income</div>
+      </div>
+      <div class="schedule-row">
+        <div class="schedule-line-num">2</div>
+        <div class="schedule-desc"><strong>Returns and allowances</strong><span>Refunds given to customers. Rarely used by gig workers — usually $0</span></div>
+        <div class="schedule-amt">Usually $0</div>
+      </div>
+      <div class="schedule-row">
+        <div class="schedule-line-num">3</div>
+        <div class="schedule-desc"><strong>Subtract line 2 from line 1</strong><span>Your adjusted gross receipts</span></div>
+        <div class="schedule-amt">Line 1 − Line 2</div>
+      </div>
+      <div class="schedule-row">
+        <div class="schedule-line-num">4</div>
+        <div class="schedule-desc"><strong>Cost of goods sold</strong><span>For sellers with inventory (Etsy, eBay). Most gig workers and service freelancers: $0</span></div>
+        <div class="schedule-amt">Usually $0 for services</div>
+      </div>
+      <div class="schedule-row">
+        <div class="schedule-line-num">5</div>
+        <div class="schedule-desc"><strong>Gross profit</strong><span>Line 3 minus line 4</span></div>
+        <div class="schedule-amt">Line 3 − Line 4</div>
+      </div>
+      <div class="schedule-row">
+        <div class="schedule-line-num">6</div>
+        <div class="schedule-desc"><strong>Other income</strong><span>Bad debt recovery, prizes won through platform, fuel tax credits — uncommon for most gig workers</span></div>
+        <div class="schedule-amt">Usually $0</div>
+      </div>
+      <div class="schedule-row">
+        <div class="schedule-line-num">7</div>
+        <div class="schedule-desc"><strong>Gross income</strong><span>Line 5 plus line 6. This is your total business income before expenses.</span></div>
+        <div class="schedule-amt">= Line 5 + Line 6</div>
+      </div>
+    </div>
+
+    <div class="callout amber">
+      <strong>⚠️ Line 1 includes ALL income, not just what's on 1099 forms</strong>
+      Add together every 1099-NEC Box 1 amount, every 1099-K Box 1a amount, and any cash or unreported income from the same business. Don't just copy one form — total everything from every platform under that business.
+    </div>
+  </div>
+
+  <!-- SECTION 4: PART II -->
+  <div class="guide-section" id="part2">
+    <div class="section-num">Section 4</div>
+    <h2>Part II — Expenses (Lines 8–28)</h2>
+    <p>This is where you list every business deduction. Each line is a specific expense category. Here are the lines most relevant to gig workers and freelancers:</p>
+
+    <div class="ded-line-grid">
+      <div class="ded-line-card"><span class="ded-line-num">Line 9</span><h5>Car & truck expenses</h5><p>Mileage deduction or actual vehicle expenses. Your single biggest deduction as a driver.</p></div>
+      <div class="ded-line-card"><span class="ded-line-num">Line 11</span><h5>Contract labor</h5><p>If you paid someone else to help with your business (rare for most gig workers).</p></div>
+      <div class="ded-line-card"><span class="ded-line-num">Line 13</span><h5>Depreciation/Section 179</h5><p>Equipment purchases like laptops, cameras — full cost deducted in year of purchase.</p></div>
+      <div class="ded-line-card"><span class="ded-line-num">Line 15</span><h5>Insurance (business)</h5><p>Business liability insurance, NOT health insurance (that goes on Schedule 1 instead).</p></div>
+      <div class="ded-line-card"><span class="ded-line-num">Line 17</span><h5>Legal & professional fees</h5><p>Tax software cost, CPA fees, legal consultation fees related to your business.</p></div>
+      <div class="ded-line-card"><span class="ded-line-num">Line 18</span><h5>Office expense</h5><p>Supplies, small equipment, printer paper, pens — general office consumables.</p></div>
+      <div class="ded-line-card"><span class="ded-line-num">Line 20b</span><h5>Rent — other business property</h5><p>Equipment rental, storage unit for business inventory or supplies.</p></div>
+      <div class="ded-line-card"><span class="ded-line-num">Line 22</span><h5>Supplies</h5><p>Delivery bags, packaging materials, work-specific supplies and consumables.</p></div>
+      <div class="ded-line-card"><span class="ded-line-num">Line 23</span><h5>Taxes & licenses</h5><p>Business license fees, platform registration fees, local business taxes.</p></div>
+      <div class="ded-line-card"><span class="ded-line-num">Line 24a</span><h5>Travel</h5><p>Business travel away from your tax home (not regular daily driving — that's line 9).</p></div>
+      <div class="ded-line-card"><span class="ded-line-num">Line 25</span><h5>Utilities</h5><p>Business-percentage of phone bill, internet, if not claimed on home office worksheet.</p></div>
+      <div class="ded-line-card"><span class="ded-line-num">Line 27a</span><h5>Other expenses</h5><p>Software subscriptions, platform fees (Upwork, Fiverr), bank fees, education courses — itemized on Part V.</p></div>
+    </div>
+
+    <h3>Line 28 — Total Expenses</h3>
+    <p>This is the sum of all expense lines above. This number gets subtracted from your gross income (Line 7) to calculate your tentative profit.</p>
+
+    <h3>Line 30 — Home Office Deduction</h3>
+    <p>Calculated separately on Form 8829 (or the simplified method worksheet) and entered here. The simplified method is $5 per square foot, up to 300 sq ft, for a maximum $1,500 deduction.</p>
+
+    <h3>Line 31 — Net Profit or Loss</h3>
+    <p>This is the most important number on the entire form: <strong>Line 7 (gross income) − Line 28 (total expenses) − Line 30 (home office) = Line 31 (net profit)</strong>. This flows to Schedule SE for self-employment tax and to Form 1040 for income tax.</p>
+  </div>
+
+  <!-- AD MID -->
+  <div class="ad-slot ad-728" style="margin-bottom:32px;"><!-- AdSense 728x90 -->Advertisement</div>
+
+  <!-- SECTION 5: PART III/IV/V -->
+  <div class="guide-section" id="part3">
+    <div class="section-num">Section 5</div>
+    <h2>Part III, IV, V — Cost of Goods, Vehicle Info, Other Expenses</h2>
+
+    <h3>Part III — Cost of Goods Sold</h3>
+    <p>Only relevant if you sell physical products (Etsy shop, reselling business). Most service-based gig workers and freelancers leave this blank or enter $0 on Line 4. If you do sell goods, this section calculates your inventory costs.</p>
+
+    <h3>Part IV — Information on Your Vehicle</h3>
+    <p>If you claimed car/truck expenses on Line 9, Part IV asks detailed questions: when you placed the vehicle in service, total miles driven, business miles, commuting miles, and whether you have written evidence (a mileage log) to support your deduction. This section is exactly why mileage tracking apps like Stride or MileIQ matter — you need defensible records here.</p>
+
+    <h3>Part V — Other Expenses</h3>
+    <p>This is where you itemize anything that doesn't fit a specific line in Part II. List each expense type and amount, then total it and carry the total to Line 27a. Common Part V entries for gig workers:</p>
+    <ul>
+      <li>Mileage tracking app subscription (Stride Premium, MileIQ, Everlance)</li>
+      <li>Platform fees (Upwork service fee, Fiverr commission)</li>
+      <li>Bank fees on business account</li>
+      <li>Continuing education or skill-building courses</li>
+      <li>Business-related subscriptions (Canva, Adobe, project management tools)</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 6: EXAMPLE -->
+  <div class="guide-section" id="example">
+    <div class="section-num">Section 6</div>
+    <h2>Complete Filled-Out Example</h2>
+    <p>Here's how Schedule C looks for a real DoorDash driver with $45,000 in gross earnings:</p>
+
+    <div class="example">
+      <div class="example-title">📋 Schedule C — DoorDash Driver, Full-Time</div>
+      <table class="example-table">
+        <tr><td><span class="lineno">Line 1</span>Gross receipts (1099-NEC + 1099-K combined)</td><td>$45,000</td></tr>
+        <tr><td><span class="lineno">Line 7</span>Gross income</td><td>$45,000</td></tr>
+        <tr><td><span class="lineno">Line 9</span>Car & truck expenses (16,000 mi × 72.5¢)</td><td>$11,600</td></tr>
+        <tr><td><span class="lineno">Line 18</span>Office expense (delivery bags, supplies)</td><td>$180</td></tr>
+        <tr><td><span class="lineno">Line 22</span>Supplies (phone mount, chargers)</td><td>$120</td></tr>
+        <tr><td><span class="lineno">Line 25</span>Utilities (phone bill — 70% business use)</td><td>$672</td></tr>
+        <tr><td><span class="lineno">Line 27a</span>Other expenses (mileage app subscription)</td><td>$72</td></tr>
+        <tr><td><span class="lineno">Line 28</span>Total expenses</td><td>$12,644</td></tr>
+        <tr><td><span class="lineno">Line 30</span>Home office deduction</td><td>$0 (no dedicated office)</td></tr>
+        <tr class="total"><td><span class="lineno">Line 31</span>✅ Net Profit</td><td>$32,356</td></tr>
+      </table>
+    </div>
+    <p>This $32,356 net profit flows directly to Schedule SE, where it generates an SE tax of roughly $4,571, and to Form 1040 where it's combined with other income for the income tax calculation.</p>
+
+    <div class="inline-cta">
+      <div class="inline-cta-text">
+        <h3>🧮 Calculate the tax on your net profit</h3>
+        <p>Enter your Schedule C numbers to see your full tax bill</p>
+      </div>
+      <a href="/se-tax-calculator.html" class="inline-cta-btn">SE Tax Calculator →</a>
+    </div>
+  </div>
+
+  <!-- SECTION 7: CONNECTS -->
+  <div class="guide-section" id="connects">
+    <div class="section-num">Section 7</div>
+    <h2>How Schedule C Connects to Schedule SE and Form 1040</h2>
+    <p>Schedule C doesn't exist in isolation — it's the starting point for several other parts of your tax return:</p>
+
+    <table class="info-table">
+      <thead><tr><th>Form</th><th>What It Does</th><th>Connection to Schedule C</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Schedule SE</strong></td><td>Calculates 15.3% self-employment tax</td><td>Uses Schedule C Line 31 (net profit) as its starting point</td></tr>
+        <tr><td><strong>Schedule 1</strong></td><td>Reports additional income and adjustments</td><td>Schedule C net profit flows here, plus the ½ SE tax deduction</td></tr>
+        <tr><td><strong>Form 1040</strong></td><td>Your main tax return</td><td>Schedule 1 total flows into your overall taxable income</td></tr>
+        <tr><td><strong>Form 8995 (QBI)</strong></td><td>Qualified Business Income deduction</td><td>Calculates up to 20% deduction based on Schedule C profit</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout green">
+      <strong>✅ Tax software handles this automatically</strong>
+      You don't need to manually transfer numbers between forms. TurboTax, H&R Block, and TaxSlayer all auto-populate Schedule SE, Schedule 1, and Form 8995 based on your Schedule C entries. Understanding the flow just helps you sanity-check the numbers.
+    </div>
+  </div>
+
+  <!-- SECTION 8: MULTIPLE GIGS -->
+  <div class="guide-section" id="multiple">
+    <div class="section-num">Section 8</div>
+    <h2>Multiple Gigs — One Schedule C or Several?</h2>
+    <p>This is one of the most common points of confusion. The rule: <strong>one Schedule C per distinct business activity</strong>, not one per platform.</p>
+
+    <h3>Combine into ONE Schedule C if:</h3>
+    <ul>
+      <li>You drive for Uber AND Lyft AND DoorDash — all are "transportation/delivery services," one business</li>
+      <li>You freelance on Upwork AND Fiverr AND have direct clients — all the same type of work (e.g., web design)</li>
+      <li>The activities use the same skills, equipment, and business purpose</li>
+    </ul>
+
+    <h3>Use SEPARATE Schedule C forms if:</h3>
+    <ul>
+      <li>You drive for DoorDash AND also do freelance bookkeeping — genuinely different businesses</li>
+      <li>You sell on Etsy AND also do photography — different products/services, different expense categories</li>
+      <li>One business has employees or significant assets and the other doesn't</li>
+    </ul>
+
+    <div class="callout navy">
+      <strong>💡 When in doubt, combine similar work</strong>
+      The IRS principal business code (entered at the top of Schedule C) should describe your overall activity. If Uber, Lyft, and DoorDash all fall under code 492000 (couriers and messengers) or 485300 (taxi/limousine service), they belong on one Schedule C. Separate distinctly different income streams.
+    </div>
+  </div>
+
+  <!-- SECTION 9: MISTAKES -->
+  <div class="guide-section" id="mistakes">
+    <div class="section-num">Section 9</div>
+    <h2>Common Schedule C Mistakes</h2>
+
+    <h3>Mistake 1: Reporting only 1099 amounts, missing cash/unreported income</h3>
+    <p>Line 1 should include ALL business income — not just what appears on your 1099 forms. If you earned $300 cash from a client who didn't issue a 1099, it still belongs on Line 1.</p>
+
+    <h3>Mistake 2: Mixing personal and business expenses</h3>
+    <p>Only business-use expenses belong on Schedule C. If you deduct 100% of your phone bill but only use it 60% for work, you're over-deducting — and this is a common audit trigger.</p>
+
+    <h3>Mistake 3: Forgetting Part IV vehicle questions</h3>
+    <p>If you claim mileage on Line 9, you must answer the vehicle questions in Part IV truthfully, including whether you have written evidence. Skipping this section while claiming a large mileage deduction is a red flag.</p>
+
+    <h3>Mistake 4: Double-deducting home office and actual home expenses</h3>
+    <p>If you use the simplified home office method (Line 30), don't also separately deduct a portion of rent/utilities elsewhere on the form. Choose one method and apply it consistently.</p>
+
+    <h3>Mistake 5: Not itemizing Part V "other expenses"</h3>
+    <p>Lumping everything into a single "miscellaneous" line without itemization in Part V can raise questions in an audit. List each expense type separately, even if small.</p>
+  </div>
+
+  <!-- SECTION 10: FAQ -->
+  <div class="guide-section" id="faq">
+    <div class="section-num">Section 10</div>
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Do I need to attach my 1099 forms to Schedule C? <span class="arrow">▾</span></button>
+        <div class="faq-a">No — you don't physically attach 1099 forms to your tax return. You simply total the amounts and report them on Line 1 of Schedule C. Keep the 1099 forms in your own records for at least 3 years in case the IRS asks for verification.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What if I have a net loss on Schedule C? <span class="arrow">▾</span></button>
+        <div class="faq-a">A loss (negative net profit) means you owe no self-employment tax for that activity, and the loss can offset other income on your tax return (like W-2 wages), potentially reducing your overall tax bill. However, consistent losses (3+ years out of 5) may cause the IRS to reclassify your activity as a hobby rather than a business, which restricts your ability to deduct losses going forward.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What is the principal business code on Schedule C? <span class="arrow">▾</span></button>
+        <div class="faq-a">It's a 6-digit code that classifies your business activity for IRS statistics. Common codes for gig workers: 485300 (taxi/limousine service) for rideshare drivers, 492000 (couriers and messengers) for delivery drivers, 541990 (other professional services) for many freelancers, 541510 (computer systems design) for tech freelancers. The exact code doesn't change your tax liability — it's used for IRS data categorization only.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Can I deduct expenses from before I started earning income? <span class="arrow">▾</span></button>
+        <div class="faq-a">Generally, you can only deduct business expenses incurred after your business activity began (when you started actively trying to earn income). Startup costs incurred before your business launched have special rules — you can deduct up to $5,000 in startup costs in your first year, with the remainder amortized over 15 years. For most gig workers who simply sign up for a platform and start working, this rarely applies — your business "starts" the day you accept your first ride or delivery.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Is Schedule C the same as a business tax return? <span class="arrow">▾</span></button>
+        <div class="faq-a">No — Schedule C is part of YOUR personal tax return (Form 1040), not a separate business return. Sole proprietors and single-member LLCs report business activity through Schedule C attached to their personal 1040. This is different from corporations (C-Corp or S-Corp) which file entirely separate business tax returns (Form 1120 or 1120-S). Most gig workers and freelancers are sole proprietors using Schedule C.</div>
+      </div>
+    </div>
+  </div>
+
+</article>
+</main>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="cta-card">
+    <h3>🧮 Calculate Tax on Your Net Profit</h3>
+    <p>Enter your Schedule C income and deductions for your full tax bill.</p>
+    <a href="/se-tax-calculator.html">SE Tax Calculator →</a>
+  </div>
+
+  <div class="sidebar-card toc-sidebar">
+    <h3>In This Guide</h3>
+    <ol>
+      <li><a href="#what-is">What is Schedule C?</a></li>
+      <li><a href="#who-files">Who files it?</a></li>
+      <li><a href="#part1">Part I — Income</a></li>
+      <li><a href="#part2">Part II — Expenses</a></li>
+      <li><a href="#part3">Parts III–V</a></li>
+      <li><a href="#example">Filled-out example</a></li>
+      <li><a href="#connects">Connects to SE & 1040</a></li>
+      <li><a href="#multiple">Multiple gigs</a></li>
+      <li><a href="#mistakes">Common mistakes</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ol>
+  </div>
+
+  <div class="sidebar-card" style="padding:0;overflow:hidden;">
+    <div class="ad-slot ad-300"><!-- AdSense 300x250 -->Advertisement</div>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>Key Schedule C Lines</h3>
+    <div class="quick-links">
+      <a href="#part1">Line 1: <strong>Gross income</strong></a>
+      <a href="#part2">Line 9: <strong>Car/truck expenses</strong></a>
+      <a href="#part2">Line 28: <strong>Total expenses</strong></a>
+      <a href="#part2">Line 30: <strong>Home office</strong></a>
+      <a href="#part2">Line 31: <strong>Net profit</strong></a>
+    </div>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>Related Guides</h3>
+    <div class="quick-links">
+      <a href="/guides/gig-worker-taxes.html">Gig Worker Tax Guide</a>
+      <a href="/guides/self-employment-tax.html">What Is SE Tax?</a>
+      <a href="/guides/1099-nec-vs-1099-k.html">1099-NEC vs 1099-K</a>
+      <a href="/deductions.html">Top 20 Deductions</a>
+      <a href="/faq.html">Full FAQ</a>
+    </div>
+  </div>
+
+  <div class="sidebar-card" style="padding:0;overflow:hidden;">
+    <div class="ad-slot ad-300"><!-- AdSense 300x250 -->Advertisement</div>
+  </div>
+</aside>
+</div>
+
+<!-- BOTTOM AD -->
+<div class="container">
+  <div class="ad-slot ad-728"><!-- AdSense 728x90 -->Advertisement</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-text">1099Tax<span style="color:var(--amber)">Calcs</span>.com</span>
+        <p>Free tax calculators built for America's 70 million gig workers and freelancers. Calculate what you owe, discover deductions, and never miss a quarterly deadline.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Calculators</h4>
+        <a href="/se-tax-calculator.html">SE Tax Calculator</a>
+        <a href="/quarterly-tax-calculator.html">Quarterly Calculator</a>
+        <a href="/mileage-calculator.html">Mileage Calculator</a>
+        <a href="/freelancer-tax-calculator.html">Freelancer Calculator</a>
+        <a href="/1099-vs-w2-calculator.html">1099 vs W-2</a>
+      </div>
+      <div class="footer-col">
+        <h4>By Platform</h4>
+        <a href="/uber-taxes.html">Uber Driver Taxes</a>
+        <a href="/doordash-taxes.html">DoorDash Taxes</a>
+        <a href="/instacart-taxes.html">Instacart Taxes</a>
+        <a href="/upwork-fiverr-taxes.html">Upwork & Fiverr</a>
+        <a href="/amazon-flex-taxes.html">Amazon Flex</a>
+      </div>
+      <div class="footer-col">
+        <h4>Guides</h4>
+        <a href="/guides/gig-worker-taxes.html">Gig Worker Tax Guide</a>
+        <a href="/guides/self-employment-tax.html">What Is SE Tax?</a>
+        <a href="/guides/schedule-c-explained.html">Schedule C Explained</a>
+        <a href="/deductions.html">Top 20 Deductions</a>
+        <a href="/faq.html">FAQ</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 1099TaxCalcs.com — For informational purposes only. Not tax advice. Consult a CPA for your specific situation.</span>
+      <div style="display:flex;gap:16px;">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+        <a href="/about.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleNav() { document.getElementById('main-nav').classList.toggle('open'); }
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = btn.classList.contains('open');
+  document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+  if (!isOpen) { btn.classList.add('open'); answer.classList.add('open'); }
+}
+</script>
+</body>
+</html>
