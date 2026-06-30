@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="What is self-employment tax? Complete guide to the 15.3% SE tax for 1099 workers, gig workers, and freelancers in 2026. How it's calculated, who pays it, and how to reduce it.">
+<meta name="keywords" content="what is self employment tax, self employment tax 2026, SE tax rate, self employed tax explained, 15.3 percent tax, Schedule SE, self employment tax calculator, how does self employment tax work">
+<meta name="author" content="1099TaxCalcs.com">
+<meta property="og:title" content="What Is Self-Employment Tax? Complete Guide 2026 | 1099TaxCalcs.com">
+<meta property="og:description" content="Everything you need to know about the 15.3% self-employment tax — who pays it, how it's calculated, and how to legally reduce it.">
+<meta property="og:url" content="https://1099taxcalcs.com/guides/self-employment-tax.html">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://1099taxcalcs.com/guides/self-employment-tax.html">
+<title>What Is Self-Employment Tax? 15.3% SE Tax Explained (2026) | 1099TaxCalcs.com</title>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+<style>
+  :root {
+    --navy:   #0D1F3C;
+    --navy2:  #162847;
+    --green:  #00A878;
+    --green2: #008F65;
+    --amber:  #F5A623;
+    --light:  #F4F7FC;
+    --gray1:  #F0F4FA;
+    --gray2:  #E2E8F4;
+    --gray3:  #94A3B8;
+    --text:   #1A2A44;
+    --text2:  #4A5A72;
+    --red:    #E53E3E;
+    --font:   'Segoe UI', system-ui, -apple-system, sans-serif;
+    --radius: 8px;
+    --shadow: 0 2px 12px rgba(13,31,60,0.10);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); color: var(--text); background: var(--light); font-size: 16px; line-height: 1.6; }
+  a { color: var(--green); text-decoration: none; }
+  a:hover { color: var(--green2); text-decoration: underline; }
+
+  /* HEADER */
+  header { background: var(--navy); padding: 0 24px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+  .header-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-icon { width: 38px; height: 38px; background: var(--green); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: white; letter-spacing: -1px; flex-shrink: 0; }
+  .logo-text { color: white; font-size: 17px; font-weight: 700; }
+  .logo-text span { color: var(--amber); }
+  nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+  nav a { color: rgba(255,255,255,0.85); font-size: 13px; padding: 6px 10px; border-radius: 6px; transition: all 0.15s; white-space: nowrap; }
+  nav a:hover { background: rgba(255,255,255,0.1); color: white; text-decoration: none; }
+  nav a.active { color: var(--amber); }
+  .nav-cta { background: var(--green) !important; color: white !important; font-weight: 600; padding: 7px 14px !important; }
+  .nav-cta:hover { background: var(--green2) !important; }
+  .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: white; margin: 5px 0; border-radius: 2px; }
+  @media(max-width: 768px) {
+    .hamburger { display: block; }
+    nav { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--navy2); padding: 12px 16px; flex-direction: column; align-items: flex-start; gap: 2px; }
+    nav.open { display: flex; }
+    nav a { width: 100%; padding: 10px 12px; }
+  }
+
+  /* HERO */
+  .page-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%); color: white; padding: 48px 24px 40px; }
+  .page-hero-inner { max-width: 1200px; margin: 0 auto; }
+  .breadcrumb { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 14px; }
+  .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--green); }
+  .breadcrumb span { margin: 0 6px; }
+  .guide-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(0,168,120,0.2); border: 1px solid rgba(0,168,120,0.4); color: #5EEAD4; font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+  .page-hero h1 { font-size: clamp(26px, 4vw, 42px); font-weight: 800; line-height: 1.15; margin-bottom: 14px; }
+  .page-hero h1 em { color: var(--amber); font-style: normal; }
+  .page-hero p { font-size: 16px; color: rgba(255,255,255,0.78); max-width: 640px; line-height: 1.75; margin-bottom: 20px; }
+  .guide-meta { display: flex; gap: 20px; flex-wrap: wrap; }
+  .meta-item { display: flex; align-items: center; gap: 6px; font-size: 13px; color: rgba(255,255,255,0.55); }
+  .meta-item strong { color: rgba(255,255,255,0.8); }
+
+  /* LAYOUT */
+  .main-wrap { max-width: 1200px; margin: 0 auto; padding: 32px 24px; display: grid; grid-template-columns: 1fr 300px; gap: 36px; align-items: start; }
+  @media(max-width: 960px) { .main-wrap { grid-template-columns: 1fr; } }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  .ad-slot { background: var(--gray1); border: 1px dashed var(--gray2); border-radius: var(--radius); text-align: center; color: var(--gray3); font-size: 11px; padding: 8px; }
+  .ad-728 { width: 100%; height: 90px; line-height: 74px; margin: 20px 0; }
+  .ad-300 { width: 100%; height: 250px; line-height: 234px; }
+
+  /* ARTICLE */
+  article { background: white; border-radius: 12px; padding: 36px 40px; box-shadow: var(--shadow); }
+  @media(max-width: 600px) { article { padding: 24px 18px; } }
+
+  /* TOC */
+  .toc { background: var(--gray1); border-radius: var(--radius); border: 1.5px solid var(--gray2); padding: 20px 24px; margin-bottom: 36px; }
+  .toc h3 { font-size: 13px; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px; }
+  .toc ol { list-style: none; counter-reset: toc; padding: 0; }
+  .toc li { counter-increment: toc; margin-bottom: 6px; display: flex; align-items: center; gap: 0; }
+  .toc li::before { content: counter(toc) '.'; color: var(--green); font-weight: 700; margin-right: 8px; font-size: 13px; min-width: 18px; }
+  .toc a { font-size: 14px; color: var(--text2); }
+  .toc a:hover { color: var(--green); }
+
+  /* SECTIONS */
+  .guide-section { margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid var(--gray2); }
+  .guide-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .section-num { display: inline-block; background: var(--green); color: white; font-size: 11px; font-weight: 700; padding: 2px 10px; border-radius: 20px; margin-bottom: 10px; letter-spacing: 0.04em; }
+  .guide-section h2 { font-size: 26px; font-weight: 800; color: var(--navy); margin-bottom: 14px; line-height: 1.2; }
+  .guide-section h3 { font-size: 19px; font-weight: 700; color: var(--navy); margin: 24px 0 10px; }
+  .guide-section h4 { font-size: 16px; font-weight: 700; color: var(--navy); margin: 18px 0 8px; }
+  .guide-section p { color: var(--text2); line-height: 1.85; margin-bottom: 14px; font-size: 15px; }
+  .guide-section ul, .guide-section ol { color: var(--text2); line-height: 1.85; margin: 10px 0 14px 24px; font-size: 15px; }
+  .guide-section li { margin-bottom: 7px; }
+  .guide-section strong { color: var(--navy); }
+
+  /* CALLOUTS */
+  .callout { border-radius: var(--radius); padding: 16px 18px; margin: 18px 0; font-size: 14px; line-height: 1.7; }
+  .callout.green { background: #E9F9F4; border-left: 4px solid var(--green); color: #065F46; }
+  .callout.amber { background: #FFF8EC; border-left: 4px solid var(--amber); color: #7A4F00; }
+  .callout.red   { background: #FFF0F0; border-left: 4px solid var(--red);   color: #7A1F1F; }
+  .callout.navy  { background: #EEF2FA; border-left: 4px solid var(--navy);  color: var(--text2); }
+  .callout strong { display: block; margin-bottom: 4px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; }
+
+  /* FORMULA */
+  .formula { background: var(--navy); color: white; border-radius: var(--radius); padding: 18px 22px; margin: 18px 0; font-family: 'Courier New', monospace; font-size: 14px; line-height: 1.9; overflow-x: auto; }
+  .formula .comment   { color: rgba(255,255,255,0.4); }
+  .formula .highlight { color: var(--amber); font-weight: 700; }
+  .formula .result    { color: #6EE7B7; font-weight: 700; }
+
+  /* EXAMPLE */
+  .example { background: #F0FFF9; border: 1.5px solid rgba(0,168,120,0.25); border-radius: var(--radius); padding: 18px 20px; margin: 18px 0; }
+  .example-title { font-size: 12px; font-weight: 700; color: var(--green2); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; }
+  .example-table { width: 100%; font-size: 14px; border-collapse: collapse; }
+  .example-table td { padding: 6px 0; color: var(--text2); border-bottom: 1px solid rgba(0,168,120,0.1); }
+  .example-table td:last-child { text-align: right; font-weight: 600; color: var(--navy); }
+  .example-table tr:last-child td { border-bottom: none; }
+  .example-table .total td { border-top: 2px solid rgba(0,168,120,0.2); padding-top: 8px; font-weight: 700; font-size: 15px; color: var(--navy); }
+  .example-table .highlight td { color: var(--green2); font-weight: 600; }
+
+  /* COMPARISON TABLE */
+  .compare-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 16px 0; }
+  .compare-table th { background: var(--navy); color: white; padding: 10px 14px; text-align: left; font-size: 12px; letter-spacing: 0.04em; }
+  .compare-table td { padding: 10px 14px; border-bottom: 1px solid var(--gray2); color: var(--text2); vertical-align: top; }
+  .compare-table td:first-child { font-weight: 600; color: var(--navy); }
+  .compare-table tr:nth-child(even) td { background: var(--gray1); }
+  .compare-table .win { color: var(--green2); font-weight: 700; }
+  .compare-table .lose { color: var(--red); }
+
+  /* VISUAL BREAKDOWN */
+  .rate-visual { background: var(--gray1); border-radius: var(--radius); padding: 20px; margin: 18px 0; }
+  .rate-visual h4 { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 14px; text-align: center; text-transform: uppercase; letter-spacing: 0.05em; }
+  .rate-bar-wrap { display: flex; height: 48px; border-radius: 8px; overflow: hidden; margin-bottom: 12px; }
+  .rate-seg { display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: white; transition: width 0.5s; }
+  .rate-legend { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+  .rate-leg-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text2); }
+  .rate-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+  /* STRATEGY CARDS */
+  .strategy-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; margin-top: 14px; }
+  .strategy-card { background: var(--gray1); border: 1.5px solid var(--gray2); border-radius: var(--radius); padding: 16px; }
+  .strategy-card .s-icon { font-size: 22px; margin-bottom: 8px; }
+  .strategy-card h4 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .strategy-card .s-save { font-size: 12px; font-weight: 600; color: var(--green2); margin-bottom: 6px; }
+  .strategy-card p { font-size: 13px; color: var(--text2); margin: 0; line-height: 1.5; }
+
+  /* INFO TABLE */
+  .info-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 14px 0; }
+  .info-table th { background: var(--navy); color: white; padding: 10px 14px; text-align: left; font-size: 12px; letter-spacing: 0.04em; }
+  .info-table td { padding: 10px 14px; border-bottom: 1px solid var(--gray2); color: var(--text2); }
+  .info-table tr:nth-child(even) td { background: var(--gray1); }
+  .info-table strong { color: var(--navy); }
+
+  /* INLINE CTA */
+  .inline-cta { background: linear-gradient(135deg, var(--navy), var(--navy2)); border-radius: 12px; padding: 22px 26px; margin: 28px 0; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .inline-cta-text h3 { font-size: 16px; font-weight: 700; color: white; margin-bottom: 3px; }
+  .inline-cta-text p { font-size: 13px; color: rgba(255,255,255,0.7); margin: 0; }
+  .inline-cta-btn { display: inline-block; background: var(--green); color: white; padding: 10px 22px; border-radius: var(--radius); font-weight: 700; font-size: 14px; text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+  .inline-cta-btn:hover { background: var(--green2); text-decoration: none; color: white; }
+
+  /* STAT GRID */
+  .stat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin: 16px 0; }
+  .stat-box { background: var(--gray1); border-radius: var(--radius); padding: 14px; text-align: center; border: 1.5px solid var(--gray2); }
+  .stat-val { font-size: 26px; font-weight: 800; color: var(--navy); }
+  .stat-lbl { font-size: 11px; color: var(--text2); margin-top: 3px; line-height: 1.4; }
+
+  /* BOXES */
+  .warn-box { background: #FFF8EC; border: 1px solid #F5D78E; border-radius: var(--radius); padding: 14px 16px; font-size: 13px; color: #7A4F00; line-height: 1.6; margin: 14px 0; }
+  .green-box { background: #E9F9F4; border: 1px solid rgba(0,168,120,0.3); border-radius: var(--radius); padding: 14px 16px; font-size: 13px; color: #065F46; line-height: 1.6; margin: 14px 0; }
+  .info-box  { background: #EEF2FA; border: 1px solid #C7D4EE; border-radius: var(--radius); padding: 14px 16px; font-size: 13px; color: var(--text2); line-height: 1.6; margin: 14px 0; }
+
+  /* FAQ */
+  .faq-list { margin-top: 10px; }
+  .faq-item { border-bottom: 1px solid var(--gray2); }
+  .faq-q { width: 100%; text-align: left; background: none; border: none; padding: 14px 0; font-size: 15px; font-weight: 600; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: var(--font); }
+  .faq-q:hover { color: var(--green); }
+  .faq-q .arrow { font-size: 18px; color: var(--green); transition: transform 0.2s; flex-shrink: 0; margin-left: 12px; }
+  .faq-q.open .arrow { transform: rotate(180deg); }
+  .faq-a { font-size: 14px; color: var(--text2); line-height: 1.8; padding-bottom: 14px; display: none; }
+  .faq-a.open { display: block; }
+
+  /* SIDEBAR */
+  .sidebar { display: flex; flex-direction: column; gap: 18px; }
+  .sidebar-card { background: white; border-radius: 12px; padding: 18px; box-shadow: var(--shadow); }
+  .sidebar-card h3 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 10px; border-bottom: 2px solid var(--green); padding-bottom: 7px; }
+  .cta-card { background: linear-gradient(135deg, var(--navy), var(--navy2)); color: white; border-radius: 12px; padding: 18px; }
+  .cta-card h3 { font-size: 14px; font-weight: 700; color: white; margin-bottom: 6px; border: none; padding: 0; }
+  .cta-card p { font-size: 12px; color: rgba(255,255,255,0.7); margin-bottom: 12px; line-height: 1.6; }
+  .cta-card a { display: block; background: var(--green); color: white; text-align: center; padding: 9px; border-radius: var(--radius); font-weight: 700; font-size: 13px; text-decoration: none; }
+  .cta-card a:hover { background: var(--green2); }
+  .quick-links a { display: flex; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--gray2); font-size: 13px; color: var(--text); text-decoration: none; }
+  .quick-links a:last-child { border-bottom: none; }
+  .quick-links a:hover { color: var(--green); }
+  .quick-links a::before { content: '→'; color: var(--green); font-weight: 700; }
+  .toc-sidebar { position: sticky; top: 84px; }
+  .toc-sidebar ol { list-style: none; counter-reset: stoc; padding: 0; }
+  .toc-sidebar li { counter-increment: stoc; margin-bottom: 5px; }
+  .toc-sidebar li::before { content: counter(stoc) '.'; color: var(--green); font-weight: 700; margin-right: 6px; }
+  .toc-sidebar a { color: var(--text2); font-size: 13px; }
+  .toc-sidebar a:hover { color: var(--green); }
+
+  /* FOOTER */
+  footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 40px 24px 24px; margin-top: 48px; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 32px; }
+  .footer-brand .logo-text { font-size: 18px; color: white; display: block; margin-bottom: 8px; }
+  .footer-brand p { font-size: 13px; line-height: 1.7; }
+  .footer-col h4 { color: white; font-size: 13px; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,0.55); margin-bottom: 7px; text-decoration: none; }
+  .footer-col a:hover { color: var(--green); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 12px; }
+  .footer-bottom a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .footer-bottom a:hover { color: var(--green); }
+  @media(max-width: 700px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1/-1; } }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What Is Self-Employment Tax? 15.3% SE Tax Explained (2026)",
+  "description": "Complete guide to the 15.3% self-employment tax — who pays it, how it's calculated, and how to legally reduce it.",
+  "author": { "@type": "Organization", "name": "1099TaxCalcs.com" },
+  "publisher": { "@type": "Organization", "name": "1099TaxCalcs.com" },
+  "dateModified": "2026-06-01",
+  "mainEntityOfPage": "https://1099taxcalcs.com/guides/self-employment-tax.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is self-employment tax?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Self-employment tax (SE tax) is the 15.3% tax that self-employed workers, freelancers, gig workers, and independent contractors pay to cover Social Security (12.4%) and Medicare (2.9%). When you work a regular job, your employer pays half (7.65%) and you pay the other half. When you're self-employed, you pay the full 15.3% yourself." }
+    },
+    {
+      "@type": "Question",
+      "name": "Who has to pay self-employment tax?",
+      "acceptedAnswer": { "@type": "Answer", "text": "You must pay self-employment tax if your net self-employment earnings are $400 or more in a year. This applies to freelancers, independent contractors, gig workers (Uber, DoorDash, Instacart), sole proprietors, and anyone who receives a 1099-NEC or 1099-K form. It also applies to side hustle income even if you also have a W-2 job." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate self-employment tax?",
+      "acceptedAnswer": { "@type": "Answer", "text": "To calculate SE tax: (1) Subtract business expenses from gross income to get net profit. (2) Multiply net profit by 0.9235 (92.35%) to get the SE tax base. (3) Multiply the SE tax base by 0.153 (15.3%) to get your SE tax. Example: $50,000 net profit × 0.9235 = $46,175 × 0.153 = $7,065 in SE tax." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <div class="logo-icon">1099</div>
+      <div class="logo-text">Tax<span>Calcs</span>.com</div>
+    </a>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
+    <nav id="main-nav">
+      <a href="/calculators.html">Calculators</a>
+      <a href="/deductions.html">Deductions</a>
+      <a href="/quarterly-taxes.html">Quarterly Taxes</a>
+      <a href="/platforms.html">By Platform</a>
+      <a href="/guides.html" class="active">Guides</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/se-tax-calculator.html" class="nav-cta">Calculate My SE Tax →</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/guides.html">Guides</a><span>›</span>What Is Self-Employment Tax?</div>
+    <div class="guide-badge">📚 Complete Guide — 2026</div>
+    <h1>What Is Self-Employment Tax? <em>15.3% SE Tax Explained</em></h1>
+    <p>Self-employment tax is the Social Security and Medicare tax that every 1099 worker, freelancer, and gig worker pays. Here's exactly what it is, who pays it, how to calculate it, and how to legally reduce it — explained in plain English.</p>
+    <div class="guide-meta">
+      <div class="meta-item">📅 <strong>Updated:</strong> June 2026</div>
+      <div class="meta-item">⏱️ <strong>Read time:</strong> 8 minutes</div>
+      <div class="meta-item">📋 <strong>SE Tax Rate 2026:</strong> 15.3%</div>
+    </div>
+  </div>
+</div>
+
+<!-- TOP AD -->
+<div class="container">
+  <div class="ad-slot ad-728"><!-- AdSense 728x90 -->Advertisement</div>
+</div>
+
+<!-- MAIN -->
+<div class="main-wrap">
+<main>
+<article>
+
+  <!-- TOC -->
+  <div class="toc">
+    <h3>📋 What's covered</h3>
+    <ol>
+      <li><a href="#what-is">What is self-employment tax?</a></li>
+      <li><a href="#who-pays">Who has to pay SE tax?</a></li>
+      <li><a href="#rate">The 15.3% rate — what it covers</a></li>
+      <li><a href="#calculate">How to calculate SE tax step by step</a></li>
+      <li><a href="#vs-income">SE tax vs income tax — the difference</a></li>
+      <li><a href="#examples">Real calculation examples</a></li>
+      <li><a href="#deduct-half">The half SE tax deduction</a></li>
+      <li><a href="#reduce">How to reduce your SE tax legally</a></li>
+      <li><a href="#pay">How and when to pay SE tax</a></li>
+      <li><a href="#faq">Frequently asked questions</a></li>
+    </ol>
+  </div>
+
+  <!-- SECTION 1 -->
+  <div class="guide-section" id="what-is">
+    <div class="section-num">Section 1</div>
+    <h2>What Is Self-Employment Tax?</h2>
+    <p>Self-employment tax (commonly called SE tax) is the combined Social Security and Medicare tax that self-employed people pay. When you work a traditional W-2 job, these taxes are split equally between you and your employer — you each pay 7.65%. When you're self-employed, there is no employer to cover the other half, so <strong>you pay the entire 15.3% yourself</strong>.</p>
+    <p>This is often the biggest financial surprise for new gig workers and freelancers. They know about income tax. They don't always know about SE tax sitting on top of it. A freelancer in the 22% income tax bracket who earns $60,000 net profit owes roughly $8,480 in SE tax before a single dollar of income tax is calculated.</p>
+
+    <div class="stat-grid">
+      <div class="stat-box"><div class="stat-val">15.3%</div><div class="stat-lbl">Total SE tax rate in 2026</div></div>
+      <div class="stat-box"><div class="stat-val">12.4%</div><div class="stat-lbl">Social Security portion</div></div>
+      <div class="stat-box"><div class="stat-val">2.9%</div><div class="stat-lbl">Medicare portion</div></div>
+      <div class="stat-box"><div class="stat-val">$400</div><div class="stat-lbl">Net earnings minimum before SE tax applies</div></div>
+    </div>
+
+    <div class="callout navy">
+      <strong>💡 The short version</strong>
+      SE tax = Social Security + Medicare tax. W-2 workers pay 7.65%, employers pay 7.65%. Self-employed workers pay the full 15.3% themselves — but get to deduct half of it from their income taxes.
+    </div>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="guide-section" id="who-pays">
+    <div class="section-num">Section 2</div>
+    <h2>Who Has to Pay Self-Employment Tax?</h2>
+    <p>You owe SE tax if your <strong>net self-employment earnings are $400 or more</strong> during a tax year. This applies regardless of age, whether you have a regular job, or whether you received a 1099 form. The IRS looks at net profit — your earnings after business expenses — not your gross income.</p>
+
+    <h3>Who must pay SE tax:</h3>
+    <ul>
+      <li>Gig workers: Uber, Lyft, DoorDash, Instacart, Amazon Flex, Grubhub drivers</li>
+      <li>Freelancers: Upwork, Fiverr, Toptal, direct client work</li>
+      <li>Independent contractors of any kind</li>
+      <li>Sole proprietors and single-member LLC owners</li>
+      <li>People with side hustle income alongside a W-2 job</li>
+      <li>Anyone receiving a 1099-NEC or 1099-K</li>
+      <li>Cash-based self-employed workers (even without a 1099)</li>
+    </ul>
+
+    <div class="callout amber">
+      <strong>⚠️ Side hustle with a W-2 job</strong>
+      If you earn $500 driving for DoorDash on weekends while also working a full-time job, you owe SE tax on the DoorDash net profit. Your W-2 withholding does NOT cover your gig income. You'll likely owe extra at tax time — or need to make quarterly estimated payments.
+    </div>
+
+    <h3>Who does NOT pay SE tax:</h3>
+    <ul>
+      <li>W-2 employees (your employer handles FICA withholding)</li>
+      <li>People earning less than $400 in net self-employment income</li>
+      <li>S-Corp shareholders on distribution income (only salary portion pays SE tax)</li>
+      <li>Passive investors receiving rental income (with some exceptions)</li>
+      <li>People receiving Social Security or pension income only</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="guide-section" id="rate">
+    <div class="section-num">Section 3</div>
+    <h2>The 15.3% Rate — What It Covers</h2>
+    <p>The 15.3% SE tax rate is not a single tax — it's two separate programs combined:</p>
+
+    <div class="rate-visual">
+      <h4>📊 SE Tax Breakdown — 15.3% Total</h4>
+      <div class="rate-bar-wrap">
+        <div class="rate-seg" style="width:81%;background:#2563EB;">Social Security: 12.4%</div>
+        <div class="rate-seg" style="width:19%;background:#10B981;">Medicare: 2.9%</div>
+      </div>
+      <div class="rate-legend">
+        <div class="rate-leg-item"><div class="rate-dot" style="background:#2563EB;"></div>Social Security (12.4%) — capped at $176,100 wages in 2026</div>
+        <div class="rate-leg-item"><div class="rate-dot" style="background:#10B981;"></div>Medicare (2.9%) — no earnings cap</div>
+      </div>
+    </div>
+
+    <h3>Social Security portion: 12.4%</h3>
+    <p>The 12.4% Social Security tax applies to your net self-employment earnings up to the <strong>Social Security wage base</strong>, which is <strong>$176,100 for 2026</strong>. If you earn more than this, you stop paying the 12.4% portion on income above that threshold (though Medicare continues on all earnings).</p>
+    <p>For most gig workers and freelancers earning under $176,100, the full 12.4% applies to every dollar of net profit.</p>
+
+    <h3>Medicare portion: 2.9%</h3>
+    <p>The 2.9% Medicare tax applies to all your net self-employment earnings with <strong>no cap</strong>. High earners (above $200,000 for single filers) also pay an additional 0.9% Medicare surtax, bringing their Medicare rate to 3.8% on the amount above the threshold.</p>
+
+    <table class="info-table">
+      <thead><tr><th>Component</th><th>Rate</th><th>2026 Income Cap</th><th>Who It Applies To</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Social Security</strong></td><td>12.4%</td><td>$176,100</td><td>All self-employed workers</td></tr>
+        <tr><td><strong>Medicare</strong></td><td>2.9%</td><td>No cap</td><td>All self-employed workers</td></tr>
+        <tr><td><strong>Additional Medicare</strong></td><td>0.9%</td><td>Above $200,000 (single)</td><td>High earners only</td></tr>
+        <tr><td><strong>Total (most workers)</strong></td><td><strong>15.3%</strong></td><td>Up to $176,100</td><td>Most gig workers and freelancers</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout green">
+      <strong>✅ The 92.35% rule</strong>
+      The IRS doesn't apply SE tax to 100% of your net profit. Instead, they apply it to 92.35% (0.9235) of net profit. This is a built-in adjustment that partially compensates for the fact that employees only pay SE tax on their gross wages, while the employer's matching contribution comes out of business operating costs. The result: you pay slightly less SE tax than if the full 100% were used.
+    </div>
+  </div>
+
+  <!-- SECTION 4 -->
+  <div class="guide-section" id="calculate">
+    <div class="section-num">Section 4</div>
+    <h2>How to Calculate SE Tax Step by Step</h2>
+    <p>The IRS formula for SE tax is straightforward. Here it is broken into clear steps:</p>
+
+    <div class="formula">
+      <span class="comment">// STEP 1: Calculate net profit</span><br>
+      Net Profit = Gross 1099 Income − Business Expenses<br><br>
+      <span class="comment">// STEP 2: Apply 92.35% adjustment</span><br>
+      SE Base = Net Profit × <span class="highlight">0.9235</span><br><br>
+      <span class="comment">// STEP 3: Apply 15.3% SE tax rate</span><br>
+      SE Tax = SE Base × <span class="highlight">0.153</span><br><br>
+      <span class="comment">// STEP 4: Deduct half of SE tax from income (reduces income tax)</span><br>
+      SE Tax Deduction = SE Tax × <span class="highlight">0.5</span><br><br>
+      <span class="result">// Total SE Tax = Step 3 result — reported on Schedule SE</span>
+    </div>
+
+    <h3>Quick reference — SE tax at common income levels</h3>
+    <table class="info-table">
+      <thead><tr><th>Net Profit</th><th>× 92.35%</th><th>× 15.3%</th><th>SE Tax Owed</th><th>Per Quarter</th></tr></thead>
+      <tbody>
+        <tr><td><strong>$15,000</strong></td><td>$13,853</td><td>×15.3%</td><td>$2,120</td><td>$530</td></tr>
+        <tr><td><strong>$25,000</strong></td><td>$23,088</td><td>×15.3%</td><td>$3,532</td><td>$883</td></tr>
+        <tr><td><strong>$40,000</strong></td><td>$36,940</td><td>×15.3%</td><td>$5,652</td><td>$1,413</td></tr>
+        <tr><td><strong>$60,000</strong></td><td>$55,410</td><td>×15.3%</td><td>$8,478</td><td>$2,119</td></tr>
+        <tr><td><strong>$80,000</strong></td><td>$73,880</td><td>×15.3%</td><td>$11,304</td><td>$2,826</td></tr>
+        <tr><td><strong>$100,000</strong></td><td>$92,350</td><td>×15.3%</td><td>$14,130</td><td>$3,532</td></tr>
+        <tr><td><strong>$150,000</strong></td><td>$138,525</td><td>×15.3%</td><td>$21,194</td><td>$5,299</td></tr>
+      </tbody>
+    </table>
+
+    <div class="inline-cta">
+      <div class="inline-cta-text">
+        <h3>🧮 Calculate your exact SE tax</h3>
+        <p>Enter your income and deductions — get your precise SE tax bill instantly</p>
+      </div>
+      <a href="/se-tax-calculator.html" class="inline-cta-btn">SE Tax Calculator →</a>
+    </div>
+  </div>
+
+  <!-- AD MID -->
+  <div class="ad-slot ad-728" style="margin-bottom:32px;"><!-- AdSense 728x90 -->Advertisement</div>
+
+  <!-- SECTION 5 -->
+  <div class="guide-section" id="vs-income">
+    <div class="section-num">Section 5</div>
+    <h2>SE Tax vs Income Tax — The Key Difference</h2>
+    <p>Many people confuse SE tax with income tax, or assume they're the same thing. They are completely separate taxes calculated on different bases. You owe both.</p>
+
+    <table class="compare-table">
+      <thead><tr><th>Feature</th><th>Self-Employment Tax</th><th>Federal Income Tax</th></tr></thead>
+      <tbody>
+        <tr><td>What it funds</td><td>Social Security + Medicare</td><td>General federal government</td></tr>
+        <tr><td>Rate</td><td>15.3% (flat)</td><td>10–37% (progressive brackets)</td></tr>
+        <tr><td>Applied to</td><td>92.35% of net profit</td><td>Taxable income (net profit minus deductions)</td></tr>
+        <tr><td>Standard deduction</td><td>Does NOT reduce SE tax</td><td class="win">Reduces income tax base</td></tr>
+        <tr><td>Calculated on</td><td>Schedule SE</td><td>Form 1040 with brackets</td></tr>
+        <tr><td>W-2 employee comparison</td><td>Pay 7.65% (employer pays 7.65%)</td><td>Same brackets as self-employed</td></tr>
+        <tr><td>Can reduce with deductions?</td><td class="win">Yes — business expenses reduce net profit</td><td class="win">Yes — plus standard deduction + SE deduction</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout amber">
+      <strong>⚠️ The order matters</strong>
+      You calculate SE tax first (on net profit × 92.35% × 15.3%). Then you take the result, divide by 2, and subtract that from your gross income before calculating income tax. SE tax affects income tax, but income tax does not affect SE tax.
+    </div>
+
+    <div class="example">
+      <div class="example-title">📋 Example: $70,000 net profit, single filer, no state tax</div>
+      <table class="example-table">
+        <tr><td>Net profit (after business deductions)</td><td>$70,000</td></tr>
+        <tr><td>SE tax base (× 92.35%)</td><td>$64,645</td></tr>
+        <tr><td>SE Tax (× 15.3%)</td><td>$9,891</td></tr>
+        <tr><td>— — —</td><td>— — —</td></tr>
+        <tr><td>Income tax base: net profit</td><td>$70,000</td></tr>
+        <tr><td>− ½ SE tax deduction</td><td>−$4,946</td></tr>
+        <tr><td>− Standard deduction (single 2026)</td><td>−$15,000</td></tr>
+        <tr><td>= Federal taxable income</td><td>$50,054</td></tr>
+        <tr><td>Federal income tax (10–22% brackets)</td><td>$6,157</td></tr>
+        <tr class="highlight"><td>SE Tax</td><td>$9,891</td></tr>
+        <tr class="total"><td>✅ Total Federal Tax</td><td>$16,048</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- SECTION 6 -->
+  <div class="guide-section" id="examples">
+    <div class="section-num">Section 6</div>
+    <h2>Real Calculation Examples by Platform</h2>
+
+    <h3>DoorDash Driver — Part-time, $18,000 gross, Texas</h3>
+    <div class="example">
+      <div class="example-title">📋 DoorDash driver, part-time, single</div>
+      <table class="example-table">
+        <tr><td>Gross DoorDash earnings</td><td>$18,000</td></tr>
+        <tr><td>− Mileage: 6,000 miles × 72.5¢</td><td>−$4,350</td></tr>
+        <tr><td>− Phone + accessories</td><td>−$400</td></tr>
+        <tr><td>= Net Profit</td><td>$13,250</td></tr>
+        <tr><td>SE Tax (× 0.9235 × 0.153)</td><td>$1,871</td></tr>
+        <tr><td>Federal income tax (after std deduction)</td><td>$0 (below taxable threshold)</td></tr>
+        <tr class="total"><td>✅ Total Tax Owed</td><td>$1,871</td></tr>
+        <tr class="highlight"><td>Set aside per week</td><td>~$36/week</td></tr>
+      </table>
+    </div>
+
+    <h3>Full-time Freelancer — $95,000 gross, California</h3>
+    <div class="example">
+      <div class="example-title">📋 Upwork developer, full-time, California, single</div>
+      <table class="example-table">
+        <tr><td>Gross Upwork earnings</td><td>$95,000</td></tr>
+        <tr><td>− Platform fees (~8%)</td><td>−$7,600</td></tr>
+        <tr><td>− Home office, software, equipment</td><td>−$8,200</td></tr>
+        <tr><td>− Health insurance premiums</td><td>−$6,000</td></tr>
+        <tr><td>= Net Profit</td><td>$73,200</td></tr>
+        <tr><td>SE Tax (× 0.9235 × 0.153)</td><td>$10,334</td></tr>
+        <tr><td>Federal income tax</td><td>$7,942</td></tr>
+        <tr><td>California state tax (~7.5% effective)</td><td>$5,490</td></tr>
+        <tr class="total"><td>✅ Total Tax Owed</td><td>$23,766</td></tr>
+        <tr class="highlight"><td>Quarterly payment</td><td>$5,942</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- SECTION 7 -->
+  <div class="guide-section" id="deduct-half">
+    <div class="section-num">Section 7</div>
+    <h2>The Half SE Tax Deduction — How It Works</h2>
+    <p>Here's one of the few breaks the IRS gives self-employed workers: you can deduct <strong>50% of your SE tax</strong> from your gross income before calculating income tax. This is an "above-the-line" deduction — meaning it reduces your income regardless of whether you itemize or take the standard deduction.</p>
+
+    <div class="formula">
+      <span class="comment">// After calculating SE tax:</span><br>
+      SE Tax Deduction = SE Tax × <span class="highlight">0.5</span><br><br>
+      <span class="comment">// This reduces your income BEFORE the standard deduction:</span><br>
+      Adjusted Gross Income = Net Profit − <span class="highlight">SE Tax Deduction</span><br>
+      Taxable Income = AGI − Standard Deduction<br><br>
+      <span class="result">// Result: Your income tax bill is lower because of SE tax you paid</span>
+    </div>
+
+    <p>On $10,000 in SE tax, you deduct $5,000 from your income. If you're in the 22% bracket, that saves you $1,100 in income tax. It doesn't eliminate the SE tax burden — but it partially compensates for it.</p>
+
+    <div class="callout green">
+      <strong>✅ This happens automatically</strong>
+      Tax software (TurboTax, H&R Block, TaxSlayer) and Schedule SE both handle this deduction automatically. You don't need to calculate or enter it separately — just ensure your Schedule C and Schedule SE are complete.
+    </div>
+  </div>
+
+  <!-- SECTION 8 -->
+  <div class="guide-section" id="reduce">
+    <div class="section-num">Section 8</div>
+    <h2>How to Reduce Your SE Tax Legally</h2>
+    <p>SE tax is calculated on your <strong>net profit</strong> — not your gross income. Every legitimate business deduction reduces your net profit, which directly reduces your SE tax bill. Here are the most powerful strategies:</p>
+
+    <div class="strategy-grid">
+      <div class="strategy-card">
+        <div class="s-icon">🚗</div>
+        <h4>Track Every Business Mile</h4>
+        <div class="s-save">Saves $1,530 per 10,000 miles</div>
+        <p>Mileage at 72.5¢/mile reduces net profit. 10,000 miles = $7,250 deduction × 15.3% SE rate = $1,109 saved in SE tax alone.</p>
+      </div>
+      <div class="strategy-card">
+        <div class="s-icon">🏠</div>
+        <h4>Home Office Deduction</h4>
+        <div class="s-save">Saves up to $230 in SE tax</div>
+        <p>Up to $1,500 deduction (simplified method). Reduces both SE tax and income tax. Easy to claim — just a dedicated workspace.</p>
+      </div>
+      <div class="strategy-card">
+        <div class="s-icon">💊</div>
+        <h4>Deduct Health Insurance</h4>
+        <div class="s-save">Saves $765–$2,295 in SE tax</div>
+        <p>100% of health insurance premiums reduce net profit if self-employed. On $5,000 premiums — saves $765 in SE tax.</p>
+      </div>
+      <div class="strategy-card">
+        <div class="s-icon">🏦</div>
+        <h4>SEP-IRA Contribution</h4>
+        <div class="s-save">Up to $10,710 in SE tax savings</div>
+        <p>Contribute up to 25% of net profit (max $70,000). Every $10,000 contributed saves $1,530 in SE tax. Open in 20 min at Fidelity.</p>
+      </div>
+      <div class="strategy-card">
+        <div class="s-icon">💻</div>
+        <h4>Deduct Equipment & Software</h4>
+        <div class="s-save">Saves 15.3% of each deduction</div>
+        <p>Laptop, camera, software subscriptions — all reduce net profit. A $2,000 laptop saves $306 in SE tax through Section 179.</p>
+      </div>
+      <div class="strategy-card">
+        <div class="s-icon">🏢</div>
+        <h4>S-Corp Election (high earners)</h4>
+        <div class="s-save">Can save $5,000–$15,000+/year</div>
+        <p>Above ~$80,000 net profit, electing S-Corp status splits income into salary + distributions. Only salary portion pays SE tax. Consult a CPA first.</p>
+      </div>
+    </div>
+
+    <div class="warn-box">⚠️ <strong>The S-Corp strategy has real costs:</strong> You need to run payroll, file a separate corporate return (Form 1120-S), and pay yourself a "reasonable salary." The added complexity costs $1,000–$3,000/year in accounting fees. It only makes financial sense above roughly $80,000 in net profit.</div>
+  </div>
+
+  <!-- SECTION 9 -->
+  <div class="guide-section" id="pay">
+    <div class="section-num">Section 9</div>
+    <h2>How and When to Pay SE Tax</h2>
+    <p>SE tax is not paid separately from income tax. You pay both together through the same quarterly estimated payment process and on your annual return. Here's how it works:</p>
+
+    <h3>Quarterly estimated payments (if you expect to owe $1,000+)</h3>
+    <p>Pay at <strong>IRS.gov/payments</strong> using IRS Direct Pay — free, no account needed. Select "Estimated Tax" and tax year 2026. Pay the combined SE tax + income tax estimate divided by 4.</p>
+
+    <table class="info-table">
+      <thead><tr><th>Quarter</th><th>Income Period</th><th>Due Date</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Q1</strong></td><td>Jan–Mar</td><td>April 15, 2026</td></tr>
+        <tr><td><strong>Q2</strong></td><td>Apr–May</td><td>June 16, 2026</td></tr>
+        <tr><td><strong>Q3</strong></td><td>Jun–Aug</td><td>September 15, 2026 ← Next deadline</td></tr>
+        <tr><td><strong>Q4</strong></td><td>Sep–Dec</td><td>January 15, 2027</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Annual filing (Schedule SE)</h3>
+    <p>At tax time (April 15), you file <strong>Schedule SE</strong> attached to your Form 1040. This form calculates the exact SE tax amount based on your Schedule C net profit. Tax software generates it automatically. Any remaining balance after quarterly payments is due April 15; overpayments become refunds.</p>
+
+    <div class="green-box">✅ <strong>Pro tip:</strong> If you haven't set aside money for taxes yet, don't panic. Calculate your total estimate using our <a href="/se-tax-calculator.html">SE tax calculator</a>, then make a large Q3 payment by September 15 to get as close to the safe harbor as possible. The underpayment penalty is only ~8% annually — not the end of the world, but avoidable.</div>
+  </div>
+
+  <!-- SECTION 10: FAQ -->
+  <div class="guide-section" id="faq">
+    <div class="section-num">Section 10</div>
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Is self-employment tax the same as income tax? <span class="arrow">▾</span></button>
+        <div class="faq-a">No — they are completely separate taxes. Self-employment tax (15.3%) covers Social Security and Medicare. Federal income tax (10–37%) funds the general government. Both are owed by gig workers and freelancers and are calculated separately. SE tax is calculated first on Schedule SE, then income tax is calculated on Form 1040 using taxable income that has already been reduced by the SE tax deduction.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Why is SE tax 15.3% instead of 7.65% like employees pay? <span class="arrow">▾</span></button>
+        <div class="faq-a">W-2 employees pay 7.65% (their share of FICA), and their employer pays another 7.65%. As a self-employed worker, you are both the employee and the employer, so you pay both halves — the full 15.3%. To partially compensate, the IRS lets you: (1) calculate SE tax on only 92.35% of net profit rather than 100%, and (2) deduct 50% of SE tax paid from your gross income before calculating income tax.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Do I still pay SE tax if I also have a W-2 job? <span class="arrow">▾</span></button>
+        <div class="faq-a">Yes. Your W-2 employer withholds FICA on your wages, but that doesn't cover your gig or freelance income. You owe the full 15.3% SE tax on any net self-employment earnings over $400 — in addition to your W-2 taxes. However, if your combined W-2 wages and self-employment income exceeds the Social Security wage base ($176,100 in 2026), you may have already paid the 12.4% Social Security portion through your W-2 withholding and won't owe it again on the self-employment portion. Tax software handles this automatically.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Does SE tax count toward my Social Security retirement benefits? <span class="arrow">▾</span></button>
+        <div class="faq-a">Yes — this is an important benefit most people overlook. The Social Security portion of your SE tax (12.4%) goes toward your Social Security earnings record, which determines your future retirement benefit, disability benefit, and survivor benefits. The more you pay in, the higher your eventual Social Security benefit. Paying SE tax isn't just a cost — it's also a forced contribution to your own future retirement income.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Can I avoid SE tax by forming an LLC? <span class="arrow">▾</span></button>
+        <div class="faq-a">No — a single-member LLC is a "disregarded entity" for tax purposes. You file the same Schedule C and pay the same SE tax as a sole proprietor. The LLC provides legal liability protection but zero tax benefit on its own. To reduce SE tax with a business structure, you need to elect S-Corporation status — which splits income into salary and distributions, with SE tax only applying to the salary portion. This becomes worthwhile above roughly $80,000 in net profit, but adds complexity and accounting costs.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What if I can't afford to pay my SE tax? <span class="arrow">▾</span></button>
+        <div class="faq-a">File your return on time even if you can't pay — the failure-to-file penalty (5%/month, max 25%) is far worse than the failure-to-pay penalty (0.5%/month). Then request an IRS payment plan at IRS.gov/opa. The Online Payment Agreement lets you pay in monthly installments with interest at the federal short-term rate + 3%. If you truly cannot pay, the IRS also has an Offer in Compromise program for taxpayers facing genuine hardship.</div>
+      </div>
+    </div>
+  </div>
+
+</article>
+</main>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="cta-card">
+    <h3>🧮 Calculate Your SE Tax</h3>
+    <p>Enter your income and deductions for your exact SE tax bill — including quarterly payment amounts.</p>
+    <a href="/se-tax-calculator.html">Open SE Tax Calculator →</a>
+  </div>
+
+  <div class="sidebar-card toc-sidebar">
+    <h3>In This Guide</h3>
+    <ol>
+      <li><a href="#what-is">What is SE tax?</a></li>
+      <li><a href="#who-pays">Who pays it?</a></li>
+      <li><a href="#rate">The 15.3% rate</a></li>
+      <li><a href="#calculate">How to calculate</a></li>
+      <li><a href="#vs-income">SE vs income tax</a></li>
+      <li><a href="#examples">Real examples</a></li>
+      <li><a href="#deduct-half">Half SE deduction</a></li>
+      <li><a href="#reduce">Reduce SE tax</a></li>
+      <li><a href="#pay">When to pay</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ol>
+  </div>
+
+  <div class="sidebar-card" style="padding:0;overflow:hidden;">
+    <div class="ad-slot ad-300"><!-- AdSense 300x250 -->Advertisement</div>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>Key 2026 Numbers</h3>
+    <div class="quick-links">
+      <a href="#">SE Tax Rate: <strong>15.3%</strong></a>
+      <a href="#">SE Tax Base: <strong>92.35%</strong> of net profit</a>
+      <a href="#">SS Wage Cap: <strong>$176,100</strong></a>
+      <a href="#">Medicare: <strong>No cap</strong></a>
+      <a href="#">File if net &gt; <strong>$400</strong></a>
+      <a href="#">Mileage Rate: <strong>72.5¢/mile</strong></a>
+    </div>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>Related Guides</h3>
+    <div class="quick-links">
+      <a href="/guides/gig-worker-taxes.html">Gig Worker Tax Guide</a>
+      <a href="/quarterly-taxes.html">Quarterly Tax Guide</a>
+      <a href="/deductions.html">Top 20 Deductions</a>
+      <a href="/guides/quarterly-estimated-taxes.html">How to Pay Quarterly</a>
+      <a href="/faq.html">Full FAQ</a>
+    </div>
+  </div>
+
+  <div class="sidebar-card" style="padding:0;overflow:hidden;">
+    <div class="ad-slot ad-300"><!-- AdSense 300x250 -->Advertisement</div>
+  </div>
+</aside>
+</div>
+
+<!-- BOTTOM AD -->
+<div class="container">
+  <div class="ad-slot ad-728"><!-- AdSense 728x90 -->Advertisement</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-text">1099Tax<span style="color:var(--amber)">Calcs</span>.com</span>
+        <p>Free tax calculators built for America's 70 million gig workers and freelancers. Calculate what you owe, discover deductions, and never miss a quarterly deadline.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Calculators</h4>
+        <a href="/se-tax-calculator.html">SE Tax Calculator</a>
+        <a href="/quarterly-tax-calculator.html">Quarterly Calculator</a>
+        <a href="/mileage-calculator.html">Mileage Calculator</a>
+        <a href="/freelancer-tax-calculator.html">Freelancer Calculator</a>
+        <a href="/1099-vs-w2-calculator.html">1099 vs W-2</a>
+      </div>
+      <div class="footer-col">
+        <h4>By Platform</h4>
+        <a href="/uber-taxes.html">Uber Driver Taxes</a>
+        <a href="/doordash-taxes.html">DoorDash Taxes</a>
+        <a href="/instacart-taxes.html">Instacart Taxes</a>
+        <a href="/upwork-fiverr-taxes.html">Upwork & Fiverr</a>
+        <a href="/amazon-flex-taxes.html">Amazon Flex</a>
+      </div>
+      <div class="footer-col">
+        <h4>Guides</h4>
+        <a href="/guides/gig-worker-taxes.html">Gig Worker Tax Guide</a>
+        <a href="/guides/self-employment-tax.html">What Is SE Tax?</a>
+        <a href="/deductions.html">Top 20 Deductions</a>
+        <a href="/quarterly-taxes.html">Quarterly Tax Guide</a>
+        <a href="/faq.html">FAQ</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 1099TaxCalcs.com — For informational purposes only. Not tax advice. Consult a CPA for your specific situation.</span>
+      <div style="display:flex;gap:16px;">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+        <a href="/about.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleNav() { document.getElementById('main-nav').classList.toggle('open'); }
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = btn.classList.contains('open');
+  document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+  if (!isOpen) { btn.classList.add('open'); answer.classList.add('open'); }
+}
+</script>
+</body>
+</html>
