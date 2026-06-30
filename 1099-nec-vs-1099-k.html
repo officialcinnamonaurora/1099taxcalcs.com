@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="1099-NEC vs 1099-K — what's the difference? Complete guide for 2026. Learn which form you'll receive, what to do with each one, and how to report them on your taxes.">
+<meta name="keywords" content="1099-NEC vs 1099-K, difference between 1099-NEC and 1099-K, what is 1099-K, what is 1099-NEC, 1099-K 2026 threshold, 1099 forms explained, gig worker tax forms">
+<meta name="author" content="1099TaxCalcs.com">
+<meta property="og:title" content="1099-NEC vs 1099-K — What's the Difference? (2026 Guide)">
+<meta property="og:description" content="Received a 1099-NEC or 1099-K and not sure what to do? This complete 2026 guide explains both forms, who sends them, and exactly how to report them.">
+<meta property="og:url" content="https://1099taxcalcs.com/guides/1099-nec-vs-1099-k.html">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://1099taxcalcs.com/guides/1099-nec-vs-1099-k.html">
+<title>1099-NEC vs 1099-K — What's the Difference? Complete 2026 Guide | 1099TaxCalcs.com</title>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+<style>
+  :root {
+    --navy:   #0D1F3C;
+    --navy2:  #162847;
+    --green:  #00A878;
+    --green2: #008F65;
+    --amber:  #F5A623;
+    --nec:    #7C3AED;
+    --nec2:   #6D28D9;
+    --k:      #0284C7;
+    --k2:     #0369A1;
+    --light:  #F4F7FC;
+    --gray1:  #F0F4FA;
+    --gray2:  #E2E8F4;
+    --gray3:  #94A3B8;
+    --text:   #1A2A44;
+    --text2:  #4A5A72;
+    --red:    #E53E3E;
+    --font:   'Segoe UI', system-ui, -apple-system, sans-serif;
+    --radius: 8px;
+    --shadow: 0 2px 12px rgba(13,31,60,0.10);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); color: var(--text); background: var(--light); font-size: 16px; line-height: 1.6; }
+  a { color: var(--green); text-decoration: none; }
+  a:hover { color: var(--green2); text-decoration: underline; }
+
+  /* HEADER */
+  header { background: var(--navy); padding: 0 24px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+  .header-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-icon { width: 38px; height: 38px; background: var(--green); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: white; letter-spacing: -1px; flex-shrink: 0; }
+  .logo-text { color: white; font-size: 17px; font-weight: 700; }
+  .logo-text span { color: var(--amber); }
+  nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+  nav a { color: rgba(255,255,255,0.85); font-size: 13px; padding: 6px 10px; border-radius: 6px; transition: all 0.15s; white-space: nowrap; }
+  nav a:hover { background: rgba(255,255,255,0.1); color: white; text-decoration: none; }
+  nav a.active { color: var(--amber); }
+  .nav-cta { background: var(--green) !important; color: white !important; font-weight: 600; padding: 7px 14px !important; }
+  .nav-cta:hover { background: var(--green2) !important; }
+  .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: white; margin: 5px 0; border-radius: 2px; }
+  @media(max-width: 768px) {
+    .hamburger { display: block; }
+    nav { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--navy2); padding: 12px 16px; flex-direction: column; align-items: flex-start; gap: 2px; }
+    nav.open { display: flex; }
+    nav a { width: 100%; padding: 10px 12px; }
+  }
+
+  /* HERO */
+  .page-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%); color: white; padding: 48px 24px 40px; }
+  .page-hero-inner { max-width: 1200px; margin: 0 auto; }
+  .breadcrumb { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 14px; }
+  .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--green); }
+  .breadcrumb span { margin: 0 6px; }
+  .guide-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(0,168,120,0.2); border: 1px solid rgba(0,168,120,0.4); color: #5EEAD4; font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+  .page-hero h1 { font-size: clamp(24px, 4vw, 40px); font-weight: 800; line-height: 1.15; margin-bottom: 14px; }
+  .page-hero h1 em { color: var(--amber); font-style: normal; }
+  .page-hero p { font-size: 16px; color: rgba(255,255,255,0.78); max-width: 640px; line-height: 1.75; margin-bottom: 20px; }
+  .guide-meta { display: flex; gap: 20px; flex-wrap: wrap; }
+  .meta-item { display: flex; align-items: center; gap: 6px; font-size: 13px; color: rgba(255,255,255,0.55); }
+  .meta-item strong { color: rgba(255,255,255,0.8); }
+
+  /* LAYOUT */
+  .main-wrap { max-width: 1200px; margin: 0 auto; padding: 32px 24px; display: grid; grid-template-columns: 1fr 300px; gap: 36px; align-items: start; }
+  @media(max-width: 960px) { .main-wrap { grid-template-columns: 1fr; } }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  .ad-slot { background: var(--gray1); border: 1px dashed var(--gray2); border-radius: var(--radius); text-align: center; color: var(--gray3); font-size: 11px; padding: 8px; }
+  .ad-728 { width: 100%; height: 90px; line-height: 74px; margin: 20px 0; }
+  .ad-300 { width: 100%; height: 250px; line-height: 234px; }
+
+  /* ARTICLE */
+  article { background: white; border-radius: 12px; padding: 36px 40px; box-shadow: var(--shadow); }
+  @media(max-width: 600px) { article { padding: 24px 18px; } }
+
+  /* TOC */
+  .toc { background: var(--gray1); border-radius: var(--radius); border: 1.5px solid var(--gray2); padding: 20px 24px; margin-bottom: 36px; }
+  .toc h3 { font-size: 13px; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px; }
+  .toc ol { list-style: none; counter-reset: toc; padding: 0; }
+  .toc li { counter-increment: toc; margin-bottom: 6px; display: flex; align-items: center; }
+  .toc li::before { content: counter(toc) '.'; color: var(--green); font-weight: 700; margin-right: 8px; font-size: 13px; min-width: 18px; }
+  .toc a { font-size: 14px; color: var(--text2); }
+  .toc a:hover { color: var(--green); }
+
+  /* SECTIONS */
+  .guide-section { margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid var(--gray2); }
+  .guide-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .section-num { display: inline-block; background: var(--green); color: white; font-size: 11px; font-weight: 700; padding: 2px 10px; border-radius: 20px; margin-bottom: 10px; letter-spacing: 0.04em; }
+  .guide-section h2 { font-size: 26px; font-weight: 800; color: var(--navy); margin-bottom: 14px; line-height: 1.2; }
+  .guide-section h3 { font-size: 19px; font-weight: 700; color: var(--navy); margin: 24px 0 10px; }
+  .guide-section h4 { font-size: 16px; font-weight: 700; color: var(--navy); margin: 18px 0 8px; }
+  .guide-section p { color: var(--text2); line-height: 1.85; margin-bottom: 14px; font-size: 15px; }
+  .guide-section ul, .guide-section ol { color: var(--text2); line-height: 1.85; margin: 10px 0 14px 24px; font-size: 15px; }
+  .guide-section li { margin-bottom: 7px; }
+  .guide-section strong { color: var(--navy); }
+
+  /* CALLOUTS */
+  .callout { border-radius: var(--radius); padding: 16px 18px; margin: 18px 0; font-size: 14px; line-height: 1.7; }
+  .callout.green { background: #E9F9F4; border-left: 4px solid var(--green); color: #065F46; }
+  .callout.amber { background: #FFF8EC; border-left: 4px solid var(--amber); color: #7A4F00; }
+  .callout.red   { background: #FFF0F0; border-left: 4px solid var(--red);   color: #7A1F1F; }
+  .callout.navy  { background: #EEF2FA; border-left: 4px solid var(--navy);  color: var(--text2); }
+  .callout strong { display: block; margin-bottom: 4px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; }
+
+  /* FORM COMPARISON CARDS */
+  .form-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  @media(max-width: 600px) { .form-cards { grid-template-columns: 1fr; } }
+  .form-card { border-radius: 12px; padding: 20px 22px; }
+  .form-card.nec { background: #F5F3FF; border: 2px solid rgba(124,58,237,0.25); }
+  .form-card.k   { background: #EFF6FF; border: 2px solid rgba(2,132,199,0.25); }
+  .form-card-badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+  .form-card.nec .form-card-badge { background: rgba(124,58,237,0.15); color: var(--nec); }
+  .form-card.k   .form-card-badge { background: rgba(2,132,199,0.15);   color: var(--k); }
+  .form-card h3 { font-size: 18px; font-weight: 800; margin-bottom: 4px; }
+  .form-card.nec h3 { color: var(--nec); }
+  .form-card.k   h3 { color: var(--k); }
+  .form-card .subtitle { font-size: 12px; color: var(--text2); margin-bottom: 14px; }
+  .form-card-row { display: flex; gap: 8px; margin-bottom: 8px; font-size: 13px; align-items: flex-start; }
+  .form-card-row .icon { flex-shrink: 0; font-size: 14px; }
+  .form-card-row .fc-label { font-weight: 600; color: var(--navy); min-width: 90px; flex-shrink: 0; }
+  .form-card-row .fc-val { color: var(--text2); }
+
+  /* BIG COMPARISON TABLE */
+  .big-compare { width: 100%; border-collapse: collapse; font-size: 14px; margin: 16px 0; }
+  .big-compare th { padding: 10px 14px; text-align: left; font-size: 12px; letter-spacing: 0.04em; font-weight: 700; }
+  .big-compare th:first-child { background: var(--navy); color: white; }
+  .big-compare th.h-nec { background: var(--nec); color: white; }
+  .big-compare th.h-k   { background: var(--k);   color: white; }
+  .big-compare td { padding: 10px 14px; border-bottom: 1px solid var(--gray2); color: var(--text2); vertical-align: top; }
+  .big-compare td:first-child { font-weight: 600; color: var(--navy); }
+  .big-compare td.td-nec { background: #FDFBFF; }
+  .big-compare td.td-k   { background: #F8FBFF; }
+  .big-compare tr:nth-child(even) td.td-nec { background: #F5F3FF; }
+  .big-compare tr:nth-child(even) td.td-k   { background: #EFF6FF; }
+
+  /* THRESHOLD VISUAL */
+  .threshold-visual { background: var(--gray1); border-radius: var(--radius); padding: 20px; margin: 18px 0; }
+  .threshold-visual h4 { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 14px; text-align: center; text-transform: uppercase; letter-spacing: 0.05em; }
+  .threshold-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .threshold-year { font-size: 12px; font-weight: 700; color: var(--navy); min-width: 36px; }
+  .threshold-bar-wrap { flex: 1; }
+  .threshold-bar { height: 24px; background: var(--gray2); border-radius: 4px; overflow: hidden; position: relative; }
+  .threshold-fill { height: 100%; border-radius: 4px; display: flex; align-items: center; padding-left: 8px; font-size: 11px; font-weight: 700; color: white; }
+  .threshold-amount { font-size: 12px; font-weight: 700; color: var(--navy); min-width: 60px; text-align: right; }
+
+  /* PLATFORM TABLE */
+  .platform-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 14px 0; }
+  .platform-table th { background: var(--navy); color: white; padding: 10px 14px; text-align: left; font-size: 12px; letter-spacing: 0.04em; }
+  .platform-table td { padding: 10px 14px; border-bottom: 1px solid var(--gray2); color: var(--text2); }
+  .platform-table td:first-child { font-weight: 600; color: var(--navy); }
+  .platform-table tr:nth-child(even) td { background: var(--gray1); }
+  .platform-table .badge { display: inline-block; font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 20px; }
+  .platform-table .badge.nec { background: rgba(124,58,237,0.12); color: var(--nec); }
+  .platform-table .badge.k   { background: rgba(2,132,199,0.12);   color: var(--k); }
+  .platform-table .badge.both { background: rgba(0,168,120,0.12); color: var(--green2); }
+
+  /* STEP BOXES */
+  .step-box { display: flex; gap: 16px; margin-bottom: 18px; align-items: flex-start; }
+  .step-num { width: 34px; height: 34px; background: var(--green); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; flex-shrink: 0; margin-top: 2px; }
+  .step-content h4 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .step-content p { font-size: 14px; color: var(--text2); margin: 0; line-height: 1.65; }
+
+  /* SCENARIO BOXES */
+  .scenario { background: var(--gray1); border: 1.5px solid var(--gray2); border-radius: var(--radius); padding: 18px 20px; margin: 16px 0; }
+  .scenario-title { font-size: 12px; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
+  .scenario p { font-size: 14px; color: var(--text2); margin-bottom: 8px; line-height: 1.7; }
+  .scenario p:last-child { margin-bottom: 0; }
+  .scenario strong { color: var(--navy); }
+
+  /* INLINE CTA */
+  .inline-cta { background: linear-gradient(135deg, var(--navy), var(--navy2)); border-radius: 12px; padding: 22px 26px; margin: 28px 0; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .inline-cta-text h3 { font-size: 16px; font-weight: 700; color: white; margin-bottom: 3px; }
+  .inline-cta-text p { font-size: 13px; color: rgba(255,255,255,0.7); margin: 0; }
+  .inline-cta-btn { display: inline-block; background: var(--green); color: white; padding: 10px 22px; border-radius: var(--radius); font-weight: 700; font-size: 14px; text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+  .inline-cta-btn:hover { background: var(--green2); text-decoration: none; color: white; }
+
+  /* FAQ */
+  .faq-list { margin-top: 10px; }
+  .faq-item { border-bottom: 1px solid var(--gray2); }
+  .faq-q { width: 100%; text-align: left; background: none; border: none; padding: 14px 0; font-size: 15px; font-weight: 600; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: var(--font); }
+  .faq-q:hover { color: var(--green); }
+  .faq-q .arrow { font-size: 18px; color: var(--green); transition: transform 0.2s; flex-shrink: 0; margin-left: 12px; }
+  .faq-q.open .arrow { transform: rotate(180deg); }
+  .faq-a { font-size: 14px; color: var(--text2); line-height: 1.8; padding-bottom: 14px; display: none; }
+  .faq-a.open { display: block; }
+
+  /* SIDEBAR */
+  .sidebar { display: flex; flex-direction: column; gap: 18px; }
+  .sidebar-card { background: white; border-radius: 12px; padding: 18px; box-shadow: var(--shadow); }
+  .sidebar-card h3 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 10px; border-bottom: 2px solid var(--green); padding-bottom: 7px; }
+  .cta-card { background: linear-gradient(135deg, var(--navy), var(--navy2)); color: white; border-radius: 12px; padding: 18px; }
+  .cta-card h3 { font-size: 14px; font-weight: 700; color: white; margin-bottom: 6px; border: none; padding: 0; }
+  .cta-card p { font-size: 12px; color: rgba(255,255,255,0.7); margin-bottom: 12px; line-height: 1.6; }
+  .cta-card a { display: block; background: var(--green); color: white; text-align: center; padding: 9px; border-radius: var(--radius); font-weight: 700; font-size: 13px; text-decoration: none; }
+  .cta-card a:hover { background: var(--green2); }
+  .quick-links a { display: flex; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--gray2); font-size: 13px; color: var(--text); text-decoration: none; }
+  .quick-links a:last-child { border-bottom: none; }
+  .quick-links a:hover { color: var(--green); }
+  .quick-links a::before { content: '→'; color: var(--green); font-weight: 700; }
+  .toc-sidebar { position: sticky; top: 84px; }
+  .toc-sidebar ol { list-style: none; counter-reset: stoc; padding: 0; }
+  .toc-sidebar li { counter-increment: stoc; margin-bottom: 5px; }
+  .toc-sidebar li::before { content: counter(stoc) '.'; color: var(--green); font-weight: 700; margin-right: 6px; }
+  .toc-sidebar a { color: var(--text2); font-size: 13px; }
+  .toc-sidebar a:hover { color: var(--green); }
+
+  /* FOOTER */
+  footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 40px 24px 24px; margin-top: 48px; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 32px; }
+  .footer-brand .logo-text { font-size: 18px; color: white; display: block; margin-bottom: 8px; }
+  .footer-brand p { font-size: 13px; line-height: 1.7; }
+  .footer-col h4 { color: white; font-size: 13px; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,0.55); margin-bottom: 7px; text-decoration: none; }
+  .footer-col a:hover { color: var(--green); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 12px; }
+  .footer-bottom a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .footer-bottom a:hover { color: var(--green); }
+  @media(max-width: 700px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1/-1; } }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "1099-NEC vs 1099-K — What's the Difference? Complete 2026 Guide",
+  "description": "Complete guide explaining the difference between 1099-NEC and 1099-K forms for gig workers and freelancers in 2026.",
+  "author": { "@type": "Organization", "name": "1099TaxCalcs.com" },
+  "publisher": { "@type": "Organization", "name": "1099TaxCalcs.com" },
+  "dateModified": "2026-06-01",
+  "mainEntityOfPage": "https://1099taxcalcs.com/guides/1099-nec-vs-1099-k.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between 1099-NEC and 1099-K?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A 1099-NEC (Nonemployee Compensation) reports money paid directly to you by a business for services — like base pay from Uber, DoorDash bonuses, or client payments. A 1099-K reports payments processed through a third-party payment network — like tips paid through the DoorDash app, or payments received through PayPal, Venmo, or Stripe. Both report taxable income, but from different sources." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the 1099-K threshold for 2026?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Starting in 2026, the 1099-K threshold is $600. Any payment platform (PayPal, Venmo, Stripe, Uber, DoorDash, etc.) must send you a 1099-K if you received $600 or more through their system during the year. This is down from $5,000 in 2024-2025 and the previous $20,000 threshold, meaning millions more people will receive a 1099-K for the first time in 2026." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I have to report income if I didn't receive a 1099 form?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. You must report all income over $400 in net self-employment earnings regardless of whether you receive a 1099 form. The $600 threshold is only when platforms are required to send the form — not when you're required to report the income. If you earned $500 driving for DoorDash and didn't get a 1099, you still owe self-employment tax on your net profit." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <div class="logo-icon">1099</div>
+      <div class="logo-text">Tax<span>Calcs</span>.com</div>
+    </a>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
+    <nav id="main-nav">
+      <a href="/calculators.html">Calculators</a>
+      <a href="/deductions.html">Deductions</a>
+      <a href="/quarterly-taxes.html">Quarterly Taxes</a>
+      <a href="/platforms.html">By Platform</a>
+      <a href="/guides.html" class="active">Guides</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/se-tax-calculator.html" class="nav-cta">Calculate My Taxes →</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/guides.html">Guides</a><span>›</span>1099-NEC vs 1099-K</div>
+    <div class="guide-badge">📚 Complete Guide — Updated for 2026</div>
+    <h1>1099-NEC vs 1099-K — <em>What's the Difference?</em></h1>
+    <p>Got a 1099-NEC, a 1099-K, or both — and not sure what to do? This complete 2026 guide explains exactly what each form is, who sends them, what changed with the new $600 threshold, and how to report each one on your tax return.</p>
+    <div class="guide-meta">
+      <div class="meta-item">📅 <strong>Updated:</strong> June 2026</div>
+      <div class="meta-item">⏱️ <strong>Read time:</strong> 9 minutes</div>
+      <div class="meta-item">🔑 <strong>Key change:</strong> 1099-K threshold dropped to $600 in 2026</div>
+    </div>
+  </div>
+</div>
+
+<!-- TOP AD -->
+<div class="container">
+  <div class="ad-slot ad-728"><!-- AdSense 728x90 -->Advertisement</div>
+</div>
+
+<!-- MAIN -->
+<div class="main-wrap">
+<main>
+<article>
+
+  <!-- TOC -->
+  <div class="toc">
+    <h3>📋 What's covered</h3>
+    <ol>
+      <li><a href="#quick-answer">Quick answer — key differences at a glance</a></li>
+      <li><a href="#what-is-nec">What is Form 1099-NEC?</a></li>
+      <li><a href="#what-is-k">What is Form 1099-K?</a></li>
+      <li><a href="#threshold-change">The $600 threshold change — what changed in 2026</a></li>
+      <li><a href="#which-platforms">Which form does each platform send?</a></li>
+      <li><a href="#both-forms">What if you receive both forms?</a></li>
+      <li><a href="#no-form">What if you didn't receive any 1099?</a></li>
+      <li><a href="#how-to-report">How to report each form on your taxes</a></li>
+      <li><a href="#common-mistakes">Common mistakes with 1099 forms</a></li>
+      <li><a href="#faq">Frequently asked questions</a></li>
+    </ol>
+  </div>
+
+  <!-- SECTION 1: QUICK ANSWER -->
+  <div class="guide-section" id="quick-answer">
+    <div class="section-num">Section 1</div>
+    <h2>Quick Answer — Key Differences at a Glance</h2>
+    <p>Before diving into the details, here's the core difference in plain English:</p>
+
+    <div class="form-cards">
+      <div class="form-card nec">
+        <div class="form-card-badge">Form 1099-NEC</div>
+        <h3>1099-NEC</h3>
+        <div class="subtitle">Nonemployee Compensation</div>
+        <div class="form-card-row"><span class="icon">💵</span><span class="fc-label">What it is:</span><span class="fc-val">Payment from a business directly to you for services</span></div>
+        <div class="form-card-row"><span class="icon">📨</span><span class="fc-label">Who sends it:</span><span class="fc-val">The platform or client who paid you</span></div>
+        <div class="form-card-row"><span class="icon">📏</span><span class="fc-label">Threshold:</span><span class="fc-val">$600 or more in the year</span></div>
+        <div class="form-card-row"><span class="icon">📋</span><span class="fc-label">Reports:</span><span class="fc-val">Base pay, bonuses, incentives, direct payments</span></div>
+        <div class="form-card-row"><span class="icon">📅</span><span class="fc-label">Due to you:</span><span class="fc-val">January 31</span></div>
+        <div class="form-card-row"><span class="icon">📊</span><span class="fc-label">Report on:</span><span class="fc-val">Schedule C (business income)</span></div>
+      </div>
+      <div class="form-card k">
+        <div class="form-card-badge">Form 1099-K</div>
+        <h3>1099-K</h3>
+        <div class="subtitle">Payment Card & Third-Party Network Transactions</div>
+        <div class="form-card-row"><span class="icon">💳</span><span class="fc-label">What it is:</span><span class="fc-val">Payments processed through a third-party payment network</span></div>
+        <div class="form-card-row"><span class="icon">📨</span><span class="fc-label">Who sends it:</span><span class="fc-val">The payment processor (PayPal, Stripe, Venmo, platform)</span></div>
+        <div class="form-card-row"><span class="icon">📏</span><span class="fc-label">Threshold 2026:</span><span class="fc-val">$600 or more (new in 2026)</span></div>
+        <div class="form-card-row"><span class="icon">📋</span><span class="fc-label">Reports:</span><span class="fc-val">Tips paid through app, card payments, digital payments</span></div>
+        <div class="form-card-row"><span class="icon">📅</span><span class="fc-label">Due to you:</span><span class="fc-val">January 31</span></div>
+        <div class="form-card-row"><span class="icon">📊</span><span class="fc-label">Report on:</span><span class="fc-val">Schedule C (same as 1099-NEC)</span></div>
+      </div>
+    </div>
+
+    <div class="callout green">
+      <strong>✅ Bottom line for gig workers</strong>
+      Both forms report taxable income. Both go on your Schedule C. You pay the same SE tax and income tax on both. The only difference is the source: 1099-NEC is for direct business payments; 1099-K is for payments processed through a third-party system. Report all of it — even if you got both for the same platform.
+    </div>
+  </div>
+
+  <!-- SECTION 2: WHAT IS NEC -->
+  <div class="guide-section" id="what-is-nec">
+    <div class="section-num">Section 2</div>
+    <h2>What Is Form 1099-NEC?</h2>
+    <p>The 1099-NEC (Nonemployee Compensation) is the primary tax form for independent contractors and gig workers. The IRS reinstated it in 2020 after previously using Box 7 of the 1099-MISC for this purpose.</p>
+    <p>A business or platform sends you a 1099-NEC when they paid you <strong>$600 or more</strong> during the year for services as a nonemployee. "Services" includes driving for Uber, delivering for DoorDash, completing projects on Upwork — essentially any work you did as an independent contractor rather than an employee.</p>
+
+    <h3>What's reported on a 1099-NEC</h3>
+    <ul>
+      <li><strong>Box 1 — Nonemployee Compensation:</strong> The total amount the business paid you. This is the number you report on Schedule C.</li>
+      <li><strong>Box 4 — Federal income tax withheld:</strong> Usually $0 for gig workers. If backup withholding applies (rare), it appears here.</li>
+      <li><strong>Boxes 5–7 — State information:</strong> State income reported and any state taxes withheld.</li>
+    </ul>
+
+    <h3>Who sends a 1099-NEC to gig workers</h3>
+    <ul>
+      <li>Uber and Lyft — for incentive and bonus payments</li>
+      <li>DoorDash — for base Dasher pay and promotion payments</li>
+      <li>Instacart — for shopper pay</li>
+      <li>Amazon Flex — for delivery payments</li>
+      <li>Upwork — for contract earnings reported to IRS</li>
+      <li>Direct clients — if they paid you $600+ as a contractor</li>
+    </ul>
+
+    <div class="callout navy">
+      <strong>💡 The $600 threshold is for the sender, not for you</strong>
+      The platform only has to send a 1099-NEC if they paid you $600 or more. But you must report ALL self-employment income over $400 net — even if you earned $350 from a client and got no form. The form is for the platform's reporting obligation; your reporting obligation has a different (lower) threshold.
+    </div>
+  </div>
+
+  <!-- SECTION 3: WHAT IS K -->
+  <div class="guide-section" id="what-is-k">
+    <div class="section-num">Section 3</div>
+    <h2>What Is Form 1099-K?</h2>
+    <p>The 1099-K (Payment Card and Third Party Network Transactions) reports payments made through third-party payment processors. It was originally designed for merchants accepting credit cards, but has expanded significantly to cover gig economy payments and digital wallets.</p>
+    <p>A 1099-K is sent by the <strong>payment processor</strong> — not necessarily the company you worked for. If DoorDash processes customer tips through their payment system and passes them to you, DoorDash (as the payment processor) may send you a 1099-K for those tips. Meanwhile, DoorDash may also send you a 1099-NEC for base pay.</p>
+
+    <h3>Who sends a 1099-K</h3>
+    <ul>
+      <li><strong>Uber/Lyft</strong> — for trip fare payments processed through the app</li>
+      <li><strong>DoorDash/Grubhub</strong> — for customer-paid tips and some earnings</li>
+      <li><strong>PayPal/Venmo</strong> — if you received $600+ for goods or services</li>
+      <li><strong>Stripe/Square</strong> — for any business payments processed</li>
+      <li><strong>Cash App (Business)</strong> — for business account transactions</li>
+      <li><strong>Etsy/eBay</strong> — for seller payments processed through their systems</li>
+    </ul>
+
+    <div class="callout amber">
+      <strong>⚠️ Personal transfers do NOT belong on 1099-K</strong>
+      If your friend sends you $700 via Venmo to split rent or reimburse you for dinner, that is NOT income and does not belong on your tax return. The IRS knows personal transfers happen — mark payments as "personal" in PayPal/Venmo to prevent them from appearing on a 1099-K. If you receive an incorrect 1099-K including personal payments, you can report only the business income portion on Schedule C and document the discrepancy.
+    </div>
+  </div>
+
+  <!-- SECTION 4: THRESHOLD CHANGE -->
+  <div class="guide-section" id="threshold-change">
+    <div class="section-num">Section 4</div>
+    <h2>The $600 Threshold Change — What Changed in 2026</h2>
+    <p>The 1099-K threshold has undergone the most significant change in its history, affecting an estimated 20 million additional Americans who never received this form before.</p>
+
+    <div class="threshold-visual">
+      <h4>📉 1099-K Reporting Threshold History</h4>
+      <div class="threshold-row">
+        <div class="threshold-year">2022</div>
+        <div class="threshold-bar-wrap">
+          <div class="threshold-bar"><div class="threshold-fill" style="width:100%;background:#6B7280;">$20,000 AND 200+ transactions</div></div>
+        </div>
+        <div class="threshold-amount">$20,000</div>
+      </div>
+      <div class="threshold-row">
+        <div class="threshold-year">2023</div>
+        <div class="threshold-bar-wrap">
+          <div class="threshold-bar"><div class="threshold-fill" style="width:100%;background:#6B7280;">$20,000 — IRS delayed implementation</div></div>
+        </div>
+        <div class="threshold-amount">$20,000</div>
+      </div>
+      <div class="threshold-row">
+        <div class="threshold-year">2024</div>
+        <div class="threshold-bar-wrap">
+          <div class="threshold-bar"><div class="threshold-fill" style="width:35%;background:#F59E0B;">$5,000 (transition year)</div></div>
+        </div>
+        <div class="threshold-amount">$5,000</div>
+      </div>
+      <div class="threshold-row">
+        <div class="threshold-year">2025</div>
+        <div class="threshold-bar-wrap">
+          <div class="threshold-bar"><div class="threshold-fill" style="width:35%;background:#F59E0B;">$5,000 (continued transition)</div></div>
+        </div>
+        <div class="threshold-amount">$5,000</div>
+      </div>
+      <div class="threshold-row">
+        <div class="threshold-year">2026</div>
+        <div class="threshold-bar-wrap">
+          <div class="threshold-bar"><div class="threshold-fill" style="width:3%;background:#10B981;">$600</div></div>
+        </div>
+        <div class="threshold-amount" style="color:var(--green2);font-weight:800;">$600 ← NOW</div>
+      </div>
+    </div>
+
+    <h3>What this means for gig workers in 2026</h3>
+    <p>The $600 threshold means <strong>many more gig workers will receive a 1099-K</strong> for the first time in early 2027 (covering 2026 earnings). If you earned $600 or more through PayPal, Venmo (business account), Stripe, or any gig platform's payment processing system, you will receive a 1099-K.</p>
+
+    <div class="callout red">
+      <strong>🚨 This is NOT new income — it's newly reported income</strong>
+      The $600 threshold change does not create a new tax. You owe the same SE tax and income tax on gig earnings regardless of the threshold. What changed is that platforms are now required to report it to the IRS. If you've been under-reporting gig income, the IRS will now have records it didn't before.
+    </div>
+
+    <h3>Common confusion: Am I taxed differently because of 1099-K?</h3>
+    <p>No. Whether your income appears on a 1099-NEC, a 1099-K, or no form at all, it's all reported the same way — on Schedule C — and taxed the same way. The form is just an information return that helps the IRS cross-check your reporting. It doesn't change your tax rate or liability.</p>
+  </div>
+
+  <!-- AD MID -->
+  <div class="ad-slot ad-728" style="margin-bottom:32px;"><!-- AdSense 728x90 -->Advertisement</div>
+
+  <!-- SECTION 5: WHICH PLATFORMS -->
+  <div class="guide-section" id="which-platforms">
+    <div class="section-num">Section 5</div>
+    <h2>Which Form Does Each Platform Send?</h2>
+    <p>The combination of forms you receive depends on the platform and how they process payments. Here's a quick reference guide:</p>
+
+    <table class="platform-table">
+      <thead><tr><th>Platform</th><th>1099-NEC</th><th>1099-K</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Uber / Lyft</td>
+          <td><span class="badge nec">Yes — bonuses & incentives</span></td>
+          <td><span class="badge k">Yes — trip fares & tips</span></td>
+          <td>You may receive both. Add them together — don't double-count.</td>
+        </tr>
+        <tr>
+          <td>DoorDash</td>
+          <td><span class="badge nec">Yes — base Dasher pay</span></td>
+          <td><span class="badge k">Yes — if tips ≥ $600</span></td>
+          <td>Base pay on 1099-NEC; customer tips may appear on 1099-K separately.</td>
+        </tr>
+        <tr>
+          <td>Instacart</td>
+          <td><span class="badge nec">Yes — shopper earnings</span></td>
+          <td><span class="badge k">Sometimes</span></td>
+          <td>Primarily 1099-NEC. Check Instacart's tax center in the app.</td>
+        </tr>
+        <tr>
+          <td>Amazon Flex</td>
+          <td><span class="badge nec">Yes — delivery pay</span></td>
+          <td>Rarely</td>
+          <td>Amazon Flex pays directly — primarily 1099-NEC.</td>
+        </tr>
+        <tr>
+          <td>Upwork</td>
+          <td><span class="badge nec">Yes — contract earnings</span></td>
+          <td><span class="badge k">Yes — payment processing</span></td>
+          <td>May receive both. Upwork's platform fee is deductible as a business expense.</td>
+        </tr>
+        <tr>
+          <td>Fiverr</td>
+          <td>Sometimes</td>
+          <td><span class="badge k">Yes — all seller payments</span></td>
+          <td>Fiverr processes all payments — primarily 1099-K.</td>
+        </tr>
+        <tr>
+          <td>PayPal / Venmo (business)</td>
+          <td>No</td>
+          <td><span class="badge k">Yes — if ≥ $600 in 2026</span></td>
+          <td>Only business transactions count. Personal transfers excluded.</td>
+        </tr>
+        <tr>
+          <td>Stripe</td>
+          <td>No</td>
+          <td><span class="badge k">Yes — if ≥ $600 in 2026</span></td>
+          <td>Used by many freelancers for client invoicing. 1099-K for all processed payments.</td>
+        </tr>
+        <tr>
+          <td>Direct clients (check/wire)</td>
+          <td><span class="badge nec">Yes — if they paid ≥ $600</span></td>
+          <td>No</td>
+          <td>Clients paying by check or wire send 1099-NEC. Credit card payments may generate 1099-K from the processor.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout green">
+      <strong>✅ Pro tip: Check your tax center</strong>
+      Every major platform has a "Tax Center" or "Tax Documents" section in your account. Log in to Uber, DoorDash, Upwork, etc. and download all your tax forms by February. Don't rely on paper copies arriving by mail — digital copies are faster and never get lost.
+    </div>
+  </div>
+
+  <!-- SECTION 6: BOTH FORMS -->
+  <div class="guide-section" id="both-forms">
+    <div class="section-num">Section 6</div>
+    <h2>What If You Receive Both Forms From the Same Platform?</h2>
+    <p>This is one of the most confusing situations gig workers face — receiving both a 1099-NEC and a 1099-K from the same company like Uber or DoorDash. Many people worry they're being taxed twice. They're not.</p>
+
+    <p>Here's what's happening: the platform is reporting different types of payments on different forms:</p>
+    <ul>
+      <li><strong>1099-NEC:</strong> Direct payments from the company to you — base pay, bonuses, incentives</li>
+      <li><strong>1099-K:</strong> Payments processed through their payment system — often customer tips, or trip fares processed as card transactions</li>
+    </ul>
+
+    <div class="scenario">
+      <div class="scenario-title">📋 Example: Uber Driver Receives Both Forms</div>
+      <p>Maria drives for Uber full-time and earns $52,000 for the year. She receives:</p>
+      <p><strong>1099-NEC:</strong> $4,200 — Quest bonuses, referral bonuses, and surge pay incentives paid directly by Uber</p>
+      <p><strong>1099-K:</strong> $47,800 — Trip fares and tips processed through the Uber payment system</p>
+      <p><strong>Total income: $52,000</strong> — She reports the <em>combined</em> $52,000 on Schedule C. She does NOT add $4,200 + $47,800 = $52,000 and then add the forms together — she just uses the total. The two forms together account for all her income, not twice her income.</p>
+    </div>
+
+    <h3>How to avoid double-counting</h3>
+    <div class="step-box">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Add up both form amounts</h4>
+        <p>Take all 1099-NEC Box 1 amounts and all 1099-K Box 1a amounts from the same platform. Add them together.</p>
+      </div>
+    </div>
+    <div class="step-box">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Compare to your actual earnings</h4>
+        <p>Check your platform's annual earnings summary or payment history. The total should match (or be close to) the sum of both forms. If they match — great. If not, flag the discrepancy.</p>
+      </div>
+    </div>
+    <div class="step-box">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Report the actual total on Schedule C</h4>
+        <p>Report your actual total income earned — not just the form amounts. If forms total $52,000 and your earnings summary also shows $52,000, report $52,000 on Schedule C.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 7: NO FORM -->
+  <div class="guide-section" id="no-form">
+    <div class="section-num">Section 7</div>
+    <h2>What If You Didn't Receive Any 1099 Form?</h2>
+    <p>Not receiving a 1099 form does not mean your income is tax-free. The form is the platform's reporting obligation — your reporting obligation is separate and has a lower threshold.</p>
+
+    <h3>You still must report income if:</h3>
+    <ul>
+      <li>Your net self-employment earnings exceeded <strong>$400</strong> (regardless of forms received)</li>
+      <li>A client paid you less than $600 (below their 1099-NEC threshold)</li>
+      <li>You were paid in cash with no records sent to the IRS</li>
+      <li>You earned income from a new platform that doesn't have your tax information yet</li>
+    </ul>
+
+    <h3>Reasons you might not receive a 1099</h3>
+    <ul>
+      <li>You earned less than $600 from that specific payer (below their reporting threshold)</li>
+      <li>The platform has an incorrect address or SSN on file — update it immediately</li>
+      <li>The form was sent to a wrong address — check your email and platform tax center first</li>
+      <li>The platform is late sending it (must be postmarked by January 31)</li>
+    </ul>
+
+    <div class="callout amber">
+      <strong>⚠️ Don't wait for a form that might not come</strong>
+      If January 31 passes and you haven't received your expected 1099 forms, contact the platform directly. For missing or incorrect 1099s from a business client, contact the payer. If you still can't get it by mid-February, contact the IRS (1-800-829-1040) and they can send a substitute form letter. Report your income using your own records — don't skip it just because the form didn't arrive.
+    </div>
+  </div>
+
+  <!-- SECTION 8: HOW TO REPORT -->
+  <div class="guide-section" id="how-to-report">
+    <div class="section-num">Section 8</div>
+    <h2>How to Report Each Form on Your Taxes</h2>
+    <p>Both forms ultimately end up in the same place: <strong>Schedule C (Profit or Loss from Business)</strong> attached to your Form 1040. Here's the step-by-step reporting process:</p>
+
+    <div class="step-box">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Gather all your 1099 forms</h4>
+        <p>Download every 1099-NEC and 1099-K from all platforms. Also gather your own earnings records — platform summaries, bank statements, mileage logs — to verify accuracy.</p>
+      </div>
+    </div>
+    <div class="step-box">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Complete Schedule C for your business</h4>
+        <p>Enter your total gross income on Line 1 of Schedule C. This is the combined total from all 1099-NEC Box 1 amounts, all 1099-K Box 1a amounts, and any cash income not reflected in forms. Then list all business deductions (Part II of Schedule C) — mileage, home office, equipment, etc.</p>
+      </div>
+    </div>
+    <div class="step-box">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Schedule SE calculates your SE tax</h4>
+        <p>The net profit from Schedule C flows to Schedule SE, which calculates your 15.3% SE tax on 92.35% of net profit. Tax software does this automatically.</p>
+      </div>
+    </div>
+    <div class="step-box">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>Both schedules attach to Form 1040</h4>
+        <p>Your completed Schedule C and Schedule SE attach to your Form 1040. The SE tax flows to Form 1040 Schedule 2, and the ½ SE tax deduction flows to Schedule 1. Tax software handles all of this automatically.</p>
+      </div>
+    </div>
+
+    <div class="callout green">
+      <strong>✅ Let tax software handle it</strong>
+      TurboTax Self-Employed, H&R Block Self-Employed, and TaxSlayer Self-Employed all handle 1099-NEC and 1099-K reporting correctly. Many platforms allow you to import your tax forms directly into TurboTax, saving manual entry time. The software asks the right questions and routes everything to the correct form.
+    </div>
+
+    <div class="inline-cta">
+      <div class="inline-cta-text">
+        <h3>🧮 Calculate taxes on your 1099 income</h3>
+        <p>Enter your total income from all forms — get your exact tax bill and quarterly payment amounts</p>
+      </div>
+      <a href="/se-tax-calculator.html" class="inline-cta-btn">SE Tax Calculator →</a>
+    </div>
+  </div>
+
+  <!-- SECTION 9: MISTAKES -->
+  <div class="guide-section" id="common-mistakes">
+    <div class="section-num">Section 9</div>
+    <h2>Common Mistakes With 1099 Forms</h2>
+
+    <h3>Mistake 1: Double-counting income from both forms</h3>
+    <p>Receiving a 1099-NEC for $4,000 and a 1099-K for $48,000 does not mean you earned $52,000 — unless those are truly separate income streams. If they're from the same platform reporting different aspects of the same earnings, check your annual summary to find your actual total.</p>
+
+    <h3>Mistake 2: Not reporting income below the form threshold</h3>
+    <p>If you earned $450 from a client and got no 1099-NEC (below $600), you still must report that $450 on Schedule C. The IRS requires reporting all self-employment income over $400 net — the $600 threshold is for the payer, not for you.</p>
+
+    <h3>Mistake 3: Including personal transfers in 1099-K income</h3>
+    <p>If your 1099-K from PayPal includes $3,000 in personal friend reimbursements alongside $8,000 in actual business income, you only report the $8,000 as income. Keep detailed records. If the form is incorrect, you can report the correct amount on Schedule C and attach an explanation — or request a corrected 1099-K from the payer.</p>
+
+    <h3>Mistake 4: Forgetting to deduct the platform's service fee</h3>
+    <p>Upwork, Fiverr, and other platforms report your <em>gross</em> contract value on your 1099 — before their fee. Their fee is a deductible business expense. If Upwork shows $100,000 on your 1099 but took a $10,000 fee, you deduct $10,000 as a business expense on Schedule C, leaving $90,000 net income. Don't pay taxes on money you never received.</p>
+
+    <h3>Mistake 5: Not reconciling form amounts with actual earnings</h3>
+    <p>Always compare your 1099 form amounts to your actual earnings records. Platforms make mistakes. If a form overstates your income, contact the platform for a corrected 1099 before filing — or file with your actual correct amount and document the discrepancy.</p>
+  </div>
+
+  <!-- SECTION 10: FAQ -->
+  <div class="guide-section" id="faq">
+    <div class="section-num">Section 10</div>
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">I received a 1099-K for selling personal items on eBay. Is that taxable? <span class="arrow">▾</span></button>
+        <div class="faq-a">Not necessarily. If you sold personal items for less than you originally paid for them (like old clothes or furniture), those are personal capital losses — not business income. You don't owe tax on them even if you received a 1099-K. If you sold items for more than you paid (a profit), that profit is taxable. Report the 1099-K amount on Schedule C, then offset it with your original purchase cost as Cost of Goods Sold. The IRS expects to see some response to every 1099-K — don't ignore it even if it's non-taxable.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What happens if I ignore a 1099 form? <span class="arrow">▾</span></button>
+        <div class="faq-a">The IRS automatically receives copies of all your 1099 forms. If you don't report income that matches a form, the IRS computer system will flag the discrepancy and send you a CP2000 notice — an automated audit. You'll owe the tax plus penalties (20–25% of the underpayment) and interest (8% annually). Ignoring 1099 income is one of the easiest ways to trigger an IRS audit and one of the most avoidable tax mistakes.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Do I get a 1099 for Venmo or Cash App payments? <span class="arrow">▾</span></button>
+        <div class="faq-a">Starting in 2026, yes — if you received $600 or more through Venmo, Cash App, or PayPal for <em>goods or services</em> (not personal transfers). These apps distinguish between personal and business transactions. Only business transactions count toward the $600 threshold. If you use a personal Venmo account and occasionally receive payment for services, mark those as "purchases" in the app to separate them — and keep your own records of which payments were for business services.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">My 1099-K from Uber includes tips from passengers. Do I owe SE tax on tips? <span class="arrow">▾</span></button>
+        <div class="faq-a">Yes — 100% of tips are taxable income, including tips received through any gig platform. Tips show up on your 1099-K (processed through the payment system) and are subject to both SE tax and income tax just like base earnings. There is no tip exclusion for gig workers — unlike some restaurant employees who have partial tip exclusions, independent contractors owe full taxes on all tips.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What's a 1099-MISC and how is it different? <span class="arrow">▾</span></button>
+        <div class="faq-a">The 1099-MISC (Miscellaneous Information) is a catch-all form for payments that don't fit other categories. Since 2020, when the 1099-NEC was reinstated for contractor payments, the 1099-MISC is now used primarily for rent payments (Box 1), royalties (Box 2), prizes and awards (Box 3), and medical/legal payments. Most gig workers won't receive a 1099-MISC — but if you won a platform contest, received a settlement, or earned royalties, you might. It's still reported on Schedule C if it's business-related income.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">I got a 1099-K but all the income was from personal sales, not a business. What do I do? <span class="arrow">▾</span></button>
+        <div class="faq-a">You still need to address it on your tax return — you can't ignore a 1099-K even if the income isn't taxable. Report the 1099-K amount on Schedule C as gross income, then deduct your original cost basis for the items sold. If you sold personal items at a loss (sold for less than you paid), you can show $0 profit or a documented loss. Alternatively, if using TurboTax, there's a specific section for reporting 1099-K income from personal item sales without it generating a business tax. Keep receipts for original purchases in case of questions.</div>
+      </div>
+    </div>
+  </div>
+
+</article>
+</main>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="cta-card">
+    <h3>🧮 Calculate Taxes on Your 1099 Income</h3>
+    <p>Enter your total 1099 income and deductions for your exact SE tax bill and quarterly payment amount.</p>
+    <a href="/se-tax-calculator.html">SE Tax Calculator →</a>
+  </div>
+
+  <div class="sidebar-card toc-sidebar">
+    <h3>In This Guide</h3>
+    <ol>
+      <li><a href="#quick-answer">Quick answer</a></li>
+      <li><a href="#what-is-nec">What is 1099-NEC?</a></li>
+      <li><a href="#what-is-k">What is 1099-K?</a></li>
+      <li><a href="#threshold-change">$600 threshold change</a></li>
+      <li><a href="#which-platforms">Which form by platform</a></li>
+      <li><a href="#both-forms">Receiving both forms</a></li>
+      <li><a href="#no-form">No 1099 received</a></li>
+      <li><a href="#how-to-report">How to report</a></li>
+      <li><a href="#common-mistakes">Common mistakes</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ol>
+  </div>
+
+  <div class="sidebar-card" style="padding:0;overflow:hidden;">
+    <div class="ad-slot ad-300"><!-- AdSense 300x250 -->Advertisement</div>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>Quick Form Reference</h3>
+    <div class="quick-links">
+      <a href="#what-is-nec"><span style="color:var(--nec);font-weight:700;">1099-NEC</span> — direct business pay</a>
+      <a href="#what-is-k"><span style="color:var(--k);font-weight:700;">1099-K</span> — payment processor</a>
+      <a href="#threshold-change">2026 threshold: <strong>$600</strong></a>
+      <a href="#how-to-report">Both go on <strong>Schedule C</strong></a>
+      <a href="#no-form">Report all income &gt; <strong>$400 net</strong></a>
+    </div>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>Related Guides</h3>
+    <div class="quick-links">
+      <a href="/guides/gig-worker-taxes.html">Gig Worker Tax Guide</a>
+      <a href="/guides/self-employment-tax.html">What Is SE Tax?</a>
+      <a href="/deductions.html">Top 20 Deductions</a>
+      <a href="/quarterly-taxes.html">Quarterly Tax Guide</a>
+      <a href="/faq.html">Full FAQ</a>
+    </div>
+  </div>
+
+  <div class="sidebar-card" style="padding:0;overflow:hidden;">
+    <div class="ad-slot ad-300"><!-- AdSense 300x250 -->Advertisement</div>
+  </div>
+</aside>
+</div>
+
+<!-- BOTTOM AD -->
+<div class="container">
+  <div class="ad-slot ad-728"><!-- AdSense 728x90 -->Advertisement</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-text">1099Tax<span style="color:var(--amber)">Calcs</span>.com</span>
+        <p>Free tax calculators built for America's 70 million gig workers and freelancers. Calculate what you owe, discover deductions, and never miss a quarterly deadline.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Calculators</h4>
+        <a href="/se-tax-calculator.html">SE Tax Calculator</a>
+        <a href="/quarterly-tax-calculator.html">Quarterly Calculator</a>
+        <a href="/mileage-calculator.html">Mileage Calculator</a>
+        <a href="/freelancer-tax-calculator.html">Freelancer Calculator</a>
+        <a href="/1099-vs-w2-calculator.html">1099 vs W-2</a>
+      </div>
+      <div class="footer-col">
+        <h4>By Platform</h4>
+        <a href="/uber-taxes.html">Uber Driver Taxes</a>
+        <a href="/doordash-taxes.html">DoorDash Taxes</a>
+        <a href="/instacart-taxes.html">Instacart Taxes</a>
+        <a href="/upwork-fiverr-taxes.html">Upwork & Fiverr</a>
+        <a href="/amazon-flex-taxes.html">Amazon Flex</a>
+      </div>
+      <div class="footer-col">
+        <h4>Guides</h4>
+        <a href="/guides/gig-worker-taxes.html">Gig Worker Tax Guide</a>
+        <a href="/guides/self-employment-tax.html">What Is SE Tax?</a>
+        <a href="/guides/1099-nec-vs-1099-k.html">1099-NEC vs 1099-K</a>
+        <a href="/deductions.html">Top 20 Deductions</a>
+        <a href="/faq.html">FAQ</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 1099TaxCalcs.com — For informational purposes only. Not tax advice. Consult a CPA for your specific situation.</span>
+      <div style="display:flex;gap:16px;">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+        <a href="/about.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleNav() { document.getElementById('main-nav').classList.toggle('open'); }
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = btn.classList.contains('open');
+  document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+  if (!isOpen) { btn.classList.add('open'); answer.classList.add('open'); }
+}
+</script>
+</body>
+</html>
