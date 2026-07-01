@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Do you owe taxes if you made less than $600 on a gig? Yes — the $600 threshold is for 1099 forms, not tax filing. The IRS requires reporting all self-employment income over $400.">
+<meta name="keywords" content="do I owe taxes under 600, less than 600 1099, no 1099 form taxes, gig worker under 600, self employment tax under 600, do I have to report income without 1099">
+<meta name="author" content="1099TaxCalcs.com">
+<meta property="og:title" content="Do I Owe Taxes If I Made Less Than $600 on a Gig? | 1099TaxCalcs.com">
+<meta property="og:description" content="Yes — the $600 rule is about 1099 forms, not taxes. The IRS requires you to report all self-employment income over $400, with or without a 1099.">
+<meta property="og:url" content="https://1099taxcalcs.com/guides/do-i-owe-taxes-under-600.html">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://1099taxcalcs.com/guides/do-i-owe-taxes-under-600.html">
+<title>Do I Owe Taxes If I Made Less Than $600 on a Gig? | 1099TaxCalcs.com</title>
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+<style>
+  :root {
+    --navy:   #0D1F3C;
+    --navy2:  #162847;
+    --green:  #00A878;
+    --green2: #008F65;
+    --amber:  #F5A623;
+    --light:  #F4F7FC;
+    --white:  #FFFFFF;
+    --gray1:  #F0F4FA;
+    --gray2:  #E2E8F4;
+    --gray3:  #94A3B8;
+    --text:   #1A2A44;
+    --text2:  #4A5A72;
+    --red:    #E53E3E;
+    --font:   'Segoe UI', system-ui, -apple-system, sans-serif;
+    --radius: 8px;
+    --shadow: 0 2px 12px rgba(13,31,60,0.10);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); color: var(--text); background: var(--light); font-size: 16px; line-height: 1.6; }
+  a { color: var(--green); text-decoration: none; }
+  a:hover { color: var(--green2); text-decoration: underline; }
+
+  /* HEADER */
+  header { background: var(--navy); padding: 0 24px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+  .header-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-icon { width: 38px; height: 38px; background: var(--green); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: white; letter-spacing: -1px; flex-shrink: 0; }
+  .logo-text { color: white; font-size: 17px; font-weight: 700; line-height: 1.2; }
+  .logo-text span { color: var(--amber); }
+  nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+  nav a { color: rgba(255,255,255,0.85); font-size: 13px; padding: 6px 10px; border-radius: 6px; transition: all 0.15s; white-space: nowrap; }
+  nav a:hover { background: rgba(255,255,255,0.1); color: white; text-decoration: none; }
+  .nav-cta { background: var(--green) !important; color: white !important; font-weight: 600; padding: 7px 14px !important; }
+  .nav-cta:hover { background: var(--green2) !important; }
+  .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: white; margin: 5px 0; border-radius: 2px; }
+  @media(max-width: 768px) {
+    .hamburger { display: block; }
+    nav { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--navy2); padding: 12px 16px; flex-direction: column; align-items: flex-start; gap: 2px; }
+    nav.open { display: flex; }
+    nav a { width: 100%; padding: 10px 12px; }
+  }
+
+  /* PAGE HERO */
+  .page-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%); color: white; padding: 40px 24px 36px; }
+  .page-hero-inner { max-width: 1200px; margin: 0 auto; }
+  .breadcrumb { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 12px; }
+  .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--green); }
+  .breadcrumb span { margin: 0 6px; }
+  .page-hero h1 { font-size: clamp(22px, 3.2vw, 36px); font-weight: 800; line-height: 1.2; margin-bottom: 10px; }
+  .page-hero h1 em { color: var(--amber); font-style: normal; }
+  .page-hero p { font-size: 15px; color: rgba(255,255,255,0.75); max-width: 640px; line-height: 1.7; }
+  .hero-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+  .pill { font-size: 11px; font-weight: 600; padding: 4px 12px; border-radius: 20px; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8); border: 1px solid rgba(255,255,255,0.15); }
+  .pill.green { background: rgba(0,168,120,0.2); color: #5EEAD4; border-color: rgba(0,168,120,0.3); }
+
+  /* BIG ANSWER BOX */
+  .big-answer { background: white; border-radius: 16px; box-shadow: 0 6px 32px rgba(13,31,60,0.14); overflow: hidden; margin-bottom: 24px; }
+  .big-answer-header { background: var(--green); color: white; padding: 20px 28px; display: flex; align-items: center; gap: 14px; }
+  .big-answer-header .icon { font-size: 36px; flex-shrink: 0; }
+  .big-answer-header h2 { font-size: 20px; font-weight: 800; margin-bottom: 3px; }
+  .big-answer-header p { font-size: 14px; color: rgba(255,255,255,0.85); }
+  .big-answer-body { padding: 24px 28px; }
+
+  /* THRESHOLD COMPARISON */
+  .threshold-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+  @media(max-width: 600px) { .threshold-grid { grid-template-columns: 1fr; } }
+  .threshold-box { border-radius: 12px; padding: 20px; text-align: center; }
+  .threshold-box.platform { background: #FFF8EC; border: 2px solid #F5D78E; }
+  .threshold-box.irs { background: #FFF0F0; border: 2px solid #FFBBBB; }
+  .threshold-box .th-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+  .threshold-box.platform .th-label { color: #92650A; }
+  .threshold-box.irs .th-label { color: #8B1A1A; }
+  .threshold-box .th-amount { font-size: 44px; font-weight: 900; margin-bottom: 4px; }
+  .threshold-box.platform .th-amount { color: #B7791F; }
+  .threshold-box.irs .th-amount { color: var(--red); }
+  .threshold-box .th-desc { font-size: 13px; line-height: 1.5; }
+  .threshold-box.platform .th-desc { color: #7A5200; }
+  .threshold-box.irs .th-desc { color: #7A1A1A; }
+
+  .vs-divider { display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 900; color: var(--gray3); }
+  @media(max-width: 600px) { .vs-divider { display: none; } }
+
+  /* LAYOUT */
+  .main-wrap { max-width: 1200px; margin: 0 auto; padding: 32px 24px; display: grid; grid-template-columns: 1fr 300px; gap: 32px; align-items: start; }
+  @media(max-width: 960px) { .main-wrap { grid-template-columns: 1fr; } }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* AD SLOTS */
+  .ad-slot { background: var(--gray1); border: 1px dashed var(--gray2); border-radius: var(--radius); text-align: center; color: var(--gray3); font-size: 11px; padding: 8px; }
+  .ad-728 { width: 100%; height: 90px; line-height: 74px; margin: 20px 0; }
+  .ad-300 { width: 100%; height: 250px; line-height: 234px; }
+
+  /* CONTENT SECTIONS */
+  .section { background: white; border-radius: 12px; padding: 28px; margin-bottom: 20px; box-shadow: var(--shadow); }
+  .section-label { font-size: 11px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+  .section h2 { font-size: 22px; font-weight: 800; color: var(--navy); margin-bottom: 12px; }
+  .section h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin: 22px 0 9px; }
+  .section p { color: var(--text2); line-height: 1.8; margin-bottom: 14px; }
+  .section ul, .section ol { color: var(--text2); line-height: 1.8; margin: 10px 0 14px 20px; }
+  .section li { margin-bottom: 8px; }
+  .section strong { color: var(--navy); }
+
+  /* SCENARIO TABLE */
+  .scenario-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 16px 0; }
+  .scenario-table th { background: var(--navy); color: white; padding: 11px 14px; text-align: left; font-size: 12px; letter-spacing: 0.04em; }
+  .scenario-table td { padding: 11px 14px; border-bottom: 1px solid var(--gray2); color: var(--text2); vertical-align: top; }
+  .scenario-table tr:nth-child(even) td { background: var(--gray1); }
+  .scenario-table tr:hover td { background: #E9F9F4; }
+  .scenario-table strong { color: var(--navy); }
+  .badge-yes { display: inline-block; background: #FFEAEA; color: #8B1A1A; font-size: 11px; font-weight: 700; padding: 2px 10px; border-radius: 20px; }
+  .badge-no { display: inline-block; background: #E6F9F4; color: #006B4B; font-size: 11px; font-weight: 700; padding: 2px 10px; border-radius: 20px; }
+  .badge-maybe { display: inline-block; background: #FFF8EC; color: #7A5200; font-size: 11px; font-weight: 700; padding: 2px 10px; border-radius: 20px; }
+
+  /* CALLOUT BOXES */
+  .warn-box { background: #FFF8EC; border: 1.5px solid #F5D78E; border-radius: var(--radius); padding: 16px 18px; font-size: 14px; color: #7A4F00; line-height: 1.7; margin: 16px 0; }
+  .warn-box strong { color: #5A3800; }
+  .green-box { background: #E9F9F4; border: 1.5px solid rgba(0,168,120,0.3); border-radius: var(--radius); padding: 16px 18px; font-size: 14px; color: #005438; line-height: 1.7; margin: 16px 0; }
+  .green-box strong { color: var(--green2); }
+  .red-box { background: #FFF0F0; border: 1.5px solid #FFBBBB; border-radius: var(--radius); padding: 16px 18px; font-size: 14px; color: #7A1A1A; line-height: 1.7; margin: 16px 0; }
+  .red-box strong { color: #8B1A1A; }
+  .navy-box { background: #EEF2FA; border: 1.5px solid #C7D4EE; border-radius: var(--radius); padding: 16px 18px; font-size: 14px; color: var(--text2); line-height: 1.7; margin: 16px 0; }
+
+  /* KEY NUMBER HERO */
+  .key-num-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 20px 0; }
+  @media(max-width: 600px) { .key-num-row { grid-template-columns: 1fr 1fr; } }
+  .kn { background: var(--gray1); border-radius: var(--radius); border: 1.5px solid var(--gray2); padding: 16px; text-align: center; }
+  .kn-val { font-size: 30px; font-weight: 900; color: var(--navy); }
+  .kn-val.red { color: var(--red); }
+  .kn-val.green { color: var(--green2); }
+  .kn-val.amber { color: #B7791F; }
+  .kn-lbl { font-size: 12px; color: var(--text2); margin-top: 4px; line-height: 1.4; }
+
+  /* PLATFORM LIST */
+  .platform-list { margin: 16px 0; }
+  .platform-row { display: flex; align-items: center; gap: 14px; padding: 12px 14px; background: var(--gray1); border-radius: var(--radius); border: 1px solid var(--gray2); margin-bottom: 8px; }
+  .platform-row:hover { border-color: var(--green); background: white; }
+  .platform-icon { width: 38px; height: 38px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+  .platform-info h4 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 2px; }
+  .platform-info p { font-size: 12px; color: var(--text2); margin: 0; line-height: 1.4; }
+  .platform-threshold { margin-left: auto; font-size: 12px; font-weight: 700; color: var(--text2); white-space: nowrap; }
+
+  /* STEPS */
+  .step { display: flex; gap: 14px; margin-bottom: 20px; align-items: flex-start; }
+  .step-num { width: 32px; height: 32px; background: var(--green); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; flex-shrink: 0; margin-top: 2px; }
+  .step-content h4 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .step-content p { font-size: 14px; color: var(--text2); margin: 0; line-height: 1.65; }
+
+  /* INLINE CALCULATOR */
+  .mini-calc { background: var(--navy); border-radius: 12px; padding: 22px 24px; margin: 20px 0; }
+  .mini-calc h3 { color: white; font-size: 16px; font-weight: 700; margin-bottom: 14px; }
+  .mini-calc-row { display: flex; gap: 10px; align-items: flex-end; flex-wrap: wrap; }
+  .mini-calc label { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 5px; }
+  .mini-calc input { padding: 9px 12px 9px 26px; border: 1.5px solid rgba(255,255,255,0.2); border-radius: var(--radius); font-size: 15px; color: white; background: rgba(255,255,255,0.1); font-family: var(--font); width: 160px; }
+  .mini-calc input::placeholder { color: rgba(255,255,255,0.4); }
+  .mini-calc input:focus { outline: none; border-color: var(--green); background: rgba(255,255,255,0.15); }
+  .mini-calc-dollar { position: relative; }
+  .mini-calc-dollar::before { content: '$'; position: absolute; left: 10px; bottom: 10px; color: rgba(255,255,255,0.5); font-size: 14px; }
+  .mini-calc-btn { padding: 10px 20px; background: var(--green); color: white; font-size: 14px; font-weight: 700; border: none; border-radius: var(--radius); cursor: pointer; font-family: var(--font); white-space: nowrap; }
+  .mini-calc-btn:hover { background: var(--green2); }
+  .mini-calc-result { margin-top: 14px; padding: 14px; background: rgba(255,255,255,0.08); border-radius: var(--radius); display: none; }
+  .mini-calc-result.show { display: block; }
+  .mini-calc-result .mcr-label { font-size: 11px; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .mini-calc-result .mcr-value { font-size: 22px; font-weight: 800; color: var(--amber); }
+  .mini-calc-result .mcr-note { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 6px; line-height: 1.5; }
+
+  /* FAQ */
+  .faq-list { margin-top: 12px; }
+  .faq-item { border-bottom: 1px solid var(--gray2); }
+  .faq-q { width: 100%; text-align: left; background: none; border: none; padding: 14px 0; font-size: 15px; font-weight: 600; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: var(--font); }
+  .faq-q:hover { color: var(--green); }
+  .faq-q .arrow { font-size: 18px; color: var(--green); transition: transform 0.2s; flex-shrink: 0; margin-left: 12px; }
+  .faq-q.open .arrow { transform: rotate(180deg); }
+  .faq-a { font-size: 14px; color: var(--text2); line-height: 1.8; padding-bottom: 16px; display: none; }
+  .faq-a.open { display: block; }
+
+  /* RELATED */
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; margin-top: 14px; }
+  .related-card { background: var(--gray1); border: 1.5px solid var(--gray2); border-radius: var(--radius); padding: 14px 16px; text-decoration: none; transition: all 0.15s; display: block; }
+  .related-card:hover { border-color: var(--green); background: white; text-decoration: none; }
+  .related-card h4 { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+  .related-card p { font-size: 12px; color: var(--text2); margin: 0; }
+
+  /* SIDEBAR */
+  .sidebar { display: flex; flex-direction: column; gap: 18px; }
+  .sidebar-card { background: white; border-radius: 12px; padding: 18px; box-shadow: var(--shadow); }
+  .sidebar-card h3 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 10px; border-bottom: 2px solid var(--green); padding-bottom: 7px; }
+  .cta-card { background: linear-gradient(135deg, var(--navy), var(--navy2)); color: white; border-radius: 12px; padding: 18px; }
+  .cta-card h3 { font-size: 14px; font-weight: 700; color: white; margin-bottom: 6px; border: none; padding: 0; }
+  .cta-card p { font-size: 12px; color: rgba(255,255,255,0.7); margin-bottom: 12px; line-height: 1.6; }
+  .cta-card a { display: block; background: var(--green); color: white; text-align: center; padding: 9px; border-radius: var(--radius); font-weight: 700; font-size: 13px; text-decoration: none; }
+  .cta-card a:hover { background: var(--green2); }
+  .quick-links a { display: flex; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--gray2); font-size: 13px; color: var(--text); text-decoration: none; }
+  .quick-links a:last-child { border-bottom: none; }
+  .quick-links a:hover { color: var(--green); }
+  .quick-links a::before { content: '→'; color: var(--green); font-weight: 700; }
+
+  /* FOOTER */
+  footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 40px 24px 24px; margin-top: 48px; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 32px; }
+  .footer-brand .logo-text { font-size: 18px; color: white; display: block; margin-bottom: 8px; }
+  .footer-brand p { font-size: 13px; line-height: 1.7; }
+  .footer-col h4 { color: white; font-size: 13px; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,0.55); margin-bottom: 7px; text-decoration: none; }
+  .footer-col a:hover { color: var(--green); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 12px; }
+  .footer-bottom a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .footer-bottom a:hover { color: var(--green); }
+  @media(max-width: 700px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } }
+</style>
+
+<!-- Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I owe taxes if I made less than $600 on a gig?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The $600 threshold only determines when a platform must send you a 1099 form. The IRS requires you to report and pay taxes on all self-employment net income over $400, regardless of whether you received any 1099 form."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum self-employment income I have to report?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You must file a tax return and pay self-employment tax if your net self-employment income (income minus expenses) is $400 or more in a year. This applies even if you received no 1099 form."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will the IRS know if I don't report income under $600?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The IRS may still find out. Platforms report payment totals to the IRS even when they don't send you a 1099, and cash payments can be discovered through bank records during an audit. Not reporting taxable income is considered tax evasion regardless of the amount."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Do I Owe Taxes If I Made Less Than $600 on a Gig?",
+  "description": "The $600 rule is about 1099 forms, not taxes. The IRS requires reporting all self-employment income over $400.",
+  "publisher": { "@type": "Organization", "name": "1099TaxCalcs.com", "url": "https://1099taxcalcs.com" },
+  "mainEntityOfPage": "https://1099taxcalcs.com/guides/do-i-owe-taxes-under-600.html"
+}
+</script>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <div class="logo-icon">1099</div>
+      <div class="logo-text">Tax<span>Calcs</span>.com</div>
+    </a>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav">
+      <a href="/calculators.html">Calculators</a>
+      <a href="/deductions.html">Deductions</a>
+      <a href="/guides/quarterly-estimated-taxes.html">Quarterly Taxes</a>
+      <a href="/platforms.html">By Platform</a>
+      <a href="/guides.html">Guides</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/se-tax-calculator.html" class="nav-cta">Calculate Now →</a>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span>
+      <a href="/guides.html">Guides</a><span>›</span>
+      Do I Owe Taxes Under $600?
+    </div>
+    <h1>Do I Owe Taxes If I Made <em>Less Than $600</em> on a Gig?</h1>
+    <p>Short answer: yes. The $600 rule is about 1099 forms — not taxes. Here's exactly what you owe, when you owe it, and what happens if you don't report it.</p>
+    <div class="hero-pills">
+      <span class="pill green">✓ IRS rules explained</span>
+      <span class="pill">$400 filing threshold</span>
+      <span class="pill">All gig platforms</span>
+      <span class="pill">Updated 2026</span>
+    </div>
+  </div>
+</div>
+
+<!-- TOP AD -->
+<div class="container">
+  <div class="ad-slot ad-728">
+    <!-- Google AdSense 728x90 -->
+    Advertisement
+  </div>
+</div>
+
+<!-- MAIN CONTENT + SIDEBAR -->
+<div class="main-wrap">
+  <main>
+
+    <!-- BIG ANSWER -->
+    <div class="big-answer">
+      <div class="big-answer-header">
+        <div class="icon">⚠️</div>
+        <div>
+          <h2>Yes — You Still Owe Taxes</h2>
+          <p>The $600 threshold is for 1099 forms only. The IRS has a completely different — and lower — threshold for when you must pay tax.</p>
+        </div>
+      </div>
+      <div class="big-answer-body">
+        <p style="color:var(--text2);line-height:1.8;margin-bottom:18px;">This is one of the most common and costly misconceptions in gig work. Millions of people believe that if a platform doesn't send them a 1099 form, they don't owe taxes. <strong>That is incorrect.</strong> The 1099 form is just a paperwork requirement — the tax obligation exists regardless of whether you receive one.</p>
+
+        <div class="threshold-grid">
+          <div class="threshold-box platform">
+            <div class="th-label">📋 Platform Sends You a 1099-NEC When You Earn</div>
+            <div class="th-amount">$600+</div>
+            <div class="th-desc">This is just a paperwork threshold. It determines when DoorDash, Uber, or your client must mail you a form. It has nothing to do with your tax obligation.</div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900;color:var(--gray3);">VS</div>
+          <div class="threshold-box irs">
+            <div class="th-label">🏛️ IRS Requires You to Pay Tax When Net Earnings Exceed</div>
+            <div class="th-amount">$400</div>
+            <div class="th-desc">This is the actual tax filing threshold. Net self-employment income over $400 means you must file Schedule SE and pay self-employment tax — no matter what.</div>
+          </div>
+        </div>
+
+        <div class="red-box">
+          ⚠️ <strong>The $400 IRS threshold applies to net income</strong> — that's after your business expenses. If you earned $800 delivering for DoorDash but spent $450 on gas and supplies, your net is $350 — below the threshold. But if you earned $500 with minimal expenses, you likely owe tax.
+        </div>
+      </div>
+    </div>
+
+    <!-- THE RULE EXPLAINED -->
+    <div class="section">
+      <div class="section-label">The IRS Rule</div>
+      <h2>The $600 vs. $400 Rule — Explained Simply</h2>
+
+      <p>There are two completely separate rules that gig workers confuse constantly. Here's how they actually work:</p>
+
+      <div class="key-num-row">
+        <div class="kn">
+          <div class="kn-val amber">$600</div>
+          <div class="kn-lbl">When a platform must send you a 1099-NEC form</div>
+        </div>
+        <div class="kn">
+          <div class="kn-val red">$400</div>
+          <div class="kn-lbl">When the IRS requires you to file and pay SE tax</div>
+        </div>
+        <div class="kn">
+          <div class="kn-val green">$0</div>
+          <div class="kn-lbl">Minimum income you should report (technically all of it)</div>
+        </div>
+      </div>
+
+      <h3>Rule #1 — The 1099-NEC Form Threshold ($600)</h3>
+      <p>When you earn $600 or more from a single client or platform in a calendar year, that payer is <strong>required by law to send you (and the IRS) a Form 1099-NEC</strong> by January 31 of the following year. This is purely an information-reporting requirement placed on the payer. It's there so the IRS can track payments.</p>
+      <p>If you earn $599 from a client, they are not required to send you a 1099. But that doesn't mean you don't owe taxes on that $599.</p>
+
+      <h3>Rule #2 — The Self-Employment Tax Filing Threshold ($400)</h3>
+      <p>Separately and independently, the IRS requires <em>you</em> to report and pay self-employment tax if your <strong>net self-employment income is $400 or more</strong> for the year. "Net" means after you subtract your business expenses from your gross income.</p>
+      <p>This rule applies:</p>
+      <ul>
+        <li>Whether or not you received a 1099 form</li>
+        <li>Whether you earned the money from one source or twenty</li>
+        <li>Whether you got paid in cash, Venmo, PayPal, or bank transfer</li>
+        <li>Whether it was a one-time gig or ongoing work</li>
+        <li>Even if it was a side hustle alongside a W-2 job</li>
+      </ul>
+
+      <div class="warn-box">
+        💡 <strong>The rules work independently.</strong> A platform may not send you a 1099 (because you earned under $600 from them) while you still owe taxes on that income. The IRS expects you to know this and comply — ignorance of the rule is not a defense in an audit.
+      </div>
+    </div>
+
+    <!-- MINI CALCULATOR -->
+    <div class="mini-calc">
+      <h3>🧮 Quick Check — Do You Owe Taxes on This Income?</h3>
+      <div class="mini-calc-row">
+        <div>
+          <label>Gross gig income earned</label>
+          <div class="mini-calc-dollar">
+            <input type="number" id="mc-income" placeholder="500" min="0">
+          </div>
+        </div>
+        <div>
+          <label>Business expenses</label>
+          <div class="mini-calc-dollar">
+            <input type="number" id="mc-expenses" placeholder="50" min="0">
+          </div>
+        </div>
+        <button class="mini-calc-btn" onclick="miniCalc()">Check →</button>
+      </div>
+      <div class="mini-calc-result" id="mc-result">
+        <div class="mcr-label">Your net self-employment income</div>
+        <div class="mcr-value" id="mc-net"></div>
+        <div class="mcr-note" id="mc-verdict"></div>
+      </div>
+    </div>
+
+    <!-- MIDDLE AD -->
+    <div class="ad-slot ad-728" style="margin: 0 0 20px;">
+      <!-- Google AdSense 728x90 -->
+      Advertisement
+    </div>
+
+    <!-- SCENARIO TABLE -->
+    <div class="section">
+      <div class="section-label">Real Scenarios</div>
+      <h2>Do You Owe Taxes? 8 Real Gig Scenarios</h2>
+      <p>Here's exactly how the rules apply in common gig situations:</p>
+
+      <table class="scenario-table">
+        <thead>
+          <tr>
+            <th>Scenario</th>
+            <th>Get a 1099?</th>
+            <th>Owe Taxes?</th>
+            <th>Why</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Earned $800 on DoorDash, $350 in expenses</strong></td>
+            <td><span class="badge-yes">Yes — 1099-NEC</span></td>
+            <td><span class="badge-yes">Yes</span></td>
+            <td>Net = $450, over $400 threshold</td>
+          </tr>
+          <tr>
+            <td><strong>Earned $500 on Uber, $60 in expenses</strong></td>
+            <td><span class="badge-no">No 1099 (under $600)</span></td>
+            <td><span class="badge-yes">Yes</span></td>
+            <td>Net = $440, over $400. No 1099 ≠ no tax</td>
+          </tr>
+          <tr>
+            <td><strong>Earned $400 on Fiverr, $0 expenses</strong></td>
+            <td><span class="badge-no">No 1099 (under $600)</span></td>
+            <td><span class="badge-maybe">Borderline</span></td>
+            <td>Exactly $400 net — technically at the threshold. Best to report it</td>
+          </tr>
+          <tr>
+            <td><strong>Earned $300 mowing lawns for cash</strong></td>
+            <td><span class="badge-no">No 1099</span></td>
+            <td><span class="badge-no">No</span></td>
+            <td>Net under $400. Still good practice to report</td>
+          </tr>
+          <tr>
+            <td><strong>Earned $200 on TaskRabbit + $250 on Instacart</strong></td>
+            <td><span class="badge-no">No 1099 from either</span></td>
+            <td><span class="badge-yes">Yes</span></td>
+            <td>Combined net likely over $400. All sources add together</td>
+          </tr>
+          <tr>
+            <td><strong>Earned $1,200 from a single freelance client</strong></td>
+            <td><span class="badge-yes">Yes — 1099-NEC</span></td>
+            <td><span class="badge-yes">Yes</span></td>
+            <td>Over both thresholds — owe tax and get a form</td>
+          </tr>
+          <tr>
+            <td><strong>Earned $550 on Etsy, $200 in supplies</strong></td>
+            <td><span class="badge-maybe">Maybe (1099-K rules)</span></td>
+            <td><span class="badge-no">No</span></td>
+            <td>Net = $350, under $400. No SE tax owed (but income should still be reported)</td>
+          </tr>
+          <tr>
+            <td><strong>Earned $400 on Amazon Flex + $400 W-2 job</strong></td>
+            <td><span class="badge-no">No 1099 (under $600)</span></td>
+            <td><span class="badge-yes">Yes</span></td>
+            <td>W-2 and 1099 are reported separately. $400 net gig income = SE tax owed</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="navy-box">
+        📌 <strong>Important:</strong> All sources of self-employment income are added together to reach the $400 threshold. If you earned $200 from Uber, $150 from Fiverr, and $100 mowing lawns — that's $450 combined and you likely owe SE tax, even though no single source exceeded $400.
+      </div>
+    </div>
+
+    <!-- WHAT FORMS YOU FILE -->
+    <div class="section">
+      <div class="section-label">Tax Filing</div>
+      <h2>What Forms Do You File If You Made Under $600?</h2>
+
+      <p>If you earned over $400 net but never received a 1099, you still file the same forms as someone who did receive one. The difference is you enter the numbers yourself rather than copying from a form. Here's what you need:</p>
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>Form 1040 — Your Main Tax Return</h4>
+          <p>Everyone files this. Your self-employment income (with or without a 1099) flows onto Schedule 1 of Form 1040. You report your gross income and expenses here.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>Schedule C — Profit or Loss from Business</h4>
+          <p>You list your gross gig income on Schedule C, then subtract your business expenses (mileage, phone, supplies, etc.) to arrive at net profit. This number flows to your 1040. Even with no 1099, you self-report your income here.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>Schedule SE — Self-Employment Tax</h4>
+          <p>If your Schedule C net profit is $400+, you fill out Schedule SE. This calculates your 15.3% self-employment tax (Social Security + Medicare). You pay this on top of regular income tax.</p>
+        </div>
+      </div>
+
+      <div class="green-box">
+        ✅ <strong>Good news:</strong> Most tax software (TurboTax, H&R Block, TaxSlayer) will walk you through this automatically. Just enter your income when prompted, even without a 1099. The software fills out Schedule C and Schedule SE for you.
+      </div>
+
+      <h3>How to Document Income With No 1099</h3>
+      <p>Without a 1099, you're self-reporting. The IRS accepts this — they just expect you to keep records in case of an audit. Keep:</p>
+      <ul>
+        <li>Bank statements showing deposits from gig platforms or clients</li>
+        <li>Payment receipts or earnings statements from your app (Uber, DoorDash, etc. all let you download these)</li>
+        <li>PayPal, Venmo, or Cash App transaction history if paid that way</li>
+        <li>Invoices you sent to clients</li>
+        <li>A simple spreadsheet log of income by date and source</li>
+      </ul>
+      <p>You don't submit these with your return — just keep them for 3 years in case the IRS asks.</p>
+    </div>
+
+    <!-- PLATFORM 1099 THRESHOLDS -->
+    <div class="section">
+      <div class="section-label">By Platform</div>
+      <h2>1099 Thresholds by Gig Platform (2026)</h2>
+      <p>Different platforms issue different types of 1099 forms with different thresholds. Here's a quick reference — but remember, all of this is about form delivery, not your tax obligation.</p>
+
+      <div class="platform-list">
+        <div class="platform-row">
+          <div class="platform-icon" style="background:#000;color:white;">🚗</div>
+          <div class="platform-info">
+            <h4>Uber</h4>
+            <p>Issues 1099-K (for payments) and 1099-NEC (for incentives/referrals) based on thresholds</p>
+          </div>
+          <div class="platform-threshold">1099-K: $600+<br>1099-NEC: $600+</div>
+        </div>
+        <div class="platform-row">
+          <div class="platform-icon" style="background:#FF3008;color:white;">🍕</div>
+          <div class="platform-info">
+            <h4>DoorDash</h4>
+            <p>Issues 1099-NEC for all earnings. Uses Stripe to deliver tax forms electronically.</p>
+          </div>
+          <div class="platform-threshold">1099-NEC: $600+</div>
+        </div>
+        <div class="platform-row">
+          <div class="platform-icon" style="background:#0AAD0A;color:white;">🛒</div>
+          <div class="platform-info">
+            <h4>Instacart</h4>
+            <p>Issues 1099-NEC for shoppers who earn $600 or more in a year.</p>
+          </div>
+          <div class="platform-threshold">1099-NEC: $600+</div>
+        </div>
+        <div class="platform-row">
+          <div class="platform-icon" style="background:#FF9900;color:white;">📦</div>
+          <div class="platform-info">
+            <h4>Amazon Flex</h4>
+            <p>Issues 1099-NEC for drivers. Delivery partners earning under $600 receive no form.</p>
+          </div>
+          <div class="platform-threshold">1099-NEC: $600+</div>
+        </div>
+        <div class="platform-row">
+          <div class="platform-icon" style="background:#6FDA44;color:white;">💼</div>
+          <div class="platform-info">
+            <h4>Upwork</h4>
+            <p>Issues 1099-K for US freelancers paid through Upwork's payment processor.</p>
+          </div>
+          <div class="platform-threshold">1099-K: $600+</div>
+        </div>
+        <div class="platform-row">
+          <div class="platform-icon" style="background:#1DBF73;color:white;">🎨</div>
+          <div class="platform-info">
+            <h4>Fiverr</h4>
+            <p>Issues 1099-K for sellers who receive $600 or more through the platform in 2026.</p>
+          </div>
+          <div class="platform-threshold">1099-K: $600+</div>
+        </div>
+        <div class="platform-row">
+          <div class="platform-icon" style="background:#00B2FF;color:white;">💳</div>
+          <div class="platform-info">
+            <h4>PayPal / Venmo (Business)</h4>
+            <p>Issues 1099-K for business payments received. Starting 2026, the threshold is $600.</p>
+          </div>
+          <div class="platform-threshold">1099-K: $600+</div>
+        </div>
+        <div class="platform-row">
+          <div class="platform-icon" style="background:#F7C948;color:#333;">🛋️</div>
+          <div class="platform-info">
+            <h4>TaskRabbit / Thumbtack</h4>
+            <p>For earnings paid through the platform's payment system, 1099-K may apply.</p>
+          </div>
+          <div class="platform-threshold">1099-K: $600+</div>
+        </div>
+      </div>
+
+      <div class="warn-box">
+        ⚠️ <strong>About the 1099-K threshold history:</strong> The IRS has changed the 1099-K threshold multiple times. For 2021 and prior, it was $20,000 + 200 transactions. For 2022–2024, there were delays and transitional periods. As of 2026, the $600 threshold is fully in effect. Many platforms will issue 1099-Ks to millions of sellers who previously received nothing.
+      </div>
+    </div>
+
+    <!-- WHAT IF YOU DON'T REPORT -->
+    <div class="section">
+      <div class="section-label">Important Warning</div>
+      <h2>What Happens If You Don't Report Under-$600 Income?</h2>
+
+      <p>Many people assume that because they received no 1099, the IRS won't know about the income. That assumption is risky for several reasons:</p>
+
+      <h3>The IRS Gets More Information Than You Think</h3>
+      <p>Even when platforms don't send you a 1099-NEC, they often still report aggregate payment data to the IRS through other channels. Bank records, payment processors, and platform data can all surface in an audit. The IRS has significantly increased its matching technology in recent years.</p>
+
+      <h3>Audits Can Look at Your Entire Return</h3>
+      <p>If the IRS audits your return for any reason (an error elsewhere, a random selection, a mismatch with a W-2), they look at everything — including unreported cash income. Small amounts can trigger penalties and back taxes with interest.</p>
+
+      <h3>The Penalty Structure</h3>
+      <ul>
+        <li><strong>Failure to file penalty:</strong> 5% of unpaid taxes per month, up to 25%</li>
+        <li><strong>Failure to pay penalty:</strong> 0.5% per month of unpaid taxes</li>
+        <li><strong>Interest:</strong> Currently ~8% per year on unpaid amounts</li>
+        <li><strong>Accuracy-related penalty:</strong> 20% of the underpayment for negligence or disregard of rules</li>
+      </ul>
+
+      <div class="red-box">
+        🚨 <strong>Tax evasion is a federal crime</strong> — even on small amounts. The IRS generally distinguishes between honest mistakes (which result in back taxes + interest) and intentional concealment (which can result in criminal charges). Always report all income and let your deductions do the work of reducing your bill legally.
+      </div>
+
+      <h3>The Right Approach: Report Everything, Deduct What You Can</h3>
+      <p>The IRS wants you to pay tax on your <em>net profit</em> — not gross income. That means you subtract every legitimate business expense before your tax is calculated. If you earned $500 driving for Uber but spent $200 on gas and maintenance, you only owe tax on $300 net — which is under the $400 threshold anyway. Smart deduction tracking is legal, ethical, and dramatically reduces your bill.</p>
+
+      <a href="/deductions.html" style="display:inline-block;margin-top:6px;font-weight:700;">See all 20 deductions for gig workers →</a>
+    </div>
+
+    <!-- FAQs -->
+    <div class="section">
+      <div class="section-label">Common Questions</div>
+      <h2>Under-$600 Income — FAQ</h2>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">I earned $400 from a side gig. Do I have to file a tax return? <span class="arrow">▾</span></button>
+          <div class="faq-a">If that $400 is your only income, you likely don't need to file a full return — the standard deduction ($15,000 for single filers in 2026) would eliminate any income tax. But you would owe self-employment tax if your net earnings hit $400, and you'd need to file Schedule SE. In practice: if your only income is $400 net from a gig, your SE tax would be about $56 (15.3% × 92.35% × $400). Small but technically owed.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What if I received a 1099 for less than $600 — is that possible? <span class="arrow">▾</span></button>
+          <div class="faq-a">Yes, it's possible. While platforms are only <em>required</em> to send a 1099-NEC when you earn $600+, they may voluntarily send one for lower amounts. Some platforms do this for their own tracking purposes. If you receive a 1099 for $300, you still use it to report that income on Schedule C — the amount on the form doesn't change your tax obligation, it just confirms what the platform is also telling the IRS.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">I got paid in cash. Does the IRS still find out? <span class="arrow">▾</span></button>
+          <div class="faq-a">The IRS can't see cash directly, but cash deposits show up in your bank account. If your lifestyle spending or bank deposits don't match your reported income, that can trigger an audit. During an audit, the IRS can reconstruct income using bank statements, expense records, and lifestyle analysis. Additionally, cash-paying clients are sometimes audited and their payment records examined. Reporting all income — including cash — is the safest approach.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">I did multiple small gigs totaling $800 but no single one was over $600. Who sends me a 1099? <span class="arrow">▾</span></button>
+          <div class="faq-a">Probably nobody, if each payer individually paid you under $600. Each employer or platform only sends a 1099 based on what they paid you — they don't coordinate with each other. But you are still responsible for adding up all your income sources yourself and reporting the total on Schedule C. This is exactly the scenario where most under-reporters get caught — they think "nobody sent me a form" means they're off the hook, when actually they owe tax on the combined $800.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Can my business expenses bring my income below the $400 threshold? <span class="arrow">▾</span></button>
+          <div class="faq-a">Yes — and this is a legitimate, legal strategy. If you earned $600 gross but had $250 in legitimate business expenses (mileage, supplies, platform fees, etc.), your net is $350 — below the $400 threshold. You'd still file Schedule C to show the income and expenses, but you would owe no SE tax. Tracking all your deductions carefully is one of the most important financial habits for any gig worker, not just to reduce taxes but to understand whether you're actually profitable.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">I have a W-2 job plus under-$600 from a gig. How does that work? <span class="arrow">▾</span></button>
+          <div class="faq-a">Your W-2 income and gig income are calculated separately but filed on the same return. Your W-2 income goes on your 1040 as normal, and your gig income goes on Schedule C. If your net gig income is $400+, you owe SE tax on just the gig portion. Your combined income determines your federal income tax bracket, and your employer's withholding from your W-2 may or may not cover the extra income tax owed on your gig earnings — so you may owe more at tax time or need to make quarterly payments.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What is a 1099-K and how is it different from a 1099-NEC? <span class="arrow">▾</span></button>
+          <div class="faq-a">A 1099-NEC (Non-Employee Compensation) is issued by clients and employers who pay you directly for services. A 1099-K is issued by payment processors and platforms (PayPal, Stripe, Venmo business accounts, Uber, DoorDash) based on total payment volume passing through them. Starting in 2026, the 1099-K threshold dropped to $600, meaning many more platform sellers and gig workers will receive one. If you get both for the same income, be careful not to double-count it — read our <a href="/guides/1099-nec-vs-1099-k.html">1099-NEC vs 1099-K guide</a> for details.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RELATED -->
+    <div class="section">
+      <div class="section-label">Related Guides & Tools</div>
+      <h2>Continue Learning</h2>
+      <div class="related-grid">
+        <a href="/se-tax-calculator.html" class="related-card">
+          <h4>🧮 SE Tax Calculator</h4>
+          <p>Calculate exactly what you owe on any amount of gig income</p>
+        </a>
+        <a href="/guides/gig-worker-taxes.html" class="related-card">
+          <h4>📋 Gig Worker Tax Guide</h4>
+          <p>Complete overview of how gig taxes work — start here</p>
+        </a>
+        <a href="/guides/1099-nec-vs-1099-k.html" class="related-card">
+          <h4>📄 1099-NEC vs 1099-K</h4>
+          <p>What's the difference and which forms should you expect?</p>
+        </a>
+        <a href="/guides/quarterly-estimated-taxes.html" class="related-card">
+          <h4>📅 Quarterly Tax Guide</h4>
+          <p>Avoid penalties by paying estimated taxes every quarter</p>
+        </a>
+        <a href="/deductions.html" class="related-card">
+          <h4>💰 Top 20 Deductions</h4>
+          <p>Reduce your net income legally with every deduction you're owed</p>
+        </a>
+        <a href="/guides/schedule-c-explained.html" class="related-card">
+          <h4>📝 Schedule C Explained</h4>
+          <p>The form where you report all self-employment income and expenses</p>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="cta-card">
+      <h3>🧮 Calculate What You Owe</h3>
+      <p>Enter any income amount and get your exact SE tax and quarterly payment in seconds.</p>
+      <a href="/se-tax-calculator.html">SE Tax Calculator →</a>
+    </div>
+
+    <div class="sidebar-card" style="padding:0;overflow:hidden;">
+      <div class="ad-slot ad-300">
+        <!-- Google AdSense 300x250 -->
+        Advertisement
+      </div>
+    </div>
+
+    <!-- KEY RULES BOX -->
+    <div class="sidebar-card">
+      <h3>⚡ The Key Rules</h3>
+      <div style="font-size:13px;line-height:1.7;color:var(--text2);">
+        <div style="padding:8px 0;border-bottom:1px solid var(--gray2);">
+          <strong style="color:var(--navy);">$600</strong><br>
+          When platforms must send you a 1099 form
+        </div>
+        <div style="padding:8px 0;border-bottom:1px solid var(--gray2);">
+          <strong style="color:var(--red);">$400</strong><br>
+          When YOU must pay self-employment tax
+        </div>
+        <div style="padding:8px 0;border-bottom:1px solid var(--gray2);">
+          <strong style="color:var(--navy);">15.3%</strong><br>
+          SE tax rate on net self-employment income
+        </div>
+        <div style="padding:8px 0;">
+          <strong style="color:var(--navy);">All sources combined</strong><br>
+          Add up all gig income to reach the $400 threshold
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <h3>Quick Links</h3>
+      <div class="quick-links">
+        <a href="/se-tax-calculator.html">SE Tax Calculator</a>
+        <a href="/quarterly-tax-calculator.html">Quarterly Calculator</a>
+        <a href="/deductions.html">Top 20 Deductions</a>
+        <a href="/guides/gig-worker-taxes.html">Gig Worker Tax Guide</a>
+        <a href="/guides/1099-nec-vs-1099-k.html">1099-NEC vs 1099-K</a>
+        <a href="/guides/schedule-c-explained.html">Schedule C Guide</a>
+        <a href="/faq.html">Full Tax FAQ</a>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <h3>Best Tax Software for 1099</h3>
+      <p style="font-size:12px;color:var(--text2);margin-bottom:12px;">These handle gig income, Schedule C, and SE tax automatically:</p>
+      <a href="/tax-software.html" style="display:flex;gap:10px;padding:10px;background:var(--gray1);border-radius:var(--radius);margin-bottom:8px;text-decoration:none;align-items:center;">
+        <span style="font-size:20px;">🟢</span>
+        <div><div style="font-size:13px;font-weight:700;color:var(--navy);">TurboTax Self-Employed</div><div style="font-size:11px;color:var(--text2);">Best for complex 1099 situations</div></div>
+      </a>
+      <a href="/tax-software.html" style="display:flex;gap:10px;padding:10px;background:var(--gray1);border-radius:var(--radius);margin-bottom:8px;text-decoration:none;align-items:center;">
+        <span style="font-size:20px;">🔴</span>
+        <div><div style="font-size:13px;font-weight:700;color:var(--navy);">H&R Block Self-Employed</div><div style="font-size:11px;color:var(--text2);">Good value, easy to use</div></div>
+      </a>
+      <a href="/tax-software.html" style="display:flex;gap:10px;padding:10px;background:var(--gray1);border-radius:var(--radius);text-decoration:none;align-items:center;">
+        <span style="font-size:20px;">🔵</span>
+        <div><div style="font-size:13px;font-weight:700;color:var(--navy);">TaxSlayer Self-Employed</div><div style="font-size:11px;color:var(--text2);">Most affordable option</div></div>
+      </a>
+      <a href="/tax-software.html" style="font-size:12px;color:var(--green);display:block;margin-top:10px;font-weight:600;">Compare all options →</a>
+    </div>
+
+    <div class="sidebar-card" style="padding:0;overflow:hidden;">
+      <div class="ad-slot ad-300">
+        <!-- Google AdSense 300x250 -->
+        Advertisement
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+<!-- BOTTOM AD -->
+<div class="container">
+  <div class="ad-slot ad-728">Advertisement</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-text">1099Tax<span style="color:var(--amber)">Calcs</span>.com</span>
+        <p>Free tax calculators built for America's 70 million gig workers and freelancers. Calculate what you owe, discover deductions, and never miss a quarterly deadline.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Calculators</h4>
+        <a href="/se-tax-calculator.html">SE Tax Calculator</a>
+        <a href="/quarterly-tax-calculator.html">Quarterly Calculator</a>
+        <a href="/mileage-calculator.html">Mileage Calculator</a>
+        <a href="/freelancer-tax-calculator.html">Freelancer Calculator</a>
+        <a href="/1099-vs-w2-calculator.html">1099 vs W-2</a>
+      </div>
+      <div class="footer-col">
+        <h4>By Platform</h4>
+        <a href="/uber-taxes.html">Uber Driver Taxes</a>
+        <a href="/doordash-taxes.html">DoorDash Taxes</a>
+        <a href="/instacart-taxes.html">Instacart Taxes</a>
+        <a href="/amazon-flex-taxes.html">Amazon Flex</a>
+        <a href="/upwork-fiverr-taxes.html">Upwork & Fiverr</a>
+      </div>
+      <div class="footer-col">
+        <h4>Guides</h4>
+        <a href="/deductions.html">Top 20 Deductions</a>
+        <a href="/guides/quarterly-estimated-taxes.html">Quarterly Tax Guide</a>
+        <a href="/guides.html">All Tax Guides</a>
+        <a href="/faq.html">FAQ</a>
+        <a href="/about.html">About</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 1099TaxCalcs.com — For informational purposes only. Not tax advice. Consult a CPA for your specific situation.</span>
+      <div style="display:flex;gap:16px;">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+        <a href="/about.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// NAV
+function toggleNav() { document.getElementById('main-nav').classList.toggle('open'); }
+
+// MINI CALCULATOR
+function miniCalc() {
+  const income   = parseFloat(document.getElementById('mc-income').value)   || 0;
+  const expenses = parseFloat(document.getElementById('mc-expenses').value) || 0;
+  const net      = Math.max(0, income - expenses);
+  const seTax    = net * 0.9235 * 0.153;
+
+  const netEl     = document.getElementById('mc-net');
+  const verdictEl = document.getElementById('mc-verdict');
+  const resultEl  = document.getElementById('mc-result');
+
+  netEl.textContent = '$' + Math.round(net).toLocaleString() + ' net';
+
+  if (net >= 400) {
+    verdictEl.innerHTML = `⚠️ Yes — you likely owe taxes. Estimated SE tax: <strong>$${Math.round(seTax).toLocaleString()}</strong> on this income. You must file Schedule C and Schedule SE, even without a 1099. Use our <a href="/se-tax-calculator.html" style="color:var(--amber)">full calculator</a> for a complete estimate including income tax.`;
+  } else if (net > 0) {
+    verdictEl.innerHTML = `✅ Your net income of $${Math.round(net).toLocaleString()} is below the $400 SE tax threshold. No self-employment tax owed on this amount. You should still report it on Schedule C if you file a return, but you won't owe SE tax.`;
+  } else {
+    verdictEl.innerHTML = `✅ Your expenses equal or exceed your income — net is $0 or negative. No SE tax owed. You may still want to file Schedule C to document the loss, which can offset other income.`;
+  }
+
+  resultEl.classList.add('show');
+}
+
+// FAQ
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = btn.classList.contains('open');
+  document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+  if (!isOpen) { btn.classList.add('open'); answer.classList.add('open'); }
+}
+
+// Enter key on mini calc
+document.addEventListener('keydown', e => { if (e.key === 'Enter') miniCalc(); });
+</script>
+
+</body>
+</html>
