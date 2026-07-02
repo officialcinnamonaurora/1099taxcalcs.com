@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Home office deduction 2026 guide for gig workers and freelancers. Learn the simplified method vs regular method, what qualifies, and how to claim it on Schedule C.">
+<meta name="keywords" content="home office deduction 2026, home office tax deduction gig worker, simplified method home office, schedule c home office, freelancer home office deduction, self employed home office">
+<meta name="author" content="1099TaxCalcs.com">
+<meta property="og:title" content="Home Office Deduction 2026 — Complete Guide for Gig Workers | 1099TaxCalcs.com">
+<meta property="og:description" content="Claim the home office deduction on Schedule C. Learn the two methods, what qualifies, how to calculate it, and what the IRS requires.">
+<meta property="og:url" content="https://1099taxcalcs.com/guides/home-office-deduction.html">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://1099taxcalcs.com/guides/home-office-deduction.html">
+<title>Home Office Deduction 2026 — Guide for Gig Workers & Freelancers | 1099TaxCalcs.com</title>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+<style>
+  :root {
+    --navy:   #0D1F3C;
+    --navy2:  #162847;
+    --green:  #00A878;
+    --green2: #008F65;
+    --amber:  #F5A623;
+    --light:  #F4F7FC;
+    --gray1:  #F0F4FA;
+    --gray2:  #E2E8F4;
+    --gray3:  #94A3B8;
+    --text:   #1A2A44;
+    --text2:  #4A5A72;
+    --red:    #E53E3E;
+    --font:   'Segoe UI', system-ui, -apple-system, sans-serif;
+    --radius: 8px;
+    --shadow: 0 2px 12px rgba(13,31,60,0.10);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); color: var(--text); background: var(--light); font-size: 16px; line-height: 1.6; }
+  a { color: var(--green); text-decoration: none; }
+  a:hover { color: var(--green2); text-decoration: underline; }
+
+  /* HEADER */
+  header { background: var(--navy); padding: 0 24px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+  .header-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-icon { width: 38px; height: 38px; background: var(--green); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: white; letter-spacing: -1px; flex-shrink: 0; }
+  .logo-text { color: white; font-size: 17px; font-weight: 700; }
+  .logo-text span { color: var(--amber); }
+  nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+  nav a { color: rgba(255,255,255,0.85); font-size: 13px; padding: 6px 10px; border-radius: 6px; transition: all 0.15s; white-space: nowrap; }
+  nav a:hover { background: rgba(255,255,255,0.1); color: white; text-decoration: none; }
+  .nav-cta { background: var(--green) !important; color: white !important; font-weight: 600; padding: 7px 14px !important; }
+  .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: white; margin: 5px 0; border-radius: 2px; }
+  @media(max-width: 768px) {
+    .hamburger { display: block; }
+    nav { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--navy2); padding: 12px 16px; flex-direction: column; align-items: flex-start; gap: 2px; }
+    nav.open { display: flex; }
+    nav a { width: 100%; padding: 10px 12px; }
+  }
+
+  /* HERO */
+  .page-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%); color: white; padding: 40px 24px 36px; }
+  .page-hero-inner { max-width: 1200px; margin: 0 auto; }
+  .breadcrumb { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 12px; }
+  .breadcrumb a { color: rgba(255,255,255,0.5); }
+  .breadcrumb a:hover { color: var(--green); }
+  .breadcrumb span { margin: 0 6px; }
+  .page-hero h1 { font-size: clamp(22px, 3.2vw, 36px); font-weight: 800; line-height: 1.2; margin-bottom: 10px; }
+  .page-hero h1 em { color: var(--amber); font-style: normal; }
+  .page-hero p { font-size: 15px; color: rgba(255,255,255,0.75); max-width: 640px; line-height: 1.7; }
+  .hero-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+  .pill { font-size: 11px; font-weight: 600; padding: 4px 12px; border-radius: 20px; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8); border: 1px solid rgba(255,255,255,0.15); }
+  .pill.green { background: rgba(0,168,120,0.2); color: #5EEAD4; border-color: rgba(0,168,120,0.3); }
+
+  /* LAYOUT */
+  .main-wrap { max-width: 1200px; margin: 0 auto; padding: 32px 24px; display: grid; grid-template-columns: 1fr 300px; gap: 32px; align-items: start; }
+  @media(max-width: 960px) { .main-wrap { grid-template-columns: 1fr; } }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* AD */
+  .ad-slot { background: var(--gray1); border: 1px dashed var(--gray2); border-radius: var(--radius); text-align: center; color: var(--gray3); font-size: 11px; padding: 8px; }
+  .ad-728 { width: 100%; height: 90px; line-height: 74px; margin: 20px 0; }
+  .ad-300 { width: 100%; height: 250px; line-height: 234px; }
+
+  /* SECTIONS */
+  .section { background: white; border-radius: 12px; padding: 28px; margin-bottom: 20px; box-shadow: var(--shadow); }
+  .section-label { font-size: 11px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+  .section h2 { font-size: 22px; font-weight: 800; color: var(--navy); margin-bottom: 12px; }
+  .section h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin: 22px 0 9px; }
+  .section p { color: var(--text2); line-height: 1.8; margin-bottom: 14px; }
+  .section ul, .section ol { color: var(--text2); line-height: 1.8; margin: 10px 0 14px 20px; }
+  .section li { margin-bottom: 8px; }
+  .section strong { color: var(--navy); }
+
+  /* HERO STAT BANNER */
+  .stat-banner { background: white; border-radius: 14px; box-shadow: 0 6px 32px rgba(13,31,60,0.12); overflow: hidden; margin-bottom: 24px; }
+  .stat-banner-top { background: linear-gradient(135deg, #1a3a5c, var(--navy)); padding: 20px 28px; display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+  .sb-icon { font-size: 48px; }
+  .sb-text h2 { font-size: 20px; font-weight: 800; color: white; margin-bottom: 4px; }
+  .sb-text p { font-size: 14px; color: rgba(255,255,255,0.78); }
+  .stat-banner-body { display: grid; grid-template-columns: repeat(3, 1fr); padding: 18px 28px; gap: 16px; }
+  @media(max-width:580px) { .stat-banner-body { grid-template-columns: 1fr 1fr; } }
+  .sb-stat { text-align: center; }
+  .sb-val { font-size: 28px; font-weight: 900; color: var(--navy); }
+  .sb-val.green { color: var(--green2); }
+  .sb-val.amber { color: #B7791F; }
+  .sb-lbl { font-size: 12px; color: var(--text2); line-height: 1.4; margin-top: 3px; }
+
+  /* QUALIFICATION TEST */
+  .qual-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 18px 0; }
+  @media(max-width:580px) { .qual-grid { grid-template-columns: 1fr; } }
+  .qual-card { border-radius: 10px; padding: 18px; }
+  .qual-card.pass { background: #E9F9F4; border: 2px solid rgba(0,168,120,0.3); }
+  .qual-card.fail { background: #FFF0F0; border: 2px solid #FFBBBB; }
+  .qual-card h4 { font-size: 14px; font-weight: 800; margin-bottom: 8px; }
+  .qual-card.pass h4 { color: #005438; }
+  .qual-card.fail h4 { color: #7A1A1A; }
+  .qual-card ul { margin: 0 0 0 16px; }
+  .qual-card li { font-size: 13px; line-height: 1.7; margin-bottom: 5px; }
+  .qual-card.pass li { color: #005438; }
+  .qual-card.fail li { color: #7A1A1A; }
+
+  /* METHOD COMPARISON */
+  .method-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  @media(max-width:600px) { .method-grid { grid-template-columns: 1fr; } }
+  .method-card { border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); }
+  .method-hdr { padding: 16px 20px; color: white; }
+  .method-hdr.simplified { background: var(--green); }
+  .method-hdr.regular { background: var(--navy); }
+  .method-hdr h3 { font-size: 16px; font-weight: 800; color: white; margin-bottom: 2px; }
+  .method-hdr .rate-tag { font-size: 22px; font-weight: 900; color: rgba(255,255,255,0.95); }
+  .method-hdr p { font-size: 12px; opacity: 0.82; margin-top: 3px; }
+  .method-body { background: white; padding: 16px 20px; }
+  .method-body ul { margin: 0 0 0 16px; }
+  .method-body li { font-size: 13px; color: var(--text2); margin-bottom: 7px; line-height: 1.5; }
+  .method-body .pro { color: #005438; }
+  .method-body .con { color: #7A1A1A; }
+  .method-verdict { background: var(--gray1); padding: 10px 14px; font-size: 12px; font-weight: 700; color: var(--text2); border-top: 1px solid var(--gray2); }
+
+  /* INLINE CALCULATOR */
+  .calc-box { background: var(--navy); border-radius: 14px; padding: 24px; margin: 20px 0; }
+  .calc-box h3 { color: white; font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+  .calc-box p { color: rgba(255,255,255,0.65); font-size: 13px; margin-bottom: 16px; }
+  .calc-tabs { display: flex; gap: 8px; margin-bottom: 18px; }
+  .calc-tab { padding: 7px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; border: 2px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.7); background: transparent; font-family: var(--font); transition: all 0.15s; }
+  .calc-tab.active { background: var(--green); border-color: var(--green); color: white; }
+  .calc-panel { display: none; }
+  .calc-panel.active { display: block; }
+  .calc-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+  @media(max-width:500px) { .calc-row { grid-template-columns: 1fr; } }
+  .calc-field label { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 5px; }
+  .calc-field input { width: 100%; padding: 9px 12px; border: 1.5px solid rgba(255,255,255,0.2); border-radius: var(--radius); font-size: 15px; color: white; background: rgba(255,255,255,0.1); font-family: var(--font); }
+  .calc-field input:focus { outline: none; border-color: var(--green); }
+  .calc-btn { width: 100%; padding: 11px; background: var(--green); color: white; font-size: 14px; font-weight: 700; border: none; border-radius: var(--radius); cursor: pointer; font-family: var(--font); margin-top: 4px; }
+  .calc-btn:hover { background: var(--green2); }
+  .calc-result { margin-top: 16px; background: rgba(255,255,255,0.08); border-radius: var(--radius); padding: 16px; display: none; }
+  .calc-result.show { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  @media(max-width:480px) { .calc-result.show { grid-template-columns: 1fr 1fr; } }
+  .cr-item { text-align: center; }
+  .cr-val { font-size: 22px; font-weight: 900; color: var(--amber); }
+  .cr-lbl { font-size: 11px; color: rgba(255,255,255,0.6); margin-top: 3px; line-height: 1.4; }
+
+  /* EXPENSE TABLE */
+  .exp-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 14px 0; }
+  .exp-table th { background: var(--navy); color: white; padding: 10px 14px; text-align: left; font-size: 12px; letter-spacing: 0.04em; }
+  .exp-table td { padding: 10px 14px; border-bottom: 1px solid var(--gray2); color: var(--text2); vertical-align: top; }
+  .exp-table tr:nth-child(even) td { background: var(--gray1); }
+  .exp-table tr:hover td { background: #E9F9F4; }
+  .exp-table strong { color: var(--navy); }
+  .badge-direct { display: inline-block; background: #E9F9F4; color: #005438; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 10px; }
+  .badge-indirect { display: inline-block; background: #EEF2FA; color: var(--navy); font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 10px; }
+
+  /* ROOM DIAGRAM */
+  .room-diagram { background: var(--gray1); border: 2px dashed var(--gray2); border-radius: 12px; padding: 24px; margin: 20px 0; text-align: center; }
+  .room-diagram h4 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 16px; }
+  .house-svg-wrap { max-width: 340px; margin: 0 auto; }
+  .room-formula { display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 16px; font-size: 14px; color: var(--text2); }
+  .room-formula .box { background: white; border: 2px solid var(--gray2); border-radius: var(--radius); padding: 8px 14px; font-weight: 700; color: var(--navy); }
+  .room-formula .box.highlight { background: var(--green); border-color: var(--green); color: white; }
+  .room-formula .op { font-size: 20px; font-weight: 900; color: var(--gray3); }
+
+  /* CALLOUTS */
+  .warn-box { background: #FFF8EC; border: 1.5px solid #F5D78E; border-radius: var(--radius); padding: 16px 18px; font-size: 14px; color: #7A4F00; line-height: 1.7; margin: 16px 0; }
+  .warn-box strong { color: #5A3800; }
+  .green-box { background: #E9F9F4; border: 1.5px solid rgba(0,168,120,0.3); border-radius: var(--radius); padding: 16px 18px; font-size: 14px; color: #005438; line-height: 1.7; margin: 16px 0; }
+  .green-box strong { color: var(--green2); }
+  .red-box { background: #FFF0F0; border: 1.5px solid #FFBBBB; border-radius: var(--radius); padding: 16px 18px; font-size: 14px; color: #7A1A1A; line-height: 1.7; margin: 16px 0; }
+  .red-box strong { color: #8B1A1A; }
+  .navy-box { background: #EEF2FA; border: 1.5px solid #C7D4EE; border-radius: var(--radius); padding: 16px 18px; font-size: 14px; color: var(--text2); line-height: 1.7; margin: 16px 0; }
+
+  /* STEPS */
+  .step { display: flex; gap: 14px; margin-bottom: 20px; align-items: flex-start; }
+  .step-num { width: 32px; height: 32px; background: var(--green); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; flex-shrink: 0; margin-top: 2px; }
+  .step-content h4 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .step-content p { font-size: 14px; color: var(--text2); margin: 0; line-height: 1.65; }
+
+  /* FAQ */
+  .faq-item { border-bottom: 1px solid var(--gray2); }
+  .faq-q { width: 100%; text-align: left; background: none; border: none; padding: 14px 0; font-size: 15px; font-weight: 600; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: var(--font); }
+  .faq-q:hover { color: var(--green); }
+  .faq-q .arrow { font-size: 18px; color: var(--green); transition: transform 0.2s; flex-shrink: 0; margin-left: 12px; }
+  .faq-q.open .arrow { transform: rotate(180deg); }
+  .faq-a { font-size: 14px; color: var(--text2); line-height: 1.8; padding-bottom: 16px; display: none; }
+  .faq-a.open { display: block; }
+
+  /* RELATED */
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; margin-top: 14px; }
+  .related-card { background: var(--gray1); border: 1.5px solid var(--gray2); border-radius: var(--radius); padding: 14px 16px; text-decoration: none; display: block; transition: all 0.15s; }
+  .related-card:hover { border-color: var(--green); background: white; text-decoration: none; }
+  .related-card h4 { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+  .related-card p { font-size: 12px; color: var(--text2); margin: 0; }
+
+  /* SIDEBAR */
+  .sidebar { display: flex; flex-direction: column; gap: 18px; }
+  .sidebar-card { background: white; border-radius: 12px; padding: 18px; box-shadow: var(--shadow); }
+  .sidebar-card h3 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 10px; border-bottom: 2px solid var(--green); padding-bottom: 7px; }
+  .cta-card { background: linear-gradient(135deg, var(--navy), var(--navy2)); color: white; border-radius: 12px; padding: 18px; }
+  .cta-card h3 { font-size: 14px; font-weight: 700; color: white; margin-bottom: 6px; border: none; padding: 0; }
+  .cta-card p { font-size: 12px; color: rgba(255,255,255,0.7); margin-bottom: 12px; line-height: 1.6; }
+  .cta-card a { display: block; background: var(--green); color: white; text-align: center; padding: 9px; border-radius: var(--radius); font-weight: 700; font-size: 13px; text-decoration: none; }
+  .cta-card a:hover { background: var(--green2); }
+  .quick-links a { display: flex; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--gray2); font-size: 13px; color: var(--text); text-decoration: none; }
+  .quick-links a:last-child { border-bottom: none; }
+  .quick-links a:hover { color: var(--green); }
+  .quick-links a::before { content: '→'; color: var(--green); font-weight: 700; }
+
+  /* FOOTER */
+  footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 40px 24px 24px; margin-top: 48px; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 32px; }
+  .footer-brand .logo-text { font-size: 18px; color: white; display: block; margin-bottom: 8px; }
+  .footer-brand p { font-size: 13px; line-height: 1.7; }
+  .footer-col h4 { color: white; font-size: 13px; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,0.55); margin-bottom: 7px; text-decoration: none; }
+  .footer-col a:hover { color: var(--green); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 12px; }
+  .footer-bottom a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .footer-bottom a:hover { color: var(--green); }
+  @media(max-width: 700px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can gig workers claim the home office deduction?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Self-employed gig workers and freelancers who use part of their home regularly and exclusively for business can claim the home office deduction on Schedule C. This includes managing your gig accounts, tracking income and expenses, dispatching, and other administrative tasks done from home." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the simplified method for the home office deduction?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The simplified method lets you deduct $5 per square foot of your dedicated home office space, up to a maximum of 300 square feet ($1,500 maximum deduction). No receipts needed — just measure your space." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the home office have to be a separate room?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. The home office does not have to be a separate room. It can be a clearly defined area within a room — such as a dedicated desk corner — as long as that area is used regularly and exclusively for business. However, a separate room is easier to defend in an audit." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <div class="logo-icon">1099</div>
+      <div class="logo-text">Tax<span>Calcs</span>.com</div>
+    </a>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
+    <nav id="main-nav">
+      <a href="/calculators.html">Calculators</a>
+      <a href="/deductions.html">Deductions</a>
+      <a href="/guides/quarterly-estimated-taxes.html">Quarterly Taxes</a>
+      <a href="/platforms.html">By Platform</a>
+      <a href="/guides.html">Guides</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/se-tax-calculator.html" class="nav-cta">Calculate Now →</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span><a href="/guides.html">Guides</a><span>›</span><a href="/deductions.html">Deductions</a><span>›</span>Home Office Deduction
+    </div>
+    <h1>Home Office Deduction <em>2026</em> — Complete Guide for Gig Workers</h1>
+    <p>If you manage your gig business from home — tracking orders, logging miles, handling invoices — you may qualify for the home office deduction. Here's exactly what the IRS requires and how to calculate it.</p>
+    <div class="hero-pills">
+      <span class="pill green">✓ $5/sq ft simplified method</span>
+      <span class="pill">Schedule C Form 8829</span>
+      <span class="pill">Regular & exclusive use rule</span>
+      <span class="pill">Updated 2026</span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="ad-slot ad-728">Advertisement</div>
+</div>
+
+<div class="main-wrap">
+<main>
+
+  <!-- STAT BANNER -->
+  <div class="stat-banner">
+    <div class="stat-banner-top">
+      <div class="sb-icon">🏠</div>
+      <div class="sb-text">
+        <h2>Home Office Deduction at a Glance</h2>
+        <p>Deduct the business portion of your home costs — rent, mortgage interest, utilities, insurance, and more — based on your office's share of your home's square footage.</p>
+      </div>
+    </div>
+    <div class="stat-banner-body">
+      <div class="sb-stat">
+        <div class="sb-val green">$5</div>
+        <div class="sb-lbl">Per sq ft — simplified method rate</div>
+      </div>
+      <div class="sb-stat">
+        <div class="sb-val">300</div>
+        <div class="sb-lbl">Max sq ft under simplified method</div>
+      </div>
+      <div class="sb-stat">
+        <div class="sb-val amber">$1,500</div>
+        <div class="sb-lbl">Maximum simplified method deduction</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT IS IT -->
+  <div class="section">
+    <div class="section-label">The Basics</div>
+    <h2>What Is the Home Office Deduction?</h2>
+    <p>The home office deduction lets self-employed workers deduct the portion of their home expenses that relate to their business. If your home office takes up 10% of your home's square footage, you can deduct 10% of your rent (or mortgage interest), utilities, insurance, and other home costs as a business expense on Schedule C.</p>
+    <p>For gig workers, this deduction is often overlooked — but it's legitimate and valuable. If you spend time at home managing your DoorDash account, planning your Uber schedule, handling client invoices as a freelancer, or doing any other business-related work, you likely qualify.</p>
+
+    <div class="green-box">
+      ✅ <strong>Key insight:</strong> The home office deduction isn't just for people with a dedicated room. It's for anyone who uses a defined space in their home <em>regularly and exclusively</em> for business. Even a dedicated desk area in a studio apartment can qualify — though a separate room is far easier to defend.
+    </div>
+
+    <h3>Who Can Claim It</h3>
+    <p>To claim the home office deduction as a gig worker or freelancer, you must meet all three of these conditions:</p>
+    <ol>
+      <li><strong>Regular use:</strong> You use the space for business on a regular basis — not just occasionally</li>
+      <li><strong>Exclusive use:</strong> The space is used <em>only</em> for business — no personal use of that specific area</li>
+      <li><strong>Principal place of business:</strong> Your home office is your main place of business, OR you use it to meet clients, OR it's a separate structure used for business</li>
+    </ol>
+
+    <div class="warn-box">
+      ⚠️ <strong>The "exclusive use" rule is strict.</strong> If your home office doubles as a guest bedroom, kids' homework room, or personal hobby space — it does not qualify. The IRS is serious about this. The space must be used <em>only</em> for business, every time.
+    </div>
+  </div>
+
+  <!-- QUALIFICATION TEST -->
+  <div class="section">
+    <div class="section-label">Do You Qualify?</div>
+    <h2>Does Your Home Office Qualify? Real Scenarios</h2>
+    <p>The regular and exclusive use rules trip up many gig workers. Here are common scenarios:</p>
+
+    <div class="qual-grid">
+      <div class="qual-card pass">
+        <h4>✅ These Qualify</h4>
+        <ul>
+          <li>Dedicated desk in a spare room used only for gig work admin</li>
+          <li>Separate room used only for freelance client calls and work</li>
+          <li>Detached garage converted to a home office or studio</li>
+          <li>Basement area clearly sectioned off and used only for business</li>
+          <li>Corner of a room with a dedicated desk used only for business — with clearly defined boundaries</li>
+          <li>Room used for client meetings that isn't used for anything else</li>
+        </ul>
+      </div>
+      <div class="qual-card fail">
+        <h4>❌ These Do NOT Qualify</h4>
+        <ul>
+          <li>Kitchen table where you also eat family meals</li>
+          <li>Living room couch where you occasionally check your delivery app</li>
+          <li>Bedroom desk where you also browse social media or watch TV</li>
+          <li>Guest bedroom used as office "most of the time" but guests stay there too</li>
+          <li>Shared workspace where family also uses the computer</li>
+          <li>Any space used even occasionally for personal purposes</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="navy-box">
+      📌 <strong>The "principal place of business" test for gig workers:</strong> Delivery drivers and rideshare workers do their actual gig work in their car — not at home. But if you use your home office to manage your business (accept orders, review earnings, do bookkeeping, track mileage), it still qualifies as your principal place of business for administrative purposes. The IRS allows this explicitly.
+    </div>
+  </div>
+
+  <!-- CALCULATOR -->
+  <div class="calc-box">
+    <h3>🏠 Home Office Deduction Calculator</h3>
+    <p>Calculate your deduction using either the simplified method or the regular (actual expense) method.</p>
+    <div class="calc-tabs">
+      <button class="calc-tab active" onclick="switchTab('simplified')">Simplified Method</button>
+      <button class="calc-tab" onclick="switchTab('regular')">Regular Method</button>
+    </div>
+
+    <!-- SIMPLIFIED -->
+    <div class="calc-panel active" id="panel-simplified">
+      <div class="calc-row">
+        <div class="calc-field">
+          <label>Home Office Square Footage</label>
+          <input type="number" id="s-sqft" placeholder="120" min="0" max="300">
+        </div>
+        <div class="calc-field">
+          <label>Months Used for Business</label>
+          <input type="number" id="s-months" placeholder="12" min="1" max="12">
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calcSimplified()">Calculate Simplified Deduction →</button>
+      <div class="calc-result" id="result-simplified">
+        <div class="cr-item"><div class="cr-val" id="sr-deduction"></div><div class="cr-lbl">Annual Deduction</div></div>
+        <div class="cr-item"><div class="cr-val" id="sr-savings"></div><div class="cr-lbl">Est. Tax Savings (~30% rate)</div></div>
+        <div class="cr-item"><div class="cr-val" id="sr-sqft"></div><div class="cr-lbl">Qualifying Sq Ft (300 max)</div></div>
+      </div>
+    </div>
+
+    <!-- REGULAR -->
+    <div class="calc-panel" id="panel-regular">
+      <div class="calc-row">
+        <div class="calc-field">
+          <label>Office Sq Ft</label>
+          <input type="number" id="r-office" placeholder="120" min="0">
+        </div>
+        <div class="calc-field">
+          <label>Total Home Sq Ft</label>
+          <input type="number" id="r-home" placeholder="1200" min="0">
+        </div>
+      </div>
+      <div class="calc-row">
+        <div class="calc-field">
+          <label>Annual Rent or Mortgage Interest ($)</label>
+          <input type="number" id="r-rent" placeholder="18000" min="0">
+        </div>
+        <div class="calc-field">
+          <label>Annual Utilities ($)</label>
+          <input type="number" id="r-utilities" placeholder="2400" min="0">
+        </div>
+      </div>
+      <div class="calc-row">
+        <div class="calc-field">
+          <label>Annual Home Insurance ($)</label>
+          <input type="number" id="r-insurance" placeholder="1200" min="0">
+        </div>
+        <div class="calc-field">
+          <label>Other Home Expenses ($)</label>
+          <input type="number" id="r-other" placeholder="600" min="0">
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calcRegular()">Calculate Regular Method Deduction →</button>
+      <div class="calc-result" id="result-regular">
+        <div class="cr-item"><div class="cr-val" id="rr-pct"></div><div class="cr-lbl">Business Use %</div></div>
+        <div class="cr-item"><div class="cr-val" id="rr-deduction"></div><div class="cr-lbl">Annual Deduction</div></div>
+        <div class="cr-item"><div class="cr-val" id="rr-savings"></div><div class="cr-lbl">Est. Tax Savings (~30%)</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AD MID -->
+  <div class="ad-slot ad-728" style="margin-bottom:20px;">Advertisement</div>
+
+  <!-- TWO METHODS -->
+  <div class="section">
+    <div class="section-label">Method Comparison</div>
+    <h2>Simplified Method vs. Regular Method</h2>
+    <p>The IRS gives you two ways to calculate the home office deduction. You choose the method each year — unlike the mileage/actual vehicle expense choice, you can switch home office methods from year to year.</p>
+
+    <div class="method-grid">
+      <div class="method-card">
+        <div class="method-hdr simplified">
+          <h3>Simplified Method</h3>
+          <div class="rate-tag">$5 / sq ft</div>
+          <p>Up to 300 sq ft maximum ($1,500 cap)</p>
+        </div>
+        <div class="method-body">
+          <ul>
+            <li class="pro">No receipts or recordkeeping needed</li>
+            <li class="pro">Just measure your office space</li>
+            <li class="pro">Can switch to regular method in future years</li>
+            <li class="pro">No depreciation recapture when you sell your home</li>
+            <li class="pro">Deduction not limited by business income</li>
+            <li class="con">Capped at $1,500 total ($5 × 300 sq ft)</li>
+            <li class="con">May produce a smaller deduction than regular method</li>
+          </ul>
+        </div>
+        <div class="method-verdict">✅ Best for: Small offices, renters, and those who want simplicity</div>
+      </div>
+
+      <div class="method-card">
+        <div class="method-hdr regular">
+          <h3>Regular Method</h3>
+          <div class="rate-tag">Actual % of Home Costs</div>
+          <p>Office sq ft ÷ home sq ft × all expenses</p>
+        </div>
+        <div class="method-body">
+          <ul>
+            <li class="pro">No dollar cap — larger deduction possible</li>
+            <li class="pro">Includes rent, utilities, insurance, repairs, depreciation</li>
+            <li class="pro">Better for large offices or high home expenses</li>
+            <li class="pro">Renters with high rent benefit the most</li>
+            <li class="con">Requires tracking all home expenses with receipts</li>
+            <li class="con">Must file Form 8829 with your return</li>
+            <li class="con">Depreciation can trigger recapture tax when you sell</li>
+            <li class="con">Deduction limited to net business income (no loss)</li>
+          </ul>
+        </div>
+        <div class="method-verdict">⚠️ Best for: Large offices, high rent/mortgage, or homeowners</div>
+      </div>
+    </div>
+
+    <div class="green-box">
+      ✅ <strong>Quick rule of thumb:</strong> If your qualifying office is under 200 sq ft and your home expenses are moderate, the simplified method ($1,000 max at 200 sq ft) is usually fine. If your office is large or you pay high rent, run both calculations — the regular method can produce deductions 3–5× larger for people in expensive housing markets.
+    </div>
+  </div>
+
+  <!-- WHAT YOU CAN DEDUCT -->
+  <div class="section">
+    <div class="section-label">Regular Method Details</div>
+    <h2>What Home Expenses Can You Deduct? (Regular Method)</h2>
+    <p>Under the regular method, you calculate your business-use percentage (office sq ft ÷ total home sq ft) and apply it to your home expenses. Some expenses apply only to the office (direct) while others apply to the whole home (indirect).</p>
+
+    <h3>How Business Use % Works</h3>
+    <div class="room-diagram">
+      <h4>Example: 150 sq ft office in a 1,500 sq ft home</h4>
+      <div class="room-formula">
+        <div class="box">150 sq ft<br><small>Office</small></div>
+        <div class="op">÷</div>
+        <div class="box">1,500 sq ft<br><small>Total Home</small></div>
+        <div class="op">=</div>
+        <div class="box highlight">10%<br><small>Business Use</small></div>
+      </div>
+      <p style="margin-top:14px;font-size:13px;color:var(--text2);">Apply this 10% to all indirect expenses. Direct expenses (like painting only the office) are 100% deductible.</p>
+    </div>
+
+    <table class="exp-table">
+      <thead>
+        <tr><th>Expense</th><th>Type</th><th>How to Deduct</th><th>Example (10% office)</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Rent</strong></td>
+          <td><span class="badge-indirect">Indirect</span></td>
+          <td>Business use % × annual rent</td>
+          <td>$18,000 × 10% = $1,800</td>
+        </tr>
+        <tr>
+          <td><strong>Mortgage Interest</strong></td>
+          <td><span class="badge-indirect">Indirect</span></td>
+          <td>Business use % × annual interest paid</td>
+          <td>$12,000 × 10% = $1,200</td>
+        </tr>
+        <tr>
+          <td><strong>Utilities (electric, gas, water)</strong></td>
+          <td><span class="badge-indirect">Indirect</span></td>
+          <td>Business use % × annual utility costs</td>
+          <td>$2,400 × 10% = $240</td>
+        </tr>
+        <tr>
+          <td><strong>Homeowner's / Renter's Insurance</strong></td>
+          <td><span class="badge-indirect">Indirect</span></td>
+          <td>Business use % × annual premium</td>
+          <td>$1,200 × 10% = $120</td>
+        </tr>
+        <tr>
+          <td><strong>General Home Repairs</strong></td>
+          <td><span class="badge-indirect">Indirect</span></td>
+          <td>Business use % × repair cost</td>
+          <td>$500 repair × 10% = $50</td>
+        </tr>
+        <tr>
+          <td><strong>Office-Only Repairs / Painting</strong></td>
+          <td><span class="badge-direct">Direct</span></td>
+          <td>100% deductible (office-specific)</td>
+          <td>$300 office repaint = $300</td>
+        </tr>
+        <tr>
+          <td><strong>Office Furniture & Equipment</strong></td>
+          <td><span class="badge-direct">Direct</span></td>
+          <td>100% deductible (or via Section 179)</td>
+          <td>$800 desk = $800</td>
+        </tr>
+        <tr>
+          <td><strong>Home Depreciation</strong></td>
+          <td><span class="badge-indirect">Indirect</span></td>
+          <td>Business use % × annual depreciation (complex — use Form 8829)</td>
+          <td>Varies — calculate on Form 8829</td>
+        </tr>
+        <tr>
+          <td><strong>HOA Fees</strong></td>
+          <td><span class="badge-indirect">Indirect</span></td>
+          <td>Business use % × annual HOA fees</td>
+          <td>$2,400 × 10% = $240</td>
+        </tr>
+        <tr>
+          <td><strong>Internet (dedicated business line)</strong></td>
+          <td><span class="badge-direct">Direct</span></td>
+          <td>100% if dedicated business-only line; otherwise see phone/internet guide</td>
+          <td>See phone & internet deduction guide</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="warn-box">
+      ⚠️ <strong>Homeowners: be cautious about depreciation.</strong> When you sell your home, any depreciation you claimed on the home office portion is subject to "depreciation recapture" tax — you'll owe tax on that amount even if the home qualifies for the principal residence exclusion. Renters don't face this issue. For homeowners with a small office, the simplified method often makes more sense for this reason alone.
+    </div>
+  </div>
+
+  <!-- HOW TO CLAIM -->
+  <div class="section">
+    <div class="section-label">Filing Your Taxes</div>
+    <h2>How to Claim the Home Office Deduction on Your Return</h2>
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Measure your office space</h4>
+        <p>Measure the square footage of the area used exclusively for business. For a dedicated room, measure length × width. For a defined area within a room, measure only that area. Take a photo for your records showing the clear boundaries of the space.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Choose your method</h4>
+        <p>Decide between the simplified method ($5/sq ft, max 300 sq ft) or the regular method (actual expenses × business use %). If using the regular method, total all your home expenses for the year from receipts and statements.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Simplified: enter on Schedule C directly</h4>
+        <p>If using the simplified method, calculate your deduction (sq ft × $5, max $1,500) and enter it on <strong>Schedule C, Part II, Line 30</strong>. No additional form required.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>Regular method: complete Form 8829</h4>
+        <p>If using the regular method, complete <strong>Form 8829 (Expenses for Business Use of Your Home)</strong>. This form calculates your business use percentage and applies it to each category of home expense. The result flows to Schedule C Line 30. Tax software handles this automatically.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-content">
+        <h4>Keep records in case of audit</h4>
+        <p>Save photos of your dedicated office space, floor plans or measurements, and expense receipts for 3 years. You don't submit these — but if the IRS audits you, the exclusive-use requirement is the most scrutinized part of this deduction.</p>
+      </div>
+    </div>
+
+    <div class="navy-box">
+      📌 <strong>Important limit:</strong> Under the regular method, your home office deduction cannot exceed your net business income for the year. If your gig work lost money or broke even, you can't use the home office deduction to create a loss (though you can carry the unused deduction to the next year). The simplified method has no income limitation.
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section">
+    <div class="section-label">Common Questions</div>
+    <h2>Home Office Deduction FAQ</h2>
+    <div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">I'm a delivery driver — my car is my office. Can I still claim a home office? <span class="arrow">▾</span></button>
+        <div class="faq-a">Yes, if you use a dedicated home space for the administrative tasks of your gig business. The IRS specifically allows home office deductions for people whose actual work happens elsewhere, as long as they have no other fixed location for administrative or management activities. Managing your DoorDash or Uber account, reviewing earnings, handling expense tracking, and planning your schedule from a dedicated home space all count. Just make sure the space meets the regular and exclusive use test.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">I rent an apartment. Can I still claim this deduction? <span class="arrow">▾</span></button>
+        <div class="faq-a">Absolutely — renters can claim the home office deduction just like homeowners. For renters using the regular method, you deduct the business-use percentage of your rent, utilities, and renter's insurance. You don't have the depreciation complication that homeowners face, which actually makes the regular method more straightforward and potentially larger for renters in high-rent areas. A renter paying $2,500/month with a 10% office can deduct $3,000 in rent alone.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Will claiming the home office deduction trigger an audit? <span class="arrow">▾</span></button>
+        <div class="faq-a">The home office deduction used to be considered a red flag, but that reputation is outdated. The IRS has become much more accepting of it as remote and gig work has become mainstream. Claiming a legitimate, well-documented home office deduction does not meaningfully increase your audit risk. What does increase risk is claiming a very large deduction that seems disproportionate to your income, or failing to meet the exclusive-use requirement. Keep good records and claim what you genuinely qualify for.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Can I deduct internet as part of the home office AND separately as a phone/internet expense? <span class="arrow">▾</span></button>
+        <div class="faq-a">You should only deduct your internet once — not twice. If you're using the regular method for your home office, the business-use percentage of your internet bill might already be included in your home expenses. Alternatively, you can deduct the business-use portion of internet on Schedule C as a separate expense (utilities/communications) and exclude it from the home office calculation. The key rule: don't double-count the same expense. See our <a href="/guides/phone-internet-deduction.html">Phone & Internet Deduction Guide</a> for more detail.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What if I started using my home office partway through the year? <span class="arrow">▾</span></button>
+        <div class="faq-a">You can only deduct the months (or portion of the year) the space was used for business. Under the simplified method, you prorate: $5 × sq ft × (months used ÷ 12). Under the regular method, you only include home expenses from the months the office was in use. Document when you started using the space for business — even a calendar entry or lease date helps establish the timeline.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Can I claim home office AND deduct my desk, chair, and computer separately? <span class="arrow">▾</span></button>
+        <div class="faq-a">Yes — office furniture and equipment are separate deductions from the home office deduction itself. Under the regular method, furniture and equipment used exclusively in the office are 100% deductible direct expenses (or via Section 179 immediate expensing). Under the simplified method, you can still deduct furniture and equipment separately on Schedule C as business expenses. The $5/sq ft simplified rate does not include furniture — it covers only the structural home costs like rent and utilities.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RELATED -->
+  <div class="section">
+    <div class="section-label">Related Guides & Tools</div>
+    <h2>More Ways to Reduce Your Tax Bill</h2>
+    <div class="related-grid">
+      <a href="/deductions.html" class="related-card">
+        <h4>💰 Top 20 Deductions</h4>
+        <p>All deductions available to gig workers in one place</p>
+      </a>
+      <a href="/guides/mileage-deduction.html" class="related-card">
+        <h4>🚗 Mileage Deduction</h4>
+        <p>72.5¢/mile — the biggest deduction for most drivers</p>
+      </a>
+      <a href="/guides/phone-internet-deduction.html" class="related-card">
+        <h4>📱 Phone & Internet</h4>
+        <p>Deduct the business portion of your phone and data</p>
+      </a>
+      <a href="/guides/sep-ira-guide.html" class="related-card">
+        <h4>🏦 SEP-IRA Guide</h4>
+        <p>Slash your tax bill with a self-employed retirement account</p>
+      </a>
+      <a href="/se-tax-calculator.html" class="related-card">
+        <h4>🧮 SE Tax Calculator</h4>
+        <p>See exactly how deductions reduce your total tax owed</p>
+      </a>
+      <a href="/guides/schedule-c-explained.html" class="related-card">
+        <h4>📝 Schedule C Guide</h4>
+        <p>Where every deduction goes on your tax return</p>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+
+  <div class="cta-card">
+    <h3>🧮 See Your Full Tax Bill</h3>
+    <p>Enter your income and deductions to calculate your exact SE tax and what you'll owe.</p>
+    <a href="/se-tax-calculator.html">SE Tax Calculator →</a>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>Quick Method Comparison</h3>
+    <div style="font-size:13px;color:var(--text2);line-height:1.8;">
+      <div style="padding:8px 0;border-bottom:1px solid var(--gray2);">
+        <strong style="color:var(--green);">Simplified</strong><br>
+        $5 × sq ft (max 300)<br>
+        Max deduction: <strong style="color:var(--navy);">$1,500</strong>
+      </div>
+      <div style="padding:8px 0;">
+        <strong style="color:var(--navy);">Regular</strong><br>
+        (Office ÷ Home) × all expenses<br>
+        No dollar cap — larger possible
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar-card" style="padding:0;overflow:hidden;">
+    <div class="ad-slot ad-300">Advertisement</div>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>The 3 IRS Requirements</h3>
+    <div style="font-size:13px;color:var(--text2);line-height:1.8;">
+      <div style="padding:7px 0;border-bottom:1px solid var(--gray2);">
+        <strong style="color:var(--navy);">1. Regular Use</strong><br>
+        Used for business on a consistent basis
+      </div>
+      <div style="padding:7px 0;border-bottom:1px solid var(--gray2);">
+        <strong style="color:var(--navy);">2. Exclusive Use</strong><br>
+        Only for business — never personal
+      </div>
+      <div style="padding:7px 0;">
+        <strong style="color:var(--navy);">3. Principal Place</strong><br>
+        Your main business location for admin work
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>Quick Links</h3>
+    <div class="quick-links">
+      <a href="/deductions.html">All 20 Deductions</a>
+      <a href="/guides/mileage-deduction.html">Mileage Deduction</a>
+      <a href="/guides/phone-internet-deduction.html">Phone Deduction</a>
+      <a href="/guides/sep-ira-guide.html">SEP-IRA Guide</a>
+      <a href="/guides/schedule-c-explained.html">Schedule C Guide</a>
+      <a href="/se-tax-calculator.html">SE Tax Calculator</a>
+    </div>
+  </div>
+
+  <div class="sidebar-card">
+    <h3>Best Tax Software for 1099</h3>
+    <p style="font-size:12px;color:var(--text2);margin-bottom:12px;">These guide you through home office and all deductions:</p>
+    <a href="/tax-software.html" style="display:flex;gap:10px;padding:10px;background:var(--gray1);border-radius:var(--radius);margin-bottom:8px;text-decoration:none;align-items:center;">
+      <span style="font-size:20px;">🟢</span>
+      <div><div style="font-size:13px;font-weight:700;color:var(--navy);">TurboTax Self-Employed</div><div style="font-size:11px;color:var(--text2);">Handles Form 8829 automatically</div></div>
+    </a>
+    <a href="/tax-software.html" style="display:flex;gap:10px;padding:10px;background:var(--gray1);border-radius:var(--radius);margin-bottom:8px;text-decoration:none;align-items:center;">
+      <span style="font-size:20px;">🔴</span>
+      <div><div style="font-size:13px;font-weight:700;color:var(--navy);">H&R Block Self-Employed</div><div style="font-size:11px;color:var(--text2);">Step-by-step home office guidance</div></div>
+    </a>
+    <a href="/tax-software.html" style="font-size:12px;color:var(--green);display:block;margin-top:10px;font-weight:600;">Compare all options →</a>
+  </div>
+
+  <div class="sidebar-card" style="padding:0;overflow:hidden;">
+    <div class="ad-slot ad-300">Advertisement</div>
+  </div>
+
+</aside>
+</div>
+
+<div class="container">
+  <div class="ad-slot ad-728">Advertisement</div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-text">1099Tax<span style="color:var(--amber)">Calcs</span>.com</span>
+        <p>Free tax calculators and guides built for America's 70 million gig workers and freelancers. Never miss a deduction or overpay the IRS.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Calculators</h4>
+        <a href="/se-tax-calculator.html">SE Tax Calculator</a>
+        <a href="/quarterly-tax-calculator.html">Quarterly Calculator</a>
+        <a href="/mileage-calculator.html">Mileage Calculator</a>
+        <a href="/freelancer-tax-calculator.html">Freelancer Calculator</a>
+        <a href="/1099-vs-w2-calculator.html">1099 vs W-2</a>
+      </div>
+      <div class="footer-col">
+        <h4>By Platform</h4>
+        <a href="/uber-taxes.html">Uber Driver Taxes</a>
+        <a href="/doordash-taxes.html">DoorDash Taxes</a>
+        <a href="/instacart-taxes.html">Instacart Taxes</a>
+        <a href="/amazon-flex-taxes.html">Amazon Flex</a>
+        <a href="/upwork-fiverr-taxes.html">Upwork & Fiverr</a>
+      </div>
+      <div class="footer-col">
+        <h4>Deductions</h4>
+        <a href="/deductions.html">Top 20 Deductions</a>
+        <a href="/guides/mileage-deduction.html">Mileage Deduction</a>
+        <a href="/guides/home-office-deduction.html">Home Office</a>
+        <a href="/guides/phone-internet-deduction.html">Phone & Internet</a>
+        <a href="/guides/sep-ira-guide.html">SEP-IRA Guide</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 1099TaxCalcs.com — For informational purposes only. Not tax advice. Consult a CPA for your specific situation.</span>
+      <div style="display:flex;gap:16px;">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+        <a href="/about.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleNav() { document.getElementById('main-nav').classList.toggle('open'); }
+
+function switchTab(tab) {
+  document.querySelectorAll('.calc-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.calc-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('panel-' + tab).classList.add('active');
+  event.target.classList.add('active');
+}
+
+function calcSimplified() {
+  const sqft   = Math.min(parseFloat(document.getElementById('s-sqft').value) || 0, 300);
+  const months = Math.min(Math.max(parseFloat(document.getElementById('s-months').value) || 12, 1), 12);
+  const deduction = sqft * 5 * (months / 12);
+  const savings   = deduction * 0.30;
+
+  document.getElementById('sr-deduction').textContent = '$' + Math.round(deduction).toLocaleString();
+  document.getElementById('sr-savings').textContent   = '$' + Math.round(savings).toLocaleString();
+  document.getElementById('sr-sqft').textContent      = sqft + ' sq ft';
+  document.getElementById('result-simplified').classList.add('show');
+}
+
+function calcRegular() {
+  const office    = parseFloat(document.getElementById('r-office').value)    || 0;
+  const home      = parseFloat(document.getElementById('r-home').value)      || 1;
+  const rent      = parseFloat(document.getElementById('r-rent').value)      || 0;
+  const utilities = parseFloat(document.getElementById('r-utilities').value) || 0;
+  const insurance = parseFloat(document.getElementById('r-insurance').value) || 0;
+  const other     = parseFloat(document.getElementById('r-other').value)     || 0;
+
+  const pct       = office / home;
+  const total     = (rent + utilities + insurance + other) * pct;
+  const savings   = total * 0.30;
+
+  document.getElementById('rr-pct').textContent       = (pct * 100).toFixed(1) + '%';
+  document.getElementById('rr-deduction').textContent = '$' + Math.round(total).toLocaleString();
+  document.getElementById('rr-savings').textContent   = '$' + Math.round(savings).toLocaleString();
+  document.getElementById('result-regular').classList.add('show');
+}
+
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = btn.classList.contains('open');
+  document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+  if (!isOpen) { btn.classList.add('open'); answer.classList.add('open'); }
+}
+</script>
+</body>
+</html>
