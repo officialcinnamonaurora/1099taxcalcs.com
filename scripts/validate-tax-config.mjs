@@ -1,0 +1,15 @@
+import fs from 'node:fs';import vm from 'node:vm';import path from 'node:path';
+const root=path.resolve(import.meta.dirname,'..'),file=path.join(root,'data/tax-years/2026.js'),errors=[];
+const source=fs.readFileSync(file,'utf8'),context={globalThis:{}};vm.createContext(context);vm.runInContext(source,context,{filename:file});const data=context.globalThis.TaxYear2026;
+const fail=m=>errors.push(m),validDate=x=>/^\d{4}-\d{2}-\d{2}$/.test(x)&&!Number.isNaN(Date.parse(`${x}T00:00:00Z`));
+if(!data||data.taxYear!==2026)fail('Unsupported or missing tax year; expected 2026.');
+if(!validDate(data?.lastReviewed))fail('Missing or invalid last-reviewed date.');
+if(!data?.verificationStatus)fail('Missing configuration verification status.');
+const records=[...Object.values(data?.values||{}),...(data?.mileagePeriods||[]),...(data?.estimatedTaxDates||[])],keys=new Set();
+if(!data?.federalIncomeTax?.source?.url?.startsWith('https://www.irs.gov/'))fail('Federal income-tax configuration missing official IRS source.');
+for(const status of ['single','mfs','mfj','qw','hoh']){const brackets=data?.federalIncomeTax?.brackets?.[status],deduction=data?.federalIncomeTax?.standardDeductions?.[status];if(!Array.isArray(brackets)||brackets.length!==7)fail(`${status}: expected seven verified federal brackets.`);if(!(deduction>0))fail(`${status}: missing verified standard deduction.`)}
+for(const r of records){if(!r.key)fail('Configuration record missing key.');else if(keys.has(r.key))fail(`Duplicate configuration key: ${r.key}`);else keys.add(r.key);if(!r.source?.url?.startsWith('https://www.irs.gov/')&&!r.source?.url?.startsWith('https://www.ssa.gov/'))fail(`${r.key}: missing permitted official source URL.`);if(!validDate(r.effectiveStart))fail(`${r.key}: missing/invalid effective start.`);if(r.effectiveEnd&&!validDate(r.effectiveEnd))fail(`${r.key}: invalid effective end.`);if(!r.verificationStatus)fail(`${r.key}: missing verification status.`);if(!r.reviewNote)fail(`${r.key}: missing review note.`)}
+const periods=[...(data?.mileagePeriods||[])].sort((a,b)=>a.effectiveStart.localeCompare(b.effectiveStart));for(let i=0;i<periods.length;i++){if(i&&new Date(periods[i-1].effectiveEnd+'T00:00:00Z').getTime()+86400000!==new Date(periods[i].effectiveStart+'T00:00:00Z').getTime())fail(`Mileage gap or overlap between ${periods[i-1].key} and ${periods[i].key}.`)}
+if(periods[0]?.effectiveStart!=='2026-01-01'||periods.at(-1)?.effectiveEnd!=='2026-12-31')fail('Mileage periods do not cover all of 2026.');
+for(const html of ['index.html',...fs.readdirSync(path.join(root,'calculators'),{withFileTypes:true}).filter(x=>x.isDirectory()).map(x=>`calculators/${x.name}/index.html`)]){const p=path.join(root,html);if(fs.existsSync(p)&&!fs.readFileSync(p,'utf8').includes('data/tax-years/2026.js'))fail(`${html}: missing canonical 2026 tax-data script reference.`)}
+if(errors.length){console.error(errors.map(x=>`ERROR: ${x}`).join('\n'));process.exit(1)}console.log(`PASS: ${records.length} configuration records validated for 2026; mileage periods are contiguous and source metadata is complete.`);

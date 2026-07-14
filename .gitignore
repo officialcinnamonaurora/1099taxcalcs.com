@@ -1,0 +1,16 @@
+# Browser-test profiles and temporary output
+.edge-smoke/
+.edge-smoke2/
+.browser-profile/
+test-output/
+screenshots/
+
+# Logs, OS, and editor temporary files
+*.log
+*.tmp
+*.swp
+*~
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
