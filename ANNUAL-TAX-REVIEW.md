@@ -20,3 +20,13 @@ Use official IRS.gov and SSA.gov material only. Do not publish a value that lack
 15. Review the final diff for remote scripts, APIs, tracking, secrets, temporary browser profiles, screenshots, and logs.
 
 Values that remain user-entered—income-tax planning percentages, state/local rates, benefits, deductions, custom mileage rates, and safe-harbor education inputs—must not be silently converted into authoritative defaults.
+
+## Phase 5 page review
+
+- Review profession pages when work patterns, platform reporting, or linked official guidance materially changes.
+- Review education pages for current forms, payment timing, Schedule SE methodology, mileage periods, home-office rules, and official links.
+- Review deduction pages for limitations, capitalization, depreciation, reimbursement, inventory, retirement arrangements, and health-insurance treatment.
+- Regenerate with `node build_phase5.mjs`, then confirm all 55 URLs remain in the sitemap and metadata remains unique.
+- Mostly evergreen concepts still need source-link and correction-policy review; year-specific statements require annual verification before publication.
+- For Phase 5B, review the `educationDetail` entries in `build_phase5.mjs`, verify each linked IRS or SSA page, regenerate, and run `node scripts/test-phase5b.mjs`.
+- For Phase 5C, review every `deductionDetail` source and warning. Give extra attention to mileage periods, meal limitations, travel rules, home-office methods, depreciation and expensing guidance, retirement plan limits and deadlines, and Form 7206 health-insurance guidance. Regenerate and run `node scripts/test-phase5c.mjs` without changing `CNAME`.

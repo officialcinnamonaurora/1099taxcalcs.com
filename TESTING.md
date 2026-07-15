@@ -33,3 +33,13 @@ Browser profiles and generated output belong outside the published site or in ig
 ## Phase 3 run record
 
 The completion report records only commands actually run. Browser results should be regenerated after any calculator markup, CSS, or controller change.
+
+## Phase 5 content checks
+
+Run `node scripts/test-phase5.mjs` after `node build_phase5.mjs`. It checks the exact 20/20/15 page counts, directory filtering hooks, profession-to-calculator paths, required sources and disclaimers, sitemap coverage, homepage discovery limits, privacy restrictions, mobile CSS, and CNAME preservation.
+
+The complete pre-upload sequence is: `validate-encoding.mjs`, `validate-tax-config.mjs`, `validate-site.mjs`, `test-calculators.mjs`, `test-phase4.mjs`, and `test-phase5.mjs`. Manual review should filter both directories by keyboard, inspect representative long pages around 360px, confirm ads do not obstruct content, and inspect the console.
+
+For Phase 5B, `node scripts/test-phase5b.mjs` verifies all 20 education files, metadata, canonicals, required explanatory sections, sources, disclaimers, review dates, calculator/profession/education links, directory groups, homepage features, sitemap URLs, and CNAME.
+
+For Phase 5C, run `node scripts/test-phase5c.mjs`. It verifies all 15 deduction files, category-specific sections, careful eligibility language, calculator/profession/education/deduction links, directory groups, six homepage features, sitemap coverage, preservation of Phase 5A and 5B pages, and CNAME. Follow with the existing site, encoding, tax-config, and calculator suites.

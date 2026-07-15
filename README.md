@@ -56,10 +56,22 @@ For a midyear rate change, add separate records with exact, contiguous effective
 
 ## CNAME and GitHub Pages safety
 
-Preserve `CNAME` byte-for-byte and never generate it from either build script. The Phase 4 audit found the current file empty, so domain configuration requires owner review before upload. Before uploading to GitHub Pages, review changes, run all checks, and upload only intended public/source files. This workflow does not commit, push, publish, or alter repository settings automatically.
+Preserve `CNAME` byte-for-byte and never generate it from any build script. It currently contains exactly `1099TaxCalcs.com`. Before uploading to GitHub Pages, review changes, run all checks, and upload only intended public/source files. This workflow does not commit, push, publish, or alter repository settings automatically.
 
 Do not publish temporary browser profiles, `.edge-smoke*`, local test output, screenshots, logs, OS metadata, or editor temporary files. The `.gitignore` records these exclusions without ignoring public website assets.
 
 ## Official-source review
 
 The canonical year file records source titles, URLs, effective dates, review notes, verification status, and the last-reviewed date. Review the source document itself; a URL being present is not a substitute for checking the applicable year and later corrections or announcements.
+
+## Phase 5 educational expansion
+
+Phase 5 adds 55 generated pages: 20 profession tax hubs, 20 core education guides, and 15 expense-category guides. Their content data, templates, directory pages, homepage discovery block, sitemap entries, and inventory are maintained by `build_phase5.mjs`.
+
+Run `node build_phase5.mjs` after changing Phase 5 content. If an earlier generator changes, run it first and Phase 5 last. Generated profession pages connect to tailored calculators, expense guides, core education, and related professions. Directory filtering uses `assets/js/content-filter.js`, stays in the browser, and transmits nothing.
+
+Stable concepts still need editorial review. Tax-year labels, deadlines, rates, form links, mileage rules, limitations, and official-source summaries require annual review. Before uploading, run every validation command and confirm `CNAME` contains exactly `1099TaxCalcs.com`.
+
+The 20 Phase 5B core education guides are generated from the `education` and `educationDetail` records in `build_phase5.mjs`. Each record supplies unique explanatory points, steps, examples, calculator paths, profession paths, and an official source. Run `node build_phase5.mjs` to regenerate, then `node scripts/test-phase5b.mjs` before upload.
+
+The 15 Phase 5C expense guides are generated from the `deductions` and `deductionDetail` records in `build_phase5.mjs`. The detail records control examples, mixed-use and reimbursement explanations, recordkeeping, special treatment, profession and education links, calculator paths, and official sources. Run Phase 5 last when multiple generators change, then run `node scripts/test-phase5c.mjs`. Vehicle, meals, travel, home-office, retirement, health-insurance, equipment, and other year-sensitive guidance requires frequent official-source review; general record organization and the distinction between spending and tax treatment are more stable concepts.
