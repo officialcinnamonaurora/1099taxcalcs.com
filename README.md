@@ -75,3 +75,19 @@ Stable concepts still need editorial review. Tax-year labels, deadlines, rates, 
 The 20 Phase 5B core education guides are generated from the `education` and `educationDetail` records in `build_phase5.mjs`. Each record supplies unique explanatory points, steps, examples, calculator paths, profession paths, and an official source. Run `node build_phase5.mjs` to regenerate, then `node scripts/test-phase5b.mjs` before upload.
 
 The 15 Phase 5C expense guides are generated from the `deductions` and `deductionDetail` records in `build_phase5.mjs`. The detail records control examples, mixed-use and reimbursement explanations, recordkeeping, special treatment, profession and education links, calculator paths, and official sources. Run Phase 5 last when multiple generators change, then run `node scripts/test-phase5c.mjs`. Vehicle, meals, travel, home-office, retirement, health-insurance, equipment, and other year-sensitive guidance requires frequent official-source review; general record organization and the distinction between spending and tax treatment are more stable concepts.
+
+## Phase 6 production layer and static search
+
+### Phase 7 production pass
+
+Run `node build_phase7.mjs` after Phase 6. It is the final idempotent production pass: it preserves URLs and formulas, repairs punctuation corruption, standardizes navigation and advertisement accessibility attributes, adds concise planning-scope disclosures, polishes profession copy, prepares Contact for owner configuration, and writes `PRODUCTION-AUDIT-REPORT.md`.
+
+Before a GitHub Pages upload, run `node scripts/validate-phase7.mjs`, `node scripts/test-phase7.mjs`, and every earlier suite in `TESTING.md`. Confirm `CNAME`, exclude ignored development output, and upload only intended static/source files. Future ad code may be considered only in elements marked `data-ad-placeholder="true"`, never between calculator inputs and results; update privacy/legal disclosures before activation. Replace Contact’s marked configuration text only after approving a real public contact method.
+
+Run `node build_phase6.mjs` last after any earlier generator. It preserves URLs and formulas while generating `data/search-index.js`, adding accessible site search, calculator learning paths, consistent directory filtering, trust-page copy, focused-guide improvements, `INTERNAL-LINK-REPORT.md`, and the current inventory.
+
+The search index contains short public metadata only: title, URL, content type, description, keywords, and category. `assets/js/search-core.js` performs normalization, filtering, and scoring; `assets/js/site-search.js` renders results with DOM `textContent`. Search queries stay in the browser and are not stored, transmitted, or added to URLs. Future calculators or guides enter the index automatically when their public HTML exists before Phase 6 runs.
+
+Source files are the three earlier generators, `build_phase6.mjs`, shared assets, tax-year configuration, and validation scripts. Public HTML, the search index, sitemap, inventory, and link report are generated outputs. Safe order when all sources change: Phase 1, Phase 4, Phase 5, then Phase 6. Never regenerate or edit `CNAME`.
+
+Use `CONTENT-QUALITY-CHECKLIST.md` for distinct purpose, official sources, internal links, accessibility, encoding, and mobile review. Run `node scripts/validate-phase6.mjs` and `node scripts/test-phase6.mjs` with every existing tax, calculator, site, and encoding suite before upload. Do not upload ignored browser profiles, screenshots, local output, logs, OS metadata, or editor files.

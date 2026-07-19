@@ -30,3 +30,18 @@ Values that remain user-entered—income-tax planning percentages, state/local r
 - Mostly evergreen concepts still need source-link and correction-policy review; year-specific statements require annual verification before publication.
 - For Phase 5B, review the `educationDetail` entries in `build_phase5.mjs`, verify each linked IRS or SSA page, regenerate, and run `node scripts/test-phase5b.mjs`.
 - For Phase 5C, review every `deductionDetail` source and warning. Give extra attention to mileage periods, meal limitations, travel rules, home-office methods, depreciation and expensing guidance, retirement plan limits and deadlines, and Form 7206 health-insurance guidance. Regenerate and run `node scripts/test-phase5c.mjs` without changing `CNAME`.
+
+## Phase 6 annual production review
+
+## Phase 7 release review
+
+- After tax-year or content regeneration, run `build_phase6.mjs` and `build_phase7.mjs` last.
+- Verify planning-scope language, official-source links, Contact owner configuration, Privacy statements, and any proposed advertising change.
+- Run Phase 7 validation plus every earlier tax/configuration/calculator suite and complete the human launch checklist.
+
+- Run earlier generators only when their sources change, then run `node build_phase6.mjs` last so search, cross-links, trust pages, inventory, and link reporting remain synchronized.
+- Review all search records for accurate titles, summaries, types, and keywords after adding or changing a public page.
+- Run `validate-phase6.mjs` to catch sitemap drift, duplicate metadata, missing sources or review dates, broken links, and orphan pages.
+- Review `CONTENT-QUALITY-CHECKLIST.md` across each page type and manually inspect search, filters, navigation, tables, calculators, source links, and long text at 360px through desktop width.
+- Confirm privacy statements still match implementation and that no APIs, analytics, tracking, cookies, local storage, external scripts, or query persistence were introduced.
+- Preserve `CNAME` exactly as `1099TaxCalcs.com` and exclude temporary profiles, screenshots, output, and logs from upload.
